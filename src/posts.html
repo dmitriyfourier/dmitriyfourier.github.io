@@ -1,0 +1,41 @@
+---
+layout: posts-feed
+title: Блог Димы Фурье
+desc: Заметки про управление, дизайн и менеджмент
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: posts
+---
+<h2 class="text-2xl sm:text-4xl font-bold leading-tight">Записи блога</h2>
+{% for post in pagination.items %}
+{% if post.data.published %}
+<div class="py-4">
+  <p>
+    <span class="text-2xl sm:text-4xl font-bold leading-tight">
+      <a href="{{ post.url }}">{{ post.data.title }}</a></span>
+    
+  </p>
+  <em><time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></em><span class="text-base font-normal"> &middot; Время чтения ≈ {{ post.templateContent | readTime }} мин</span>
+  <p class="mt-4">{{ post.data.post_excerpt }}...</p>
+  
+  <div class="flex justify-between items-center mt-4">
+    <div class="flex-1 pr-4">
+      {% for tag in post.data.tags %}
+        {% if tag != "posts" %}
+          <span class="pr-2"><a href="/tags/{{ tag | slug }}">{{ tag }}</a></span>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <a class="flex-none font-semibold link" href="{{ post.url }}">Read this post</a> →
+  </div>
+
+</div>
+
+{% endif %}
+{% endfor %}
+
+
+{% include "paginator.liquid" %}
