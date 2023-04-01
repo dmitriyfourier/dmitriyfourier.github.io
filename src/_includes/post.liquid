@@ -15,7 +15,7 @@ layout: blog
   {{ content }}
 {% include "likely.liquid" %}
 </div>
-<div class="mt-3 pb-10 text-xs" style="color:#999">
+<div class="mt-3 pb-4 text-xs" style="color:#999">
 	{% for tag in tags %}
 	  {% if tag != "posts" %}
 		<a class="link-novisited px-3 py-2" href="/tags/{{ tag | slug }}">
@@ -31,8 +31,8 @@ layout: blog
 	{%- if nextPost or previousPost %}
 	<hr>
 	<div class="post-footer">
-	  <div class="prev-post">{%- if previousPost %}&#9194; <a class="animated-rainbow-hover" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>{% endif %}</div>
-	  <div class="next-post">{%- if nextPost %}<a class="animated-rainbow-hover" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> &#9193;{% endif %}</div>
+	  <div class="text-sm">{%- if previousPost %}← <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>{% endif %}</div>
+	  <div class="text-sm">{%- if nextPost %}<a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> → {% endif %}</div>
 	</div>
 	{%- endif %}
 	{%- endif %}
