@@ -1,8 +1,8 @@
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const markdownIt = require('markdown-it');
 const moment = require('moment');
 const slugify = require("slugify");
+const img2picture = require("eleventy-plugin-img2picture");;
 moment.locale('ru');
 
 module.exports = function(eleventyConfig) {
@@ -80,10 +80,25 @@ module.exports = function(eleventyConfig) {
     })
   })*/
   eleventyConfig.setLibrary('md', md)
+  // IMAGES
+  eleventyConfig.addPlugin(img2picture, {
+    // Should be same as Eleventy input folder set using `dir.input`.
+    eleventyInputDir: "./src/",
+
+    // Output folder for optimized images.
+    imagesOutputDir: "_site/assets/img/",
+
+    // URL prefix for images src URLS.
+    // It should match with path suffix in `imagesOutputDir`.
+    // Eg: imagesOutputDir with `_site/images` likely need urlPath as `/images/`
+    urlPath: "/assets/img/",
+    extensions: ["jpg", "png", "jpeg"],
+    formats: ["avif", "webp", "jpeg"],
+  });
 
   // asset_img shortcode
   eleventyConfig.addLiquidShortcode('asset_img', (filename, alt) => {
-    return `<img class="my-4" src="/assets/img/posts/${filename}" alt="${alt}" />`
+    return `<img class="my-4" src="/assets/img/${filename}" alt="${alt}" />`
   })
 
   return {
