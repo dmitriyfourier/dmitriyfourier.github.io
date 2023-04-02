@@ -3,6 +3,7 @@ title: Kotlin
 date: 2001-07-01
 permalink: "/posts/{{ title | slug }}/"
 published: false
+draft: true
 tags:
 - kotlin
 - android
