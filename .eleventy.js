@@ -1,22 +1,22 @@
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const markdownIt = require('markdown-it');
-const moment = require('moment');
-const slugify = require("slugify");
-const img2picture = require("eleventy-plugin-img2picture");;
-moment.locale('ru');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const markdownIt = require('markdown-it')
+const moment = require('moment')
+const slugify = require('slugify')
+const img2picture = require('eleventy-plugin-img2picture')
+moment.locale('ru')
 
 module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight)
   eleventyConfig.addFilter('dateIso', date => {
-    return moment(date).toISOString();
-  });
+    return moment(date).toISOString()
+  })
  
   eleventyConfig.addFilter('dateReadable', date => {
-    return moment(date).utc().format('LL'); // E.g. May 31, 2019
-  });
+    return moment(date).utc().format('LL') // E.g. May 31, 2019
+  })
 
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)
   
   // To enable merging of tags
   eleventyConfig.setDataDeepMerge(true)
@@ -57,9 +57,9 @@ module.exports = function(eleventyConfig) {
     return Array.from(tagsSet).sort()
   })
   // slugify filter //
-  eleventyConfig.addFilter("slug", (str) => {
+  eleventyConfig.addFilter('slug', (str) => {
     if (!str) {
-      return;
+      return
     }
   
     return slugify(str, {
@@ -68,11 +68,11 @@ module.exports = function(eleventyConfig) {
       strict: true,
       locale: 'en',
       remove: /["]/g,
-    });
-  });
+    })
+  })
 
   const md = markdownIt({ html: true, linkify: true })
- /* md.use(markdownItAnchor, { 
+  /* md.use(markdownItAnchor, { 
     level: [1, 2], 
     permalink: markdownItAnchor.permalink.headerLink({ 
       safariReaderFix: true,
@@ -83,21 +83,21 @@ module.exports = function(eleventyConfig) {
   // IMAGES
   eleventyConfig.addPlugin(img2picture, {
     // Should be same as Eleventy input folder set using `dir.input`.
-    eleventyInputDir: "./src/",
+    eleventyInputDir: './src/',
 
     // Output folder for optimized images.
-    imagesOutputDir: "_site/assets/img/",
+    imagesOutputDir: '_site/assets/img/',
 
     // URL prefix for images src URLS.
     // It should match with path suffix in `imagesOutputDir`.
     // Eg: imagesOutputDir with `_site/images` likely need urlPath as `/images/`
-    urlPath: "/assets/img/",
-    extensions: ["jpg", "png", "jpeg"],
-    formats: ["avif", "webp", "jpeg"],
+    urlPath: '/assets/img/',
+    extensions: ['jpg', 'png', 'jpeg'],
+    formats: ['avif', 'webp', 'jpeg'],
     minWidth: 400,
     maxWidth: 1280,
-    sizes:"100vw",
-  });
+    sizes:'100vw',
+  })
 
   // asset_img shortcode
   eleventyConfig.addLiquidShortcode('asset_img', (filename, alt) => {
