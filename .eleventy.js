@@ -94,6 +94,9 @@ module.exports = function(eleventyConfig) {
     urlPath: "/assets/img/",
     extensions: ["jpg", "png", "jpeg"],
     formats: ["avif", "webp", "jpeg"],
+    minWidth: 400,
+    maxWidth: 1280,
+    sizes:"100vw",
   });
 
   // asset_img shortcode
