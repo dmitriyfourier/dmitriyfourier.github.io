@@ -1,128 +1,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<pre><code>    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/bezopasnost-pri-najme-finmenedzhera/&lt;/loc&gt;
-        &lt;lastmod&gt;Wed Apr 05 2017 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/kakandnbspvesti-uchyot-nalichki-vandnbspbiznese-iandnbspneandnbspsvihnutsya/&lt;/loc&gt;
-        &lt;lastmod&gt;Wed Jul 05 2017 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/otzyv-na-pervuyu-stupen-universiteta-finolog/&lt;/loc&gt;
-        &lt;lastmod&gt;Tue Sep 12 2017 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/sveryajtes-v-terminologii/&lt;/loc&gt;
-        &lt;lastmod&gt;Thu Sep 21 2017 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/kak-smenit-familiyu-i-ne-oblazhatsya/&lt;/loc&gt;
-        &lt;lastmod&gt;Fri Jun 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/minimalnyj-nabor-dlya-starta-v-gejmdeve/&lt;/loc&gt;
-        &lt;lastmod&gt;Wed Aug 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/samyj-bogatyj-chelovek-v-vavilone/&lt;/loc&gt;
-        &lt;lastmod&gt;Mon Jun 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/kalendar-dedlajnov/&lt;/loc&gt;
-        &lt;lastmod&gt;Thu Aug 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/postroit-zapasnoj-aerodrom/&lt;/loc&gt;
-        &lt;lastmod&gt;Mon Jun 15 2020 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/permian-navigation-part1/&lt;/loc&gt;
-        &lt;lastmod&gt;Sat Jun 04 2022 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/permian-navigation-part2/&lt;/loc&gt;
-        &lt;lastmod&gt;Sun Jun 12 2022 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/start-proekta-dobrososedstvo-20/&lt;/loc&gt;
-        &lt;lastmod&gt;Tue Jun 14 2022 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/permian-navigation-part3/&lt;/loc&gt;
-        &lt;lastmod&gt;Wed Jun 15 2022 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/permian-navigation-part4/&lt;/loc&gt;
-        &lt;lastmod&gt;Sat Jun 18 2022 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/permian-navigation-part5/&lt;/loc&gt;
-        &lt;lastmod&gt;Sun Jun 19 2022 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/permian-navigation-part6/&lt;/loc&gt;
-        &lt;lastmod&gt;Sat Jun 25 2022 00:00:00 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/404/&lt;/loc&gt;
-        &lt;lastmod&gt;Tue Apr 04 2023 17:16:41 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/&lt;/loc&gt;
-        &lt;lastmod&gt;Tue Apr 04 2023 17:16:41 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/posts/&lt;/loc&gt;
-        &lt;lastmod&gt;Tue Apr 04 2023 17:16:41 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/tags/posts/&lt;/loc&gt;
-        &lt;lastmod&gt;Tue Apr 04 2023 17:16:41 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-
-    &lt;url&gt;
-        &lt;loc&gt;https://furye.ru/tags/&lt;/loc&gt;
-        &lt;lastmod&gt;Tue Apr 04 2023 17:16:41 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
-        &lt;changefreq&gt;&lt;/changefreq&gt;
-    &lt;/url&gt;
-</code></pre>
+<p><url>
+<loc><a href="https://furye.ru/posts/bezopasnost-pri-najme-finmenedzhera/">https://furye.ru/posts/bezopasnost-pri-najme-finmenedzhera/</a></loc>
+<lastmod>Wed Apr 05 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/kakandnbspvesti-uchyot-nalichki-vandnbspbiznese-iandnbspneandnbspsvihnutsya/">https://furye.ru/posts/kakandnbspvesti-uchyot-nalichki-vandnbspbiznese-iandnbspneandnbspsvihnutsya/</a></loc>
+<lastmod>Wed Jul 05 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/otzyv-na-pervuyu-stupen-universiteta-finolog/">https://furye.ru/posts/otzyv-na-pervuyu-stupen-universiteta-finolog/</a></loc>
+<lastmod>Tue Sep 12 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/sveryajtes-v-terminologii/">https://furye.ru/posts/sveryajtes-v-terminologii/</a></loc>
+<lastmod>Thu Sep 21 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/kak-smenit-familiyu-i-ne-oblazhatsya/">https://furye.ru/posts/kak-smenit-familiyu-i-ne-oblazhatsya/</a></loc>
+<lastmod>Fri Jun 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/minimalnyj-nabor-dlya-starta-v-gejmdeve/">https://furye.ru/posts/minimalnyj-nabor-dlya-starta-v-gejmdeve/</a></loc>
+<lastmod>Wed Aug 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/samyj-bogatyj-chelovek-v-vavilone/">https://furye.ru/posts/samyj-bogatyj-chelovek-v-vavilone/</a></loc>
+<lastmod>Mon Jun 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/kalendar-dedlajnov/">https://furye.ru/posts/kalendar-dedlajnov/</a></loc>
+<lastmod>Thu Aug 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/postroit-zapasnoj-aerodrom/">https://furye.ru/posts/postroit-zapasnoj-aerodrom/</a></loc>
+<lastmod>Mon Jun 15 2020 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/permian-navigation-part1/">https://furye.ru/posts/permian-navigation-part1/</a></loc>
+<lastmod>Sat Jun 04 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/permian-navigation-part2/">https://furye.ru/posts/permian-navigation-part2/</a></loc>
+<lastmod>Sun Jun 12 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/start-proekta-dobrososedstvo-20/">https://furye.ru/posts/start-proekta-dobrososedstvo-20/</a></loc>
+<lastmod>Tue Jun 14 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/permian-navigation-part3/">https://furye.ru/posts/permian-navigation-part3/</a></loc>
+<lastmod>Wed Jun 15 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/permian-navigation-part4/">https://furye.ru/posts/permian-navigation-part4/</a></loc>
+<lastmod>Sat Jun 18 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/permian-navigation-part5/">https://furye.ru/posts/permian-navigation-part5/</a></loc>
+<lastmod>Sun Jun 19 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/permian-navigation-part6/">https://furye.ru/posts/permian-navigation-part6/</a></loc>
+<lastmod>Sat Jun 25 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/404/">https://furye.ru/404/</a></loc>
+<lastmod>Tue Apr 04 2023 17:22:43 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/">https://furye.ru/</a></loc>
+<lastmod>Tue Apr 04 2023 17:22:43 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/posts/">https://furye.ru/posts/</a></loc>
+<lastmod>Tue Apr 04 2023 17:22:43 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/tags/posts/">https://furye.ru/tags/posts/</a></loc>
+<lastmod>Tue Apr 04 2023 17:22:43 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
+<p><url>
+<loc><a href="https://furye.ru/tags/">https://furye.ru/tags/</a></loc>
+<lastmod>Tue Apr 04 2023 17:22:43 GMT+0000 (Coordinated Universal Time)</lastmod>
+<changefreq></changefreq>
+</url></p>
 </urlset>
