@@ -1,5 +1,5 @@
 ---
-title: Как&nbsp;вести учёт налички в&nbsp;бизнесе и&nbsp;не&nbsp;свихнуться
+title: Как вести учёт налички в бизнесе и не свихнуться
 date: 2017-07-05
 permalink: "/posts/{{ title | slug }}/"
 # published: false

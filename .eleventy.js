@@ -3,6 +3,8 @@ const markdownIt = require('markdown-it')
 const moment = require('moment')
 const slugify = require('slugify')
 const img2picture = require('eleventy-plugin-img2picture')
+const fs = require("fs");
+const Image = require("@11ty/eleventy-img");
 moment.locale('ru')
 
 module.exports = function(eleventyConfig) {
@@ -80,6 +82,54 @@ module.exports = function(eleventyConfig) {
     })
   })*/
   eleventyConfig.setLibrary('md', md)
+  // Open graph generation
+  eleventyConfig.addFilter('splitlines', function(input) {
+    const parts = input.split(' ');
+    const lines = parts.reduce(function(prev, current) {
+
+    if (!prev.length) {
+        return [current];
+    }
+    
+    let lastOne = prev[prev.length - 1];
+
+    if (lastOne.length + current.length > 19) {
+        return [...prev, current];
+    }
+
+    prev[prev.length - 1] = lastOne + ' ' + current;
+
+    return prev;
+    }, []);
+
+    return lines;
+});
+// Conver og images from SVG to JPG
+eleventyConfig.on('afterBuild', () => {
+  const socialPreviewImagesDir = "_site/assets/img/og/";
+  fs.readdir(socialPreviewImagesDir, function (err, files) {
+      if (files.length > 0) {
+          files.forEach(function (filename) {
+              if (filename.endsWith(".svg")) {
+
+                  let imageUrl = socialPreviewImagesDir + filename;
+                  Image(imageUrl, {
+                      formats: ["jpeg"],
+                      outputDir: "./" + socialPreviewImagesDir,
+                      filenameFormat: function (id, src, width, format, options) {
+
+                          let outputFilename = filename.substring(0, (filename.length-4));
+                      
+                          return `${outputFilename}.${format}`;
+
+                      }
+                  });
+
+              }
+          })
+      }
+  })
+});
   // IMAGES
   eleventyConfig.addPlugin(img2picture, {
     // Should be same as Eleventy input folder set using `dir.input`.

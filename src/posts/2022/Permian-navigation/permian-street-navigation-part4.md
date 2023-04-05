@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Уличная навигация в&nbsp;Перми [Часть&nbsp;4] &times; Существующая навигация
+title: Уличная навигация в Перми [Часть 4] × Существующая навигация
 date: 2022-06-18
 url: permian-navigation-part4
 permalink: "/posts/{{ url | slug }}/"

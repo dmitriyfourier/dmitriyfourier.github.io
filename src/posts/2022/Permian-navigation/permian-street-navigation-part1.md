@@ -1,6 +1,6 @@
 ---
 layout: post
-title: О&nbsp;недоделанной Пермской уличной навигации [Часть&nbsp;1] &times; Предпосылки
+title: О недоделанной Пермской уличной навигации [Часть 1] × Предпосылки
 date: 2022-06-04
 url: permian-navigation-part1
 permalink: "/posts/{{ url | slug }}/"

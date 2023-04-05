@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Уличная навигация в&nbsp;Перми [Часть&nbsp;3] &times; Переписка с&nbsp;разработчиками проекта
+title: Уличная навигация в Перми [Часть 3] × Переписка с разработчиками проекта
 date: 2022-06-15
 url: permian-navigation-part3
 permalink: "/posts/{{ url | slug }}/"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Переработка пермской уличной навигации [Часть&nbsp;2] &times; Разбор базовых форматов
+title: Переработка пермской уличной навигации [Часть 2] × Разбор базовых форматов
 date: 2022-06-12
 url: permian-navigation-part2
 permalink: "/posts/{{ url | slug }}/"
