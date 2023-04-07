@@ -1,5 +1,5 @@
 module.exports = {
-  theme: {
+ /* theme: {
     colors: {
       // ...
       'tg': {
@@ -8,7 +8,7 @@ module.exports = {
       },
       // ...
     },
-  },
+  }, */
   
   darkMode: 'class',
   content: ['./src/**/*.md', './src/**/*.html', './src/_includes/**/*.liquid', './node_modules/flowbite/**/*.js'],
