@@ -262,11 +262,7 @@ p {
   padding-left: 0.875rem;
   padding-top: 0.875rem;
   border-radius: 0.5rem;
-<<<<<<< HEAD
-  @apply bg-tg-light dark:bg-tg-dark;
-=======
   background-color: #15202b;
->>>>>>> parent of 0fe48cb... update css colors
   border: 1px solid #234;
 }
 
@@ -286,9 +282,4 @@ blockquote .twitter-tweet {
 
 p {
   font-size: 1.25rem;
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> parent of 0fe48cb... update css colors
