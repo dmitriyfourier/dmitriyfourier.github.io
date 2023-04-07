@@ -262,7 +262,7 @@ p {
   padding-left: 0.875rem;
   padding-top: 0.875rem;
   border-radius: 0.5rem;
-  background-color: #15202b; @apply dark:bg-slate-800;
+  @apply bg-white dark:tg-dark;
   border: 1px solid #234;
 }
 
