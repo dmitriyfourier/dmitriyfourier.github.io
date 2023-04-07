@@ -1,10 +1,15 @@
 module.exports = {
-  
-  colors: {
-    'tg-dark': '#15202b',
-    'tg-light' '#fff',
-
+  theme: {
+    colors: {
+      // ...
+      'tg': {
+        light: '#fff',
+        dark: '#15202b',
+      },
+      // ...
+    },
   },
+  
   darkMode: 'class',
   content: ['./src/**/*.md', './src/**/*.html', './src/_includes/**/*.liquid', './node_modules/flowbite/**/*.js'],
   plugins: [
