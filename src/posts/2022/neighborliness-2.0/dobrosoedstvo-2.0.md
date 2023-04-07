@@ -41,7 +41,7 @@ tags:
 
 Или как в&nbsp;Перми соседи привели в&nbsp;порядок квартал в&nbsp;Рабочем посёлке
 
-https://twitter.com/CurrentTimeTv/status/1227255906343120897
+<blockquote class="twitter-tweet"><p lang="ru" dir="ltr">&quot;Спроси себя, почему лично ты согласен на &quot;убого&quot;?&quot;<br><br>Жители этого квартала отказались от управляющих компаний, перевели дома в непосредственное управление и добились от властей проведения капремонта. Сравнить их дома с соседними вы можете сами <a href="https://t.co/TXrOXsWWfW">pic.twitter.com/TXrOXsWWfW</a></p>&mdash; Настоящее Время (@CurrentTimeTv) <a href="https://twitter.com/CurrentTimeTv/status/1227255906343120897?ref_src=twsrc%5Etfw">February 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Или как ребята&nbsp;из [Краеведческой ячейки Гэнгъ](https://vk.com/stpkraevedgang) отмывают исторические парадные в&nbsp;Петербурге и&nbsp;приводят их&nbsp;с&nbsp;волонтерами в&nbsp;порядок.
 
