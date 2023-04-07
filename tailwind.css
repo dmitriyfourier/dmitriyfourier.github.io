@@ -262,7 +262,7 @@ p {
   padding-left: 0.875rem;
   padding-top: 0.875rem;
   border-radius: 0.5rem;
-  background-color: #15202b;
+  background-color: #15202b; @apply dark:bg-slate-800;
   border: 1px solid #234;
 }
 
@@ -276,10 +276,20 @@ blockquote > p {
   font-size: 1.3rem;
 }
 
-blockquote .twitter-tweet {
-  
-}
+
 
 p {
   font-size: 1.25rem;
+}
+
+
+.bc-dark,
+.bc-preview-wrap.bc-dark {
+  background-color: @apply bg-white dark:bg-slate-900;
+  color: @apply text-slate-900 dark:text-white;
+}
+
+.bc-dark .bc-preview-wrap.bc-nodark {
+  background-color: #fff;
+  color: #000;
 }
