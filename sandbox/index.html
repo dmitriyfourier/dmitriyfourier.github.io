@@ -2,11 +2,11 @@
     <meta charset="utf-8">
   	<meta name="viewport" content="width=device-width">
 
-    <title>Тестовое название для главной страницы部落格</title>
+    <title>Тестирование скрипта для переключение</title>
     <meta name="description" content="Тестовое описание для главной страницы">
 
     <!--links-->
-    <link rel="canonical" href="https://furye.ru/1/">
+    <link rel="canonical" href="https://furye.ru/sandbox/">
     <!-- fonts -->
     <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
@@ -66,8 +66,32 @@
         
         
 
-<h2 class="text-2xl font-bold">Сделал</h2>
-<h2 class="text-2xl font-bold">Наговорил</h2>
+<h2 class="text-2xl font-bold">Страничка для теста перкключения темной темы</h2>
+
+<h3> Изменения цвета likely</h3>
+
+<div class="likely likely_visible likely_ready py-4">
+  <div class="twitter">Твитнуть</div>
+  <div class="facebook">Поделиться</div>
+  <div class="vkontakte">Поделиться</div>
+  <div class="telegram">Отправить</div>
+  <div class="linkedin">Линкануть</div>
+</div>
+
+<h3>Изменение цвета комментариев</h3>
+
+<!--Telegram comments widget -->
+<section class="comments py-4" id="comments">
+  <div class="widget emerge" data-hold="500" style="transition: opacity 500ms ease-out 0s; opacity: 1;">
+    <script async="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5" data-page-id="" data-page-title="" data-dislikes="1" data-outlined="1" data-colorful="1" data-dark="1"></script>
+</div>
+</section>
+
+
+
+
+
+
       
       </main>
       
@@ -95,7 +119,7 @@
 -->
   </p></div>
 </footer>
-      <!--<script>
+      <script>
         document.getElementById("toggleDarkMode").addEventListener("change", function() {
           if (isDarkMode()) {
             localStorage.theme = 'light'
@@ -105,8 +129,9 @@
             document.documentElement.classList.add('dark')
           }
         });
-      </script>-->
-      <script src="/assets/scripts/jquery.min.js"></script>
-      <script src="/assets/scripts/fotorama.min.js"></script>
+      </script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <script src="/assets/scripts/fotorama.min.js"></script>
+  <script src="/assets/scripts/likely.min.js"></script>
   
 </body></html>
