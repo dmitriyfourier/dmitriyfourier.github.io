@@ -28,9 +28,8 @@
     <meta name="theme-color" content="#202020">
 
     <!--styles-->
-    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     <link href="/assets/styles/tailwind.css" rel="stylesheet">
-    <link href="/assets/styles/index.css" rel="stylesheet">
+    <!--Scripts-->
     <script>
       const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
       if (isDarkMode()) {
@@ -41,7 +40,7 @@
     </script>
   </head>
  
-  <body class="dark:text-gray-300 dark:bg-neutral-900 px-5">
+  <body class="dark:text-mk-white dark:bg-mk-background"> 
     <header>
       <nav class="font-normal mb-4"> 
   <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
@@ -195,7 +194,6 @@
 -->
   </p></div>
 </footer>
-
       <script>
         document.getElementById("toggleDarkMode").addEventListener("change", function() {
           if (isDarkMode()) {
