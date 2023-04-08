@@ -5,6 +5,7 @@ module.exports = {
       'tg': {
         light: '#fff',
         dark: '#15202b',
+        deepdark: '#234',
       },
       'mk': {
         background: '#2e2e2e',

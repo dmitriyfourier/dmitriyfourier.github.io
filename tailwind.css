@@ -39,12 +39,16 @@ p {
 }
 
 /*comments*/
+.comments{
+  max-width: 840px;
+}
 .comments .widget {
   position: relative;
   padding-right: 0.875rem;
   padding-left: 0.875rem;
   padding-top: 0.875rem;
+  padding-bottom: .875rem;
   border-radius: 0.5rem;
   @apply bg-tg-light dark:bg-tg-dark;
-  border: 1px solid #234;
+  @apply border-mk-comments dark:border-tg-deepdark;
 }
