@@ -35,13 +35,13 @@
       if (isDarkMode()) {
         document.documentElement.classList.add('dark')
         document.querySelector('div.likely').classList.add('likely-light')
-        document.querySelector('div.comments-white').classList.add('invisible')
-        document.querySelector('div.comments-dark').classList.remove('invisible')
+        document.querySelector('div.comments-white').classList.add('hidden')
+        document.querySelector('div.comments-dark').classList.remove('hidden')
       } else {
         document.documentElement.classList.remove('dark')
         document.querySelector('div.likely').classList.remove('likely-light')
-        document.querySelector('div.comments-dark').classList.add('invisible')
-        document.querySelector('div.comments-white').classList.remove('invisible')
+        document.querySelector('div.comments-dark').classList.add('hidden')
+        document.querySelector('div.comments-white').classList.remove('hidden')
 
       }
     </script>
@@ -75,17 +75,6 @@
         
 
 <h2 class="text-2xl font-bold">Страничка для теста перкключения темной темы</h2>
-
-<h3> Изменения цвета likely</h3>
-
-<div class="likely likely_visible likely_ready py-4">
-  <div class="twitter">Твитнуть</div>
-  <div class="facebook">Поделиться</div>
-  <div class="vkontakte">Поделиться</div>
-  <div class="telegram">Отправить</div>
-  <div class="linkedin">Линкануть</div>
-</div>
-
 <h3>Изменение цвета комментариев</h3>
 
 <!--Telegram comments widget -->
@@ -102,6 +91,18 @@
 
 <!--data-dark="1"-->
 
+
+
+
+<h3> Изменения цвета likely</h3>
+
+<div class="likely likely_visible likely_ready py-4">
+  <div class="twitter">Твитнуть</div>
+  <div class="facebook">Поделиться</div>
+  <div class="vkontakte">Поделиться</div>
+  <div class="telegram">Отправить</div>
+  <div class="linkedin">Линкануть</div>
+</div>
 
 
 
@@ -138,14 +139,14 @@
             localStorage.theme = 'light'
             document.documentElement.classList.remove('dark')
             document.querySelector('div.likely').classList.remove('likely-light')
-            document.querySelector('div.comments-dark').classList.add('invisible')
-            document.querySelector('div.comments-white').classList.remove('invisible')
+            document.querySelector('div.comments-dark').classList.add('hidden')
+            document.querySelector('div.comments-white').classList.remove('hidden')
           } else {
             localStorage.theme = 'dark'
             document.documentElement.classList.add('dark')
             document.querySelector('div.likely').classList.add('likely-light')
-            document.querySelector('div.comments-white').classList.add('invisible')
-            document.querySelector('div.comments-dark').classList.remove('invisible')
+            document.querySelector('div.comments-white').classList.add('hidden')
+            document.querySelector('div.comments-dark').classList.remove('hidden')
           }
         });
       </script>
