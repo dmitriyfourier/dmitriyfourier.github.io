@@ -30,9 +30,9 @@ layout: blog
 	{% assign nextPost = collections.posts | getNextCollectionItem: page %}
 	{%- if nextPost or previousPost %}
 	<hr>
-	<div class="post-footer">
-	  <div class="text-sm">{%- if previousPost %}← <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>{% endif %}</div>
-	  <div class="text-sm">{%- if nextPost %}<a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> → {% endif %}</div>
+	<div class="flex flex-row justify-between">
+	  <div class="basis-1/2 justify-self-start">{%- if previousPost %}← <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>{% endif %}</div>
+	  <div class="basis-1/2 justify-self-end">{%- if nextPost %}<a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> → {% endif %}</div>
 	</div>
 	{%- endif %}
 	{%- endif %}
