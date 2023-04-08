@@ -39,14 +39,18 @@
   <meta name="twitter:site" content="@bnijenhuis">
   <meta name="twitter:creator" content="@bnijenhuis">
 
-  <!--<script>
-      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      if (isDarkMode()) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-    </script>-->
+  <script>
+    const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+      '(prefers-color-scheme: dark)').matches);
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+      document.querySelector('div.likely').classList.add('likely-light')
+    } else {
+      document.documentElement.classList.remove('dark')
+      document.querySelector('div.likely').classList.remove('likely-light')
+
+    }
+  </script>
 </head>
 
 <body class="dark:text-mk-white dark:bg-mk-background">
@@ -145,17 +149,11 @@
       if (isDarkMode()) {
         localStorage.theme = 'light'
         document.documentElement.classList.remove('dark')
-        $('.likely').addClass('likely');
-        $('.comments-app').data('data-dark', 0);
-        setTimeout(function () {
-          cookieStorage.removeCookie('YellowNightMode');
-        }, 100);
+        document.querySelector('div.likely').classList.remove('likely-light')
       } else {
         localStorage.theme = 'dark'
         document.documentElement.classList.add('dark')
-        $('.likely').removeClass('likely-light');
-        $('.comments-app').data('data-dark', 1);
-        cookieStorage.setCookie('YellowNightMode', 'true', 2628000000, '/');
+        document.querySelector('div.likely').classList.add('likely-light')
       }
     });
   </script>

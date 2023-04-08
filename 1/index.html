@@ -1,48 +1,52 @@
 <!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
 
-    <title>Тестовое название для главной страницы部落格</title>
-    <meta name="description" content="Тестовое описание для главной страницы">
+  <title>Тестовое название для главной страницы部落格</title>
+  <meta name="description" content="Тестовое описание для главной страницы">
 
-    <!--links-->
-    <link rel="canonical" href="https://furye.ru/1/">
-    <!-- fonts -->
-    <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
-    <!--/assets/img/favicon/-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="194x194" href="/assets/img/favicon/favicon-194x194.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#202020">
-    <meta name="msapplication-TileColor" content="#202020">
-    <meta name="theme-color" content="#202020">
+  <!--links-->
+  <link rel="canonical" href="https://furye.ru/1/">
+  <!-- fonts -->
+  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <!--/assets/img/favicon/-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/assets/img/favicon/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#202020">
+  <meta name="msapplication-TileColor" content="#202020">
+  <meta name="theme-color" content="#202020">
 
-    <!--styles-->
-    <link href="/assets/styles/tailwind.css" rel="stylesheet">
-    <!--Scripts-->
-    <script>
-      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      if (isDarkMode()) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-    </script>
-  </head>
- 
-  <body class="dark:text-mk-white dark:bg-mk-background"> 
-    <header>
-      <nav class="font-normal mb-4"> 
+  <!--styles-->
+  <link href="/assets/styles/tailwind.css" rel="stylesheet">
+  <!--Scripts-->
+  <script>
+    const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+      '(prefers-color-scheme: dark)').matches);
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+      document.querySelector('div.likely').classList.add('likely-light')
+    } else {
+      document.documentElement.classList.remove('dark')
+      document.querySelector('div.likely').classList.remove('likely-light')
+
+    }
+  </script>
+</head>
+
+<body class="dark:text-mk-white dark:bg-mk-background">
+  <header>
+    <nav class="font-normal mb-4"> 
   <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
     <a href="/" class="flex items-center space-x-4 no-underline">
       <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><source type="image/jpeg" srcset="/assets/img/furye-jW4TMYjeYE-240w.jpeg 240w" sizes="100vw"><img src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240" class="mr-3 w-10 h-10 sm:h-9 rounded-full" alt="Дмитрий Фурье" loading="lazy" decoding="async"></picture>
@@ -61,17 +65,17 @@
     </div>
   </div>
 </nav>
-    </header>
-      <main>
-        
-        
+  </header>
+  <main>
+
+    
 
 <h2 class="text-2xl font-bold">Сделал</h2>
 <h2 class="text-2xl font-bold">Наговорил</h2>
-      
-      </main>
-      
-      <footer class="dark:black">
+
+  </main>
+
+  <footer class="dark:black">
   <div class="mx-auto  pb-10">
     <p class="text-sm py-2">
       <!--Добавляем автора сайта-->
@@ -95,18 +99,21 @@
 -->
   </p></div>
 </footer>
-      <!--<script>
-        document.getElementById("toggleDarkMode").addEventListener("change", function() {
-          if (isDarkMode()) {
-            localStorage.theme = 'light'
-            document.documentElement.classList.remove('dark')
-          } else {
-            localStorage.theme = 'dark'
-            document.documentElement.classList.add('dark')
-          }
-        });
-      </script>-->
-      <script src="/assets/scripts/jquery.min.js"></script>
-      <script src="/assets/scripts/fotorama.min.js"></script>
-  
+  <script>
+    document.getElementById("toggleDarkMode").addEventListener("change", function () {
+      if (isDarkMode()) {
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+        document.querySelector('div.likely').classList.remove('likely-light')
+      } else {
+        localStorage.theme = 'dark'
+        document.documentElement.classList.add('dark')
+        document.querySelector('div.likely').classList.add('likely-light')
+      }
+    });
+  </script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <script src="/assets/scripts/fotorama.min.js"></script>
+
+
 </body></html>
