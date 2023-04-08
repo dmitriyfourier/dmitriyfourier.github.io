@@ -37,11 +37,14 @@
       if (isDarkMode()) {
         document.documentElement.classList.add('dark')
         document.querySelector('div.likely').classList.add('likely-light')
+        document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "1");
       } else {
         document.documentElement.classList.remove('dark')
         document.querySelector('div.likely').classList.remove('likely-light')
+        document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "0");
       }
     </script>
+    <!-- bc-content-wrap -->
   </head>
  
   <body class="dark:text-mk-white dark:bg-mk-background"> 
@@ -61,10 +64,12 @@
             localStorage.theme = 'light'
             document.documentElement.classList.remove('dark')
             document.querySelector('div.likely').classList.remove('likely-light')
+            document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "0");
           } else {
             localStorage.theme = 'dark'
             document.documentElement.classList.add('dark')
             document.querySelector('div.likely').classList.add('likely-light')
+            document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "1");
           }
         });
       </script>
