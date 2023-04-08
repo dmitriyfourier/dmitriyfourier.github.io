@@ -37,10 +37,14 @@
       if (isDarkMode()) {
         document.documentElement.classList.add('dark')
         document.querySelector('div.likely').classList.add('likely-light')
+        document.querySelector('body.bc-embed-mode').classList.add('bc-dark')
         document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "1");
+        document.querySelector('script[data-comments-app-website="OvICjhJt"]').removeAttribute("data-dark", "0");
       } else {
         document.documentElement.classList.remove('dark')
         document.querySelector('div.likely').classList.remove('likely-light')
+        document.querySelector('body.bc-embed-mode').classList.remove('bc-dark')
+        document.querySelector('script[data-comments-app-website="OvICjhJt"]').removeAttribute("data-dark", "1");
         document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "0");
       }
     </script>
@@ -64,11 +68,13 @@
             localStorage.theme = 'light'
             document.documentElement.classList.remove('dark')
             document.querySelector('div.likely').classList.remove('likely-light')
+            document.querySelector('body.bc-embed-mode').classList.remove('bc-dark')
             document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "0");
           } else {
             localStorage.theme = 'dark'
             document.documentElement.classList.add('dark')
             document.querySelector('div.likely').classList.add('likely-light')
+            document.querySelector('body.bc-embed-mode').classList.add('bc-dark')
             document.querySelector('script[data-comments-app-website="OvICjhJt"]').setAttribute("data-dark", "1");
           }
         });
