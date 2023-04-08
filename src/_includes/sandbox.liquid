@@ -36,8 +36,12 @@
       const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
       if (isDarkMode()) {
         document.documentElement.classList.add('dark')
+        document.querySelector('div.likely').classList.add('likely-light')
+        document.querySelector('section.comments').classList.add('likely-light')
       } else {
         document.documentElement.classList.remove('dark')
+        document.querySelector('div.likely').classList.remove('likely-light')
+        document.querySelector('section.comments').classList.add('likely-light')
       }
     </script>
   </head>
@@ -58,9 +62,11 @@
           if (isDarkMode()) {
             localStorage.theme = 'light'
             document.documentElement.classList.remove('dark')
+            document.querySelector('div.likely').classList.remove('likely-light')
           } else {
             localStorage.theme = 'dark'
             document.documentElement.classList.add('dark')
+            document.querySelector('div.likely').classList.add('likely-light')
           }
         });
       </script>
