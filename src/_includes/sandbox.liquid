@@ -37,13 +37,9 @@
       if (isDarkMode()) {
         document.documentElement.classList.add('dark')
         document.querySelector('div.likely').classList.add('likely-light')
-        document.querySelector('div.comments-white').classList.add('hidden')
-        document.querySelector('div.comments-dark').classList.remove('hidden')
       } else {
         document.documentElement.classList.remove('dark')
         document.querySelector('div.likely').classList.remove('likely-light')
-        document.querySelector('div.comments-dark').classList.add('hidden')
-        document.querySelector('div.comments-white').classList.remove('hidden')
 
       }
     </script>
@@ -67,14 +63,10 @@
             localStorage.theme = 'light'
             document.documentElement.classList.remove('dark')
             document.querySelector('div.likely').classList.remove('likely-light')
-            document.querySelector('div.comments-dark').classList.add('hidden')
-            document.querySelector('div.comments-white').classList.remove('hidden')
           } else {
             localStorage.theme = 'dark'
             document.documentElement.classList.add('dark')
             document.querySelector('div.likely').classList.add('likely-light')
-            document.querySelector('div.comments-white').classList.add('hidden')
-            document.querySelector('div.comments-dark').classList.remove('hidden')
           }
         });
       </script>
