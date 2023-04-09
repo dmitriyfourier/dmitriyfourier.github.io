@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
+
+    <title>Тестирование скрипта для переключение</title>
+    <meta name="description" content="Тестовое описание для главной страницы">
+
+    <!--links-->
+    <link rel="canonical" href="https://furye.ru/sandbox/">
+    <!-- fonts -->
+    <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+    <!--/assets/img/favicon/-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/assets/img/favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#202020">
+    <meta name="msapplication-TileColor" content="#202020">
+    <meta name="theme-color" content="#202020">
+
+    <!--styles-->
+    <link href="/assets/styles/tailwind.css" rel="stylesheet">
+    <!--Scripts-->
+    <script>
+      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDarkMode()) {
+        document.documentElement.classList.add('dark')
+        document.querySelector('div.likely').classList.add('likely-light')
+      } else {
+        document.documentElement.classList.remove('dark')
+        document.querySelector('div.likely').classList.remove('likely-light')
+
+      }
+    </script>
+    <!-- bc-content-wrap -->
+  </head>
+ 
+  <body class="dark:text-mk-white dark:bg-mk-background"> 
+    <header>
+      <nav class="font-normal mb-4"> 
+  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
+    <a href="/" class="flex items-center space-x-4 no-underline">
+      <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><source type="image/jpeg" srcset="/assets/img/furye-jW4TMYjeYE-240w.jpeg 240w" sizes="100vw"><img src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240" class="mr-3 w-10 h-10 sm:h-9 rounded-full" alt="Дмитрий Фурье" loading="lazy" decoding="async"></picture>
+      <div class="ml-0.5 self-center font-semibold whitespace-nowrap dark:text-white">Дмитрий Фурье</div>
+    </a>
+    <div class="flex items-center lg:order-2">
+      <a href="/done" class="dark:text-white text-black bg-primary-700 hover:bg-primary-800 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 link no-visited">Проекты</a>
+      <a href="/podcasts" class="dark:text-white text-black bg-primary-700 hover:bg-primary-800 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 link no-visited">Наговорил </a>
+      <a href="/posts/" class="dark:text-white text-black bg-primary-700 hover:bg-primary-800 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 link no-visited">Блог</a>
+      <span class="text-gray-800 dark:text-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
+        <label id="toggleDarkMode" class="relative inline-flex items-center cursor-pointer switch-button">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+          </div>
+        </label></span>
+    </div>
+  </div>
+</nav>
+    </header>
+      <main>
+        
+        
+
+<h2 class="text-2xl font-bold">Страничка для теста перкключения темной темы</h2>
+<h3>Изменение цвета комментариев</h3>
+
+<!--Telegram comments widget -->
+<section class="comments py-4" id="comments">
+  <div class="widget emerge" data-hold="500" style="transition: opacity 500ms ease-out 0s; opacity: 1;">
+    <div class="comments-white dark:hidden visible">
+      <script async="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5"></script>
+    </div>
+    <div class="comments-dark dark:inline hidden">
+    <script async="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5" data-dark="1"></script>
+    </div>
+</div>
+</section>
+
+<!--data-dark="1"-->
+
+
+
+
+<h3> Изменения цвета likely</h3>
+
+<div class="likely likely_visible likely_ready py-4">
+  <div class="twitter">Твитнуть</div>
+  <div class="facebook">Поделиться</div>
+  <div class="vkontakte">Поделиться</div>
+  <div class="telegram">Отправить</div>
+  <div class="linkedin">Линкануть</div>
+</div>
+
+
+
+      
+      </main>
+      
+      <footer class="dark:black">
+  <div class="mx-auto  pb-10">
+    <p class="text-sm py-2">
+      <!--Добавляем автора сайта-->
+      <span class="space-out-bottom-mili-xs">© Дмитрий Фурье × </span>
+      <!--Добавляем копирайт на сайт и даты-->
+      <span>2017 — 2023</span>
+      <!---->
+        
+<!--Ссылки на соц-сети
+      
+        <a href=https://github.io/kohrongying>Github</a> 
+      
+
+      
+        &middot; <a href=https://www.linkedin.com/in/rongyingkoh/>LinkedIn</a>
+      
+
+      
+        &middot; <a href=https://twitter.com/DmitriyFourier>Twitter</a>
+      
+-->
+  </p></div>
+</footer>
+      <script>
+        document.getElementById("toggleDarkMode").addEventListener("change", function() {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+            document.querySelector('div.likely').classList.remove('likely-light')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+            document.querySelector('div.likely').classList.add('likely-light')
+          }
+        });
+      </script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <script src="/assets/scripts/fotorama.min.js"></script>
+  <script src="/assets/scripts/likely.min.js"></script>
+  
+</body></html>
