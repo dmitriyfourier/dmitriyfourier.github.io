@@ -27,7 +27,7 @@ body {
 
 /*blockquote*/
 blockquote {
-  @apply border-l-4 border-l-mk-comments dark:border-l-mk-yellow
+  @apply border-l-4 border-l-mk-comments dark:border-l-mk-yellow-main;
 }
 
 blockquote > p {
