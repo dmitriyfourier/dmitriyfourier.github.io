@@ -59,7 +59,9 @@ https://twitter.com/andrey_sitnik/status/1644667063699423233
 ## Instagram
 https://www.instagram.com/p/CpumzTZNB-Q/?utm_source=ig_web_copy_link
 
-## Telegram
+## Telegram <i class="lab la-telegram"></i>
+
+<p>Пишите в телеграм <i class="lab la-telegram"></i></p>
 
 ## Tg SC
 
