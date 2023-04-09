@@ -1,20 +1,20 @@
 ---
 layout: blog
 ---
-
+<article>
 <h1>
     {{ title}}
 </h1>
-
 <div>
     <em><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></em> &middot; 
     <span>Время чтения ≈ {{ content | readTime }} мин.</span>
 </div>
-
 <div>
   {{ content }}
-{% include "likely.liquid" %}
+
 </div>
+</article>
+{% include "likely.liquid" %}
 <div class="mt-3 pb-4 text-xs" style="color:#999">
 	{% for tag in tags %}
 	  {% if tag != "posts" %}

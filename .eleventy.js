@@ -5,10 +5,12 @@ const slugify = require('slugify')
 const img2picture = require('eleventy-plugin-img2picture')
 const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
+const embedEverything = require("eleventy-plugin-embed-everything");
 moment.locale('ru')
 
 module.exports = function(eleventyConfig) {
   // Plugins
+  eleventyConfig.addPlugin(embedEverything);
   eleventyConfig.addPlugin(syntaxHighlight)
   eleventyConfig.addFilter('dateIso', date => {
     return moment(date).toISOString()
