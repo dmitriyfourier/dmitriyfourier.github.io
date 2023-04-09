@@ -19,18 +19,17 @@ pagination:
     class="text-base font-normal"> &middot; Время чтения ≈ {{ post.templateContent | readTime }} мин</span>
   <div>{{ post.templateContent }}</div>
 
-  <div class="flex justify-between items-center mt-4">
-    <div class="flex-1 pr-4 text-gray-500 hover:text-orange-500 focus:text-orange-500">
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4 text-gray-500 hover:text-orange-500 focus:text-orange-500">
       {% for tag in post.data.tags %}
       {% if tag != "posts" %}
-      <span class="pr-2 text-xs text-gray-500 "><a href="/tags/{{ tag | slug }}"
-          class="link-inherit link-novisited hover:text-orange-500 focus:text-orange-500 active:text-orange-500">{{ tag }}</a></span>
+      <span class="pr-2 text-gray-500"><a href="/tags/{{ tag | slug }}"
+          class="link-inherit link-novisited hover:text-orange-500 focus:text-orange-500 active:text-orange-500 ">{{ tag }}</a></span>
       {% endif %}
       {% endfor %}
     </div>
 
-    <a class="flex-none text-xs bordeb-b border-b-gray-500 hover:text-orange-500 focus:text-orange-500 active:text-orange-500"
-      href="{{ post.url }}#comments">Комментарии</a>
+
   </div>
 
 </div>

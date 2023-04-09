@@ -61,3 +61,20 @@ p {
 .eleventy-plugin-embed-instagram{
   @apply w-2/3 max-w-lg;
 }
+
+@media screen and (min-width: 1050px) {
+  p.aside {
+      position: relative;
+      text-align: left;
+      max-width: 200px;
+      margin-left: 4%;
+      margin-top: .15em;
+      float: right;
+      clear: right;
+  }
+}
+  p.aside {
+  line-height: 1.4;
+  font-size: 0.875em;
+  color: #4A4A4A;
+}
