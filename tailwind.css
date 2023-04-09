@@ -5,6 +5,7 @@
 @import "/src/assets/styles/links.css";
 @import "/src/assets/styles/likely.css";
 @import "/src/assets/styles/fotorama.css";
+@import "/src/assets/styles/line-awesome.css";
 @import "tailwindcss/utilities";
 @import "tailwindcss/components";
 
@@ -55,4 +56,8 @@ p {
 
 .tg-embeded{
   @apply max-w-lg;
+}
+
+.eleventy-plugin-embed-instagram{
+  @apply w-2/3 max-w-lg;
 }
