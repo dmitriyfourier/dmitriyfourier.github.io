@@ -15,8 +15,10 @@ pagination:
   <h2 class="text-2xl sm:text-4xl font-bold leading-tight">
     <a class="link-novisited" href="{{ post.url }}">{{ post.data.title }}</a>
   </h2>
+  <div>
   <em><time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></em><span
     class="text-base font-normal"> &middot; Время чтения ≈ {{ post.templateContent | readTime }} мин</span>
+  </div>
   <div>{{ post.templateContent }}</div>
 
   <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
