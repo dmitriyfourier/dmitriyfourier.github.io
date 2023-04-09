@@ -52,3 +52,7 @@ p {
   @apply bg-tg-light dark:bg-tg-dark;
   @apply border-mk-comments dark:border-tg-deepdark;
 }
+
+.tg-embeded{
+  @apply max-w-lg;
+}

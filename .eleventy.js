@@ -132,7 +132,16 @@ eleventyConfig.on('afterBuild', () => {
       }
   })
 });
+  // telgram hortcode embeded
+  eleventyConfig.addLiquidShortcode('tg-embed', (tgchannel,tgpost,) => {
+    return `<div class="tg-embeded"> <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="${tgchannel}/${tgpost}" data-width="100%" data-userpic="true" data-color="CA9C0E" data-dark="1" data-dark-color="F0B138"></script></div>`
+  })
   // IMAGES
+  // asset_img shortcode
+  eleventyConfig.addLiquidShortcode('asset_img', (filename, alt, caption,) => {
+    return `<figure><img class="my-4" src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
+  })
+
   eleventyConfig.addPlugin(img2picture, {
     // Should be same as Eleventy input folder set using `dir.input`.
     eleventyInputDir: './src/',
@@ -147,13 +156,8 @@ eleventyConfig.on('afterBuild', () => {
     extensions: ['jpg', 'png', 'jpeg'],
     formats: ['avif', 'webp', 'jpeg'],
     minWidth: 400,
-    maxWidth: 1280,
+    maxWidth: 1920,
     sizes:'100vw',
-  })
-
-  // asset_img shortcode
-  eleventyConfig.addLiquidShortcode('asset_img', (filename, alt) => {
-    return `<img class="my-4" src="/assets/img/${filename}" alt="${alt}" />`
   })
 
   return {
