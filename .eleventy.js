@@ -140,6 +140,12 @@ eleventyConfig.on('afterBuild', () => {
   eleventyConfig.addLiquidShortcode('aside', (text,) => {
     return `<p class="aside">${text}</p>`
   })
+
+  // shortcod note-image
+  eleventyConfig.addLiquidShortcode('aside-img', (filename,alt,caption) => {
+    return `<figure class="aside"><img max-wight="200" class="my-4" src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
+  })
+  
   // telgram hortcode embeded
   eleventyConfig.addLiquidShortcode('tg-embed', (tgchannel,tgpost,) => {
     return `<div class="tg-embeded"> <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="${tgchannel}/${tgpost}" data-width="100%" data-userpic="true" data-color="CA9C0E" data-dark="1" data-dark-color="F0B138"></script></div>`

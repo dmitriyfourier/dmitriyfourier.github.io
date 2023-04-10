@@ -63,7 +63,7 @@ p {
 }
 
 @media screen and (min-width: 1050px) {
-  p.aside {
+  figure.aside, p.aside {
       position: relative;
       text-align: left;
       max-width: 200px;
@@ -73,11 +73,17 @@ p {
       clear: right;
   }
 }
-  p.aside {
+ figure.aside, p.aside {
   line-height: 1.4;
   font-size: 0.875em;
   color: #4A4A4A;
 }
+
+
+  figure.aside{
+    max-width: 200px;
+  }
+
 
 div.warp-table {
   @apply overflow-x-auto;
