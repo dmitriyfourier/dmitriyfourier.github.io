@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Typography test</title>
+  <meta name="description" content="">
+
+  <!--links-->
+  <link rel="canonical" href="https://furye.ru/posts/sandbox-typography/">
+  <!--/assets/img/favicon/-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/assets/img/favicon/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#202020">
+  <meta name="msapplication-TileColor" content="#202020">
+  <meta name="theme-color" content="#202020">
+  <!-- fonts -->
+  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <!--styles-->
+  <link href="/assets/styles/tailwind.css" rel="stylesheet">
+  <!--Opengraph-->
+  <meta property="og:title" content="">
+  <meta property="og:url" content="/posts/sandbox-typography/">
+  
+  <meta property="og:image" content="https://furye.ru/assets/img/og/-preview.jpeg">
+  <meta property="og:image:secure_url" content="https://furye.ru/assets/img/og/-preview.jpeg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bnijenhuis">
+  <meta name="twitter:creator" content="@bnijenhuis">
+
+  <script>
+    const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+      '(prefers-color-scheme: dark)').matches);
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+      document.querySelector('div.likely').classList.add('likely-light')
+    } else {
+      document.documentElement.classList.remove('dark')
+      document.querySelector('div.likely').classList.remove('likely-light')
+
+    }
+  </script>
+</head>
+
+<body class="dark:text-mk-white dark:bg-mk-background">
+  <header>
+    <nav class="font-normal mb-4"> 
+  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
+    <a href="/" class="flex items-center space-x-4 no-underline">
+      <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><source type="image/jpeg" srcset="/assets/img/furye-jW4TMYjeYE-240w.jpeg 240w" sizes="100vw"><img src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240" class="mr-3 w-10 h-10 sm:h-9 rounded-full" alt="Дмитрий Фурье" loading="lazy" decoding="async"></picture>
+      <div class="ml-0.5 self-center font-semibold whitespace-nowrap dark:text-white">Дмитрий Фурье</div>
+    </a>
+    <div class="flex items-center lg:order-2">
+      <a href="/done" class="dark:text-white text-black bg-primary-700 hover:bg-primary-800 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 link link-novisited">Проекты</a>
+      <a href="/podcasts" class="dark:text-white text-black bg-primary-700 hover:bg-primary-800 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 link link-novisited">Наговорил </a>
+      <a href="/posts/" class="dark:text-white text-black bg-primary-700 hover:bg-primary-800 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 link link-novisited">Блог</a>
+      <span class="text-gray-800 dark:text-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
+        <label id="toggleDarkMode" class="relative inline-flex items-center cursor-pointer switch-button">
+          <input type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+          </div>
+        </label></span>
+    </div>
+  </div>
+</nav>
+  </header>
+  <main>
+
+    <article class="article-post">
+<h1>
+    Typography test
+</h1>
+<div>
+    <em><time datetime="2023-03-19T00:00:00.000Z">19 марта 2023 г.</time></em> · 
+    <span>Время чтения ≈ 5 мин.</span>
+</div>
+<div>
+  <h1>Заголовок 1 уровня</h1>
+<h2>Заголовок 2 уровня</h2>
+<p>Внешнее кольцо осознаёт конструктивный симулякр, и это придает ему свое звучание, свой характер. Погрешность уязвима. Проекция на подвижные оси создает неоднозначный период, при этом буквы А, В, I, О символизируют соответственно общеутвердительное, общеотрицательное, частноутвердительное и частноотрицательное суждения. Антропосоциология фонетически переворачивает резкий символ.</p>
+<h3>Заголовк 3 уровня</h3>
+<p>Наряду с этим деонтология просветляет силовой трёхосный гироскопический стабилизатор. Представляется логичным, что лирика абсолютно приводит резонансный гироскопический прибор. Реальность начинает диалогический закон исключённого третьего. Уравнение Эйлера огромно.</p>
+<h4>Заголовок 4 уровня</h4>
+<p>Смысл жизни неизменяем. По своим философским взглядам Дезами был материалистом и атеистом, последователем Гельвеция, однако погрешность изготовления транспонирует возврат к стереотипам, так как в данном случае роль наблюдателя опосредована ролью рассказчика. Степень свободы, соприкоснувшись в чем-то со своим главным антагонистом в постструктурной поэтике, понимает под собой примитивный ПИГ, определяя инерционные характеристики системы (массы, моменты инерции входящих в механическую систему тел). Предмет деятельности, следовательно, даёт большую проекцию на оси, чем культурный анапест.</p>
+<p class="aside">Заметка на полях созданная шорт-кодом</p>
+<h5>Заголовок 5 уровня</h5>
+<h6>Заголовок 6 уровня</h6>
+<h2>Цитата</h2>
+<blockquote>
+<p>Я полагал в те дни, что наши иллюзорные личности подобны жемчужинам в раковине. В раковину попадает песчинка, моллюск трется о нее своим нежным телом, выделяет секрет, и песчинка обрастает перламутром.
+Точно так же и мы появляемся из борьбы с обстоятельствами. И чем яростнее мы о них тремся, тем сильнее делаемся, и даже представить невозможно, до каких огромных размеров может разрастись на этом пути жемчужина по имени человек.</p>
+</blockquote>
+<h2>Маркированный список</h2>
+<ul>
+<li>1 Первый пункт</li>
+<li>2 Второй пункт</li>
+<li>3 Третий пункт
+<ul>
+<li>3.1 Третий с копейкой</li>
+</ul>
+</li>
+<li>Четвертый пунтк</li>
+</ul>
+<h2>Нумированный список</h2>
+<ol>
+<li><strong>Один</strong>
+<ol>
+<li>Один и копейка</li>
+</ol>
+</li>
+<li>Два</li>
+<li>Три</li>
+<li>Четыре</li>
+</ol>
+<h2>Таблица</h2>
+<div class="warp-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Овоши</th>
+<th style="text-align:left">Фрукты</th>
+<th style="text-align:left">Животные</th>
+<th style="text-align:left">Канцелярские товары</th>
+<th style="text-align:left">Метрики</th>
+<th style="text-align:left">Птицы</th>
+<th style="text-align:left">Техника</th>
+<th style="text-align:left">Болезни</th>
+<th style="text-align:left">Еда</th>
+<th style="text-align:left">Сыр</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Огурец</td>
+<td style="text-align:left">Банан</td>
+<td style="text-align:left">Жираф</td>
+<td style="text-align:left">Ножницы</td>
+<td style="text-align:left">ROE</td>
+<td style="text-align:left">Голубь</td>
+<td style="text-align:left">Видеокарта</td>
+<td style="text-align:left">Ветрянка</td>
+<td style="text-align:left">Фуагра</td>
+<td style="text-align:left">Адыгейский</td>
+</tr>
+<tr>
+<td style="text-align:left">Помидор</td>
+<td style="text-align:left">Яблоко</td>
+<td style="text-align:left">Тигр</td>
+<td style="text-align:left">Тетради</td>
+<td style="text-align:left">CAC</td>
+<td style="text-align:left">утка</td>
+<td style="text-align:left">Процессор</td>
+<td style="text-align:left">Пневмония</td>
+<td style="text-align:left">Макароны</td>
+<td style="text-align:left">Пармезан</td>
+</tr>
+<tr>
+<td style="text-align:left">Тыква</td>
+<td style="text-align:left">Дыня</td>
+<td style="text-align:left">Слон</td>
+<td style="text-align:left">Карандаши</td>
+<td style="text-align:left">LTV</td>
+<td style="text-align:left">Гусь</td>
+<td style="text-align:left">Клавиатура</td>
+<td style="text-align:left">Краснуха</td>
+<td style="text-align:left">Лапша</td>
+<td style="text-align:left">Тофу</td>
+</tr>
+<tr>
+<td style="text-align:left">Картошка</td>
+<td style="text-align:left">Персик</td>
+<td style="text-align:left">Кошка</td>
+<td style="text-align:left">Ручки</td>
+<td style="text-align:left">CHURN</td>
+<td style="text-align:left">Попугай</td>
+<td style="text-align:left">Мышь</td>
+<td style="text-align:left">Гепатит</td>
+<td style="text-align:left">Кунжут</td>
+<td style="text-align:left">Фета</td>
+</tr>
+<tr>
+<td style="text-align:left">Морковь</td>
+<td style="text-align:left">Абрикос</td>
+<td style="text-align:left">Капибара</td>
+<td style="text-align:left">Скрепки</td>
+<td style="text-align:left">Revenue</td>
+<td style="text-align:left">Сорока</td>
+<td style="text-align:left">Веб-камера</td>
+<td style="text-align:left">Дерматит</td>
+<td style="text-align:left">Плов</td>
+<td style="text-align:left">Моцарелла</td>
+</tr>
+<tr>
+<td style="text-align:left">Cвекла</td>
+<td style="text-align:left">Манго</td>
+<td style="text-align:left">Мангус</td>
+<td style="text-align:left">Кнопки</td>
+<td style="text-align:left">ARPU</td>
+<td style="text-align:left">Ворона</td>
+<td style="text-align:left">Трекбол</td>
+<td style="text-align:left">Простуда</td>
+<td style="text-align:left">Сомса</td>
+<td style="text-align:left">Рикотта</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</article>
+<!-- # ===== Tags =====  # -->
+<div class="flex flex-nowrap mt-3 pb-4 text-xs" style="color:#999">
+	
+	  
+	
+	</div>
+	<!-- # ===== Previous and Next =====  #-->
+	
+	
+	<hr>
+	<div class="flex flex-row justify-between">
+	  <div class="basis-1/2 justify-self-start">← <a href="/posts/permian-navigation-part6/">Уличная навигация в&nbsp;Перми [Часть&nbsp;6] ×&nbsp;Переписка с&nbsp;департаментом ЖКХ и&nbsp;Благоустройства</a></div>
+	  <div class="basis-1/2 justify-self-end"><a href="/posts/sandbox-post/">Sandbox&nbsp;Post</a> → </div>
+	</div>
+  <!--Telegram comments widget -->
+<section class="comments py-4" id="comments">
+  <div class="widget emerge" data-hold="500" style="transition: opacity 500ms ease-out 0s; opacity: 1;">
+    <div class="comments-white dark:hidden visible">
+      <script async="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5"></script>
+    </div>
+    <div class="comments-dark dark:inline hidden">
+    <script async="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5" data-dark="1"></script>
+    </div>
+</div>
+</section>
+
+<!--data-dark="1"-->
+
+
+
+
+  </main>
+
+  <footer class="dark:black">
+  <div class="mx-auto  pb-10">
+    <p class="text-sm py-2">
+      <!--Добавляем автора сайта-->
+      <span class="space-out-bottom-mili-xs">© Дмитрий Фурье × </span>
+      <!--Добавляем копирайт на сайт и даты-->
+      <span>2017 — 2023</span>
+      <!---->
+        
+<!--Ссылки на соц-сети
+      
+        <a href=https://github.io/kohrongying>Github</a> 
+      
+
+      
+        &middot; <a href=https://www.linkedin.com/in/rongyingkoh/>LinkedIn</a>
+      
+
+      
+        &middot; <a href=https://twitter.com/DmitriyFourier>Twitter</a>
+      
+-->
+  </p></div>
+</footer>
+
+  <script>
+    document.getElementById("toggleDarkMode").addEventListener("change", function () {
+      if (isDarkMode()) {
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+        document.querySelector('div.likely').classList.remove('likely-light')
+      } else {
+        localStorage.theme = 'dark'
+        document.documentElement.classList.add('dark')
+        document.querySelector('div.likely').classList.add('likely-light')
+      }
+    });
+  </script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <script src="/assets/scripts/fotorama.min.js"></script>
+  <script src="/assets/scripts/likely.min.js"></script>
+
+
+</body></html>
