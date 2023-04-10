@@ -143,7 +143,7 @@ eleventyConfig.on('afterBuild', () => {
 
   // shortcod note-image
   eleventyConfig.addLiquidShortcode('aside-img', (filename,alt,caption) => {
-    return `<figure class="aside"><img class="my-4" src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
+    return `<figure class="aside"><img src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
   })
   
   // telgram hortcode embeded
@@ -153,7 +153,7 @@ eleventyConfig.on('afterBuild', () => {
   // IMAGES
   // asset_img shortcode
   eleventyConfig.addLiquidShortcode('asset_img', (filename, alt, caption,) => {
-    return `<figure><img class="my-4" src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
+    return `<figure><img src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
   })
 
   eleventyConfig.addPlugin(img2picture, {
