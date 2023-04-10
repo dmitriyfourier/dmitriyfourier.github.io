@@ -21,7 +21,7 @@ module.exports = {
         kaggle:'#20beff',
         blizzard:'#0e86ca',
         epicgames:'#121212',
-        medium:'#34a245',
+        medium:'#1a8917',
         vk:'#45668e',
         xbox:'#52b043',
         twitch:'#9146ff',
@@ -34,11 +34,11 @@ module.exports = {
         imdb:'#f6c700',
         'github': {
           light:'#333',
-          dark: #f5f5f5,
+          dark: '#f5f5f5',
         },
         'steam': {
           light:'#000000',
-          dark: #f5f5f5,
+          dark: '#f5f5f5',
         },
       },
       'tg': {
