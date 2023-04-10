@@ -2,12 +2,12 @@
 layout: blog
 ---
 <article class="article-post">
-<h1>
+<h1 class="mb-4">
     {{ title}}
 </h1>
-<div>
-    <em><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></em> &middot; 
-    <span>Время чтения ≈ {{ content | readTime }} мин.</span>
+<div class="mb-4 text-mk-comments">
+    <em><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></em> •
+    <span class=>Время чтения ≈ {{ content | readTime }} мин.</span>
 </div>
 <div>
   {{ content }}
