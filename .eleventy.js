@@ -75,14 +75,18 @@ module.exports = function(eleventyConfig) {
     })
   })
 
-  const md = markdownIt({ html: true, linkify: true })
-  /* md.use(markdownItAnchor, { 
+const md = markdownIt({ html: true, linkify: true })
+ /*md.use(markdownItAnchor, { 
     level: [1, 2], 
     permalink: markdownItAnchor.permalink.headerLink({ 
       safariReaderFix: true,
       class: 'header-anchor',
     })
   })*/
+
+  // MD Table Container // 
+
+  
   eleventyConfig.setLibrary('md', md)
   // Open graph generation
   eleventyConfig.addFilter('splitlines', function(input) {

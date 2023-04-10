@@ -78,3 +78,7 @@ p {
   font-size: 0.875em;
   color: #4A4A4A;
 }
+
+div.warp-table {
+  @apply overflow-x-auto;
+}
