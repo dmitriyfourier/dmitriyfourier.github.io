@@ -85,6 +85,6 @@ p {
   }
 
 
-div.warp-table {
+div.warp {
   @apply overflow-x-auto;
 }

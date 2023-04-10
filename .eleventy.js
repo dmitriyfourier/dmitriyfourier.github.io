@@ -143,7 +143,7 @@ eleventyConfig.on('afterBuild', () => {
 
   // shortcod note-image
   eleventyConfig.addLiquidShortcode('aside-img', (filename,alt,caption) => {
-    return `<figure class="aside"><img max-wight="200" class="my-4" src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
+    return `<figure class="aside"><img class="my-4" src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`
   })
   
   // telgram hortcode embeded
