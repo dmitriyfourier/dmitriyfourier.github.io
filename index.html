@@ -70,17 +70,28 @@
 
     <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap items-top justify-end mr-0">
       <div id="nav-buttons" class="flex items-center w-full sm:w-full">
-        <div><a class="link-novisited" href="/posts">Блог</a> →</div>
-        <div class="text-gray-800 dark:text-white font-medium rounded-lg text-sm px-4 lg:px-5 p-0 lg:py-2.5 mr-2">
+        <div>
           <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
             <input type="checkbox" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outspanne-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+            <div class="flex justify-center items-center w-10 h-10 bg-gray-200 peer-focus:outspanne-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 dark:border-gray-600 peer-checked:bg-blue-600">
+              <div class="text-green-600 text-2xl dark:hidden">
+                <i class="las la-moon"></i>
+              </div>
+              <div class=" text-yellow-400 text-2xl hidden dark:visible dark:inline">
+                <i class="las la-sun"></i>
+              </div>
             </div>
-          </label></div>
-          
+        </label>
+        </div>
+        <div><a class="link-novisited" href="/posts">Блог</a> →</div>
+      </div>
+      
+
+         
+   
       </div>
     </div>
-  </div>
+  
 </nav>
 
 <script>
