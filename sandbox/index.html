@@ -58,11 +58,11 @@
     <div id="nav-menu" class="hidden sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
       <nav>
         <ul class="sm:flex items-center justify-between text-mk-blue dark:text-mk-yellow-main pt-0 sm:pt-0">
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 pl-6 lg:-ml-2" href="#">All
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:pr-3" href="#">All
               Shows</a></li>
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 pl-6 lg:-ml-2" href="#">Favourites</a></li>
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 pl-6 lg:-ml-2" href="#">Schedule</a></li>
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 pl-6 lg:-ml-2" href="#">Add
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:px-3" href="#">Вот тут отступы</a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:px-3" href="#">Schedule</a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:px-3" href="#">Add
               Show</a></li>
         </ul>
       </nav>
@@ -70,20 +70,30 @@
 
     <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap items-top justify-end mr-0">
       <div id="nav-buttons" class="flex items-center w-full sm:w-full">
-        <div>
+        <div class="px-4">
           <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
             <input type="checkbox" class="sr-only peer">
-            <div class="flex justify-center items-center w-10 h-10 bg-gray-200 peer-focus:outspanne-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 dark:border-gray-600 peer-checked:bg-blue-600">
-              <div class="text-green-600 text-2xl dark:hidden">
+            <div class="flex justify-center items-center w-8 h-8 
+              bg-tg-deepdark 
+              shadow-lg
+              shadow-mk-purple-deco
+              dark:shadow-mk-yellow-main
+              rounded-full
+              peer-hover::outspanne-none 
+              peer-hover::ring-2 
+              dark:bg-mk-yellow-main 
+              dark:border-gray-600 
+              peer-checked:bg-mk-yellow-main">
+              <div class="text-mk-yellow-main dark:hidden">
                 <i class="las la-moon"></i>
               </div>
-              <div class=" text-yellow-400 text-2xl hidden dark:visible dark:inline">
+              <div class=" text-mk-background hidden dark:visible dark:inline">
                 <i class="las la-sun"></i>
               </div>
             </div>
         </label>
         </div>
-        <div><a class="link-novisited" href="/posts">Блог</a> →</div>
+        <div class=""><a class="link-novisited" href="/posts">Блог</a> →</div>
       </div>
       
 
