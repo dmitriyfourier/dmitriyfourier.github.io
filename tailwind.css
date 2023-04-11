@@ -76,7 +76,7 @@ p {
  figure.aside, p.aside {
   line-height: 1.4;
   font-size: 0.875em;
-  color: #4A4A4A;
+  @apply text-mk-comments dark:text-mk-white;
 }
 
 

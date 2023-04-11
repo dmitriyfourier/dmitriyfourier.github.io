@@ -1,34 +1,33 @@
 <nav id="header" class="w-full z-30 top-10 py-1">
   <div class="w-full flex place-items-start justify-between mt-0 py-2">
 
-    <div id="mobileMenuButton" class="cursor-pointer sm:hidden block mr-6 inline-block left-0 top-0">
+    <div id="mobileMenuButton" class="cursor-pointer hidden block mr-6 inline-block left-0 top-0">
       <i class="las la-bars text-mk-background dark:text-mk-yellow-main text-2xl"></i>
-      </svg>
     </div>
     <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
 
-    <div id="nav-menu" class="hidden sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
+    <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
       <nav>
         <ul class="sm:flex items-center justify-between text-mk-blue dark:text-mk-yellow-main pt-0 sm:pt-0">
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:pr-3" href="#">All
-              Shows</a></li>
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:px-3"
-              href="#">Вот тут отступы</a></li>
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:px-3"
-              href="#">Schedule</a></li>
-          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-1 sm:pl-0 md:px-3" href="#">Add
-              Show</a></li>
+          <li class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
+            <a href="/" class="flex items-center no-underspanne link-novisited no-underline ">
+              <span class="hidden sm:inline-block">   <img  src="/assets/img/furye.jpg" class="mr-2 w-10 h-10 rounded-full" alt="Дмитрий Фурье" /></span>
+              <div class="ml-0.5 self-center font-semibold whitespace-nowrap dark:text-white pr-3">Дмитрий Фурье</div>
+          </li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3"
+              href="#">Сделал</a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3"
+              href="#">Наговорил</a></li>
         </ul>
       </nav>
     </div>
 
-    <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap items-top justify-end mr-0">
+    <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-row-reverse flex-col-reverse items-top justify-end mr-0">
       <div id="nav-buttons" class="flex items-center w-full sm:w-full">
         <div class="px-4">
           <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
             <input type="checkbox" class="sr-only peer">
-            <div
-              class="flex justify-center items-center w-8 h-8 
+            <div class="flex justify-center items-center w-8 h-8 
               bg-tg-deepdark 
               shadow-lg
               shadow-mk-purple-deco
@@ -46,14 +45,9 @@
                 <i class="las la-sun"></i>
               </div>
             </div>
-        </label>
+          </label>
         </div>
         <div class=""><a class="link-novisited" href="/posts">Блог</a> →</div>
-      </div>
-      
-
-         
-   
       </div>
     </div>
   </div>
