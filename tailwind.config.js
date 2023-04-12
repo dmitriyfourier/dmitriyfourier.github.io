@@ -60,7 +60,7 @@ module.exports = {
                   deco: 'rgb(232,125,62, 0.25)',
                 },
         purple: {
-                  main: 'rgb(158,134,200)',
+                  main: 'rgb(132, 91, 203)',
                   deco: 'rgb(158,134,200, 0.25)',
                 },
         greenlow: {
