@@ -29,6 +29,10 @@
   <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-brands-400.woff2" as="font" type="font/woff2" crossorigin="">
+
   <!--styles-->
   <link href="/assets/styles/tailwind.css" rel="stylesheet" />
   <!--Opengraph-->
@@ -42,8 +46,8 @@
   <meta property="og:image:secure_url" content="{{ site.url }}/img/default-preview.jpeg" />
   {% endif %}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@bnijenhuis" />
-  <meta name="twitter:creator" content="@bnijenhuis" />
+  <meta name="twitter:site" content="{{ site.twitter-s }}" />
+  <meta name="twitter:creator" content="{{ site.twitter-s }}" />
 
   <script>
     const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
