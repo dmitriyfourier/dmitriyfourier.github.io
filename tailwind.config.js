@@ -63,6 +63,10 @@ module.exports = {
                   main: 'rgb(158,134,200)',
                   deco: 'rgb(158,134,200, 0.25)',
                 },
+        greenlow: {
+            main: 'rgb(122,168,116)',
+            deco: 'rgb(122,168,116 0.25)',
+                },
         pink: '#b05279',
         blue: '#6c99bb',
       },
