@@ -19,7 +19,7 @@ a img:only-child,
 a:not([class]),
 .link,
 a:not([class]):link,
-.link:link {
+.link:link { 
   /* color: #0877db;
   text-decoration-color: rgba(8, 119, 219, 0.25);*/
   @apply text-mk-blue-main decoration-mk-blue-deco dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
@@ -38,7 +38,7 @@ a:not([class]):focus,
 .link:focus {
 /*  color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.25);*/
-  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-greenlow-main dark:decoration-mk-greenlow-deco;
 }
 
 a:not([class]):visited:hover,
@@ -47,7 +47,7 @@ a:not([class]):visited:focus,
 .link:visited:focus {
   /*color: #bc4df8;
   text-decoration-color: rgba(188, 77, 248, 0.25);*/
-@apply text-mk-purple-main decoration-mk-purple-deco dark:bg-mk-greenlow-main dark:decoration-mk-greenlow-deco;
+@apply text-mk-purple-main decoration-mk-purple-deco dark:text-mk-greenlow-main dark:decoration-mk-greenlow-deco;
 }
 
 a:not([class]):active,
@@ -74,7 +74,7 @@ a:not([class]):active,
 .link-novisited:focus {
  /* color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.25);*/
-  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-orange-main dark:decoration-mk-orange-deco;
 }
 
 .link-novisited:visited:hover,
@@ -83,7 +83,7 @@ a:not([class]):active,
   color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.25);
   */
-  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-orange-main dark:decoration-mk-orange-deco;
 }
 
 .link-novisited:active {
@@ -146,9 +146,9 @@ a:not([class]):hover {
 .link-novisited:focus,
 .link-inherit:focus,
 a:not([class]):focus {
-  background: rgba(43, 154, 255, 0.2);
+ /* background: rgba(43, 154, 255, 0.2);
   box-shadow: 0 0 0 0.1875em rgba(43, 154, 255, 0.2);
-  outline: none;
+  outline: none;*/
 }
 
 .link:not(a),
