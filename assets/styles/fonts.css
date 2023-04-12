@@ -6,7 +6,8 @@
 	font-style: normal;
 	font-weight: 250 1000;
 	src: url('/assets/fonts/TildaSans-VF.woff2') format('woff2-variations'),
-		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations');     
+		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations');  
+	font-display: swap;   
   }
   @font-face {
 	font-family: 'TildaSans';
@@ -18,6 +19,7 @@
 		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations'),
 		 url('/assets/fonts/TildaSans-Light.woff2') format('woff2'),
 		 url('/assets/fonts/TildaSans-Light.woff') format('woff');
+	font-display: swap;   
   }
   @font-face {
 	font-family: 'TildaSans';
@@ -29,6 +31,7 @@
 		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations'),  
 		 url('/assets/fonts/TildaSans-Regular.woff2') format('woff2'),
 		 url('/assets/fonts/TildaSans-Regular.woff') format('woff');
+	font-display: swap;   
   }
   @font-face {
 	font-family: 'TildaSans';
@@ -40,6 +43,7 @@
 		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations'),  
 		 url('/assets/fonts/TildaSans-Medium.woff2') format('woff2'),
 		 url('/assets/fonts/TildaSans-Medium.woff') format('woff');
+	font-display: swap;   
   }
   @font-face {
 	font-family: 'TildaSans';
@@ -51,6 +55,7 @@
 		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations'),  
 		 url('/assets/fonts/TildaSans-Semibold.woff2') format('woff2'),
 		 url('/assets/fonts/TildaSans-Semibold.woff') format('woff');
+	font-display: swap;  
   }
   @font-face {
 	font-family: 'TildaSans';
@@ -62,6 +67,7 @@
 		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations'),  
 		 url('/assets/fonts/TildaSans-Bold.woff2') format('woff2'),
 		 url('/assets/fonts/TildaSans-Bold.woff') format('woff');
+	font-display: swap;  
   }
   @font-face {
 	font-family: 'TildaSans';
@@ -84,4 +90,5 @@
 		 url('/assets/fonts/TildaSans-VF.woff') format('woff-variations'),  
 		 url('/assets/fonts/TildaSans-Black.woff2') format('woff2'),
 		 url('/assets/fonts/TildaSans-Black.woff') format('woff');
+	font-display: swap;  
   }
