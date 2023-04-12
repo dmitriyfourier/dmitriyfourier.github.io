@@ -1,6 +1,7 @@
 ---
 layout: post
 title: О недоделанной Пермской уличной навигации [Часть 1] × Предпосылки
+desc: О том, зачем Перми нужна тотальное обновление стандартов уличной навигации.
 date: 2022-06-04
 url: permian-navigation-part1
 permalink: "/posts/{{ url | slug }}/"
@@ -15,16 +16,21 @@ tags:
 Илья Бирман с командой не так давно сделали [Конструктор адресных табличек в Челябинска](https://ilyabirman.ru/projects/chelyabinsk-address-plates/), и я ему завидую.
 Выглядят таблички вот так: 1
 
-<img class="my-4" src="/assets/img/posts/prmnav/quarters.jpg" alt="Пример навигации разработанной Ильёй Барманом" />
+<div class="fotorama" data-width="100%" data-height="800"
+     data-nav="dots">
+     {% asset_img '/posts/prmnav/quarters.jpg' 'Пример навигации разработанной Ильёй Барманом' 'Пример базовой навигации разработанной Ильёй Барманом' %}
+     {% asset_img '/posts/prmnav/plans.jpg' 'Пример который объясняет как работает навигация' 'Объяснение работы навигации' %}
+</div>
 
-Фото из 
-[публикации Илья Бирмана](https://ilyabirman.ru/projects/chelyabinsk-address-plates/)
+
+<p class="aside">Фото из <a href="https://ilyabirman.ru/projects/chelyabinsk-address-plates/">публикации Илья Бирмана</a></p>
+
 Я живу в Перми, у нас довольно часто начинают хорошо, а заканчивают за упокой. Так было и с концептом адресной навигации в Перми. Но она так и осталась горкой нескольких макетов.
 У нас есть отличный [шрифт Permian](https://www.artlebedev.ru/perm/permian/), который содержит набор стрелочек для отдельной навигации.
 
 Даже были попытки разработать [Модельные правила (рекомендации) по размещению и мониторингу систем визуальных коммуникаций для Перми](https://www.tema.ru/jjj/perm/permvisualcommunications1.pdf)
 
-<img class="my-4" src="/assets/img/posts/prmnav/permvisualcommunications.jpg" alt="Пример модульных правил" />
+{% asset_img '/posts/prmnav/permvisualcommunications.jpg' 'Пример модульных правил' 'Пример модульных правил' %}
 
 
 Но они таки и носят статус «beta» — то есть разработка максимальная сырая. Она отражает задумки на перспективу, но не отражает правил, и различных вариаций.
