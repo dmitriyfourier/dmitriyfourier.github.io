@@ -49,7 +49,7 @@ module.exports = {
       'mk': {
         background: '#2e2e2e',
         comments: '#797979',
-        white: '#d6d6d6',
+        white: '#f2f2f2',
         yellow: {
                   main: 'rgb(229,181,103)',
                   deco: 'rgb(229,181,103, 0.25)',
