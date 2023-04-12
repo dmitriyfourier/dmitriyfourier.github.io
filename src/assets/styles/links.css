@@ -22,7 +22,7 @@ a:not([class]):link,
 .link:link {
   /* color: #0877db;
   text-decoration-color: rgba(8, 119, 219, 0.25);*/
-  @apply text-mk-blue decoration-mk-blue dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-main decoration-mk-blue-deco dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
 }
 
 a:not([class]):visited,
@@ -38,7 +38,7 @@ a:not([class]):focus,
 .link:focus {
 /*  color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.25);*/
-  @apply text-mk-blue decoration-mk-blue dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
 }
 
 a:not([class]):visited:hover,
@@ -60,21 +60,21 @@ a:not([class]):active,
 .link-novisited:link {
  /* color: #0877db;
   text-decoration-color: rgba(8, 119, 219, 0.25); */
-  @apply text-mk-blue decoration-mk-blue dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-main decoration-mk-blue-deco dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
 }
 
 .link-novisited:visited {
   /*
   color: #0877db;
   text-decoration-color: rgba(8, 119, 219, 0.25);*/
-  @apply text-mk-blue decoration-mk-blue dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-main decoration-mk-blue-deco dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
 }
 
 .link-novisited:hover,
 .link-novisited:focus {
  /* color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.25);*/
-  @apply text-mk-blue decoration-mk-blue dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
 }
 
 .link-novisited:visited:hover,
@@ -83,7 +83,7 @@ a:not([class]):active,
   color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.25);
   */
-  @apply text-mk-blue decoration-mk-blue dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
 }
 
 .link-novisited:active {
@@ -104,7 +104,7 @@ a:not([class]):active,
 .link-inherit:focus {
   /* color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.25); */
-  @apply text-mk-blue decoration-mk-blue dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
+  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
 }
 
 .link-inherit:visited:hover,

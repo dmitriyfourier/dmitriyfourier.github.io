@@ -68,7 +68,11 @@ module.exports = {
             deco: 'rgb(122,168,116 0.25)',
                 },
         pink: '#b05279',
-        blue: '#6c99bb',
+        blue: {
+                  main: '#6c99bb',
+                  deco: 'rgb(108,153,187, 0.25)',
+                  deep: '#4344b3',
+                  deepde:'rgb(67, 68, 179, 0.25)'},
       },
       // ...
     },
