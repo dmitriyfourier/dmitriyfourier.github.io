@@ -33,6 +33,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/i')
   eleventyConfig.addPassthroughCopy('src/browserconfig.xml')
   eleventyConfig.addPassthroughCopy('src/CNAME')
+  eleventyConfig.addPassthroughCopy('src/robot.txt')
 
   // To create excerpts
   eleventyConfig.setFrontMatterParsingOptions({

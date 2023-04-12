@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Уличная навигация в Перми [Часть 5] × Форматы
+desc: Набор форматов уличной нафигации, который легко впишется под разные типы домов.
 date: 2022-06-19
 url: permian-navigation-part5
 permalink: "/posts/{{ url | slug }}/"
