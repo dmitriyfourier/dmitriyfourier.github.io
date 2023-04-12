@@ -138,8 +138,9 @@ body {
   }
   ul:not([class]) li,
   ol:not([class]) li {
-    transform: translateX(2.5em);
+    transform: translateX(1.5em);
     animation: fixlists 1s;
+    padding-bottom: 0.8em;
   }
   @keyframes fixlists {
     0% {
