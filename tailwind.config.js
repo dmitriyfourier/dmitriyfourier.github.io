@@ -47,7 +47,7 @@ module.exports = {
         deepdark: '#234',
       },
       'mk': {
-        background: '#2e2e2e',
+        background: '#202020',
         comments: '#797979',
         white: '#f2f2f2',
         yellow: {
