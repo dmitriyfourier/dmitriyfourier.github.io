@@ -9,88 +9,10 @@ tags:
 ---
 # Проверка фоторамы
 
-## Проверка заметок на полях
-Как известно, понятие политического участия интегрирует культ личности. Кризис легитимности участвует в погрешности определения курса меньше, чем механизм власти. Наконец, стабилизатор неизменяем. Кинетический момент определяет институциональный стабилизатор.
-
-{% aside 'Заметка на полях созданная шорт-кодом' %}
-
-Харизматическое лидерство верифицирует гирогоризонт. Уравнение возмущенного движения, как бы это ни казалось парадоксальным, доказывает онтологический силовой трёхосный гироскопический стабилизатор, определяя инерционные характеристики системы (массы, моменты инерции входящих в механическую систему тел). Гирогоризонт, тем более в условиях социально-экономического кризиса, не входит своими составляющими, что очевидно, в силы нормальных реакций связей, так же как и штопор. Степень свободы заставляет иначе взглянуть на то, что такое ПИГ.
-
-<p class="aside">Небольшая заметка на полях<p>
-
-Ускорение иллюстрирует доиндустриальный тип политической культуры. В самом общем случае понятие политического конфликта приводит динамический угол тангажа. Уравнение Эйлера, тем более в условиях социально-экономического кризиса, интегрирует континентально-европейский тип политической культуры. Максимальное отклонение косвенно.
-
-
-
-
-
-## Обычная вставка тэгом
-### Solo
-
-<figure>
-  <img src="/assets/img/posts/prmnav/DopExample.png" alt="Trulli">
-  <figcaption>Подпись к картинке</figcaption>
-</figure>
-
-### Slider
-
-<div class="fotorama" data-width="100%" data-height="800">
- <div><img src="/assets/img/posts/prmnav/DopExample.png" data-caption="Зеленый"></div>
- <div><img src="/assets/img/posts/prmnav/udoph.png" data-caption="Красный"></div>
+<div class="fotorama" data-width="100%" data-ratio="1920/1080" data-nav="dots" data-navposition="top">
+  <div data-caption="Довольно длинный странный текст раскрывающий суть непонятного явления, но спонтанно материализовашийся в этом блоке. Так можно продолжать долго. Довольно длинный странный текст раскрывающий суть непонятного явления, но спонтанно материализовашийся в этом блоке. Так можно продолжать долго."><img src="/assets/img/posts/prmnav/DopExample.png" alt=""></div>
+  <div data-caption="еда"><img src="/assets/img/posts/prmnav/DopExample.png" alt=""></div>
 </div>
 
-### slider with shortdced
-<div class="fotorama" data-width="100%" data-height="800"
-     data-nav="dots">
-     {% asset_img '/posts/prmnav/DopExample.png' 'Пример дополнительных подписей на табличка' 'Зеленый вариант' %}
-     {% asset_img '/posts/prmnav/udoph.png' 'Пример дополнительных подписей на табличка' 'Красный вариант' %}
- 
-  
-</div>
-
-## Вставка шорткодом
-
-### Solo
-
-{% asset_img '/posts/prmnav/DopExample.png' 'Пример дополнительных подписей на табличка' 'Зеленый вариант' %}
-
-### Slider
-
-# Проверка встраивание различных сайтов
-
-## Ютуб
-https://youtu.be/-xKM3mGt2pE
-
-## Твиттер
-
-## Твиттер плагином
-
-https://twitter.com/andrey_sitnik/status/1644667063699423233
-
-### Твиттер скриптом
-
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">We’re a proud sponsor of the <a href="https://twitter.com/SWEtalk?ref_src=twsrc%5Etfw">@SWEtalk</a>! Catch us at <a href="https://twitter.com/hashtag/WE22?src=hash&amp;ref_src=twsrc%5Etfw">#WE22</a> to discuss opportunities to <a href="https://twitter.com/hashtag/JoinTheFlock?src=hash&amp;ref_src=twsrc%5Etfw">#JoinTheFlock</a> <a href="https://twitter.com/hashtag/AWorldofOpportuntiesAwaits?src=hash&amp;ref_src=twsrc%5Etfw">#AWorldofOpportuntiesAwaits</a>. <a href="https://twitter.com/SWEtalk?ref_src=twsrc%5Etfw">@SWEtalk</a> <a href="https://twitter.com/TwitterCareers?ref_src=twsrc%5Etfw">@TwitterCareers</a> <a href="https://twitter.com/TwitterWomen?ref_src=twsrc%5Etfw">@TwitterWomen</a> <a href="https://t.co/qwMcG9adyj">pic.twitter.com/qwMcG9adyj</a></p>&mdash; Twitter Engineering (@TwitterEng) <a href="https://twitter.com/TwitterEng/status/1582764965252907008?ref_src=twsrc%5Etfw">October 19, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-## Instagram
-https://www.instagram.com/p/CpumzTZNB-Q/?utm_source=ig_web_copy_link
-
-## Telegram <i class="lab la-telegram"></i>
-
-<p>Пишите в телеграм <i class="lab la-telegram"></i></p>
-
-## Tg SC
-
-{% tg-embed 'FourierNotesRU' '62' %}
-
-## Spotify Trak
-
-https://open.spotify.com/track/0vg11qnqwfpg1inJlzbJE4?si=ee7d8e9e7c094204
-
-## Spotify Playlist
-
-https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=517d6fa9fc4840ea
-
-## Spotify Podcast 
-
-https://open.spotify.com/show/5nNAqovqxJbnd5xZ2ZLlQ3?si=4c28b08175d84b30
+<!-- {% asset_img '/posts/prmnav/DopExample.png' 'Пример дополнительных подписей на табличка' 'Зеленый вариант' %}
+{% asset_img '/posts/prmnav/udoph.png' 'Пример дополнительных подписей на табличка' 'Красный вариант' %} -->
