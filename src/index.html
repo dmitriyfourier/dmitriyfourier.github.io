@@ -3,7 +3,7 @@ layout: base
 title: Дмитрий Фурье
 desc: Заметки, проекты, подкасты и другие странные вещи Димы Фурье
 ---
-
+{% include "about.liquid" %}
 
 <h2 class="text-2xl font-bold">Сделал</h2>
 <h2 class="text-2xl font-bold">Наговорил</h2>
@@ -11,21 +11,28 @@ desc: Заметки, проекты, подкасты и другие стра�
   <div class="flex">
 {%- for podcast in collections.podcasts -%}
 
-
-
-    <div class="flex space-x-4 shrink-0">
-      <div class="shrink-0">
-        <a href="{{ podcast.url }}">
-          <figure class="py-0 pr-2 rounded-full w-24 h-24 sm:w-24 sm:h-24 xl:w-24 xl:h-24"><img src="{{ podcast.data.pdcastimg }}"
+    <div class="flex space-x-4 shrink-0 border-r border-mk-comments">
+      <div class="shrink-0 py-2 px-2">
+        <a href="{{ podcast.url }}" class="link-novisited">
+          <figure class="rounded-full w-24 h-24 sm:w-24 sm:h-24 xl:w-24 xl:h-24 outline outline-offset-2 outline-1 hover:outline hover:outline-offset-2 hover:outline-2"><img src="{{ podcast.data.pdcastimg }}"
               alt="{{ podcast.data.title }}" class="rounded-full" /></figure>
         </a>
       </div>
       <div class="max-w-xs flex-none">
-        <h2 class="text-lg font-semibold mt-0"><a href="{{ podcast.url }}">{{ podcast.data.title }}</a></h2>
-        <p class="text-xs">{{ podcast.data.desc}}</p>
+        <h2 class="text-lg font-semibold mt-0"><a href="{{ podcast.url }}" class="link-novisited">{{ podcast.data.title }}</a></h2>
+        <p class="text-lg">{{ podcast.data.desc}}</p>
       </div>
     </div>
  
 {%- endfor -%}
 </div>
 </div>
+
+<h2 class="text-2xl font-bold mb-1">Написал</h2>
+
+{%- for post in collections.posts-%}
+  {% if forloop.last %}
+  <p><span class="font-medium">Свежее в блоге:</span><br><a href="{{ post.url }}">{{ post.data.title }}</a></p>
+  {% endif %}
+{%- endfor -%}
+
