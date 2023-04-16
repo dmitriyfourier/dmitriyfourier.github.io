@@ -1,14 +1,31 @@
 ---
 layout: base
-title: Тестовое название для главной страницы部落格
-desc: Тестовое описание для главной страницы
-pagination:
-  data: collections.posts
-  size: 10
-  reverse: true
-  alias: posts
+title: Дмитрий Фурье
+desc: Заметки, проекты, подкасты и другие странные вещи Димы Фурье
 ---
 
 
 <h2 class="text-2xl font-bold">Сделал</h2>
 <h2 class="text-2xl font-bold">Наговорил</h2>
+<div class="warp pb-4">
+  <div class="flex">
+{%- for podcast in collections.podcasts -%}
+
+
+
+    <div class="flex space-x-4 shrink-0">
+      <div class="shrink-0">
+        <a href="{{ podcast.url }}">
+          <figure class="py-0 pr-2 rounded-full w-24 h-24 sm:w-24 sm:h-24 xl:w-24 xl:h-24"><img src="{{ podcast.data.pdcastimg }}"
+              alt="{{ podcast.data.title }}" class="rounded-full" /></figure>
+        </a>
+      </div>
+      <div class="max-w-xs flex-none">
+        <h2 class="text-lg font-semibold mt-0"><a href="{{ podcast.url }}">{{ podcast.data.title }}</a></h2>
+        <p class="text-xs">{{ podcast.data.desc}}</p>
+      </div>
+    </div>
+ 
+{%- endfor -%}
+</div>
+</div>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  	<meta name='viewport' content='width=device-width'>
+
+    <title>{{ title }}</title>
+    <meta name='description' content="{{ desc }}">
+
+    <!--links-->
+    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+    <!--/assets/img/favicon/-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/assets/img/favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#202020">
+    <meta name="msapplication-TileColor" content="#202020">
+    <meta name="theme-color" content="#202020">
+    <!--Fonts-->
+    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-italic.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-700italic.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-700italic.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+    <!--styles-->
+    <link href="/assets/styles/normalize.min.css" rel="stylesheet" />
+    <link href="/assets/styles/tailwind.css" rel="stylesheet" />
+    <link href="/assets/styles/index.min.css" rel="stylesheet" />
+    <link href="/assets/styles/fotorama.min.css" rel="stylesheet" />
+    <link href="/assets/styles/bettertext.min.css" rel="stylesheet" />
+    <link href="/assets/styles/likely.min.css" rel="stylesheet" />
+    <script>
+      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDarkMode()) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+ 
+<body class="text-mk-background bg-white dark:text-mk-white dark:bg-mk-background"> 
+    <header>
+      {% include "nav.liquid" %}
+    </header>
+      <main class="max-w-3xl">
+        
+        {{ content }}
+      
+      </main>
+      
+      {% include "footer.liquid" %}
+
+      <script>
+        document.getElementById("toggleDarkMode").addEventListener("change", function() {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+        });
+      </script>
+  </body>
+</html>
