@@ -8,30 +8,13 @@
   <title>{{ title }}</title>
   <meta name='description' content="{{ desc }}">
 
-  <!--links-->
   <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-  <!-- fonts -->
-  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
-  <!--/assets/img/favicon/-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="194x194" href="/assets/img/favicon/favicon-194x194.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#202020">
-  <meta name="msapplication-TileColor" content="#202020">
-  <meta name="theme-color" content="#202020">
+  {% include "_partials/fonts.liquid" %}
+  {% include "_partials/favicons.liquid" %}
 
   <!--styles-->
   <link href="/assets/styles/tailwind.css" rel="stylesheet" />
+  
   <!--Scripts-->
   <script>
     const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
@@ -49,7 +32,7 @@
 
 <body class="dark:text-mk-white dark:bg-mk-background">
   <header>
-    {% include "nav.liquid" %}
+    {% include "_partials/nav.liquid" %}
   </header>
   <main>
 
@@ -57,7 +40,7 @@
 
   </main>
 
-  {% include "footer.liquid" %}
+  {% include "_partials/footer.liquid" %}
   <script>
     document.getElementById("toggleDarkMode").addEventListener("change", function () {
       if (isDarkMode()) {

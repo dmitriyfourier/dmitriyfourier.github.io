@@ -61,7 +61,7 @@
 
 <body class="dark:text-mk-white dark:bg-mk-background">
   <header>
-    {% include "nav.liquid" %}
+    {% include "_partials/nav.liquid" %}
   </header>
 <article>
 <h1>
@@ -76,7 +76,7 @@
 
 </div>
 </article>
-{% include "likely.liquid" %}
+{% include "_partials/likely.liquid" %}
 <div class="mt-3 pb-4 text-xs" style="color:#999">
 	{% for tag in tags %}
 	  {% if tag != "posts" %}
@@ -98,9 +98,9 @@
 	</div>
 	{%- endif %}
 	{%- endif %}
-  {% include "comments.liquid" %}
+  {% include "_partials/comments.liquid" %}
 
-  {% include "footer.liquid" %}
+  {% include "_partials/footer.liquid" %}
 
   <script>
     document.getElementById("toggleDarkMode").addEventListener("change", function () {
