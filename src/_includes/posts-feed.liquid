@@ -9,29 +9,10 @@
 
     <!--links-->
     <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-    <!--/assets/img/favicon/-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="194x194" href="/assets/img/favicon/favicon-194x194.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#202020">
-    <meta name="msapplication-TileColor" content="#202020">
-    <meta name="theme-color" content="#202020">
-    <!--Fonts-->
-    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-italic.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-700italic.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-700italic.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/pt-sans-v17-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+     {% include "_partials/fonts.liquid" %}
+  {% include "_partials/favicons.liquid" %}
     <!--styles-->
-    <link href="/assets/styles/normalize.min.css" rel="stylesheet" />
     <link href="/assets/styles/tailwind.css" rel="stylesheet" />
-    <link href="/assets/styles/index.min.css" rel="stylesheet" />
-    <link href="/assets/styles/fotorama.min.css" rel="stylesheet" />
-    <link href="/assets/styles/bettertext.min.css" rel="stylesheet" />
-    <link href="/assets/styles/likely.min.css" rel="stylesheet" />
     <script>
       const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
       if (isDarkMode()) {
