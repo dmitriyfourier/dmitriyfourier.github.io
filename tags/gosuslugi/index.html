@@ -32,7 +32,7 @@
 
   <!--styles-->
   <link href="/assets/styles/tailwind.css" rel="stylesheet">
-  <!--Opengraph-->
+</head><body class="dark:text-mk-white dark:bg-mk-background">﻿<!--Opengraph-->
   <meta property="og:title" content="">
   <meta property="og:url" content="/tags/gosuslugi/">
   
@@ -48,16 +48,14 @@
       '(prefers-color-scheme: dark)').matches);
     if (isDarkMode()) {
       document.documentElement.classList.add('dark')
-      document.querySelector('div.likely').classList.add('likely-light')
     } else {
       document.documentElement.classList.remove('dark')
-      document.querySelector('div.likely').classList.remove('likely-light')
 
     }
   </script>
-</head>
 
-<body class="dark:text-mk-white dark:bg-mk-background">
+
+
   <header>
     <nav id="header" class="w-full z-30 top-10 py-1">
   <div class="w-full flex place-items-start justify-between mt-0 py-2">
@@ -286,17 +284,14 @@
       if (isDarkMode()) {
         localStorage.theme = 'light'
         document.documentElement.classList.remove('dark')
-        document.querySelector('div.likely').classList.remove('likely-light')
       } else {
         localStorage.theme = 'dark'
         document.documentElement.classList.add('dark')
-        document.querySelector('div.likely').classList.add('likely-light')
       }
     });
   </script>
   <script src="/assets/scripts/jquery.min.js"></script>
   <script src="/assets/scripts/fotorama.min.js"></script>
-  <script src="/assets/scripts/likely.min.js"></script>
 
 
 </body></html>
