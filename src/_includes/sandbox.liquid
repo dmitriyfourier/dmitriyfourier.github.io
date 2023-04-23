@@ -19,10 +19,8 @@
       const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
       if (isDarkMode()) {
         document.documentElement.classList.add('dark')
-        document.querySelector('div.likely').classList.add('likely-light')
       } else {
         document.documentElement.classList.remove('dark')
-        document.querySelector('div.likely').classList.remove('likely-light')
 
       }
     </script>
@@ -45,16 +43,13 @@
           if (isDarkMode()) {
             localStorage.theme = 'light'
             document.documentElement.classList.remove('dark')
-            document.querySelector('div.likely').classList.remove('likely-light')
           } else {
             localStorage.theme = 'dark'
             document.documentElement.classList.add('dark')
-            document.querySelector('div.likely').classList.add('likely-light')
           }
         });
       </script>
   <script src="/assets/scripts/jquery.min.js"></script>
   <script src="/assets/scripts/fotorama.min.js"></script>
-  <script src="/assets/scripts/likely.min.js"></script>
   </body>
 </html>

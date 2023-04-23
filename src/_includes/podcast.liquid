@@ -21,10 +21,8 @@
       '(prefers-color-scheme: dark)').matches);
     if (isDarkMode()) {
       document.documentElement.classList.add('dark')
-      document.querySelector('div.likely').classList.add('likely-light')
     } else {
       document.documentElement.classList.remove('dark')
-      document.querySelector('div.likely').classList.remove('likely-light')
 
     }
   </script>
@@ -44,11 +42,9 @@
       if (isDarkMode()) {
         localStorage.theme = 'light'
         document.documentElement.classList.remove('dark')
-        document.querySelector('div.likely').classList.remove('likely-light')
       } else {
         localStorage.theme = 'dark'
         document.documentElement.classList.add('dark')
-        document.querySelector('div.likely').classList.add('likely-light')
       }
     });
   </script>

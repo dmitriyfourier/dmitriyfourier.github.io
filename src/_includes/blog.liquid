@@ -14,29 +14,15 @@
 
   <!--styles-->
   <link href="/assets/styles/tailwind.css" rel="stylesheet" />
-  <!--Opengraph-->
-  <meta property="og:title" content="{{ data.title }}" />
-  <meta property="og:url" content="{{ page.url }}" />
-  {% if tags %}
-  <meta property="og:image" content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg" />
-  <meta property="og:image:secure_url" content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg" />
-  {% else %}
-  <meta property="og:image" content="{{ site.url }}/img/default-preview.jpeg" />
-  <meta property="og:image:secure_url" content="{{ site.url }}/img/default-preview.jpeg" />
-  {% endif %}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="{{ site.twitter-s }}" />
-  <meta name="twitter:creator" content="{{ site.twitter-s }}" />
+{% include "_partials/og.liquid" %}
 
   <script>
     const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
       '(prefers-color-scheme: dark)').matches);
     if (isDarkMode()) {
       document.documentElement.classList.add('dark')
-      document.querySelector('div.likely').classList.add('likely-light')
     } else {
       document.documentElement.classList.remove('dark')
-      document.querySelector('div.likely').classList.remove('likely-light')
 
     }
   </script>
@@ -59,17 +45,14 @@
       if (isDarkMode()) {
         localStorage.theme = 'light'
         document.documentElement.classList.remove('dark')
-        document.querySelector('div.likely').classList.remove('likely-light')
       } else {
         localStorage.theme = 'dark'
         document.documentElement.classList.add('dark')
-        document.querySelector('div.likely').classList.add('likely-light')
       }
     });
   </script>
   <script src="/assets/scripts/jquery.min.js"></script>
   <script src="/assets/scripts/fotorama.min.js"></script>
-  <script src="/assets/scripts/likely.min.js"></script>
 </body>
 
 </html>
