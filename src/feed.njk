@@ -24,7 +24,7 @@ eleventyExcludeFromCollections: true
 <updated>{{ post.date | dateIso }}</updated>
 <id>{{ absolutePostUrl }}</id>
 <turbo:content>
-<content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+<content xml:lang="ru" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
 </turbo:content>
 </entry>
 </item>
