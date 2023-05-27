@@ -1,4 +1,5 @@
 ﻿user-agent: *
 Disallow: /404/*
 Disallow: /tags/*
+Disallow: /_partials/*
 Sitemap: https://furye.ru/sitemap.xml
