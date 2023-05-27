@@ -3,7 +3,8 @@ permalink: "/feed/feed.xml"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom"
+	  xmlns:turbo="http://turbo.yandex.ru">
 	<title>{{ site.title }}</title>
 	<subtitle>{{ site.feed.subtitle }}</subtitle>
 	<link href="{{ site.url }}{{ site.feed.path }}" rel="self"/>
@@ -13,20 +14,28 @@ eleventyExcludeFromCollections: true
 	<author>
 		<name>{{ site.author }}</name>
 		<email>{{ site.email }}</email>
+		<uri>{{ site.url }}</uri>
 	</author>
-
 	{%- for post in collections.posts | reverse %}
 	{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
-	<item turbo="true">
-<entry>
-<title>{{ post.data.title }}</title>
-<link href="{{ site.url }}{{ post.url }}"/>
-<updated>{{ post.date | dateIso }}</updated>
-<id>{{ absolutePostUrl }}</id>
-<turbo:content>
-<content xml:lang="ru" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-</turbo:content>
-</entry>
-</item>
+		<entry>
+			<item turbo="true">
+				<turbo:extendedHtml>true</turbo:extendedHtml>
+				<title>{{ post.data.title }}</title>
+				<turbo:topic>{{ post.data.title }}</turbo:topic>
+				<link href="{{ site.url }}{{ post.url }}"/>
+				<updated>{{ post.date | dateIso }}</updated>
+				<published>{{ post.date | dateIso }}</published>
+				<pubDate>{{ post.date | dateIso }}</pubDate>
+				<author>{{ site.author }}</author>
+				<rights type="html">© 2017 — {% year %} {{ site.author }}</rights>
+				<id>{{ absolutePostUrl }}</id>
+				<content xml:lang="ru" type="html">
+					<turbo:content>
+					{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+					</turbo:content>
+				</content>
+			</item>
+		</entry>
 {%- endfor -%}
 </feed>
