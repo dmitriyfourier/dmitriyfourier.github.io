@@ -22,7 +22,8 @@ eleventyExcludeFromCollections: true
 <title>{{ post.data.title }}</title>
 <link href="{{ site.url }}{{ post.url }}"/>
 <updated>{{ post.date | dateIso }}</updated>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+<id>{{ absolutePostUrl }}</id>
+<content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
 </entry>
 {%- endfor -%}
 </feed>
