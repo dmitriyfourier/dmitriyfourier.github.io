@@ -1,207 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
+            <loc>https://furye.ru/</loc>
+            <lastmod>2015-06-04T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
+        </url>
+    
+        <url>
             <loc>https://furye.ru/posts/bezopasnost-pri-najme-finmenedzhera/</loc>
-            <lastmod>Wed Apr 05 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2017-04-05T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/kak-vesti-uchyot-nalichki-v-biznese-i-ne-svihnutsya/</loc>
-            <lastmod>Wed Jul 05 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2017-07-05T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/otzyv-na-pervuyu-stupen-universiteta-finolog/</loc>
-            <lastmod>Tue Sep 12 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2017-09-12T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/sveryajtes-v-terminologii/</loc>
-            <lastmod>Thu Sep 21 2017 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2017-09-21T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/kak-smenit-familiyu-i-ne-oblazhatsya/</loc>
-            <lastmod>Fri Jun 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2018-06-01T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/minimalnyj-nabor-dlya-starta-v-gejmdeve-ustarelo/</loc>
-            <lastmod>Wed Aug 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2018-08-01T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/samyj-bogatyj-chelovek-v-vavilone/</loc>
-            <lastmod>Mon Jun 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2019-06-10T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/kalendar-dedlajnov/</loc>
-            <lastmod>Thu Aug 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2019-08-01T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/postroit-zapasnoj-aerodrom/</loc>
-            <lastmod>Mon Jun 15 2020 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2020-06-15T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/permian-navigation-part1/</loc>
-            <lastmod>Sat Jun 04 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2022-06-04T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/permian-navigation-part2/</loc>
-            <lastmod>Sun Jun 12 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2022-06-12T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/start-proekta-dobrososedstvo-20/</loc>
-            <lastmod>Tue Jun 14 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2022-06-14T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/permian-navigation-part3/</loc>
-            <lastmod>Wed Jun 15 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2022-06-15T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/permian-navigation-part4/</loc>
-            <lastmod>Sat Jun 18 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2022-06-18T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/permian-navigation-part5/</loc>
-            <lastmod>Sun Jun 19 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2022-06-19T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/permian-navigation-part6/</loc>
-            <lastmod>Sat Jun 25 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2022-06-25T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/podcasts/ne-nauchili/</loc>
-            <lastmod>Sun Mar 19 2023 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-03-19T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/podcasts/podcast-noboring-finance/</loc>
-            <lastmod>Sun Mar 19 2023 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-03-19T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/podcasts/young-finance/</loc>
-            <lastmod>Sun Mar 19 2023 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-03-19T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/404/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.543Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/about/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/comments/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/darkswitcher/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/favicons/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/fonts/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/footer/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/likely/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/nav/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/_partials/og/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
-        </url>
-    
-        <url>
-            <loc>https://furye.ru/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.567Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/podcasts/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.651Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.651Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/podcasts/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.655Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/</loc>
-            <lastmod>Sat May 27 2023 09:19:04 GMT+0000 (Coordinated Universal Time)</lastmod>
-            <changefreq></changefreq>
+            <lastmod>2023-05-27T10:25:16.655Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priorit>0.5</priorit>
         </url>
     
 </urlset>
