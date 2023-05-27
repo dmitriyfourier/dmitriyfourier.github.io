@@ -2,40 +2,33 @@
 permalink: "/feed/feed.xml"
 eleventyExcludeFromCollections: true
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"
-	  xmlns:turbo="http://turbo.yandex.ru">
-	<title>{{ site.title }}</title>
-	<subtitle>{{ site.feed.subtitle }}</subtitle>
-	<link href="{{ site.url }}{{ site.feed.path }}" rel="self"/>
-	<link href="{{ site.url }}/"/>
-	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-	<id>{{ site.feed.id }}</id>
-	<author>
-		<name>{{ site.author }}</name>
-		<email>{{ site.email }}</email>
-		<uri>{{ site.url }}</uri>
-	</author>
-	{%- for post in collections.posts | reverse %}
-	{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
-		<entry>
-			<item turbo="true">
-				<turbo:extendedHtml>true</turbo:extendedHtml>
-				<title>{{ post.data.title }}</title>
-				<turbo:topic>{{ post.data.title }}</turbo:topic>
-				<link href="{{ site.url }}{{ post.url }}"/>
-				<updated>{{ post.date | dateIso }}</updated>
-				<published>{{ post.date | dateIso }}</published>
-				<pubDate>{{ post.date | dateIso }}</pubDate>
-				<author>{{ site.author }}</author>
-				<rights type="html">© 2017 — {% year %} {{ site.author }}</rights>
-				<id>{{ absolutePostUrl }}</id>
-				<content xml:lang="ru" type="html">
-					<turbo:content>
-					{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-					</turbo:content>
-				</content>
-			</item>
-		</entry>
-{%- endfor -%}
-</feed>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:media="http://search.yahoo.com/mrss/"
+	 xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:turbo="http://turbo.yandex.ru"
+	 xmlns:atom="http://www.w3.org/2005/Atom"
+     version="2.0">
+    <channel>
+        <!-- Информация о сайте-источнике -->
+        <title>{{ site.title }}</title>
+        <link>{{ site.url }}</link>
+        <description>{{ site.feed.subtitle }}</description>
+        <language>ru-ru</language>
+		{%- for post in collections.posts | reverse %}
+		{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
+        <item turbo="true">
+            <!-- Информация о странице -->
+			<title>{{ post.data.title }}</title>
+			<description>{{ post.data.desc }}</description>
+            <turbo:extendedHtml>true</turbo:extendedHtml>
+            <link>{{ site.url }}{{ post.url }}</link>
+            <pubDate>{{ post.date | dateIso }}</pubDate>
+            <author>{{ site.author }}</author>
+            <turbo:content>
+				{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+            </turbo:content>
+        </item>
+		{%- endfor -%}
+    </channel>
+</rss>
