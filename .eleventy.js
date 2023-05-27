@@ -6,6 +6,7 @@ const img2picture = require('eleventy-plugin-img2picture')
 const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
 const embedEverything = require("eleventy-plugin-embed-everything");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 moment.locale('ru')
 
 module.exports = function(eleventyConfig) {
@@ -34,6 +35,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/browserconfig.xml')
   eleventyConfig.addPassthroughCopy('src/CNAME')
   eleventyConfig.addPassthroughCopy('src/robots.txt')
+
+  // rss settings
+  eleventyConfig.addPlugin(pluginRss);
 
   // To create excerpts
   eleventyConfig.setFrontMatterParsingOptions({
