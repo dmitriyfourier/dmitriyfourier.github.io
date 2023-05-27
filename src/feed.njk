@@ -15,6 +15,7 @@ eleventyExcludeFromCollections: true
         <link>{{ site.url }}</link>
         <description>{{ site.feed.subtitle }}</description>
         <language>ru-ru</language>
+		<copyright>© {{ site.author }} × 2017 — {% year %}</copyright>
 		{%- for post in collections.posts | reverse %}
 		{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
         <item turbo="true">
