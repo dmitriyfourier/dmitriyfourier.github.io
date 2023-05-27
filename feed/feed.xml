@@ -15,7 +15,8 @@
 <title>Уличная навигация в Перми [Часть 6] × Переписка с департаментом ЖКХ и Благоустройства</title>
 <link href="https://furye.ru/posts/permian-navigation-part6/"/>
 <updated>2022-06-25T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Пока делал типоразмеры, решил проверить вообще на сколько легально и безопасно можно использовать дизайн ПЦРД на жилых домах. Вроде бы макеты на момент существования ПЦРД делались государственным муниципальным учреждением, но так и не были утверждены.&lt;/p&gt;
+<id>https://furye.ru/posts/permian-navigation-part6/</id>
+<content xml:lang="" type="html">&lt;p&gt;Пока делал типоразмеры, решил проверить вообще на сколько легально и безопасно можно использовать дизайн ПЦРД на жилых домах. Вроде бы макеты на момент существования ПЦРД делались государственным муниципальным учреждением, но так и не были утверждены.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;В действующих правилах благоустройства (на 26.08.2021) требования к указателям следующие:&lt;/strong&gt;
 &lt;a href=&quot;https://www.gorodperm.ru/actions/building-up/arch_oblik_perm/ukazateli_ulitsu/&quot;&gt;Указатели с наименованием улиц и номерами домов зданий&lt;/a&gt; на сайте города Перми&lt;/p&gt;
 &lt;p&gt;Указатели с наименованиями улиц и номерами домов (зданий), номерами квартир должны соответствовать следующим требованиям:&lt;/p&gt;
@@ -59,7 +60,8 @@
 <title>Уличная навигация в Перми [Часть 5] × Форматы</title>
 <link href="https://furye.ru/posts/permian-navigation-part5/"/>
 <updated>2022-06-19T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;В процессе сбора информации выяснилось, что действующий бренд-бук никак не регламентирует сетку макета под разные размеры улиц. Поэтому давайте с ней разбираться. Нам нужно несколько видов сетки, под несколько видов табличек.&lt;/p&gt;
+<id>https://furye.ru/posts/permian-navigation-part5/</id>
+<content xml:lang="" type="html">&lt;p&gt;В процессе сбора информации выяснилось, что действующий бренд-бук никак не регламентирует сетку макета под разные размеры улиц. Поэтому давайте с ней разбираться. Нам нужно несколько видов сетки, под несколько видов табличек.&lt;/p&gt;
 &lt;h2&gt;Указатель улицы + номер дома в горизонтальной ориентации [У+Н] • [Г]&lt;/h2&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img//posts/prmnav/UNh.png&quot; alt=&quot;Две отдельные таблички, которые размещаются рядом одна с наименованием улицы, вторая с номером дома&quot; /&gt;&lt;figcaption&gt;Две отдельные таблички, которые размещаются рядом одна с наименованием улицы, вторая с номером дома&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h2&gt;Номер дома, который может дополнять табличку, а может висеть отдельно [Н] • [C]&lt;/h2&gt;
@@ -103,7 +105,8 @@
 <title>Уличная навигация в Перми [Часть 4] × Существующая навигация</title>
 <link href="https://furye.ru/posts/permian-navigation-part4/"/>
 <updated>2022-06-18T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;В попытках разобраться, есть ли какие-то общие моменты в этой навигации, пришлось пробежаться по городу собрать примеры.&lt;/p&gt;
+<id>https://furye.ru/posts/permian-navigation-part4/</id>
+<content xml:lang="" type="html">&lt;p&gt;В попытках разобраться, есть ли какие-то общие моменты в этой навигации, пришлось пробежаться по городу собрать примеры.&lt;/p&gt;
 &lt;h2&gt;Каменского 10&lt;/h2&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img//posts/prmnav/kamenskogo-nav-standart.png&quot; alt=&quot;Пример таблички размещенной на каменского&quot; /&gt;&lt;figcaption&gt;Пример таблички размещенной на Каменского&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;На улице Каменского, была сделана одна из Первых вывесок, и при этом попытка использовать тот же стиль, в других информационных табличках.&lt;/p&gt;
@@ -137,7 +140,8 @@
 <title>Уличная навигация в Перми [Часть 3] × Переписка с разработчиками проекта</title>
 <link href="https://furye.ru/posts/permian-navigation-part3/"/>
 <updated>2022-06-15T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Случайно откопал старый почтовый ящик свой. И там нашлась занятная переписка с &lt;a href=&quot;http://artemshitov.ru/&quot;&gt;Артёмом Шитовым&lt;/a&gt;. Он принимал участие в разработке &lt;a href=&quot;https://www.artlebedev.ru/perm/bus-stop/&quot;&gt;дизайна пермских остановок&lt;/a&gt; и на сколько я помню плотно взаимодействовал с ПЦРД.
+<id>https://furye.ru/posts/permian-navigation-part3/</id>
+<content xml:lang="" type="html">&lt;p&gt;Случайно откопал старый почтовый ящик свой. И там нашлась занятная переписка с &lt;a href=&quot;http://artemshitov.ru/&quot;&gt;Артёмом Шитовым&lt;/a&gt;. Он принимал участие в разработке &lt;a href=&quot;https://www.artlebedev.ru/perm/bus-stop/&quot;&gt;дизайна пермских остановок&lt;/a&gt; и на сколько я помню плотно взаимодействовал с ПЦРД.
 Переписка датирована 2015 годом. Тогда, я просил Артёма помочь с доработкой таблички по адресу Улица Деревообделочная.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img//posts/prmnav/derevoobdelochnaya.png&quot; alt=&quot;Скриншот из того брендбука, что есть в открытом доступе&quot; /&gt;&lt;figcaption&gt;Набор прототипов низкого качества :-), но там есть Ai файл.&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Но самая занятная история в том, что Артём так же отмечает, что брендбук был не доработан:&lt;/p&gt;
@@ -159,7 +163,8 @@
 <title>Старт проекта Добрососедство 2.0</title>
 <link href="https://furye.ru/posts/start-proekta-dobrososedstvo-20/"/>
 <updated>2022-06-14T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;В отпуске мне опять не сиделось ровно, а идея проекта в голове жила давно. Так я все-такие начал разворачивать проект «&lt;a href=&quot;https://neighborliness.ru/&quot;&gt;Добрососедство 2.0&lt;/a&gt;»&lt;/p&gt;
+<id>https://furye.ru/posts/start-proekta-dobrososedstvo-20/</id>
+<content xml:lang="" type="html">&lt;p&gt;В отпуске мне опять не сиделось ровно, а идея проекта в голове жила давно. Так я все-такие начал разворачивать проект «&lt;a href=&quot;https://neighborliness.ru/&quot;&gt;Добрососедство 2.0&lt;/a&gt;»&lt;/p&gt;
 &lt;h2&gt;Предыстория&lt;/h2&gt;
 &lt;p&gt;К проекту я пошел через попытки навести порядок в своем доме, пытался создать сообщество соседей — &lt;a href=&quot;https://park37a.ru/&quot;&gt;Добрососедство 37&lt;/a&gt;. Но так союзников и нашел. Хотя группа в ВК сохранились, и там более менее есть люди, которые общаются. Но все равно, там скорее демонстрация равнодушия нежели, какие-то союзники.&lt;/p&gt;
 &lt;p&gt;Совет дома тоже не поддерживает мои начинания, а УК работает чудовищно непрозрачно. Поскольку в доме в основном проживают люди взрослого поколения, им в принципе подход «Спасибо скажи, что не рухнуло», вполне полезен.&lt;/p&gt;
@@ -207,7 +212,8 @@
 <title>Переработка пермской уличной навигации [Часть 2] × Разбор базовых форматов</title>
 <link href="https://furye.ru/posts/permian-navigation-part2/"/>
 <updated>2022-06-12T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;В Перми, концепт уличной навигации так и не принял внятного очертания. В &lt;a href=&quot;https://furye.ru/posts/permian-street-navigation-part1/&quot;&gt;прошлой части&lt;/a&gt;, я говорил о том, как круто получилось сделать навигацию в Челябинске, и что было бы неплохо привести в порядок и нашу.&lt;/p&gt;
+<id>https://furye.ru/posts/permian-navigation-part2/</id>
+<content xml:lang="" type="html">&lt;p&gt;В Перми, концепт уличной навигации так и не принял внятного очертания. В &lt;a href=&quot;https://furye.ru/posts/permian-street-navigation-part1/&quot;&gt;прошлой части&lt;/a&gt;, я говорил о том, как круто получилось сделать навигацию в Челябинске, и что было бы неплохо привести в порядок и нашу.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://ilyabirman.ru/projects/chelyabinsk-address-plates/&quot;&gt;Адресные таблички Челябинска&lt;/a&gt; в Блоге Ильи Бирмана.
 Я начал собирать по кускам, те наработки, которые есть на сегодняшний день. Первой зацепкой стал документ сделанный, ныне закрытым ПЦРД — &lt;a href=&quot;https://furye.ru%5Cassets%5Cimg%5Cposts%5Cprmnav%5Cpermvisualcommunications1.pdf&quot;&gt;Брендбук Перми [β-версия]&lt;/a&gt;.&lt;/p&gt;
 &lt;p class=&quot;aside&quot;&gt;&lt;a href=&quot;https://ilyabirman.ru/projects/chelyabinsk-address-plates/&quot;&gt;Адресные таблички Челябинска&lt;/a&gt;в Блоге Ильи Бирмана.&lt;/p&gt;
@@ -265,7 +271,8 @@
 <title>О недоделанной Пермской уличной навигации [Часть 1] × Предпосылки</title>
 <link href="https://furye.ru/posts/permian-navigation-part1/"/>
 <updated>2022-06-04T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Илья Бирман с командой не так давно сделали &lt;a href=&quot;https://ilyabirman.ru/projects/chelyabinsk-address-plates/&quot;&gt;Конструктор адресных табличек в Челябинска&lt;/a&gt;, и я ему завидую.
+<id>https://furye.ru/posts/permian-navigation-part1/</id>
+<content xml:lang="" type="html">&lt;p&gt;Илья Бирман с командой не так давно сделали &lt;a href=&quot;https://ilyabirman.ru/projects/chelyabinsk-address-plates/&quot;&gt;Конструктор адресных табличек в Челябинска&lt;/a&gt;, и я ему завидую.
 Выглядят таблички вот так: 1&lt;/p&gt;
 &lt;div class=&quot;fotorama&quot; data-width=&quot;100%&quot; data-height=&quot;800&quot; data-nav=&quot;dots&quot;&gt;
      &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img//posts/prmnav/quarters.jpg&quot; alt=&quot;Пример навигации разработанной Ильёй Барманом&quot; /&gt;&lt;figcaption&gt;Пример базовой навигации разработанной Ильёй Барманом&lt;/figcaption&gt;&lt;/figure&gt;
@@ -309,7 +316,8 @@
 <title>Построить запасной аэродром</title>
 <link href="https://furye.ru/posts/postroit-zapasnoj-aerodrom/"/>
 <updated>2020-06-15T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Организовать план «Б» на случай факапа — точно такой-же способ обезопасить себя, от потери работы. Ранее мы обсуждали подушку безопасности. Она нужна, когда и план «А» и план «Б» не сработали.&lt;/p&gt;
+<id>https://furye.ru/posts/postroit-zapasnoj-aerodrom/</id>
+<content xml:lang="" type="html">&lt;p&gt;Организовать план «Б» на случай факапа — точно такой-же способ обезопасить себя, от потери работы. Ранее мы обсуждали подушку безопасности. Она нужна, когда и план «А» и план «Б» не сработали.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img/airport.png&quot; alt=&quot;Запасной аэродром&quot; /&gt;&lt;figcaption&gt;Оригинальное фото Unsplash, сфотографировал Tomas Williams&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Запасной вариант работы, хоть и не генерирует дополнительных денег, но он всегда может придти на помощь, если с прежней работой вы распрощались, и что бы не жить питаясь бич-пакетами, у вас будет вариант, который позволит вам, сохранить доходы, пусть даже и не на прежнем уровне. Если этот план роняет вас в доходах, то тут как раз и придёт на помощь подушка безопасности.&lt;/p&gt;
 &lt;h2&gt;Как построить план «Б»?&lt;/h2&gt;
@@ -347,7 +355,8 @@
 <title>Календарь дедлайнов</title>
 <link href="https://furye.ru/posts/kalendar-dedlajnov/"/>
 <updated>2019-08-01T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Когда, я работал в &lt;a href=&quot;https://www.facebook.com/taskandsolution&quot;&gt;Task &amp;amp; Solution Marketing&lt;/a&gt; у нас был сформулирован «словарь дедлайнов». Такой своеобразный переводчик формулировок с указанием сроков, с языка клиента на язык исполнителя, чтобы не допускать недопониманий, факапов и оставлять время на доработку и флекс.&lt;/p&gt;
+<id>https://furye.ru/posts/kalendar-dedlajnov/</id>
+<content xml:lang="" type="html">&lt;p&gt;Когда, я работал в &lt;a href=&quot;https://www.facebook.com/taskandsolution&quot;&gt;Task &amp;amp; Solution Marketing&lt;/a&gt; у нас был сформулирован «словарь дедлайнов». Такой своеобразный переводчик формулировок с указанием сроков, с языка клиента на язык исполнителя, чтобы не допускать недопониманий, факапов и оставлять время на доработку и флекс.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img/Dead-line-calendar.jpg&quot; alt=&quot;Deadline Calendar&quot; /&gt;&lt;figcaption&gt;undefined&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Чуть позже, ребята подготовили постер, который можно распечатать и повесить себе на стену.
 Словарь будет полезен:&lt;/p&gt;
@@ -364,7 +373,8 @@
 <title>Самый богатый человек в Вавилоне</title>
 <link href="https://furye.ru/posts/samyj-bogatyj-chelovek-v-vavilone/"/>
 <updated>2019-06-10T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Редко пишу отзывы на книги, но если бы эту книгу я прочитал в 20 лет, то вероятнее всего сейчас бы не был в той финансовой заднице, что нахожусь. Хотя продуктивно их неё вылажу. Я буду рекомендовать эту книгу всем своим друзьям, родным, поскольку на мой взгляд, вещи из нее нужно прививать ещё со школы.&lt;/p&gt;
+<id>https://furye.ru/posts/samyj-bogatyj-chelovek-v-vavilone/</id>
+<content xml:lang="" type="html">&lt;p&gt;Редко пишу отзывы на книги, но если бы эту книгу я прочитал в 20 лет, то вероятнее всего сейчас бы не был в той финансовой заднице, что нахожусь. Хотя продуктивно их неё вылажу. Я буду рекомендовать эту книгу всем своим друзьям, родным, поскольку на мой взгляд, вещи из нее нужно прививать ещё со школы.&lt;/p&gt;
 &lt;p&gt;Не так давно в одной из своих сториз &lt;a href=&quot;https://www.instagram.com/igorfaynman/&quot;&gt;Игорь Файнман&lt;/a&gt; порекомендовал книжку «&lt;a href=&quot;https://www.ozon.ru/context/detail/id/143992863/?partner=fourierOZON&quot;&gt;Самый богатый человек в Вавилоне&lt;/a&gt;»&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img/vavilon-book.jpg&quot; alt=&quot;Книга Самый богатый человек в Вавилоне&quot; /&gt;&lt;figcaption&gt;Да, приписка «Книга будущего миллионера» — звучит пафосно, но увы в другой обложке этой книги я не нашел.&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Так или иначе, пока эта книга бьёт рекорды по числу заметок и закладок в ней в моём рейтинге.&lt;/p&gt;
@@ -408,7 +418,8 @@
 <title>Минимальный набор для старта в геймдеве [Устарело]</title>
 <link href="https://furye.ru/posts/minimalnyj-nabor-dlya-starta-v-gejmdeve-ustarelo/"/>
 <updated>2018-08-01T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Прошлым летом, я планировал уйти из маркетинга, рекламы, PR в геймдев. Но так вышло, что встречал отказ за отказом, в каждой компании, куда закидывал резюме.&lt;/p&gt;
+<id>https://furye.ru/posts/minimalnyj-nabor-dlya-starta-v-gejmdeve-ustarelo/</id>
+<content xml:lang="" type="html">&lt;p&gt;Прошлым летом, я планировал уйти из маркетинга, рекламы, PR в геймдев. Но так вышло, что встречал отказ за отказом, в каждой компании, куда закидывал резюме.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img/gamedev-form-hell.jpg&quot; alt=&quot;Сложности поиска работы в геймдеве&quot; /&gt;&lt;figcaption&gt;Сложности поиска работы в геймдеве&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Отказ — это не проблема. Я специалист по отказам, поэтому это для меня очередной повод к рефлексии.&lt;/p&gt;
 &lt;p&gt;За то время, пока я искал работу я просмотрел 130, или 140 вакансий. У меня сложились следующие представления о том, что нужно знать прежде чем пойти заваливать своим резюме студии.&lt;/p&gt;
@@ -489,7 +500,8 @@
 <title>Как сменить фамилию и не облажаться</title>
 <link href="https://furye.ru/posts/kak-smenit-familiyu-i-ne-oblazhatsya/"/>
 <updated>2018-06-01T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Привет, меня зовут Дима Фурье.&lt;/p&gt;
+<id>https://furye.ru/posts/kak-smenit-familiyu-i-ne-oblazhatsya/</id>
+<content xml:lang="" type="html">&lt;p&gt;Привет, меня зовут Дима Фурье.&lt;/p&gt;
 &lt;p&gt;Раньше у меня была другая фамилия, но в один день мне захотелось что-то поменять в себе и решил я начать с фамилии. Поскольку мне пришлось, наткнуться на несколько подводных камней, я расскажу вам, как с комфортом и быстро сменить фамилию в России, без умирания в очередях, и хождениям по кабинетам.&lt;/p&gt;
 &lt;h2&gt;Шаг первый — подготовка&lt;/h2&gt;
 &lt;p&gt;Ни в коем случае не игнорируйте подготовку. Вы живете в России, где на любом общении с государством можно получить неприятности. Поэтому купите папку для бумаг — и держите её при себе. Пусть в ней будет вообще все документы и копии из списка.&lt;/p&gt;
@@ -579,7 +591,8 @@
 <title>Сверяйтесь в терминологии</title>
 <link href="https://furye.ru/posts/sveryajtes-v-terminologii/"/>
 <updated>2017-09-21T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Самое главное в переговорах — договориться в терминологии.&lt;/p&gt;
+<id>https://furye.ru/posts/sveryajtes-v-terminologii/</id>
+<content xml:lang="" type="html">&lt;p&gt;Самое главное в переговорах — договориться в терминологии.&lt;/p&gt;
 &lt;p&gt;Сейчас я стажируюсь финансовым lконсультантом в Нескучных финансах, и в финансовом консалтинге одно из важных правил — применять одинаковую терминологию. Иначе возможны ошибки в учете.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;— Какая у вас выручка?&lt;br /&gt;
@@ -615,7 +628,8 @@
 <title>Отзыв на первую ступень университета Финолог</title>
 <link href="https://furye.ru/posts/otzyv-na-pervuyu-stupen-universiteta-finolog/"/>
 <updated>2017-09-12T00:00:00.000Z</updated>
-    <content type="html">&lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img/finolog-review.jpg&quot; alt=&quot;Finolog-review&quot; /&gt;&lt;figcaption&gt;undefined&lt;/figcaption&gt;&lt;/figure&gt;
+<id>https://furye.ru/posts/otzyv-na-pervuyu-stupen-universiteta-finolog/</id>
+<content xml:lang="" type="html">&lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img/finolog-review.jpg&quot; alt=&quot;Finolog-review&quot; /&gt;&lt;figcaption&gt;undefined&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Пару месяцев назад я начал осваивать управленческий учёт. Для старта в этой сфере выбрал &lt;a href=&quot;https://finolog.ru/univer&quot;&gt;университет Финолог&lt;/a&gt; и теперь закончил первую ступень.&lt;/p&gt;
 &lt;h2&gt;Димон, нафиг оно тебе нужно?&lt;/h2&gt;
 &lt;p&gt;В первую очередь ради понимания того, как работает бизнес с точки финансов. Долгое время я работал в маркетинге и рекламе, и зачастую для обоснования своих решений или критики чужих мне не хватало аргументов по финансовой части.&lt;/p&gt;
@@ -683,7 +697,8 @@
 <title>Как вести учёт налички в бизнесе и не свихнуться</title>
 <link href="https://furye.ru/posts/kak-vesti-uchyot-nalichki-v-biznese-i-ne-svihnutsya/"/>
 <updated>2017-07-05T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;В управленческом учёте есть такой отчёт «Отчёт о движении денег» — он помогает сводить актуальные остатки, и видеть собственнику, куда ушли, и, откуда пришли деньги.&lt;/p&gt;
+<id>https://furye.ru/posts/kak-vesti-uchyot-nalichki-v-biznese-i-ne-svihnutsya/</id>
+<content xml:lang="" type="html">&lt;p&gt;В управленческом учёте есть такой отчёт «Отчёт о движении денег» — он помогает сводить актуальные остатки, и видеть собственнику, куда ушли, и, откуда пришли деньги.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://furye.ru/assets/img/cashflow-in-finance-managment.jpg&quot; alt=&quot;Питер Брейгель Младший. Выплата десятины (1615)&quot; /&gt;&lt;figcaption&gt;Питер Брейгель Младший. Выплата десятины (1615)&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;В связке с платёжным календарём и другими отчётами это помогает правильно составлять бюджеты. Но об этом чуть позже.&lt;/p&gt;
 &lt;p&gt;Уже месяц как я работаю в Нескучных финансах. Я помогаю предпринимателям внедрять управленческий учёт, и четко понимать, как работает их бизнес с точки зрения финансов.&lt;/p&gt;
@@ -778,7 +793,8 @@
 <title>Безопасность при найме финменеджера</title>
 <link href="https://furye.ru/posts/bezopasnost-pri-najme-finmenedzhera/"/>
 <updated>2017-04-05T00:00:00.000Z</updated>
-    <content type="html">&lt;p&gt;Когда мы в Нескучных финансах внедряем управленческий учёт, мы говорим собственнику, о том, что нам на его стороне понадобиться человек, который будет отвечать за предоставление данных.&lt;/p&gt;
+<id>https://furye.ru/posts/bezopasnost-pri-najme-finmenedzhera/</id>
+<content xml:lang="" type="html">&lt;p&gt;Когда мы в Нескучных финансах внедряем управленческий учёт, мы говорим собственнику, о том, что нам на его стороне понадобиться человек, который будет отвечать за предоставление данных.&lt;/p&gt;
 &lt;p&gt;Мы в нескучных убеждены, что задача собственника и руководителя управлять, а не собирать цифры. Поэтому мы считаем важным, чтобы собственник делегировал сбор данных другому сотруднику, а сам сосредоточился на оперативном управлении.&lt;/p&gt;
 &lt;p&gt;Но когда мы об этом говорим на встречах, встречаем вопрос, как доверить стороннему человеку финансы компании. Вдруг он будет подворовывать, или сливать данные посторонним?&lt;/p&gt;
 &lt;p&gt;Опасения понятны. Бизнес — это про риски. Так давайте разберёмся, как эти риски свести к минимуму.&lt;/p&gt;
