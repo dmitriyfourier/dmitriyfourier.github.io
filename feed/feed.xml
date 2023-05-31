@@ -14,6 +14,18 @@
 		<copyright>© Дмитрий Фурье × 2017 — 2023</copyright>
         <item turbo="true">
             <!-- Информация о странице -->
+			<title>Послание выпускникам 2023</title>
+			<description>Рад за вас и очень переживаю</description>
+            <turbo:extendedHtml>true</turbo:extendedHtml>
+            <link>https://furye.ru/posts/message-to-graduates/</link>
+            <pubDate>2025-06-05T00:00:00.000Z</pubDate>
+            <author>Дмитрий Фурье</author>
+            <turbo:content>
+				&lt;iframe width=&quot;1280&quot; height=&quot;720&quot; src=&quot;https://www.youtube.com/embed/1h34a3CpkIc&quot; title=&quot;Алекс Дубас &amp;amp; Ёлка &amp;quot;О пользе солнцезащитных кремов&amp;quot;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+            </turbo:content>
+        </item>
+        <item turbo="true">
+            <!-- Информация о странице -->
 			<title>Уличная навигация в Перми [Часть 6] × Переписка с департаментом ЖКХ и Благоустройства</title>
 			<description>Какие взгляды у Пермской администрации на уличную навигацию</description>
             <turbo:extendedHtml>true</turbo:extendedHtml>
