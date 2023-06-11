@@ -92,5 +92,4 @@ tags:
 И как было в совместно треке Ёлки и Алекса Дюбуса — Пользуйтесь солнцезащитными кремом.
 
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/1h34a3CpkIc" title="Алекс Дубас &amp; Ёлка &quot;О пользе солнцезащитных кремов&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+https://youtu.be/1h34a3CpkIc
