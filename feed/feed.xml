@@ -14,14 +14,14 @@
 		<copyright>© Дмитрий Фурье × 2017 — 2023</copyright>
         <item turbo="true">
             <!-- Информация о странице -->
-			<title>Дев ветка</title>
+			<title>Прод ветка</title>
 			<description>Добро пожаловать во взрослую жизнь.</description>
             <turbo:extendedHtml>true</turbo:extendedHtml>
             <link>https://furye.ru/posts/draft-test/</link>
             <pubDate>2025-06-05T00:00:00.000Z</pubDate>
             <author>Дмитрий Фурье</author>
             <turbo:content>
-				&lt;p&gt;Эта страница  должна быть только на дев окружении&lt;/p&gt;
+				&lt;p&gt;Эта страница  должна быть только на проде&lt;/p&gt;
 
             </turbo:content>
         </item>
