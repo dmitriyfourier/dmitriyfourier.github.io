@@ -143,48 +143,41 @@
     
         <url>
             <loc>https://furye.ru/404.html</loc>
-            <lastmod>2023-06-11T15:50:17.649Z</lastmod>
+            <lastmod>2023-06-11T16:36:39.360Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/podcasts/</loc>
-            <lastmod>2023-06-11T15:50:17.765Z</lastmod>
+            <lastmod>2023-06-11T16:36:39.464Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/</loc>
-            <lastmod>2023-06-11T15:50:17.765Z</lastmod>
+            <lastmod>2023-06-11T16:36:39.464Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/podcasts/</loc>
-            <lastmod>2023-06-11T15:50:17.765Z</lastmod>
+            <lastmod>2023-06-11T16:36:39.464Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/</loc>
-            <lastmod>2023-06-11T15:50:17.765Z</lastmod>
+            <lastmod>2023-06-11T16:36:39.464Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/message-to-graduates/</loc>
-            <lastmod>2025-06-05T00:00:00.000Z</lastmod>
-            <changefreq>monthly</changefreq>
-             <priority>0.5</priority>
-        </url>
-    
-        <url>
-            <loc>https://furye.ru/posts/draft-test/</loc>
             <lastmod>2025-06-05T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
