@@ -11,15 +11,15 @@ pagination:
 <h2 class="text-2xl sm:text-4xl font-bold leading-tight">Записи блога</h2>
 {% for post in pagination.items %}
 {% if post.data.published %}
-<div class="mb-16">
+<div class="mb-16" itemscope itemtype="https://schema.org/BlogPosting">
   <h2 class="text-2xl sm:text-4xl font-bold leading-tight">
-    <a class="link-novisited no-underline hover:underline" href="{{ post.url }}">{{ post.data.title }}</a>
+    <a class="link-novisited no-underline hover:underline" href="{{ post.url }}" itemprop="url"><span itemprop="name">{{ post.data.title }}</span></a>
   </h2>
   <div>
-  <em><time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></em><span
+  <em><time itemprop="datePublished" datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></em><span
     class="text-base font-normal"> &middot; Время чтения ≈ {{ post.templateContent | readTime }} мин</span>
   </div>
-  <div>{{ post.templateContent }}</div>
+  <div itemprop="articleBody">{{ post.templateContent }}</div>
 
   <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
     <div class="pr-4">

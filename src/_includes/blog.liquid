@@ -172,9 +172,9 @@
         </div>
       </div>
      
-      <p class="text-sm py-2">
+      <p class="text-sm py-2" itemprop="copyrightNotice">
         <!--Добавляем автора сайта-->
-        <span class="space-out-bottom-mili-xs">© {{ site.author }} × </span>
+        <span class="space-out-bottom-mili-xs" itemprop="publisher" itemscope itemtype="https://schema.org/Person">©<span itemprop="name">{{ site.author }}</span> × </span>
         <!--Добавляем копирайт на сайт и даты-->
         <span>2017 — {% year %}</span> </p>
   </div>
