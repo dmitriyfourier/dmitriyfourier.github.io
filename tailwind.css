@@ -88,3 +88,10 @@ p {
 div.warp {
   @apply overflow-x-auto;
 }
+
+ul.everything li {
+  transform: translateX(0em);
+  animation: fixlists 1s;
+  padding-bottom: .8em;
+  padding-right: 2.5em;
+}
