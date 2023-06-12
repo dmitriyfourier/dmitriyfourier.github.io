@@ -1,21 +1,20 @@
 ---
 layout: blog
 ---
-<article class="article-post">
-<h1 class="mb-4">
+<article class="article-post" itemscope itemtype="https://schema.org/BlogPosting" itemid="{{ url }}">
+<h1 class="mb-4" itemprop="name">
     {{ title}}
 </h1>
 <div class="mb-4 text-mk-comments">
-    <em><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></em> •
+    <em><time itemprop="datePublished" datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></em> •
     <span class=>Время чтения ≈ {{ content | readTime }} мин.</span>
 </div>
-<div>
+<div itemprop="articleBody">
   {{ content }}
-
 </div>
 </article>
 <!-- # ===== Tags =====  # -->
-<div class="warp flex mt-3 pb-4 text-xs">
+<div class="warp flex mt-3 pb-4 text-xs" itemprop="keywords">
 	{% for tag in tags %}
 	  {% if tag != "posts" %}
 		<a class="link-novisited px-3 py-2" href="/tags/{{ tag | slug }}">
