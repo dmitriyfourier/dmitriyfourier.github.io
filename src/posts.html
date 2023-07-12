@@ -8,7 +8,7 @@ pagination:
   reverse: true
   alias: posts
 ---
-<h2 class="text-2xl sm:text-4xl font-bold leading-tight">Записи блога</h2>
+<h2 class="text-2xl sm:text-4xl font-bold leading-tight">Блог</h2>
 {% for post in pagination.items %}
 {% if post.data.published %}
 <div class="mb-16" itemscope itemtype="https://schema.org/BlogPosting">
