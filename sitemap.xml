@@ -142,57 +142,64 @@
         </url>
     
         <url>
-            <loc>https://furye.ru/404.html</loc>
-            <lastmod>2023-06-25T09:00:28.608Z</lastmod>
+            <loc>https://furye.ru/posts/message-to-graduates/</loc>
+            <lastmod>2023-05-30T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
-            <loc>https://furye.ru/Everything-Everywhere-All-at-Once.html</loc>
-            <lastmod>2023-06-25T09:00:28.628Z</lastmod>
+            <loc>https://furye.ru/posts/knowledges-types/</loc>
+            <lastmod>2023-07-12T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priority>0.5</priority>
+        </url>
+    
+        <url>
+            <loc>https://furye.ru/404.html</loc>
+            <lastmod>2023-07-12T15:22:42.265Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priority>0.5</priority>
+        </url>
+    
+        <url>
+            <loc>https://furye.ru/Everything-Everywhere-All-at-Once</loc>
+            <lastmod>2023-07-12T15:22:42.289Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/donation.html</loc>
-            <lastmod>2023-06-25T09:00:28.708Z</lastmod>
+            <lastmod>2023-07-12T15:22:42.369Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/podcasts/</loc>
-            <lastmod>2023-06-25T09:00:28.708Z</lastmod>
+            <lastmod>2023-07-12T15:22:42.369Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/</loc>
-            <lastmod>2023-06-25T09:00:28.708Z</lastmod>
+            <lastmod>2023-07-12T15:22:42.373Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/podcasts/</loc>
-            <lastmod>2023-06-25T09:00:28.712Z</lastmod>
+            <lastmod>2023-07-12T15:22:42.373Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/</loc>
-            <lastmod>2023-06-25T09:00:28.712Z</lastmod>
-            <changefreq>monthly</changefreq>
-             <priority>0.5</priority>
-        </url>
-    
-        <url>
-            <loc>https://furye.ru/posts/message-to-graduates/</loc>
-            <lastmod>2025-06-05T00:00:00.000Z</lastmod>
+            <lastmod>2023-07-12T15:22:42.373Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
