@@ -2,7 +2,7 @@
 layout: post
 title: Послание выпускникам × 2023
 desc: Добро пожаловать во взрослую жизнь.
-date: 2023-30-05
+date: 2023-05-30
 url: message-to-graduates
 cover: "messagetograduatecover.jpg"
 permalink: "/posts/{{ url | slug }}/"
