@@ -2,7 +2,7 @@
 body {
     font-family: "TildaSans", system-ui, -apple-system, BlinkMacSystemFont, "SF UI Text", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.5rem;
   }
   body:not([class]),
   article:not([class]),
