@@ -1,3 +1,4 @@
+import harmonyPalette from "@evilmartians/harmony/tailwind";
 module.exports = {
   theme: {
     colors: {
@@ -47,9 +48,9 @@ module.exports = {
         deepdark: '#234',
       },
       'mk': {
-        background: '#202020',
-        comments: '#797979',
-        white: '#f2f2f2',
+        background: 'oklch(19.34% 0.012 75)',
+        comments: 'oklch(61.33% 0.008 75)',
+        white: 'oklch(96.68% 0.0171875 20)',
         yellow: {
                   main: 'rgb(229,181,103)',
                   deco: 'rgb(229,181,103, 0.25)',
@@ -69,7 +70,7 @@ module.exports = {
                 },
         pink: '#b05279',
         blue: {
-                  main: '#6c99bb',
+                  main: 'oklch(58% 0.083 242)',
                   deco: 'rgb(108,153,187, 0.25)',
                   deep: '#4344b3',
                   deepde:'rgb(67, 68, 179, 0.25)'},
