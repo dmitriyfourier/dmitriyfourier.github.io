@@ -76,8 +76,17 @@ module.exports = {
       },
       // ...
     },
+    extend: {
+      gridTemplateRows: {
+        '6': 'repeat(6, minmax(0, 1fr))',
+        '8': 'repeat(8, minmax(0, 1fr))',
+        '10': 'repeat(10, minmax(0, 1fr))',
+        '12': 'repeat(12, minmax(0, 1fr))',
+        '14': 'repeat(14, minmax(0, 1fr))',
+        '16': 'repeat(16, minmax(0, 1fr))',
   }, 
-  
+},
+},
   darkMode: 'class',
   content: ['./src/**/*.md', './src/**/*.html', './src/_includes/**/*.liquid', './node_modules/flowbite/**/*.js'],
   plugins: [
