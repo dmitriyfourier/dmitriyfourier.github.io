@@ -156,50 +156,57 @@
         </url>
     
         <url>
+            <loc>https://furye.ru/posts/managment-without-tie/</loc>
+            <lastmod>2023-10-26T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+             <priority>0.5</priority>
+        </url>
+    
+        <url>
             <loc>https://furye.ru/404.html</loc>
-            <lastmod>2023-10-18T18:11:14.900Z</lastmod>
+            <lastmod>2023-10-26T07:48:35.533Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/everything-everywhere-all-at-once.html</loc>
-            <lastmod>2023-10-18T18:11:14.924Z</lastmod>
+            <lastmod>2023-10-26T07:48:35.557Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/donation.html</loc>
-            <lastmod>2023-10-18T18:11:15.008Z</lastmod>
+            <lastmod>2023-10-26T07:48:35.641Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/podcasts/</loc>
-            <lastmod>2023-10-18T18:11:15.008Z</lastmod>
+            <lastmod>2023-10-26T07:48:35.641Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/posts/</loc>
-            <lastmod>2023-10-18T18:11:15.008Z</lastmod>
+            <lastmod>2023-10-26T07:48:35.641Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/podcasts/</loc>
-            <lastmod>2023-10-18T18:11:15.012Z</lastmod>
+            <lastmod>2023-10-26T07:48:35.645Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
     
         <url>
             <loc>https://furye.ru/tags/</loc>
-            <lastmod>2023-10-18T18:11:15.012Z</lastmod>
+            <lastmod>2023-10-26T07:48:35.645Z</lastmod>
             <changefreq>monthly</changefreq>
              <priority>0.5</priority>
         </url>
