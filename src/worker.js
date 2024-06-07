@@ -6,7 +6,7 @@
     const { status, statusText } = resp;
     const { readable, writable } = new TransformStream();
   
-    const response = await fetch("https://furye.ru/404/");
+    const response = await fetch("https://fourier.rocks/404/");
     const { headers } = response;
   
     response.body.pipeTo(writable);
