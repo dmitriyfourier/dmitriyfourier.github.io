@@ -67,9 +67,9 @@ tags:
 [Чат по Пермской навигации](https://t.me/joinchat/03yWotWXO2MwNmUy)
 
 ## Оглавление:
-- — Часть 1: [О предпосылках](https://furye.ru/posts/permian-street-navigation-part1/)
-- — Часть 2: [Попытки разобраться с базовыми форматами и укладкой названий](https://furye.ru/posts/permian-navigation-part2/)
-- — Часть 3: [Переписка с разработчиками проекта](https://furye.ru/posts/permian-navigation-part3/)
-- — Часть 4: [Существующая навигация. Разбор примеров](https://furye.ru/posts/permian-navigation-part4/)
+- — Часть 1: [О предпосылках]({{ site.url }}/posts/permian-street-navigation-part1/)
+- — Часть 2: [Попытки разобраться с базовыми форматами и укладкой названий]({{ site.url }}/posts/permian-navigation-part2/)
+- — Часть 3: [Переписка с разработчиками проекта]({{ site.url }}/posts/permian-navigation-part3/)
+- — Часть 4: [Существующая навигация. Разбор примеров]({{ site.url }}/posts/permian-navigation-part4/)
 - → Часть 5: Разбираемся с форматами
-- — Часть 6: [Переписка с департаментом ЖКХ](https://furye.ru/posts/permian-navigation-part6/)
+- — Часть 6: [Переписка с департаментом ЖКХ]({{ site.url }}/posts/permian-navigation-part6/)

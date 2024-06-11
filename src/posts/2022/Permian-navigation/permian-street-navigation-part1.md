@@ -52,9 +52,9 @@ tags:
 
 ## Оглавление
 - → Часть 1: О предпосылках
-- — Часть 2: [Попытки разобраться с базовыми форматами указателей и укладке названий.](https://furye.ru/posts/permian-navigation-part2/)
-- — Часть 3: [Переписка с разработчиками проекта.](https://furye.ru/posts/permian-navigation-part3/)
-- — Часть 4: [Существующая навигация](https://furye.ru/posts/permian-navigation-part4/)
-- — Часть 5: [Разбираемся с форматами](https://furye.ru/posts/permian-navigation-part5/)
-- — Часть 6: [Переписка с департаментом ЖКХ](https://furye.ru/posts/permian-navigation-part6/)
+- — Часть 2: [Попытки разобраться с базовыми форматами указателей и укладке названий.]({{ site.url }}/posts/permian-navigation-part2/)
+- — Часть 3: [Переписка с разработчиками проекта.]({{ site.url }}/posts/permian-navigation-part3/)
+- — Часть 4: [Существующая навигация]({{ site.url }}/posts/permian-navigation-part4/)
+- — Часть 5: [Разбираемся с форматами]({{ site.url }}/posts/permian-navigation-part5/)
+- — Часть 6: [Переписка с департаментом ЖКХ]({{ site.url }}/posts/permian-navigation-part6/)
 
