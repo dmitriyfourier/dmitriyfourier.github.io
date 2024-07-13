@@ -195,6 +195,29 @@
   </script>
   <script src="/assets/scripts/jquery.min.js"></script>
   <script src="/assets/scripts/fotorama.min.js"></script>
+  <script>
+document.addEventListener('keydown', function(event) {
+  // Проверяем, что нажата клавиша Ctrl
+  if (event.ctrlKey) {
+    // Проверяем, какая стрелка нажата
+    if (event.key === 'ArrowLeft') {
+      // Ctrl + стрелка влево
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var prevLink = document.getElementById('previousPost');
+      if (prevLink) {
+        window.location.href = prevLink.href;
+      }
+    } else if (event.key === 'ArrowRight') {
+      // Ctrl + стрелка вправо
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var nextLink = document.getElementById('nextPost');
+      if (nextLink) {
+        window.location.href = nextLink.href;
+      }
+    }
+  }
+});
+</script>
 </body>
 
 </html>

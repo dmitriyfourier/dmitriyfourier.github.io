@@ -13,6 +13,11 @@ layout: blog
   {{ content }}
 </div>
 </article>
+<!-- # ===== Related Posts ==== # -->
+{% include "_partials/similar.liquid" %}
+
+ 
+
 <!-- # ===== Tags =====  # -->
 <div class="warp flex mt-3 pb-4 text-xs" itemprop="keywords">
 	{% for tag in tags %}
@@ -30,8 +35,8 @@ layout: blog
 	{%- if nextPost or previousPost %}
 	<hr>
 	<div class="flex flex-row justify-between">
-	  <div class="basis-1/2 justify-self-start">{%- if previousPost %}← <a href="{{ previousPost.url | url }}" class="link-novisited">{{ previousPost.data.title }}</a>{% endif %}</div>
-	  <div class="basis-1/2 justify-self-end">{%- if nextPost %}<a href="{{ nextPost.url | url }}" class="link-novisited">{{ nextPost.data.title }}</a> → {% endif %}</div>
+	  <div class="basis-1/2 justify-self-start">{%- if previousPost %}<small class="text-gray-500">Ctrl ←</small><br><a href="{{ previousPost.url | url }}" class="link-novisited" id="previousPost">{{ previousPost.data.title }}</a>{% endif %}</div>
+	  <div class="basis-1/2 justify-self-end">{%- if nextPost %}<small class="text-gray-500">Ctrl →</small><br><a href="{{ nextPost.url | url }}" class="link-novisited" id="nextPost">{{ nextPost.data.title }}</a>{% endif %}</div>
 	</div>
 	{%- endif %}
 	{%- endif %}
