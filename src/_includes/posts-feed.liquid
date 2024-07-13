@@ -100,26 +100,6 @@
     </div>
   </div>
 </nav>
-
-<!-- <script>
-  var mobileMenuButton = document.getElementById("mobileMenuButton");
-  mobileMenuButton.onclick = function () {
-    document.getElementById("nav-menu").classList.toggle("hidden");
-    document.getElementById("nav-buttons").classList.toggle("flex");
-    document.getElementById("nav-buttons").classList.toggle("flex-col");
-    document.getElementById("nav-buttons").classList.toggle("space-y-2");
-  }
-  // Hide element when click outside nav
-  // var theElementContainer = document.getElementsByTagName("nav")[0];
-  // document.addEventListener('click', function(event) {
-  //   if (!theElementContainer.contains(event.target)) {
-  //     document.getElementById("menu").classList.toggle("hidden");
-  //     document.getElementById("nav-buttons").classList.toggle("flex");
-  //     document.getElementById("nav-buttons").classList.toggle("flex-col");
-  //     document.getElementById("nav-buttons").classList.toggle("space-y-2");
-  //   }
-  // });
-</script>-->
     </header>
       <main class="">
         
@@ -189,5 +169,28 @@
           }
         });
       </script>
+      <script>
+document.addEventListener('keydown', function(event) {
+  // Проверяем, что нажата клавиша Ctrl
+  if (event.ctrlKey) {
+    // Проверяем, какая стрелка нажата
+    if (event.key === 'ArrowDown') {
+      // Ctrl + стрелка вниз
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var prevLink = document.getElementById('earlierPosts');
+      if (prevLink) {
+        window.location.href = prevLink.href;
+      }
+    } else if (event.key === 'ArrowUp') {
+      // Ctrl + стрелка вверх
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var nextLink = document.getElementById('latestPosts');
+      if (nextLink) {
+        window.location.href = nextLink.href;
+      }
+    }
+  }
+});
+</script>
   </body>
 </html>
