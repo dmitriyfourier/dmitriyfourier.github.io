@@ -5,6 +5,7 @@ desc: Разбираемся в том, какие должны быть фор�
 date: 2022-06-12
 url: permian-navigation-part2
 permalink: "/posts/{{ url | slug }}/"
+categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - Домоуправление
   - ЖКХ

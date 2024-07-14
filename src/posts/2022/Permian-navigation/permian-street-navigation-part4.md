@@ -5,6 +5,7 @@ desc: Набор примеров того, как выглядит улична
 date: 2022-06-18
 url: permian-navigation-part4
 permalink: "/posts/{{ url | slug }}/"
+categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - Домоуправление
   - ЖКХ
