@@ -20,9 +20,9 @@ pagination:
 
     <div class="flex space-x-4 shrink-0">
       <div class="shrink-0 py-2 px-2">
-        <a href="{{ podcast.url }}" class="link-novisited">
+        <a href="{{ podcast.url }}" class="link-novisited" tabindex="-1" aria-hidden="true">
           <figure class="rounded-full w-24 h-24 sm:w-24 sm:h-24 xl:w-24 xl:h-24 outline-solid outline-offset-2 outline-1 hover:outline-solid hover:outline-offset-2 hover:outline-2"><img src="{{ podcast.data.pdcastimg }}"
-              alt="{{ podcast.data.title }}" class="rounded-full" loading="eager" sizes="96px" eleventy:widths="96,192,288" /></figure>
+              alt="" class="rounded-full" loading="eager" sizes="96px" eleventy:widths="96,192,288" /></figure>
         </a>
       </div>
       <div class="max-w-xs flex-none">

@@ -1,18 +1,18 @@
 <nav class="flex justify-stretch mt-8" aria-label="Страницы ленты">
   <div class="inline-flex">
     {% if page.url != pagination.href.first %}
-    <a id="latestPosts" href="{{ pagination.href.first }}">
-      <div aria-label="Посмотреть посты опубликованные Ранее">Ранее</div>
+    <a id="latestPosts" href="{{ pagination.href.first }}" aria-keyshortcuts="Control+ArrowUp">
+      Ранее
     </a>
-    <div><small class="text-muted"> Ctrl ↑</small></div>
+    <div><small class="text-muted" aria-hidden="true"> Ctrl ↑</small></div>
 
     {% else %}
     <div class="hidden">Ранее ↑</div>
     {% endif %} {% if page.url != pagination.href.last %}
-    <a id="earlierPosts" href="{{ pagination.href.last }}">
-      <div aria-label="Посмотреть посты опубликованные позже">Позднее</div>
+    <a id="earlierPosts" href="{{ pagination.href.last }}" aria-keyshortcuts="Control+ArrowDown">
+      Позднее
     </a>
-    <div><small class="text-muted"> Ctrl ↓</small></div>
+    <div><small class="text-muted" aria-hidden="true"> Ctrl ↓</small></div>
 
     {% else %}
     <div class="hidden">Позднее ↓</div>

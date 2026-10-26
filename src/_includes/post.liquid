@@ -35,8 +35,8 @@ layout: blog
 	{%- if nextPost or previousPost %}
 	<hr>
 	<nav class="flex flex-row justify-between" aria-label="Соседние записи">
-	  <div class="basis-1/2 justify-self-start">{%- if previousPost %}<small class="text-muted">Ctrl ←</small><br><a href="{{ previousPost.url | url }}" class="link-novisited" id="previousPost">{{ previousPost.data.title }}</a>{% endif %}</div>
-	  <div class="basis-1/2 justify-self-end">{%- if nextPost %}<small class="text-muted">Ctrl →</small><br><a href="{{ nextPost.url | url }}" class="link-novisited" id="nextPost">{{ nextPost.data.title }}</a>{% endif %}</div>
+	  <div class="basis-1/2 justify-self-start">{%- if previousPost %}<small class="text-muted" aria-hidden="true">Ctrl ←</small><br><a href="{{ previousPost.url | url }}" class="link-novisited" id="previousPost" aria-keyshortcuts="Control+ArrowLeft">{{ previousPost.data.title }}</a>{% endif %}</div>
+	  <div class="basis-1/2 justify-self-end">{%- if nextPost %}<small class="text-muted" aria-hidden="true">Ctrl →</small><br><a href="{{ nextPost.url | url }}" class="link-novisited" id="nextPost" aria-keyshortcuts="Control+ArrowRight">{{ nextPost.data.title }}</a>{% endif %}</div>
 	</nav>
 	{%- endif %}
 	{%- endif %}
