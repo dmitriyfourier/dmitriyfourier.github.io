@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Как телеграм снижает доступность информации.</title>
+  <meta name="description" content="С ростом популярности телеграм-каналов информация не попадает в поисковый индекс">
+  <meta name="author" content="Дмитрий Фурье">
+  <!--links-->
+  <link rel="canonical" href="https://fourier.rocks/posts/why-i-dont-like-telegram-channels/">
+   <!-- fonts -->
+  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-brands-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <!--/assets/img/favicon/-->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#202020">
+  <meta name="theme-color" content="#202020">
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="/assets/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png>
+  <link rel=" mask-icon"="" color="#202020">
+<!--Opengraph-->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/why-i-dont-like-telegram-channels/">
+  
+  <meta property="og:image" content="https://fourier.rocks/assets/covers/telegram-degradation.png">
+  <meta property="og:image:secure_url" content="https://fourier.rocks/assets/covers/telegram-degradation.png">
+  
+ 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DmitriyFourier">
+  <meta name="twitter:creator" content="@DmitriyFourier">
+  <link rel="me" href="https://mastodon.ml/@dmitriyfourier">
+  <!--styles-->
+  <link href="/assets/styles/tailwind.css" rel="stylesheet">
+
+  <script>
+    const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+      '(prefers-color-scheme: dark)').matches);
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+
+    }
+  </script>
+</head>
+
+<body class="dark:text-mk-white dark:bg-mk-background">
+  <header>
+    <nav id="header" class="w-full z-30 top-10 py-1">
+  <div class="w-full flex place-items-start justify-between mt-0 py-2">
+
+    <div id="mobileMenuButton" class="cursor-pointer hidden mr-6 left-0 top-0">
+      <i class="las la-bars text-mk-background dark:text-mk-yellow-main text-2xl"></i>
+    </div>
+    <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
+
+    <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
+      <nav>
+        <ul class="sm:flex items-center justify-between text-mk-blue dark:text-mk-yellow-main pt-0 sm:pt-0">
+          <li class="flex flex-wrap justify-between items-center mx-auto max-w-(--breakpoint-2xl)">
+            <a href="/" class="flex items-center no-underspanne link-novisited no-underline">
+              <span class="hidden sm:inline-block">   <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><img class="mr-2 w-10 h-10 rounded-full" alt="Дмитрий Фурье" loading="lazy" decoding="async" src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240"></picture></span>
+              <div class="ml-0.5 self-center font-semibold whitespace-nowrap text-mk-background dark:text-mk-white">Дмитрий Фурье</div>
+          </a></li><a href="/" class="flex items-center no-underspanne link-novisited no-underline">
+          </a><li><a href="/" class="flex items-center no-underspanne link-novisited no-underline"></a><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="#">Сделал</a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="/podcasts/">Наговорил</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
+      <div id="nav-buttons" class="flex items-center w-full sm:w-full">
+        <div class="px-4">
+          <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
+            <input type="checkbox" class="sr-only peer">
+            <div class="flex justify-center items-center w-8 h-8 
+              bg-tg-deepdark 
+              shadow-xs
+              shadow-mk-purple-deco
+              dark:shadow-mk-yellow-main
+              rounded-full
+              peer-hover::outspanne-none 
+              peer-hover::ring-2 
+              dark:bg-mk-yellow-main 
+              dark:border-gray-600 
+              peer-checked:bg-mk-yellow-main">
+              <div class="text-mk-yellow-main dark:hidden">
+                <i class="las la-moon"></i>
+              </div>
+              <div class=" text-mk-background hidden dark:visible dark:inline">
+                <i class="las la-sun"></i>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class=""><a href="/posts" class="link-novisited">Блог</a> →</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <script>
+  var mobileMenuButton = document.getElementById("mobileMenuButton");
+  mobileMenuButton.onclick = function () {
+    document.getElementById("nav-menu").classList.toggle("hidden");
+    document.getElementById("nav-buttons").classList.toggle("flex");
+    document.getElementById("nav-buttons").classList.toggle("flex-col");
+    document.getElementById("nav-buttons").classList.toggle("space-y-2");
+  }
+  // Hide element when click outside nav
+  // var theElementContainer = document.getElementsByTagName("nav")[0];
+  // document.addEventListener('click', function(event) {
+  //   if (!theElementContainer.contains(event.target)) {
+  //     document.getElementById("menu").classList.toggle("hidden");
+  //     document.getElementById("nav-buttons").classList.toggle("flex");
+  //     document.getElementById("nav-buttons").classList.toggle("flex-col");
+  //     document.getElementById("nav-buttons").classList.toggle("space-y-2");
+  //   }
+  // });
+</script>-->
+  </header>
+  <main>
+
+    <article class="article-post" itemscope="" itemtype="https://schema.org/BlogPosting" itemid="why-i-dont-like-telegram-channels">
+<h1 class="mb-4" itemprop="name">
+    Как телеграм снижает доступность информации.
+</h1>
+<div class="mb-4 text-mk-comments">
+    <em><time itemprop="datePublished" datetime="2024-06-12T00:00:00.000Z">12 июня 2024 г.</time></em> •
+    <span class="">Время чтения ≈ 4 мин.</span>
+</div>
+<div itemprop="articleBody">
+  <p>До появления Телеграма информацию в интернете распространяли на страницах сайтов, блогах или соцсетях.</p>
+<p>Все эти площадки (если они не&nbsp;были скрыты за&nbsp;paywall) позволяли найти информацию через поиск.</p>
+<p>Тебе было достаточно выложить на&nbsp;свою страницу какую-либо информацию, и&nbsp;она тут&nbsp;же становилась достоянием общественности.</p>
+<p>Так, например, если бы Николай Товеровский в 2011 году вёл Телеграм-канал и выкладывал бы всё туда, я бы никогда о нём не узнал.
+А так в своё время я гуглил что-то вроде «Дизайн графиков» и наткнулся на его материал <a href="https://ksoftware.livejournal.com/22535.html">про редизайн японских свечей</a>. И, наверное, гораздо позже бы узнал про Бюро Горбунова.</p>
+<p>То же касается ребят из <a href="https://cuprum.media/proverka-mifov-cuprum">Купрума</a>, которые пропагандируют доказательную медицину и довольно часто развенчивают вредные и опасные мифы про работу со&nbsp;здоровьем.</p>
+<p>Если бы они вели эти рубрики внутри своего телеграм-канала, я бы, скорее всего, никогда их не нашёл. А так, люди, которые гуглят «что делать, если болит «N», имеют шанс получить адекватную информацию, а&nbsp;не&nbsp;вредные советы из интернета.</p>
+<p>Похожий случай был у меня, когда я исследовал тему того, как работала и строилась техническая поддержка Рокетбанка (может, кто-то помнит такой). И&nbsp;тогда я наткнулся на ребят из supprt.school. У них в блоге был материал про то, <a href="https://supprt.science/2020/10/16/5-ways-to-motivate/">как бысла устроена мотивации команды технической поддержки Рокетбанка</a>.</p>
+<p>И&nbsp;уже&nbsp;после этого я&nbsp;нашёл их&nbsp;телеграм-канал, где есть полезные вещи, которых нет на&nbsp;сайте, и&nbsp;иногда это печалит, потому что я&nbsp;мог найти некоторые из&nbsp;этих постов раньше, будь они не скрыты в недрах телеграм-канала.</p>
+<p>Сейчас довольно часто сталкиваюсь с тем, что кто-то из друзей нашёл какой-то классный материал у кого-то в&nbsp;Телеграме или&nbsp;Инстаграме. Причём временами информация попадается настолько релевантная, что я её на всякий случай скидываю в Obsidian, чтобы не плодить подписки ради одного полезного поста в&nbsp;Телеграме.</p>
+<p>Собственно, по&nbsp;этой причине я&nbsp;свои материалы сперва выкладываю на&nbsp;сайт, а&nbsp;только потом в&nbsp;социальные сети. Потому что, если что-то из&nbsp;этого окажется полезным кому-то, я хотел&nbsp;бы, чтобы это имело шансы быть найденным в&nbsp;интернете, а&nbsp;не&nbsp;быть забытым в&nbsp;недрах какого-то телеграм-канала.</p>
+
+</div>
+</article>
+<!-- # ===== Related Posts ==== # -->
+<!-- 
+
+  
+-->
+<!---
+  
+  </div>
+</div>
+->
+
+ 
+
+<!-- # ===== Tags =====  # -->
+<div class="warp flex mt-3 pb-4 text-xs" itemprop="keywords">
+	
+	  
+	
+	  
+		<a class="link-novisited px-3 py-2" href="/tags/media">
+		  <span>Медиа</span>
+		</a>
+	  
+	
+	  
+		<a class="link-novisited px-3 py-2" href="/tags/telegram">
+		  <span>Телеграм</span>
+		</a>
+	  
+	
+	</div>
+	<!-- # ===== Previous and Next =====  #-->
+	
+	
+	<hr>
+	<div class="flex flex-row justify-between">
+	  <div class="basis-1/2 justify-self-start"><small class="text-gray-500">Ctrl ←</small><br><a href="/posts/managment-without-tie/" class="link-novisited" id="previousPost">Менеджмент без короны и галстука</a></div>
+	  <div class="basis-1/2 justify-self-end"></div>
+	</div>
+<section class="comments py-4" id="comments">
+  <div class="widget emerge" data-hold="500" style="transition: opacity 500ms ease-out 0s; opacity: 1;">
+    <div class="comments-white visible dark:hidden">
+      <script defer="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5"></script>
+    </div>
+    <div class="comments-dark hidden dark:inline">
+    <script defer="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5" data-dark="1"></script>
+    </div>
+</div>
+</section>
+
+  </main>
+
+<footer class="mt-4">
+  <div class="mx-auto  pb-10">
+
+      <!---->
+      <div class="flex flex-wrap content-center">
+        <div class="flex items-center link-novisited no-underline hover:text-social-mastodon dark:hover:text-social-mastodon mr-6">
+          <i class="lab la-mastodon text-2xl"></i>
+          <a href="https://mastodon.ml/@dmitriyfourier" class="link-novisited">Мастадон</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-linkedin dark:hover:text-social-linkedin mr-6">
+          <i class="lab la-linkedin text-2xl no-underline"></i>
+            <a href="https://www.linkedin.com/in/dmitriyfourier/" class="link-novisited">ЛинкедИн</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-instagram dark:hover:text-social-instagram mr-6">
+          <i class="lab la-instagram text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Инстаграм</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-youtube dark:hover:text-social-youtube mr-6">
+          <i class="lab la-youtube text-2xl no-underline"></i>
+          <a href="https://www.youtube.com/c/DmitriyFurye" class="link-novisited">Ютуб</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-telegram dark:hover:text-social-telegram mr-6">
+          <i class="lab la-telegram text-2xl no-underline">
+            <a href="https://t.me/FourierNotesRU" class="link-novisited"></a></i><a href="https://t.me/FourierNotesRU" class="link-novisited">Телеграм</a>
+        </div>
+
+        <div class="flex items-center sm:grow link-novisited no-underline hover:text-social-epicgames dark:hover:text-social-steam-dark mr-6">
+          <i class="lab la-steam text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Стим</a>
+        </div>
+        <div class="flex items-center link-novisited no-underline hover:text-mk-background">
+          <a href="/donation">
+            <button class="outline-solid outline-offset-2 outline-1 rounded-sm">
+              <div class="px-1 flex items-center">
+                <i class="text-2xl las la-piggy-bank"></i></div>
+            </button></a>
+        </div>
+      </div>
+     
+      <p class="text-sm py-2" itemprop="copyrightNotice">
+        <!--Добавляем автора сайта-->
+        <span class="space-out-bottom-mili-xs" itemprop="publisher" itemscope="" itemtype="https://schema.org/Person">©<span itemprop="name">Дмитрий Фурье</span> × </span>
+        <!--Добавляем копирайт на сайт и даты-->
+        <span>2017 — 2026</span> </p>
+  </div>
+</footer>
+
+  <script>
+    document.getElementById("toggleDarkMode").addEventListener("change", function () {
+      if (isDarkMode()) {
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+      } else {
+        localStorage.theme = 'dark'
+        document.documentElement.classList.add('dark')
+      }
+    });
+  </script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <script src="/assets/scripts/fotorama.min.js"></script>
+  <script>
+document.addEventListener('keydown', function(event) {
+  // Проверяем, что нажата клавиша Ctrl
+  if (event.ctrlKey) {
+    // Проверяем, какая стрелка нажата
+    if (event.key === 'ArrowLeft') {
+      // Ctrl + стрелка влево
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var prevLink = document.getElementById('previousPost');
+      if (prevLink) {
+        window.location.href = prevLink.href;
+      }
+    } else if (event.key === 'ArrowRight') {
+      // Ctrl + стрелка вправо
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var nextLink = document.getElementById('nextPost');
+      if (nextLink) {
+        window.location.href = nextLink.href;
+      }
+    }
+  }
+});
+</script>
+
+
+</body></html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Менеджмент без короны и галстука</title>
+  <meta name="description" content="Как управлять компанией, когда вертикальные связи не эффектвны.">
+  <meta name="author" content="Дмитрий Фурье">
+  <!--links-->
+  <link rel="canonical" href="https://fourier.rocks/posts/managment-without-tie/">
+   <!-- fonts -->
+  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-brands-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <!--/assets/img/favicon/-->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#202020">
+  <meta name="theme-color" content="#202020">
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="/assets/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png>
+  <link rel=" mask-icon"="" color="#202020">
+<!--Opengraph-->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/managment-without-tie/">
+  
+  <meta property="og:image" content="https://fourier.rocks/assets/covers/horizontal-mgmt-OG.png">
+  <meta property="og:image:secure_url" content="https://fourier.rocks/assets/covers/horizontal-mgmt-OG.png">
+  
+ 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DmitriyFourier">
+  <meta name="twitter:creator" content="@DmitriyFourier">
+  <link rel="me" href="https://mastodon.ml/@dmitriyfourier">
+  <!--styles-->
+  <link href="/assets/styles/tailwind.css" rel="stylesheet">
+
+  <script>
+    const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+      '(prefers-color-scheme: dark)').matches);
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+
+    }
+  </script>
+</head>
+
+<body class="dark:text-mk-white dark:bg-mk-background">
+  <header>
+    <nav id="header" class="w-full z-30 top-10 py-1">
+  <div class="w-full flex place-items-start justify-between mt-0 py-2">
+
+    <div id="mobileMenuButton" class="cursor-pointer hidden mr-6 left-0 top-0">
+      <i class="las la-bars text-mk-background dark:text-mk-yellow-main text-2xl"></i>
+    </div>
+    <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
+
+    <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
+      <nav>
+        <ul class="sm:flex items-center justify-between text-mk-blue dark:text-mk-yellow-main pt-0 sm:pt-0">
+          <li class="flex flex-wrap justify-between items-center mx-auto max-w-(--breakpoint-2xl)">
+            <a href="/" class="flex items-center no-underspanne link-novisited no-underline">
+              <span class="hidden sm:inline-block">   <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><img class="mr-2 w-10 h-10 rounded-full" alt="Дмитрий Фурье" loading="lazy" decoding="async" src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240"></picture></span>
+              <div class="ml-0.5 self-center font-semibold whitespace-nowrap text-mk-background dark:text-mk-white">Дмитрий Фурье</div>
+          </a></li><a href="/" class="flex items-center no-underspanne link-novisited no-underline">
+          </a><li><a href="/" class="flex items-center no-underspanne link-novisited no-underline"></a><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="#">Сделал</a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="/podcasts/">Наговорил</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
+      <div id="nav-buttons" class="flex items-center w-full sm:w-full">
+        <div class="px-4">
+          <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
+            <input type="checkbox" class="sr-only peer">
+            <div class="flex justify-center items-center w-8 h-8 
+              bg-tg-deepdark 
+              shadow-xs
+              shadow-mk-purple-deco
+              dark:shadow-mk-yellow-main
+              rounded-full
+              peer-hover::outspanne-none 
+              peer-hover::ring-2 
+              dark:bg-mk-yellow-main 
+              dark:border-gray-600 
+              peer-checked:bg-mk-yellow-main">
+              <div class="text-mk-yellow-main dark:hidden">
+                <i class="las la-moon"></i>
+              </div>
+              <div class=" text-mk-background hidden dark:visible dark:inline">
+                <i class="las la-sun"></i>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class=""><a href="/posts" class="link-novisited">Блог</a> →</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <script>
+  var mobileMenuButton = document.getElementById("mobileMenuButton");
+  mobileMenuButton.onclick = function () {
+    document.getElementById("nav-menu").classList.toggle("hidden");
+    document.getElementById("nav-buttons").classList.toggle("flex");
+    document.getElementById("nav-buttons").classList.toggle("flex-col");
+    document.getElementById("nav-buttons").classList.toggle("space-y-2");
+  }
+  // Hide element when click outside nav
+  // var theElementContainer = document.getElementsByTagName("nav")[0];
+  // document.addEventListener('click', function(event) {
+  //   if (!theElementContainer.contains(event.target)) {
+  //     document.getElementById("menu").classList.toggle("hidden");
+  //     document.getElementById("nav-buttons").classList.toggle("flex");
+  //     document.getElementById("nav-buttons").classList.toggle("flex-col");
+  //     document.getElementById("nav-buttons").classList.toggle("space-y-2");
+  //   }
+  // });
+</script>-->
+  </header>
+  <main>
+
+    <article class="article-post" itemscope="" itemtype="https://schema.org/BlogPosting" itemid="managment-without-tie">
+<h1 class="mb-4" itemprop="name">
+    Менеджмент без короны и галстука
+</h1>
+<div class="mb-4 text-mk-comments">
+    <em><time itemprop="datePublished" datetime="2023-10-26T00:00:00.000Z">26 октября 2023 г.</time></em> •
+    <span class="">Время чтения ≈ 8 мин.</span>
+</div>
+<div itemprop="articleBody">
+  <p>Вертикальными иерархиями достигать результата в&nbsp;бизнесе становится все&nbsp;сложнее. Если еще 5-7 лет назад (ох прекрасные доковидные времена) достаточно руководителю дать распоряжение и&nbsp;оно&nbsp;выполнялось, то в&nbsp;условиях 23&nbsp;года такая модель управления все менее эффективна.</p>
+<p>В&nbsp;этих условиях теперь требования к&nbsp;софт-скиллам руководителя стали выше, а&nbsp;вертикальные связи начинают уступать горизонтальным в&nbsp;корпоративных коммуникациях.</p>
+<p>Если раньше схема <strong>начальник→подчиненный</strong> была эффективна и&nbsp;позволяла достигать результатов, теперь все больше предпринимателей и&nbsp;руководителей предпочитает работать по&nbsp;модели <strong>партнёр←→партнёр</strong>. И&nbsp;руководителю теперь чтобы добиваться более сильных и&nbsp;качественных результатов необходимо не&nbsp;просто дать задачу и&nbsp;поставить цель сверху вниз.</p>
+<p>Теперь появилась необходимость спуститься до&nbsp;уровня партнёр-партнёр, продать ценность задачи и&nbsp;убедить коллегу в&nbsp;том, зачем необходимо разобраться «вот с&nbsp;этим», и&nbsp;еще прояснить какую ценность получат от&nbsp;этого участники процесса.</p>
+<p>Теперь руководителям как&nbsp;никогда актуально уделять внимание прокачке собственных софт-скиллов, нежели менеджерских хардов. Поскольку убедить человека организовать определенный результат стало сложнее, чем&nbsp;это было раньше.</p>
+<p>В своей практике я&nbsp;выработал несколько способов достигать вот этих связей «партнёр-партнёр», поделюсь ими.</p>
+<h2>Взращивать культуру партнёрства в&nbsp;компании</h2>
+<p>Это регулярное культивирование ценности партнёр-партнёр на&nbsp;уровне культуры компании — каждый раз упоминаем об это на подведении итогов, на регулярных планёрках, на&nbsp;индивидуальных встречах с&nbsp;коллегами.</p>
+<p>Нельзя сказать человеку, что он&nbsp;партнёр, чтобы он&nbsp;стал им — эту ценность должна поддерживать среда в&nbsp;которой находится человек, а&nbsp;не&nbsp;только набор руководителей.</p>
+<h2>Регулярно сверяться по ожиданиям друг друг от друга</h2>
+<p>Большинство рабочих конфликтов, с которыми я сталкивался — конфликты в ситуациях, когда у людей разошлись ожидания друг от друга, о которых они договорились ранее.</p>
+<p>И по этой причине — не нужно ждать, когда полыхнёт. Лучше регулярно сверяться с партнерами, о том, что вы ждете друг от друга.</p>
+<p>Друг от друга — это ключевое. Это значит, что не вы идете и говорите, что вы ждете вот это и это. А что вы начинаете разговор с того «Скажи что ты ждешь от меня как от твоего партнера?» — и внимательно слушаем.</p>
+<h3>Включать эмпатию, черт возьми</h3>
+<p>Другим из наиболее качественных инструментов в своей практике (вам он может совершенно не подойдет), является встреча так называемая «без галстуков»</p>
+<p>Это когда, я&nbsp;и&nbsp;мой коллега переходим из&nbsp;роли «коллеги» в&nbsp;роли «незнакомцы из&nbsp;бара». На&nbsp;таких встречах действует несколько правил:</p>
+<ul>
+<li>Все что происходит на&nbsp;таких встречах — остаётся на&nbsp;таких встречах.</li>
+<li>Четко обозначит, что сейчас нет ролей рабочей иерархии.</li>
+<li>Нет никакой иерархии (снимаем, короны и галстук, одежду лучше оставить).</li>
+<li>От сказанного на встрече нет никаких последствий.</li>
+</ul>
+<figure><picture><source type="image/avif" srcset="/assets/img/Crownandtie-P3Hb6NRyMh-400w.avif 400w, /assets/img/Crownandtie-P3Hb6NRyMh-550w.avif 550w, /assets/img/Crownandtie-P3Hb6NRyMh-700w.avif 700w, /assets/img/Crownandtie-P3Hb6NRyMh-850w.avif 850w, /assets/img/Crownandtie-P3Hb6NRyMh-1000w.avif 1000w" sizes="100vw"><source type="image/webp" srcset="/assets/img/Crownandtie-P3Hb6NRyMh-400w.webp 400w, /assets/img/Crownandtie-P3Hb6NRyMh-550w.webp 550w, /assets/img/Crownandtie-P3Hb6NRyMh-700w.webp 700w, /assets/img/Crownandtie-P3Hb6NRyMh-850w.webp 850w, /assets/img/Crownandtie-P3Hb6NRyMh-1000w.webp 1000w" sizes="100vw"><img alt="Снимите корону и галстук" loading="lazy" decoding="async" src="/assets/img/Crownandtie-P3Hb6NRyMh-400w.jpeg" width="1000" height="1000" srcset="/assets/img/Crownandtie-P3Hb6NRyMh-400w.jpeg 400w, /assets/img/Crownandtie-P3Hb6NRyMh-550w.jpeg 550w, /assets/img/Crownandtie-P3Hb6NRyMh-700w.jpeg 700w, /assets/img/Crownandtie-P3Hb6NRyMh-850w.jpeg 850w, /assets/img/Crownandtie-P3Hb6NRyMh-1000w.jpeg 1000w" sizes="100vw"></picture><figcaption>Снимите корону и галстук</figcaption></figure>
+<h3>Зачем я это делаю?</h3>
+<p>Для того, чтобы почувствовать самому и дать почувствовать другим, что все мы люди, а не механические болтики в корпоративной машине.</p>
+<p>Что у всех у нас есть страхи, эмоции, травмы, которые зачастую мы держим в себе, когда находимся на рабочем месте.</p>
+<p>Такие встречи позволяют показать друг другу, что мы люди, и что в нас больше человеческого, чем-то что мы видим на работе. К тому же в таких разговорах, можно узнать много нового о своих коллегах, и понять что у вас есть куда больше общего чем просто запись в трудовой или строка «место работы в линкед-ин»</p>
+<p>К тому же понимая образ мыслей друг друга на таких встречах, всем гораздо проще понимать природу тех или иных сюрпризов происходящих на работе.</p>
+<p>Например, такие встречи, дают неплохие звоночки в отношении того, на сколько комфортно люди чувствуют себя в компании.</p>
+<blockquote>
+<p>Будьте человечнее, в конце концов все мы огромный набор из суперсил и суперслабостей — которые и помогают нам достигать совместных результатов дополняя друг друга. Давайте видеть за цифрами в отчетах — друг друга.</p>
+</blockquote>
+<p><strong>P.S.</strong> Никому не интересный факт. У меня в жизни никогда не было галстука и не имею ни малейшего понятия как его завязывать.</p>
+
+</div>
+</article>
+<!-- # ===== Related Posts ==== # -->
+<!-- 
+
+  
+-->
+<!---
+  
+  </div>
+</div>
+->
+
+ 
+
+<!-- # ===== Tags =====  # -->
+<div class="warp flex mt-3 pb-4 text-xs" itemprop="keywords">
+	
+	  
+	
+	  
+		<a class="link-novisited px-3 py-2" href="/tags/upravlenie">
+		  <span>Управление</span>
+		</a>
+	  
+	
+	</div>
+	<!-- # ===== Previous and Next =====  #-->
+	
+	
+	<hr>
+	<div class="flex flex-row justify-between">
+	  <div class="basis-1/2 justify-self-start"><small class="text-gray-500">Ctrl ←</small><br><a href="/posts/knowledges-types/" class="link-novisited" id="previousPost">Типы знаний в Knowledge Managment</a></div>
+	  <div class="basis-1/2 justify-self-end"><small class="text-gray-500">Ctrl →</small><br><a href="/posts/why-i-dont-like-telegram-channels/" class="link-novisited" id="nextPost">Как телеграм снижает доступность информации.</a></div>
+	</div>
+<section class="comments py-4" id="comments">
+  <div class="widget emerge" data-hold="500" style="transition: opacity 500ms ease-out 0s; opacity: 1;">
+    <div class="comments-white visible dark:hidden">
+      <script defer="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5"></script>
+    </div>
+    <div class="comments-dark hidden dark:inline">
+    <script defer="" src="https://comments.app/js/widget.js?3" data-comments-app-website="OvICjhJt" data-limit="5" data-dark="1"></script>
+    </div>
+</div>
+</section>
+
+  </main>
+
+<footer class="mt-4">
+  <div class="mx-auto  pb-10">
+
+      <!---->
+      <div class="flex flex-wrap content-center">
+        <div class="flex items-center link-novisited no-underline hover:text-social-mastodon dark:hover:text-social-mastodon mr-6">
+          <i class="lab la-mastodon text-2xl"></i>
+          <a href="https://mastodon.ml/@dmitriyfourier" class="link-novisited">Мастадон</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-linkedin dark:hover:text-social-linkedin mr-6">
+          <i class="lab la-linkedin text-2xl no-underline"></i>
+            <a href="https://www.linkedin.com/in/dmitriyfourier/" class="link-novisited">ЛинкедИн</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-instagram dark:hover:text-social-instagram mr-6">
+          <i class="lab la-instagram text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Инстаграм</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-youtube dark:hover:text-social-youtube mr-6">
+          <i class="lab la-youtube text-2xl no-underline"></i>
+          <a href="https://www.youtube.com/c/DmitriyFurye" class="link-novisited">Ютуб</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-telegram dark:hover:text-social-telegram mr-6">
+          <i class="lab la-telegram text-2xl no-underline">
+            <a href="https://t.me/FourierNotesRU" class="link-novisited"></a></i><a href="https://t.me/FourierNotesRU" class="link-novisited">Телеграм</a>
+        </div>
+
+        <div class="flex items-center sm:grow link-novisited no-underline hover:text-social-epicgames dark:hover:text-social-steam-dark mr-6">
+          <i class="lab la-steam text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Стим</a>
+        </div>
+        <div class="flex items-center link-novisited no-underline hover:text-mk-background">
+          <a href="/donation">
+            <button class="outline-solid outline-offset-2 outline-1 rounded-sm">
+              <div class="px-1 flex items-center">
+                <i class="text-2xl las la-piggy-bank"></i></div>
+            </button></a>
+        </div>
+      </div>
+     
+      <p class="text-sm py-2" itemprop="copyrightNotice">
+        <!--Добавляем автора сайта-->
+        <span class="space-out-bottom-mili-xs" itemprop="publisher" itemscope="" itemtype="https://schema.org/Person">©<span itemprop="name">Дмитрий Фурье</span> × </span>
+        <!--Добавляем копирайт на сайт и даты-->
+        <span>2017 — 2026</span> </p>
+  </div>
+</footer>
+
+  <script>
+    document.getElementById("toggleDarkMode").addEventListener("change", function () {
+      if (isDarkMode()) {
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+      } else {
+        localStorage.theme = 'dark'
+        document.documentElement.classList.add('dark')
+      }
+    });
+  </script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <script src="/assets/scripts/fotorama.min.js"></script>
+  <script>
+document.addEventListener('keydown', function(event) {
+  // Проверяем, что нажата клавиша Ctrl
+  if (event.ctrlKey) {
+    // Проверяем, какая стрелка нажата
+    if (event.key === 'ArrowLeft') {
+      // Ctrl + стрелка влево
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var prevLink = document.getElementById('previousPost');
+      if (prevLink) {
+        window.location.href = prevLink.href;
+      }
+    } else if (event.key === 'ArrowRight') {
+      // Ctrl + стрелка вправо
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var nextLink = document.getElementById('nextPost');
+      if (nextLink) {
+        window.location.href = nextLink.href;
+      }
+    }
+  }
+});
+</script>
+
+
+</body></html>

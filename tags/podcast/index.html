@@ -1,0 +1,397 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>podcast</title>
+  <meta name="description" content="">
+  <meta name="author" content="Дмитрий Фурье">
+  <!--links-->
+  <link rel="canonical" href="https://fourier.rocks/tags/podcast/">
+   <!-- fonts -->
+  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-brands-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <!--/assets/img/favicon/-->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#202020">
+  <meta name="theme-color" content="#202020">
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="/assets/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png>
+  <link rel=" mask-icon"="" color="#202020">
+<!--Opengraph-->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/tags/podcast/">
+  
+  
+  <meta property="og:image" content="https://fourier.rocks/img/default-preview.jpeg">
+  <meta property="og:image:secure_url" content="https://fourier.rocks/img/default-preview.jpeg">
+  
+
+  
+ 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DmitriyFourier">
+  <meta name="twitter:creator" content="@DmitriyFourier">
+  <link rel="me" href="https://mastodon.ml/@dmitriyfourier">
+  <!--styles-->
+  <link href="/assets/styles/tailwind.css" rel="stylesheet">
+
+  <script>
+    const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+      '(prefers-color-scheme: dark)').matches);
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+
+    }
+  </script>
+</head>
+
+<body class="dark:text-mk-white dark:bg-mk-background">
+  <header>
+    <nav id="header" class="w-full z-30 top-10 py-1">
+  <div class="w-full flex place-items-start justify-between mt-0 py-2">
+
+    <div id="mobileMenuButton" class="cursor-pointer hidden mr-6 left-0 top-0">
+      <i class="las la-bars text-mk-background dark:text-mk-yellow-main text-2xl"></i>
+    </div>
+    <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
+
+    <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
+      <nav>
+        <ul class="sm:flex items-center justify-between text-mk-blue dark:text-mk-yellow-main pt-0 sm:pt-0">
+          <li class="flex flex-wrap justify-between items-center mx-auto max-w-(--breakpoint-2xl)">
+            <a href="/" class="flex items-center no-underspanne link-novisited no-underline">
+              <span class="hidden sm:inline-block">   <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><img class="mr-2 w-10 h-10 rounded-full" alt="Дмитрий Фурье" loading="lazy" decoding="async" src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240"></picture></span>
+              <div class="ml-0.5 self-center font-semibold whitespace-nowrap text-mk-background dark:text-mk-white">Дмитрий Фурье</div>
+          </a></li><a href="/" class="flex items-center no-underspanne link-novisited no-underline">
+          </a><li><a href="/" class="flex items-center no-underspanne link-novisited no-underline"></a><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="#">Сделал</a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="/podcasts/">Наговорил</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
+      <div id="nav-buttons" class="flex items-center w-full sm:w-full">
+        <div class="px-4">
+          <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
+            <input type="checkbox" class="sr-only peer">
+            <div class="flex justify-center items-center w-8 h-8 
+              bg-tg-deepdark 
+              shadow-xs
+              shadow-mk-purple-deco
+              dark:shadow-mk-yellow-main
+              rounded-full
+              peer-hover::outspanne-none 
+              peer-hover::ring-2 
+              dark:bg-mk-yellow-main 
+              dark:border-gray-600 
+              peer-checked:bg-mk-yellow-main">
+              <div class="text-mk-yellow-main dark:hidden">
+                <i class="las la-moon"></i>
+              </div>
+              <div class=" text-mk-background hidden dark:visible dark:inline">
+                <i class="las la-sun"></i>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class=""><a href="/posts" class="link-novisited">Блог</a> →</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <script>
+  var mobileMenuButton = document.getElementById("mobileMenuButton");
+  mobileMenuButton.onclick = function () {
+    document.getElementById("nav-menu").classList.toggle("hidden");
+    document.getElementById("nav-buttons").classList.toggle("flex");
+    document.getElementById("nav-buttons").classList.toggle("flex-col");
+    document.getElementById("nav-buttons").classList.toggle("space-y-2");
+  }
+  // Hide element when click outside nav
+  // var theElementContainer = document.getElementsByTagName("nav")[0];
+  // document.addEventListener('click', function(event) {
+  //   if (!theElementContainer.contains(event.target)) {
+  //     document.getElementById("menu").classList.toggle("hidden");
+  //     document.getElementById("nav-buttons").classList.toggle("flex");
+  //     document.getElementById("nav-buttons").classList.toggle("flex-col");
+  //     document.getElementById("nav-buttons").classList.toggle("space-y-2");
+  //   }
+  // });
+</script>-->
+  </header>
+  <main>
+
+    <div class="py-4 sm:py-10">
+  <p>
+    </p><h2 class="text-2xl sm:text-4xl font-bold"><a href="/podcasts/ne-nauchili/">Чему нас не&nbsp;научили в&nbsp;школе</a></h2>
+  <p></p>
+  <em><time datetime="2023-03-19T00:00:00.000Z">19 марта 2023 г.</time></em>
+  <div><div class="flex mb-4 mt-4 sm:mt-8 flex-wrap">
+    <div class="mr-0 sm:mr-6 mb-6 sm:mb-0">
+        <picture><source type="image/avif" srcset="/assets/img/ne-nuchili-_PBXdTN5bj-400w.avif 400w, /assets/img/ne-nuchili-_PBXdTN5bj-550w.avif 550w, /assets/img/ne-nuchili-_PBXdTN5bj-700w.avif 700w, /assets/img/ne-nuchili-_PBXdTN5bj-850w.avif 850w, /assets/img/ne-nuchili-_PBXdTN5bj-1000w.avif 1000w, /assets/img/ne-nuchili-_PBXdTN5bj-1150w.avif 1150w, /assets/img/ne-nuchili-_PBXdTN5bj-1300w.avif 1300w" sizes="100vw"><source type="image/webp" srcset="/assets/img/ne-nuchili-_PBXdTN5bj-400w.webp 400w, /assets/img/ne-nuchili-_PBXdTN5bj-550w.webp 550w, /assets/img/ne-nuchili-_PBXdTN5bj-700w.webp 700w, /assets/img/ne-nuchili-_PBXdTN5bj-850w.webp 850w, /assets/img/ne-nuchili-_PBXdTN5bj-1000w.webp 1000w, /assets/img/ne-nuchili-_PBXdTN5bj-1150w.webp 1150w, /assets/img/ne-nuchili-_PBXdTN5bj-1300w.webp 1300w" sizes="100vw"><img alt="Обложка подкаста Чему нас не&nbsp;научили в&nbsp;школе" class="rounded-full sm:w-64 sm:h-64 grow sm:grow-0" loading="lazy" decoding="async" src="/assets/img/ne-nuchili-_PBXdTN5bj-400w.jpeg" width="1300" height="1300" srcset="/assets/img/ne-nuchili-_PBXdTN5bj-400w.jpeg 400w, /assets/img/ne-nuchili-_PBXdTN5bj-550w.jpeg 550w, /assets/img/ne-nuchili-_PBXdTN5bj-700w.jpeg 700w, /assets/img/ne-nuchili-_PBXdTN5bj-850w.jpeg 850w, /assets/img/ne-nuchili-_PBXdTN5bj-1000w.jpeg 1000w, /assets/img/ne-nuchili-_PBXdTN5bj-1150w.jpeg 1150w, /assets/img/ne-nuchili-_PBXdTN5bj-1300w.jpeg 1300w" sizes="100vw"></picture>
+     </div>
+     <div class="sm:mr-6">
+        <h1 class="mt-6 sm:mt-0">Подкаст: Чему нас не&nbsp;научили в&nbsp;школе</h1>
+        <p>в&nbsp;этом подкасте два тридцатилетних человека пытаются разобраться как жить без&nbsp;багажа знаний, который нам не&nbsp;смогли дать в&nbsp;школе, но&nbsp;который жизненно необходим для того, чтобы комфортно существовать в&nbsp;нашем мире.</p>
+        <p>Обсуждаем деньги, время, аренду, юридичскую бюрократию и другие прелести взрослой жизни, к&nbsp;котрым можно оказаться не&nbsp;готовым.</p>
+    </div>
+    <div>
+        <h2>Где послушать</h2>
+        <ul>
+            <li><a href="https://nenauchily.mave.digital/" class="link-novisited">Мэйв</a></li>
+            <li><a href="https://music.yandex.com/album/23382598" class="link-novisited">Я.Музыка</a></li>
+            <li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9jbG91ZC5tYXZlLmRpZ2l0YWwvNDAzNjQ=" class="link-novisited">Google Podcasts</a></li>
+            <li><a href="https://podcasts.apple.com/us/podcast/%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B0%D1%81-%D0%BD%D0%B5-%D0%BD%D0%B0%D1%83%D1%87%D0%B8%D0%BB%D0%B8-%D0%B2-%D1%88%D0%BA%D0%BE%D0%BB%D0%B5/id1642935465" class="link-novisited">Apple Podcasts</a></li>
+            <li><a href="https://vk.com/podcasts-214755889" class="link-novisited">Vk</a></li>
+        </ul>
+    </div>
+</div>
+<h3 class="mt-2">Ведущие</h3>
+    <div class="flex flex-wrap mb-8">
+        <!--Дима-->
+        <div class="flex mb-8">
+        <div class="mr-6 shrink-0 flex-none">
+            <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><img alt="" class="rounded-full w-16 h-16" loading="lazy" decoding="async" src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240"></picture>
+        </div>
+        <div class="text-sm mr-0 sm:mr-6">
+                <p class="text-xs mb-0">Ведущий</p>
+                <p class="text-base mb-0"><a href="https://fourier.rocks/" class="link-novisited"><b>Дмитрий Фурье</b></a></p>
+                <p class="text-base mb-0">Финановый директор в&nbsp;<a href="https://noboring-finance.ru/" class="link-novisited">Нескучных финансах</a></p>
+        </div>
+        </div>
+        <!--Женя-->
+        <div class="flex">
+            <div class="flex-none mr-6 shrink-0">
+                <picture><source type="image/avif" srcset="/assets/img/hartwig-SG-tkJRYM_-400w.avif 400w, /assets/img/hartwig-SG-tkJRYM_-535w.avif 535w" sizes="100vw"><source type="image/webp" srcset="/assets/img/hartwig-SG-tkJRYM_-400w.webp 400w, /assets/img/hartwig-SG-tkJRYM_-535w.webp 535w" sizes="100vw"><img alt="" class="rounded-full w-16 h-16" loading="lazy" decoding="async" src="/assets/img/hartwig-SG-tkJRYM_-400w.jpeg" width="535" height="535" srcset="/assets/img/hartwig-SG-tkJRYM_-400w.jpeg 400w, /assets/img/hartwig-SG-tkJRYM_-535w.jpeg 535w" sizes="100vw"></picture>
+            </div>
+            <div class="text-sm mr-0 sm:mr-6">
+                    <p class="text-xs mb-0">Ведущий</p>
+                    <p class="text-base mb-0"><a href="https://www.instagram.com/margo.hartwig/" class="link-novisited"><b>Марго Гартвиг</b></a></p>
+                    <p class="text-base mb-0">Культуролог, преподаватель обществознания, репетитор</p>
+            </div>
+            </div>
+    </div>
+<!--
+<h2>Собрались два нищеброда</h2>
+   <article class="flex-grow-xs" role="main">
+        <h1 class="space-in-right-mili-lg">Подкаст: Собрались два нищеброда</h1>
+<div class="row space-out-top-base-xs">
+    <section class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 col-flex-sm">
+<p><p><img src="/assets/img/podcasts/noboring-finance-pod-orig.jpg" alt=""></p></p>
+<p></section>
+--&gt;</div>
+<span><a href="/podcasts/ne-nauchili/">Read More</a></span></p>
+  </p>
+</div>
+<div class="py-4 sm:py-10">
+  <p>
+    <h2 class="text-2xl sm:text-4xl font-bold"><a href="/podcasts/podcast-noboring-finance/">Нескучные финансы</a></h2>
+  </p>
+  <em><time datetime="2023-03-19T00:00:00.000Z">19 марта 2023 г.</time></em>
+  <div>   <div class="flex mb-4 mt-4 sm:mt-8 flex-wrap">
+        <div class="mr-0 sm:mr-6 mb-6 sm:mb-0">
+            <img src="/assets/img/podcasts/noboring-finance-pod-orig.jpg" alt="" class="rounded-full sm:w-64 sm:h-64 grow sm:grow-0"/>
+         </div>
+         <div class="sm:mr-6">
+            <h1 class="mt-6 sm:mt-0">Подкаст: Нескучные финансы</h1>
+            <p>21 выпуск <i class="las la-star"></i> 4.9 • 21</p>
+            <p>Подкаст для малого бизнеса. Фурье втирает про финансы и управление на основе цифр.</p>
+            <p>В подкасте обсуждаем, как строить продуктивные отношения с цифрами, если у вам малый бизнес. Как видеть за цифрами правду, и как не сойти с ума и достигать хороших результатов, при больших обьёмах цифр.</p>
+        </div>
+        <div>
+            <h2>Где послушать</h2>
+            <ul>
+                <li><a href="https://noboring-finance.mave.digital/" class="link-novisited">Мэйв</a></li>
+                <li><a href="https://music.yandex.ru/album/9910111" class="link-novisited">Я.Музыка</a></li>
+                <li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8xMmVmM2UyNC9wb2RjYXN0L3Jzcw==" class="link-novisited">Google Podcasts</a></li>
+                <li><a href="https://podcasts.apple.com/us/podcast/%D0%BD%D0%B5%D1%81%D0%BA%D1%83%D1%87%D0%BD%D1%8B%D0%B5-%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D1%8B/id1496177433" class="link-novisited">Apple Podcasts</a></li>
+                <li><a href="https://vk.com/podcasts-136187891" class="link-novisited">Vk</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="flex flex-wrap mb-8">
+            <div class="flex">
+            <div class="mr-6 shrink-0">
+                <img src="/assets/img/avatar/furye.jpg" alt="" class="rounded-full w-16 h-16">
+            </div>
+            <div class="text-sm shrink-0 mr-0 sm:mr-6 grow sm:grow-0">
+                    <p class="text-xs mb-0">Ведущий</p>
+                    <p class="text-base mb-0"><a href="https://fourier.rocks/" class="link-novisited"><b>Дмитрий Фурье</b></a></p>
+                    <p class="text-base mb-0">Финановый директор<br> в <a href="https://noboring-finance.ru/" class="link-novisited">Нескучных финансах</a></p>
+            </div>
+            </div>
+        </div></div>
+    <span><a href="/podcasts/podcast-noboring-finance/">Read More</a></span>
+  </p>
+</div>
+<div class="py-4 sm:py-10">
+  <p>
+    <h2 class="text-2xl sm:text-4xl font-bold"><a href="/podcasts/young-finance/">Собрались два нищеброда</a></h2>
+  </p>
+  <em><time datetime="2023-03-19T00:00:00.000Z">19 марта 2023 г.</time></em>
+  <div><div class="flex mb-4 mt-4 sm:mt-8 flex-wrap">
+    <div class="mr-0 sm:mr-6 mb-6 sm:mb-0">
+        <img src="/assets/img/podcasts/young-finance-pod-orig.jpg" alt="Обложка подкаста Собрались два Нищеброда" class="rounded-full sm:w-64 sm:h-64 grow sm:grow-0"/>
+     </div>
+     <div class="sm:mr-6">
+        <h1 class="mt-6 sm:mt-0">Подкаст: Собрались два нищеброда</h1>
+        <p>8 выпусков <i class="las la-star"></i> 5 • 1</p>
+        <p>Уютный подкаст о финансовой грамотности для молодых и амбиционных. Обсуждаем, как распоряжаться деньгами, откуда их брать, как копить и вкладывать. Вот об этом всём.</p>
+        <p>В подкасте Дима и Женя обсуждают свои отношения с деньгами, пытаются разобраться как их сохранть, приумножить и много шутят.</p>
+    </div>
+    <div>
+        <h2>Где послушать</h2>
+        <ul>
+            <li><a href="https://young-finance.mave.digital/" class="link-novisited">Мэйв</a></li>
+            <li><a href="https://music.yandex.ru/album/9160777" class="link-novisited">Я.Музыка</a></li>
+            <li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9lYjJjY2Y0L3BvZGNhc3QvcnNz" class="link-novisited">Google Podcasts</a></li>
+            <li><a href="https://podcasts.apple.com/us/podcast/%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BB%D0%B8%D1%81%D1%8C-%D0%B4%D0%B2%D0%B0-%D0%BD%D0%B8%D1%89%D0%B5%D0%B1%D1%80%D0%BE%D0%B4%D0%B0/id1483380442" class="link-novisited">Apple Podcasts</a></li>
+            <li><a href="https://vk.com/podcasts-186380402" class="link-novisited">Vk</a></li>
+        </ul>
+    </div>
+</div>
+<h3 class="mt-2">Ведущие</h3>
+    <div class="flex flex-wrap mb-8">
+        <!--Дима-->
+        <div class="flex mb-8">
+        <div class="mr-6 shrink-0 flex-none">
+            <picture><source type="image/avif" srcset="/assets/img/furye-jW4TMYjeYE-240w.avif 240w" sizes="100vw"><source type="image/webp" srcset="/assets/img/furye-jW4TMYjeYE-240w.webp 240w" sizes="100vw"><img alt="" class="rounded-full w-16 h-16" loading="lazy" decoding="async" src="/assets/img/furye-jW4TMYjeYE-240w.jpeg" width="240" height="240"></picture>
+        </div>
+        <div class="text-sm mr-0 sm:mr-6">
+                <p class="text-xs mb-0">Ведущий</p>
+                <p class="text-base mb-0"><a href="https://fourier.rocks/" class="link-novisited"><b>Дмитрий Фурье</b></a></p>
+                <p class="text-base mb-0">Финановый директор в&nbsp;<a href="https://noboring-finance.ru/" class="link-novisited">Нескучных финансах</a></p>
+        </div>
+        </div>
+        <!--Женя-->
+        <div class="flex">
+            <div class="flex-none mr-6 shrink-0">
+                <picture><source type="image/avif" srcset="/assets/img/rugaleva-a7nRb6GR4V-400w.avif 400w, /assets/img/rugaleva-a7nRb6GR4V-550w.avif 550w, /assets/img/rugaleva-a7nRb6GR4V-700w.avif 700w, /assets/img/rugaleva-a7nRb6GR4V-850w.avif 850w, /assets/img/rugaleva-a7nRb6GR4V-1000w.avif 1000w" sizes="100vw"><source type="image/webp" srcset="/assets/img/rugaleva-a7nRb6GR4V-400w.webp 400w, /assets/img/rugaleva-a7nRb6GR4V-550w.webp 550w, /assets/img/rugaleva-a7nRb6GR4V-700w.webp 700w, /assets/img/rugaleva-a7nRb6GR4V-850w.webp 850w, /assets/img/rugaleva-a7nRb6GR4V-1000w.webp 1000w" sizes="100vw"><img alt="" class="rounded-full w-16 h-16" loading="lazy" decoding="async" src="/assets/img/rugaleva-a7nRb6GR4V-400w.jpeg" width="1000" height="1000" srcset="/assets/img/rugaleva-a7nRb6GR4V-400w.jpeg 400w, /assets/img/rugaleva-a7nRb6GR4V-550w.jpeg 550w, /assets/img/rugaleva-a7nRb6GR4V-700w.jpeg 700w, /assets/img/rugaleva-a7nRb6GR4V-850w.jpeg 850w, /assets/img/rugaleva-a7nRb6GR4V-1000w.jpeg 1000w" sizes="100vw"></picture>
+            </div>
+            <div class="text-sm mr-0 sm:mr-6">
+                    <p class="text-xs mb-0">Ведущий</p>
+                    <p class="text-base mb-0"><a href="https://t.me/jenya_and_marketing" class="link-novisited"><b>Женя Шемякина</b></a></p>
+                    <p class="text-base mb-0">Маркетолог, пиарщик, хзяйка рыжего кота</p>
+            </div>
+            </div>
+    </div>
+<!--
+<h2>Собрались два нищеброда</h2>
+   <article class="flex-grow-xs" role="main">
+        <h1 class="space-in-right-mili-lg">Подкаст: Собрались два нищеброда</h1>
+<div class="row space-out-top-base-xs">
+    <section class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 col-flex-sm">
+<p><p><img src="/assets/img/podcasts/noboring-finance-pod-orig.jpg" alt=""></p></p>
+<p></section>
+--&gt;</div>
+<span><a href="/podcasts/young-finance/">Read More</a></span></p>
+  </p>
+</div>
+
+
+  </main>
+
+<footer class="mt-4">
+  <div class="mx-auto  pb-10">
+
+      <!---->
+      <div class="flex flex-wrap content-center">
+        <div class="flex items-center link-novisited no-underline hover:text-social-mastodon dark:hover:text-social-mastodon mr-6">
+          <i class="lab la-mastodon text-2xl"></i>
+          <a href="https://mastodon.ml/@dmitriyfourier" class="link-novisited">Мастадон</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-linkedin dark:hover:text-social-linkedin mr-6">
+          <i class="lab la-linkedin text-2xl no-underline"></i>
+            <a href="https://www.linkedin.com/in/dmitriyfourier/" class="link-novisited">ЛинкедИн</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-instagram dark:hover:text-social-instagram mr-6">
+          <i class="lab la-instagram text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Инстаграм</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-youtube dark:hover:text-social-youtube mr-6">
+          <i class="lab la-youtube text-2xl no-underline"></i>
+          <a href="https://www.youtube.com/c/DmitriyFurye" class="link-novisited">Ютуб</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-telegram dark:hover:text-social-telegram mr-6">
+          <i class="lab la-telegram text-2xl no-underline">
+            <a href="https://t.me/FourierNotesRU" class="link-novisited"></a></i><a href="https://t.me/FourierNotesRU" class="link-novisited">Телеграм</a>
+        </div>
+
+        <div class="flex items-center sm:grow link-novisited no-underline hover:text-social-epicgames dark:hover:text-social-steam-dark mr-6">
+          <i class="lab la-steam text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Стим</a>
+        </div>
+        <div class="flex items-center link-novisited no-underline hover:text-mk-background">
+          <a href="/donation">
+            <button class="outline-solid outline-offset-2 outline-1 rounded-sm">
+              <div class="px-1 flex items-center">
+                <i class="text-2xl las la-piggy-bank"></i></div>
+            </button></a>
+        </div>
+      </div>
+     
+      <p class="text-sm py-2" itemprop="copyrightNotice">
+        <!--Добавляем автора сайта-->
+        <span class="space-out-bottom-mili-xs" itemprop="publisher" itemscope="" itemtype="https://schema.org/Person">©<span itemprop="name">Дмитрий Фурье</span> × </span>
+        <!--Добавляем копирайт на сайт и даты-->
+        <span>2017 — 2026</span> </p>
+  </div>
+
+
+  <script>
+    document.getElementById("toggleDarkMode").addEventListener("change", function () {
+      if (isDarkMode()) {
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+      } else {
+        localStorage.theme = 'dark'
+        document.documentElement.classList.add('dark')
+      }
+    });
+  </script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <script src="/assets/scripts/fotorama.min.js"></script>
+  <script>
+document.addEventListener('keydown', function(event) {
+  // Проверяем, что нажата клавиша Ctrl
+  if (event.ctrlKey) {
+    // Проверяем, какая стрелка нажата
+    if (event.key === 'ArrowLeft') {
+      // Ctrl + стрелка влево
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var prevLink = document.getElementById('previousPost');
+      if (prevLink) {
+        window.location.href = prevLink.href;
+      }
+    } else if (event.key === 'ArrowRight') {
+      // Ctrl + стрелка вправо
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var nextLink = document.getElementById('nextPost');
+      if (nextLink) {
+        window.location.href = nextLink.href;
+      }
+    }
+  }
+});
+</script>
+
+
+</main></body></html>

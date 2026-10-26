@@ -1,0 +1,971 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
+    
+    <title>📋 Блог Димы Фурье</title>
+    <meta name="description" content="Про управление, дизайн и менеджмент">
+    
+    <meta name="author" content="Дмитрий Фурье">
+
+    <!--Open Graph-->
+    
+     <meta property="og:title" content="📋 Заметки Димы Фурье">
+     <meta property="og:description" content="Про управление, дизайн и менеджмент">
+     <meta property="og:image" content="https://fourier.rocks/assets/covers/Blog-OG.jpg">
+    
+    <meta property="og:site_name" content="fourier.rocks">
+    <meta property="og:url" content="https://fourier.rocks/posts/">
+    <meta property="og:type" content="object">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+  
+    <!--links-->
+    <link rel="canonical" href="https://fourier.rocks/posts/">
+     <!-- fonts -->
+  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-brands-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+
+        <!--/assets/img/favicon/-->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#202020">
+  <meta name="theme-color" content="#202020">
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="/assets/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png>
+  <link rel=" mask-icon"="" color="#202020">
+      <link rel="me" href="https://mastodon.ml/@dmitriyfourier">
+    <!--styles-->
+    <link href="/assets/styles/tailwind.css" rel="stylesheet">
+    <script>
+      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDarkMode()) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+ 
+<body class="text-mk-background bg-white dark:text-mk-white dark:bg-mk-background"> 
+    <header>
+<nav id="header" class="w-full z-30 top-10 py-1">
+  <div class="w-full flex place-items-start justify-between mt-0 py-2">
+
+    <div id="mobileMenuButton" class="cursor-pointer hidden mr-6 left-0 top-0">
+      <i class="las la-bars text-mk-background dark:text-mk-yellow-main text-2xl"></i>
+    </div>
+    <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
+
+    <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
+      <nav>
+        <ul class="sm:flex items-center justify-between text-mk-blue dark:text-mk-yellow-main pt-0 sm:pt-0">
+          <li class="flex flex-wrap justify-between items-center mx-auto max-w-(--breakpoint-2xl)">
+            <span class="flex items-center">
+              <div class="ml-0.5 self-center font-semibold whitespace-nowrap text-mk-background dark:text-mk-white">Блог Димы Фурье</div></span>
+          </li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="#"></a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="/podcasts/"></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
+      <div id="nav-buttons" class="flex items-center w-full sm:w-full">
+        <div class="px-4">
+          <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
+            <input type="checkbox" class="sr-only peer">
+            <div class="flex justify-center items-center w-8 h-8 
+              bg-tg-deepdark 
+              shadow-xs
+              shadow-mk-purple-deco
+              dark:shadow-mk-yellow-main
+              rounded-full
+              peer-hover::outspanne-none 
+              peer-hover::ring-2 
+              dark:bg-mk-yellow-main 
+              dark:border-gray-600 
+              peer-checked:bg-mk-yellow-main">
+              <div class="text-mk-yellow-main dark:hidden">
+                <i class="las la-moon"></i>
+              </div>
+              <div class=" text-mk-background hidden dark:visible dark:inline">
+                <i class="las la-sun"></i>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </header>
+      <main class="">
+        
+        
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/why-i-dont-like-telegram-channels/" itemprop="url"><span itemprop="name">Как телеграм снижает доступность информации.</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2024-06-12T00:00:00.000Z">12 июня 2024 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 4 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>До появления Телеграма информацию в интернете распространяли на страницах сайтов, блогах или соцсетях.</p>
+<p>Все эти площадки (если они не&nbsp;были скрыты за&nbsp;paywall) позволяли найти информацию через поиск.</p>
+<p>Тебе было достаточно выложить на&nbsp;свою страницу какую-либо информацию, и&nbsp;она тут&nbsp;же становилась достоянием общественности.</p>
+<p>Так, например, если бы Николай Товеровский в 2011 году вёл Телеграм-канал и выкладывал бы всё туда, я бы никогда о нём не узнал.
+А так в своё время я гуглил что-то вроде «Дизайн графиков» и наткнулся на его материал <a href="https://ksoftware.livejournal.com/22535.html">про редизайн японских свечей</a>. И, наверное, гораздо позже бы узнал про Бюро Горбунова.</p>
+<p>То же касается ребят из <a href="https://cuprum.media/proverka-mifov-cuprum">Купрума</a>, которые пропагандируют доказательную медицину и довольно часто развенчивают вредные и опасные мифы про работу со&nbsp;здоровьем.</p>
+<p>Если бы они вели эти рубрики внутри своего телеграм-канала, я бы, скорее всего, никогда их не нашёл. А так, люди, которые гуглят «что делать, если болит «N», имеют шанс получить адекватную информацию, а&nbsp;не&nbsp;вредные советы из интернета.</p>
+<p>Похожий случай был у меня, когда я исследовал тему того, как работала и строилась техническая поддержка Рокетбанка (может, кто-то помнит такой). И&nbsp;тогда я наткнулся на ребят из supprt.school. У них в блоге был материал про то, <a href="https://supprt.science/2020/10/16/5-ways-to-motivate/">как бысла устроена мотивации команды технической поддержки Рокетбанка</a>.</p>
+<p>И&nbsp;уже&nbsp;после этого я&nbsp;нашёл их&nbsp;телеграм-канал, где есть полезные вещи, которых нет на&nbsp;сайте, и&nbsp;иногда это печалит, потому что я&nbsp;мог найти некоторые из&nbsp;этих постов раньше, будь они не скрыты в недрах телеграм-канала.</p>
+<p>Сейчас довольно часто сталкиваюсь с тем, что кто-то из друзей нашёл какой-то классный материал у кого-то в&nbsp;Телеграме или&nbsp;Инстаграме. Причём временами информация попадается настолько релевантная, что я её на всякий случай скидываю в Obsidian, чтобы не плодить подписки ради одного полезного поста в&nbsp;Телеграме.</p>
+<p>Собственно, по&nbsp;этой причине я&nbsp;свои материалы сперва выкладываю на&nbsp;сайт, а&nbsp;только потом в&nbsp;социальные сети. Потому что, если что-то из&nbsp;этого окажется полезным кому-то, я хотел&nbsp;бы, чтобы это имело шансы быть найденным в&nbsp;интернете, а&nbsp;не&nbsp;быть забытым в&nbsp;недрах какого-то телеграм-канала.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/media" class="link-novisited no-underline hover:underline">Медиа</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/telegram" class="link-novisited no-underline hover:underline">Телеграм</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/managment-without-tie/" itemprop="url"><span itemprop="name">Менеджмент без короны и галстука</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2023-10-26T00:00:00.000Z">26 октября 2023 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 8 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Вертикальными иерархиями достигать результата в&nbsp;бизнесе становится все&nbsp;сложнее. Если еще 5-7 лет назад (ох прекрасные доковидные времена) достаточно руководителю дать распоряжение и&nbsp;оно&nbsp;выполнялось, то в&nbsp;условиях 23&nbsp;года такая модель управления все менее эффективна.</p>
+<p>В&nbsp;этих условиях теперь требования к&nbsp;софт-скиллам руководителя стали выше, а&nbsp;вертикальные связи начинают уступать горизонтальным в&nbsp;корпоративных коммуникациях.</p>
+<p>Если раньше схема <strong>начальник→подчиненный</strong> была эффективна и&nbsp;позволяла достигать результатов, теперь все больше предпринимателей и&nbsp;руководителей предпочитает работать по&nbsp;модели <strong>партнёр←→партнёр</strong>. И&nbsp;руководителю теперь чтобы добиваться более сильных и&nbsp;качественных результатов необходимо не&nbsp;просто дать задачу и&nbsp;поставить цель сверху вниз.</p>
+<p>Теперь появилась необходимость спуститься до&nbsp;уровня партнёр-партнёр, продать ценность задачи и&nbsp;убедить коллегу в&nbsp;том, зачем необходимо разобраться «вот с&nbsp;этим», и&nbsp;еще прояснить какую ценность получат от&nbsp;этого участники процесса.</p>
+<p>Теперь руководителям как&nbsp;никогда актуально уделять внимание прокачке собственных софт-скиллов, нежели менеджерских хардов. Поскольку убедить человека организовать определенный результат стало сложнее, чем&nbsp;это было раньше.</p>
+<p>В своей практике я&nbsp;выработал несколько способов достигать вот этих связей «партнёр-партнёр», поделюсь ими.</p>
+<h2>Взращивать культуру партнёрства в&nbsp;компании</h2>
+<p>Это регулярное культивирование ценности партнёр-партнёр на&nbsp;уровне культуры компании — каждый раз упоминаем об это на подведении итогов, на регулярных планёрках, на&nbsp;индивидуальных встречах с&nbsp;коллегами.</p>
+<p>Нельзя сказать человеку, что он&nbsp;партнёр, чтобы он&nbsp;стал им — эту ценность должна поддерживать среда в&nbsp;которой находится человек, а&nbsp;не&nbsp;только набор руководителей.</p>
+<h2>Регулярно сверяться по ожиданиям друг друг от друга</h2>
+<p>Большинство рабочих конфликтов, с которыми я сталкивался — конфликты в ситуациях, когда у людей разошлись ожидания друг от друга, о которых они договорились ранее.</p>
+<p>И по этой причине — не нужно ждать, когда полыхнёт. Лучше регулярно сверяться с партнерами, о том, что вы ждете друг от друга.</p>
+<p>Друг от друга — это ключевое. Это значит, что не вы идете и говорите, что вы ждете вот это и это. А что вы начинаете разговор с того «Скажи что ты ждешь от меня как от твоего партнера?» — и внимательно слушаем.</p>
+<h3>Включать эмпатию, черт возьми</h3>
+<p>Другим из наиболее качественных инструментов в своей практике (вам он может совершенно не подойдет), является встреча так называемая «без галстуков»</p>
+<p>Это когда, я&nbsp;и&nbsp;мой коллега переходим из&nbsp;роли «коллеги» в&nbsp;роли «незнакомцы из&nbsp;бара». На&nbsp;таких встречах действует несколько правил:</p>
+<ul>
+<li>Все что происходит на&nbsp;таких встречах — остаётся на&nbsp;таких встречах.</li>
+<li>Четко обозначит, что сейчас нет ролей рабочей иерархии.</li>
+<li>Нет никакой иерархии (снимаем, короны и галстук, одежду лучше оставить).</li>
+<li>От сказанного на встрече нет никаких последствий.</li>
+</ul>
+<figure><picture><source type="image/avif" srcset="/assets/img/Crownandtie-P3Hb6NRyMh-400w.avif 400w, /assets/img/Crownandtie-P3Hb6NRyMh-550w.avif 550w, /assets/img/Crownandtie-P3Hb6NRyMh-700w.avif 700w, /assets/img/Crownandtie-P3Hb6NRyMh-850w.avif 850w, /assets/img/Crownandtie-P3Hb6NRyMh-1000w.avif 1000w" sizes="100vw"><source type="image/webp" srcset="/assets/img/Crownandtie-P3Hb6NRyMh-400w.webp 400w, /assets/img/Crownandtie-P3Hb6NRyMh-550w.webp 550w, /assets/img/Crownandtie-P3Hb6NRyMh-700w.webp 700w, /assets/img/Crownandtie-P3Hb6NRyMh-850w.webp 850w, /assets/img/Crownandtie-P3Hb6NRyMh-1000w.webp 1000w" sizes="100vw"><img alt="Снимите корону и галстук" loading="lazy" decoding="async" src="/assets/img/Crownandtie-P3Hb6NRyMh-400w.jpeg" width="1000" height="1000" srcset="/assets/img/Crownandtie-P3Hb6NRyMh-400w.jpeg 400w, /assets/img/Crownandtie-P3Hb6NRyMh-550w.jpeg 550w, /assets/img/Crownandtie-P3Hb6NRyMh-700w.jpeg 700w, /assets/img/Crownandtie-P3Hb6NRyMh-850w.jpeg 850w, /assets/img/Crownandtie-P3Hb6NRyMh-1000w.jpeg 1000w" sizes="100vw"></picture><figcaption>Снимите корону и галстук</figcaption></figure>
+<h3>Зачем я это делаю?</h3>
+<p>Для того, чтобы почувствовать самому и дать почувствовать другим, что все мы люди, а не механические болтики в корпоративной машине.</p>
+<p>Что у всех у нас есть страхи, эмоции, травмы, которые зачастую мы держим в себе, когда находимся на рабочем месте.</p>
+<p>Такие встречи позволяют показать друг другу, что мы люди, и что в нас больше человеческого, чем-то что мы видим на работе. К тому же в таких разговорах, можно узнать много нового о своих коллегах, и понять что у вас есть куда больше общего чем просто запись в трудовой или строка «место работы в линкед-ин»</p>
+<p>К тому же понимая образ мыслей друг друга на таких встречах, всем гораздо проще понимать природу тех или иных сюрпризов происходящих на работе.</p>
+<p>Например, такие встречи, дают неплохие звоночки в отношении того, на сколько комфортно люди чувствуют себя в компании.</p>
+<blockquote>
+<p>Будьте человечнее, в конце концов все мы огромный набор из суперсил и суперслабостей — которые и помогают нам достигать совместных результатов дополняя друг друга. Давайте видеть за цифрами в отчетах — друг друга.</p>
+</blockquote>
+<p><strong>P.S.</strong> Никому не интересный факт. У меня в жизни никогда не было галстука и не имею ни малейшего понятия как его завязывать.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/upravlenie" class="link-novisited no-underline hover:underline">Управление</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/knowledges-types/" itemprop="url"><span itemprop="name">Типы знаний в Knowledge Managment</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2023-07-12T00:00:00.000Z">12 июля 2023 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 8 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Сейчас мы в Adesk проводим ревизию внутренней базы знаний и прокачку Customer Succsess отдела.
+Поскольку, появилась необходимость усилится в этих областях менеджмента — стали искать у&nbsp;кого можно подчерпнуть что-то полезное.</p>
+<p>Вообще это наша привычка, искать профессионалов обладающих знаниями в тех областях, которые мы развиваем, а&nbsp;не делать с&nbsp;нуля «по чуйке».</p>
+<p>Так мы наткнулись на базу знаний supprt.science, ребята, которые специализируются на прокачке отделов технической поддержки. Так вот у&nbsp;них есть своя база знаний в&nbsp;рамках их&nbsp;образовательного проекта supprt.school.</p>
+<p class="aside"><b><a href="https://base.supprt.school/">supprt.base</a></b> — база знаний о&nbsp;клиентском сервисе. </p>
+<figure><picture><source type="image/avif" srcset="/assets/img/knowlage-base-types-IUO0vMrTbj-400w.avif 400w, /assets/img/knowlage-base-types-IUO0vMrTbj-550w.avif 550w, /assets/img/knowlage-base-types-IUO0vMrTbj-700w.avif 700w, /assets/img/knowlage-base-types-IUO0vMrTbj-850w.avif 850w, /assets/img/knowlage-base-types-IUO0vMrTbj-1000w.avif 1000w, /assets/img/knowlage-base-types-IUO0vMrTbj-1150w.avif 1150w, /assets/img/knowlage-base-types-IUO0vMrTbj-1300w.avif 1300w, /assets/img/knowlage-base-types-IUO0vMrTbj-1450w.avif 1450w, /assets/img/knowlage-base-types-IUO0vMrTbj-1600w.avif 1600w, /assets/img/knowlage-base-types-IUO0vMrTbj-1750w.avif 1750w, /assets/img/knowlage-base-types-IUO0vMrTbj-1900w.avif 1900w" sizes="100vw"><source type="image/webp" srcset="/assets/img/knowlage-base-types-IUO0vMrTbj-400w.webp 400w, /assets/img/knowlage-base-types-IUO0vMrTbj-550w.webp 550w, /assets/img/knowlage-base-types-IUO0vMrTbj-700w.webp 700w, /assets/img/knowlage-base-types-IUO0vMrTbj-850w.webp 850w, /assets/img/knowlage-base-types-IUO0vMrTbj-1000w.webp 1000w, /assets/img/knowlage-base-types-IUO0vMrTbj-1150w.webp 1150w, /assets/img/knowlage-base-types-IUO0vMrTbj-1300w.webp 1300w, /assets/img/knowlage-base-types-IUO0vMrTbj-1450w.webp 1450w, /assets/img/knowlage-base-types-IUO0vMrTbj-1600w.webp 1600w, /assets/img/knowlage-base-types-IUO0vMrTbj-1750w.webp 1750w, /assets/img/knowlage-base-types-IUO0vMrTbj-1900w.webp 1900w" sizes="100vw"><img alt="Скриншот с&nbsp;данными из Support Science" loading="lazy" decoding="async" src="/assets/img/knowlage-base-types-IUO0vMrTbj-400w.jpeg" width="1900" height="1007" srcset="/assets/img/knowlage-base-types-IUO0vMrTbj-400w.jpeg 400w, /assets/img/knowlage-base-types-IUO0vMrTbj-550w.jpeg 550w, /assets/img/knowlage-base-types-IUO0vMrTbj-700w.jpeg 700w, /assets/img/knowlage-base-types-IUO0vMrTbj-850w.jpeg 850w, /assets/img/knowlage-base-types-IUO0vMrTbj-1000w.jpeg 1000w, /assets/img/knowlage-base-types-IUO0vMrTbj-1150w.jpeg 1150w, /assets/img/knowlage-base-types-IUO0vMrTbj-1300w.jpeg 1300w, /assets/img/knowlage-base-types-IUO0vMrTbj-1450w.jpeg 1450w, /assets/img/knowlage-base-types-IUO0vMrTbj-1600w.jpeg 1600w, /assets/img/knowlage-base-types-IUO0vMrTbj-1750w.jpeg 1750w, /assets/img/knowlage-base-types-IUO0vMrTbj-1900w.jpeg 1900w" sizes="100vw"></picture><figcaption>Скриншот с&nbsp;данными из Support Science</figcaption></figure>
+<p>Ребята выделяют два вида типов знаний, «фундаментальных» — это <strong>Явные знания (эксплицитные/фактологические/алгоритмические):</strong> и <strong>Неявные знания (эвристические)</strong>.</p>
+<p>И вот тут мне немного не хватило, еще одной классификации, поскольку она оказывает существенное влияние на формирование структуры базы знаний, и позволяет лучше сегментировать её.</p>
+<p>Когда мы у формировали внутреннюю базу знаний и хэлп-деск, мы держали в уме, что в базу знаний неизбежно попадут три типа знаний — профессиональные, специальные и междисциплинарные знания.</p>
+<h2>Профессиональные знания</h2>
+<p>Знаний, которые — относятся к профессиональной области. Как правило, они приходят с опытом в какой-либо деятельности ну и еще частично их можно получить в ВУЗе.</p>
+<p>Так например к профессиональным знаниям можно отнести:</p>
+<blockquote>
+    <p><span class="font-semibold">Для врача дерматолога:</span><br>Какое лекарство нужно выписать пациенту, у которого дерматит редкой формы.</p>
+    <p><span class="font-semibold">Для бухгалтера:</span><br>Как правильно заполнить декларацию по налогам.</p>
+    <p><span class="font-semibold">Для дизайнера:</span><br>Как сделать автоматический лэйаут в фигме.</p>
+</blockquote>
+<p>Профессиональные знания — знания, которые относятся к узкой профессиональной области.</p>
+<h2>Специальные знания</h2>
+<p>Знания, которые относятся к конкретному месту, или явлению но необходимы всем участникам этой области.</p>
+<blockquote>
+    <p><span class="font-semibold">Например:</span></p>
+    <p>Знание бизнес-процесса согласования платежей в конкретной компании.</p>
+    <p>Знание того, где хранятся конкретные рабочие документы относящиеся к должности</p>
+    <p>Знание о том, к кому и по какому вопросу обратиться в конкретной компании.</p>
+</blockquote>
+<p>Как правило, специальные знания, ограничены каким-либо фактором — область деятельности, и количеством людей, которые могут пользоваться этими знаниями.</p>
+<p>Самый простой пример — это инструкция или регламент ухода в отпуск.</p>
+<p>Он:</p>
+<ol>
+    <li>Применяется в конкретной организации.</li>
+    <li>Распространяется на всех сотрудников.</li>
+</ol>
+<h2>Междисциплинарные знания</h2>
+<p>Знаний, которые не зависят, ни от компании, ни от круга людей, которые ими могут пользоваться.
+Чаще всего сюда попадают знания из области применения soft-skills, или областям не ограниченным конкретной организацией или сообществом.</p>
+<blockquote>
+    <p><span class="font-semibold">Например:</span></p>
+    <p>Как организовывать тайм-менеджмент.</p>
+    <p>Как ставить и принимать задачу.</p>
+    <p>Как подготовиться к публичному выступлению.</p>
+    <p>Правила орфографии и пунктуации.</p>
+</blockquote>
+<h2>Как это применять при построении базы знаний</h2>
+<p>В первую очередь — это влияет на доступность тех или иных статей базы для сотрудников.</p>
+<p>Так например статьи относящиеся к&nbsp;области <strong>специальных</strong> и <strong>междисциплинарных</strong> — находятся на&nbsp;более высоких уровнях доступа к&nbsp;ним.</p>
+<p>Например доступ к статье о том, как уйти в отпуск — должен быть у каждого члена команды.
+Поэтому он&nbsp;попадает в&nbsp;раздел для&nbsp;всех.</p>
+<p>Профессиональные&nbsp;же статьи, например техническая документация it-отдела, может быть не&nbsp;доступна всем сотрудникам компании, чтобы не&nbsp;засорять поиск лишней выдачей, тем&nbsp;кому эта&nbsp;документация не&nbsp;релевантна.</p>
+<p>Что касается междисциплинарных знаний, чаще всего, они попадают в&nbsp;раздел связанный с обучением и&nbsp;прокачкой команды, так как это касается всех, но&nbsp;не&nbsp;в&nbsp;обязательном порядке.</p>
+<p>Хотя могут быть ситуации, когда такие статьи появляются внутри конкретных отделов.</p>
+<h2>Как это ложится в&nbsp;процесс разработки базы знаний</h2>
+<p>Понимание того, какой набор материалов к какой области знаний относится довольно хорошо помогает на&nbsp;этапе проектирования и ревизии базы знаний. Поскольку позволяет лучше понять, то, кто&nbsp;будет пользоваться материалов в&nbsp;базе знаний и&nbsp;кому реально нужен к&nbsp;ней доступ.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/upravlenie-znaniyami" class="link-novisited no-underline hover:underline">Управление знаниями</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/bazy-znanij" class="link-novisited no-underline hover:underline">Базы знаний</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/message-to-graduates/" itemprop="url"><span itemprop="name">Послание выпускникам ×&nbsp;2023</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2023-05-30T00:00:00.000Z">30 мая 2023 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 12 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Приходит пора выпукных, скоро все сдадут ЕГЭ, и&nbsp;наступет пора принимать уже взрослое решение по&nbsp;поводу того, как жить дельше — поступать в&nbsp;университет, продолжить учится и&nbsp;найти вуз зарузбежом, или&nbsp;начать перебирать разные работы в&nbsp;поисках своего призвания.</p>
+<p>В день, когда у&nbsp;меня был сдан последний экзамент, а&nbsp;это было 13 лет назад, единственное ощущение, которое я испытывал — это желание не&nbsp;вставать с&nbsp;кровати. Как будто бы я&nbsp;преодолел большой челлендж, а&nbsp;следюущего еще не появилось, а&nbsp;давление людей вокруг осталось.</p>
+<p>Сейчас на&nbsp;вас, скорее всего упадет, груз требований от&nbsp;разных взрослы, что в&nbsp;должны получить диплом, что&nbsp;нужно быть начальником, а&nbsp;быть поваром это зазорно — и&nbsp;другой набор странных и&nbsp;глупых требований.</p>
+<p>Не поддавайтесь, скорее всего не&nbsp;зависимо от&nbsp;того, что вы&nbsp;выберете — вы&nbsp;все равно останетесь хорошим человеком.</p>
+<p>Как правило, в жизни</p>
+<h2>Советы, как сорриентироваться в трудные времена</h2>
+<h3>Относитесь к чужим советам с долей скептицизама</h3>
+<p>Даже к&nbsp;этим. Люди будут хотет вам дать много советов — какие-то из&nbsp;них полезные, какие-то отстой. Но&nbsp;так или иначе все мы&nbsp;даём советы через призму своего опыта. И&nbsp;то, что сработало у&nbsp;других вполне окажется абсолютно бесполезным для&nbsp;вас.</p>
+<h3>Не залипайте в инстаграме</h3>
+<p>Скорее всего вы будете чаще расстраиваться по поводу чьей-то зелоной травы. Но&nbsp;к&nbsp;сожалению инстаграм в&nbsp;какой-то момент превратился в выставку тщеславия. Чаще всего туда попадает тщательно отсортированный глянец, каждый считает себя в&nbsp;какой-то мере духовным учителем, и&nbsp;туда почти не&nbsp;просачивается любой негатив. Сравнивать свою жизнь с&nbsp;глянцем — очень коварная ловушка.</p>
+<p>Я и сам часто себя ловлю на мысли, что завидую ребятам из инстаграма, которые научились упаковывать личный бернд, постить «только хорошее», но борюсь с этим.</p>
+<p>Если хотите сбалансировать глянец инстаграмма — установите <a href="https://twitter.com/">твиттер</a>.</p>
+<h3>Боритесь с зашоренностью и эго</h3>
+<p>Чтобы повысить свои шансы на&nbsp;успех (чтобы это не&nbsp;значило) в&nbsp;этом мире, вам следует бороться с&nbsp;собственной зашоренностью и&nbsp;эго.</p>
+<figure class="aside"><a href="https://youtu.be/vKXk2Yhm58o"><picture><source type="image/avif" srcset="/assets/img/dalio-principles-KDB4KubQSO-400w.avif 400w, /assets/img/dalio-principles-KDB4KubQSO-550w.avif 550w, /assets/img/dalio-principles-KDB4KubQSO-700w.avif 700w, /assets/img/dalio-principles-KDB4KubQSO-850w.avif 850w, /assets/img/dalio-principles-KDB4KubQSO-1000w.avif 1000w, /assets/img/dalio-principles-KDB4KubQSO-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/dalio-principles-KDB4KubQSO-400w.webp 400w, /assets/img/dalio-principles-KDB4KubQSO-550w.webp 550w, /assets/img/dalio-principles-KDB4KubQSO-700w.webp 700w, /assets/img/dalio-principles-KDB4KubQSO-850w.webp 850w, /assets/img/dalio-principles-KDB4KubQSO-1000w.webp 1000w, /assets/img/dalio-principles-KDB4KubQSO-1150w.webp 1150w" sizes="100vw"><img alt="Обложка видео Принципы Рея Далио" loading="lazy" decoding="async" src="/assets/img/dalio-principles-KDB4KubQSO-400w.jpeg" width="1150" height="646" srcset="/assets/img/dalio-principles-KDB4KubQSO-400w.jpeg 400w, /assets/img/dalio-principles-KDB4KubQSO-550w.jpeg 550w, /assets/img/dalio-principles-KDB4KubQSO-700w.jpeg 700w, /assets/img/dalio-principles-KDB4KubQSO-850w.jpeg 850w, /assets/img/dalio-principles-KDB4KubQSO-1000w.jpeg 1000w, /assets/img/dalio-principles-KDB4KubQSO-1150w.jpeg 1150w" sizes="100vw"></picture></a><figcaption>Видео: <a href="https://youtu.be/vKXk2Yhm58o">Принципы успеха. Рей Далио</a></figcaption></figure>
+<p><strong>Зашоренность</strong> — это убежденность в&nbsp;том, что перед вами полная картина реальности.</p>
+<p>Но невозможность видеть полную картину реальность — факт. Мы не&nbsp;можем оцениь то, что не&nbsp;видим и&nbsp;не&nbsp;понимаем. Борясь с&nbsp;зашоренностью —&nbsp;мы&nbsp;стремимся расширить картину мира, а&nbsp;расширяя картину мира — вводим в&nbsp;наше созание больше вещей и&nbsp;ситуация подвласных нашему контролю.</p>
+<p>А если мы начинаем признавать, что чать вещей нам не&nbsp;подвластны — мы&nbsp;способны направить свой фокус внимания на&nbsp;вещи, которые находятся в&nbsp;зоне нашего контроля.</p>
+<p><strong>Эго</strong> — мешает объективно признавать свои слабые стороны, чтобы над ними работать.</p>
+<p>Побеждая своё эго — вы начинаете понимать, что вы не во всем идеальны, а признание своих слабых сторон позволяет сосредоточиться на сильных. Развивая сильные стороны — мы можем эффективнее использовать их для достижения собственных целей, затрачивая меньше усилий.</p>
+<h3>Больше спите</h3>
+<p>Господи, как этого вам будет не&nbsp;хватать, когда вы&nbsp;подрастете (хотя надеюсь я очень ошибаюсь).
+Это поможет держать мысли в порядке, кожа будет выглядеть лучше — да и&nbsp;в&nbsp;целом вас не&nbsp;будут отвлекать мысли, о&nbsp;том какой&nbsp;же вы&nbsp;несобранный, что не&nbsp;леги в&nbsp;до&nbsp;полуночи.</p>
+<p class="aside"><a href="https://us9.campaign-archive.com/?u=4792a92d9a9a009fb843c130e&amp;id=ea8a2a80e5">Как ложиться спать вовремя</a> — рассказывает Людвиг Быстроновский</p>
+<h3>Не&nbsp;бойтесь просить помощи</h3>
+<p>Мозг каждого из&nbsp;нас имеет определенную прошивку: кто-то способен генерировать генальные идеи, но&nbsp;не&nbsp;может доводить их&nbsp;до&nbsp;реализации, кто-то наоборот системный и доводит до результата отлично</p>
+<h3>Хвалите себя</h3>
+<p>В&nbsp;школе вам постянно указывали на&nbsp;то, что у&nbsp;вас получилось плохо — поните моменты, когда учитель красной пастой подсвечивал вам что у&nbsp;ВАС НЕ ПОЛУЧИЛОСЬ. Так вот — это&nbsp;закончилось.</p>
+<p>Конечно будут еще люди, которые будут указывать вам как вы&nbsp;не&nbsp;правы, что вы&nbsp;что-то делаете не&nbsp;так. В&nbsp;общем этого и&nbsp;после школы будет хватать. Но&nbsp;если вам 11 лет вбивали и&nbsp;чаще обечценивали ваши усилия, то&nbsp;теперь у&nbsp;вас есть все шансы это побороть.</p>
+<p><strong>Отмечайте каждую свою победу.</strong> Даже если вам кажется, что&nbsp;то, что вы&nbsp;сделали это «норм», и&nbsp;не&nbsp;требует похвалы — это эхо обесценивания, никто вас не&nbsp;хвалил за отлично написанный диктант, разве что использовали, чтобы на&nbsp;контрасте показать другим их&nbsp;недостатки.</p>
+<p>Хвалите себя за каждую маленькую победу. Если вы встали с&nbsp;1&nbsp;будильника утром — хвалите, у вас получилось.
+Не обесценивайте, пожалуйста, не обесценивайте то, что вы делаете — вы прекрасны, умны и скорее всего точно знаете, что делаете.</p>
+<h3>Не вините себя, за вещи на которые не влияетее</h3>
+<p>Да и&nbsp;в&nbsp;целом вина — отравляет. Прощайте самого себя.</p>
+<h3>Берегите своё здоровье</h3>
+<p>В первую очередь менталочку. Антидепресанты и эмоциальная гигиена — удовольствие не из дешевых.
+Ценник на новые зубы, если не будете за ними следить — неприятно удивит вас.</p>
+<p>Я бы сказал —&nbsp;занимайтесь спортом, но если вы из таких как я, у кого занятия спортом все еще на стадии торга — купите коврик, и практикуйте йогу, хотя бы просто с того, чтобы полежать и потянуться.</p>
+<h3>Напишите письмо себе в будущее</h3>
+<p>Вы причина того, кем вы&nbsp;станете через 2&nbsp;года, или&nbsp;10 лет — так или иначе то, что вы&nbsp;делаете сегодня — либо поможет, либо помешает тому, кем вы&nbsp;будете позже.</p>
+<p>Напишите себе письмо будущем —&nbsp;пожелайте удачи, поддержите себя&nbsp;будущего, и&nbsp;попросите прощения. Такие письма помогут вам в&nbsp;трудные времена, инапомнят вам о&nbsp;том, что вы&nbsp;старались, и&nbsp;сильно не&nbsp;цепляться за ошибки прошлого.</p>
+<p class="aside">Пост вдохновлен, <a href="https://w-o-s.ru/article/14654">Обращением к выпускникам</a> ВОС, которое пригодилось мне когда я уже закончил школу</p>
+<blockquote>
+<p>Не вините себя понапрасну. Прощайте самого себя как можно скорее.</p>
+</blockquote>
+<p>И как было в совместно треке Ёлки и Алекса Дюбуса —&nbsp;Пользуйтесь солнцезащитными кремом.</p>
+<div id="1h34a3CpkIc" class="eleventy-plugin-youtube-embed" style="position:relative;width:100%;padding-top: 56.25%;"><iframe style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;" width="100%" height="100%" frameborder="0" title="Embedded YouTube video" src="https://www.youtube-nocookie.com/embed/1h34a3CpkIc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/obrazovanie" class="link-novisited no-underline hover:underline">Образование</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/kak-zhit" class="link-novisited no-underline hover:underline">Как жить</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/permian-navigation-part6/" itemprop="url"><span itemprop="name">Уличная навигация в&nbsp;Перми [Часть&nbsp;6] ×&nbsp;Переписка с&nbsp;департаментом ЖКХ и&nbsp;Благоустройства</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2022-06-25T00:00:00.000Z">25 июня 2022 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 6 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Пока делал типоразмеры, решил проверить вообще на&nbsp;сколько легально и&nbsp;безопасно можно использовать дизайн ПЦРД на&nbsp;жилых домах. Вроде&nbsp;бы макеты на&nbsp;момент существования ПЦРД делались государственным муниципальным учреждением, но&nbsp;так и&nbsp;не&nbsp;были утверждены.</p>
+<p><strong>В&nbsp;действующих правилах благоустройства (на&nbsp;26.08.2021) требования к&nbsp;указателям следующие:</strong>
+<a href="https://www.gorodperm.ru/actions/building-up/arch_oblik_perm/ukazateli_ulitsu/">Указатели с&nbsp;наименованием улиц и&nbsp;номерами домов зданий</a> на&nbsp;сайте города Перми</p>
+<p>Указатели с&nbsp;наименованиями улиц и&nbsp;номерами домов (зданий), номерами квартир должны соответствовать следующим требованиям:</p>
+<ol>
+<li>на&nbsp;фасаде каждого здания, независимо от&nbsp;назначения и&nbsp;формы собственности, должны быть установлены указатели с&nbsp;наименованиями улиц и&nbsp;номерами домов (зданий):</li>
+<li>расположение: со&nbsp;стороны территории общего пользования на&nbsp;правом углу дома (здания), в&nbsp;случаях размещения дома (здания) на&nbsp;перекрестке&nbsp;— со&nbsp;стороны перекрестка, на&nbsp;высоте от&nbsp;поверхности земли&nbsp;— 2,5-3,5&nbsp;м (на&nbsp;объектах, возведенных после 1998 года&nbsp;— от&nbsp;3,5 до&nbsp;5&nbsp;м, за&nbsp;исключением объектов индивидуальной застройки);</li>
+<li>материал и&nbsp;цвет: на&nbsp;металлической или пластиковой табличке синего цвета стандарта R-(0), G-(20), В-(120), размещается в&nbsp;белом цвете шрифтом стандарта Times New Roman, Arial, Helvetica (Bold) слово «улица» или подобное слово «проспект», «переулок» и&nbsp;т.&nbsp;д., а&nbsp;также наименование улицы, номер дома (здания);</li>
+<li><strong>размер:</strong>
+<ol>
+<li>—&nbsp;в&nbsp;центральном планировочном районе города Перми, границы которого определены в&nbsp;соответствии с&nbsp;Генеральным планом города Перми: — 600-800 мм&nbsp;— по&nbsp;длинной стороне и&nbsp;300-450 мм&nbsp;— по&nbsp;короткой стороне,</li>
+<li>— в&nbsp;многоквартирных домах (зданиях) выше 5 этажей: 700&nbsp;мм — 900&nbsp;мм — по&nbsp;длинной стороне и&nbsp;350-450 мм&nbsp;— по&nbsp;короткой стороне,</li>
+<li>— в&nbsp;индивидуальной застройке: 600-800 мм&nbsp;— по&nbsp;длинной стороне и&nbsp;300&nbsp;мм — по&nbsp;короткой стороне.</li>
+</ol>
+</li>
+</ol>
+<p><strong>В&nbsp;случае размещения указателей с&nbsp;наименованиями улиц и&nbsp;номерами домов (зданий), не&nbsp;соответствующих указанным требованиям, требуется разработка колерного паспорта.</strong></p>
+<h2>Проверка сведений</h2>
+<p>Поскольку ПЦРД был структурой государственной, решил уточнить, обязательно&nbsp;ли под их&nbsp;дизайн использовать колерный паспорт.</p>
+<blockquote>
+<p><a href="https://drive.google.com/file/d/1Otlwx64rPB39z0hzRdlLUf2iTENClTnJ/view?usp=sharing">Ответ из&nbsp;департамента с&nbsp;разъяснениями, что таблички дизайна</a></p>
+</blockquote>
+<h2>Ну&nbsp;и&nbsp;цитата из&nbsp;Письма:</h2>
+<blockquote>
+<p>Таким образом, для согласования разработанного Пермским центром развития дизайна в&nbsp;2011 году макета указателя адреса с&nbsp;использованием белого фона табличек и&nbsp;полос красного и&nbsp;сиреневого цветов потребуется разработка колерного паспорта, который подлежит согласованию с&nbsp;департаментом в&nbsp;соответствии с&nbsp;порядком, утвержденным постановлением администрации города Перми от&nbsp;22.02.2017 No&nbsp;130.</p>
+</blockquote>
+<h2>Вывод</h2>
+<p>Если вы&nbsp;хотите сделать современные таблички на&nbsp;дом&nbsp;— придется оформить и&nbsp;заказать и&nbsp;внести изменения в&nbsp;колерный паспорт. Иначе есть риск административной ответственности.</p>
+<p>Ближайшее, что можно сделать&nbsp;— это каким-то образом пролоббировать внесение изменений в&nbsp;действующие правила, и&nbsp;снабдить администрацию необходимыми материалами.</p>
+<ul>
+<li>—&nbsp;Часть 1:&nbsp;<a href="https://fourier.rocks/posts/permian-street-navigation-part1/">О&nbsp;предпосылках</a>.</li>
+<li>—&nbsp;Часть 2:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part2/">Попытки разобраться с&nbsp;базовыми форматами и&nbsp;укладкой названий</a>.</li>
+<li>—&nbsp;Часть 3:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part3/">Переписка с&nbsp;разработчиками проекта</a></li>
+<li>—&nbsp;Часть 4:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part4/">Существующая навигация. Разбор примеров</a></li>
+<li>—&nbsp;Часть 5:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part5/">Разбираемся с&nbsp;форматами</a></li>
+<li>→ Часть 6: Переписка с&nbsp;департаментом ЖКХ</li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/domoupravlenie" class="link-novisited no-underline hover:underline">Домоуправление</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/zhkh" class="link-novisited no-underline hover:underline">ЖКХ</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/perm" class="link-novisited no-underline hover:underline">Пермь</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/ulichnaya-navigaciya-v-permi" class="link-novisited no-underline hover:underline">Уличная навигация в Перми</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/urbanistika" class="link-novisited no-underline hover:underline">Урбанистика</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/dizajn" class="link-novisited no-underline hover:underline">Дизайн</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/permian-navigation-part5/" itemprop="url"><span itemprop="name">Уличная навигация в&nbsp;Перми [Часть&nbsp;5] ×&nbsp;Форматы</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2022-06-19T00:00:00.000Z">19 июня 2022 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 6 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>В&nbsp;процессе сбора информации выяснилось, что действующий бренд-бук никак не&nbsp;регламентирует сетку макета под разные размеры улиц. Поэтому давайте с&nbsp;ней разбираться. Нам нужно несколько видов сетки, под несколько видов табличек.</p>
+<h2>Указатель улицы + номер дома в&nbsp;горизонтальной ориентации [У+Н] • [Г]</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/UNh-QF6BJkbt-K-400w.avif 400w, /assets/img/UNh-QF6BJkbt-K-550w.avif 550w, /assets/img/UNh-QF6BJkbt-K-700w.avif 700w, /assets/img/UNh-QF6BJkbt-K-850w.avif 850w, /assets/img/UNh-QF6BJkbt-K-1000w.avif 1000w, /assets/img/UNh-QF6BJkbt-K-1150w.avif 1150w, /assets/img/UNh-QF6BJkbt-K-1300w.avif 1300w" sizes="100vw"><source type="image/webp" srcset="/assets/img/UNh-QF6BJkbt-K-400w.webp 400w, /assets/img/UNh-QF6BJkbt-K-550w.webp 550w, /assets/img/UNh-QF6BJkbt-K-700w.webp 700w, /assets/img/UNh-QF6BJkbt-K-850w.webp 850w, /assets/img/UNh-QF6BJkbt-K-1000w.webp 1000w, /assets/img/UNh-QF6BJkbt-K-1150w.webp 1150w, /assets/img/UNh-QF6BJkbt-K-1300w.webp 1300w" sizes="100vw"><img alt="Две отдельные таблички, которые размещаются рядом одна с&nbsp;наименованием улицы, вторая с&nbsp;номером дома" loading="lazy" decoding="async" src="/assets/img/UNh-QF6BJkbt-K-400w.jpeg" width="1300" height="392" srcset="/assets/img/UNh-QF6BJkbt-K-400w.jpeg 400w, /assets/img/UNh-QF6BJkbt-K-550w.jpeg 550w, /assets/img/UNh-QF6BJkbt-K-700w.jpeg 700w, /assets/img/UNh-QF6BJkbt-K-850w.jpeg 850w, /assets/img/UNh-QF6BJkbt-K-1000w.jpeg 1000w, /assets/img/UNh-QF6BJkbt-K-1150w.jpeg 1150w, /assets/img/UNh-QF6BJkbt-K-1300w.jpeg 1300w" sizes="100vw"></picture><figcaption>Две отдельные таблички, которые размещаются рядом одна с наименованием улицы, вторая с номером дома</figcaption></figure>
+<h2>Номер дома, который может дополнять табличку, а&nbsp;может висеть отдельно [Н] • [C]</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/Nh-RZEJGIo2Ld-400w.avif 400w, /assets/img/Nh-RZEJGIo2Ld-550w.avif 550w, /assets/img/Nh-RZEJGIo2Ld-700w.avif 700w, /assets/img/Nh-RZEJGIo2Ld-850w.avif 850w, /assets/img/Nh-RZEJGIo2Ld-1000w.avif 1000w, /assets/img/Nh-RZEJGIo2Ld-1150w.avif 1150w, /assets/img/Nh-RZEJGIo2Ld-1300w.avif 1300w" sizes="100vw"><source type="image/webp" srcset="/assets/img/Nh-RZEJGIo2Ld-400w.webp 400w, /assets/img/Nh-RZEJGIo2Ld-550w.webp 550w, /assets/img/Nh-RZEJGIo2Ld-700w.webp 700w, /assets/img/Nh-RZEJGIo2Ld-850w.webp 850w, /assets/img/Nh-RZEJGIo2Ld-1000w.webp 1000w, /assets/img/Nh-RZEJGIo2Ld-1150w.webp 1150w, /assets/img/Nh-RZEJGIo2Ld-1300w.webp 1300w" sizes="100vw"><img alt="Номер дома, который может дополнять табличку, а&nbsp;может висеть отдельно" loading="lazy" decoding="async" src="/assets/img/Nh-RZEJGIo2Ld-400w.jpeg" width="1300" height="405" srcset="/assets/img/Nh-RZEJGIo2Ld-400w.jpeg 400w, /assets/img/Nh-RZEJGIo2Ld-550w.jpeg 550w, /assets/img/Nh-RZEJGIo2Ld-700w.jpeg 700w, /assets/img/Nh-RZEJGIo2Ld-850w.jpeg 850w, /assets/img/Nh-RZEJGIo2Ld-1000w.jpeg 1000w, /assets/img/Nh-RZEJGIo2Ld-1150w.jpeg 1150w, /assets/img/Nh-RZEJGIo2Ld-1300w.jpeg 1300w" sizes="100vw"></picture><figcaption>Отдельно висящий номер дома</figcaption></figure>
+<p>И&nbsp;да, в&nbsp;данном случае, отдельно висящие номера дома должны быть такого&nbsp;же размера, как и&nbsp;высота других указателей горизонтальной ориентации.</p>
+<h2>Указатель улицы с&nbsp;номером дома на&nbsp;одном полотне [У&gt;Н] • [Г]</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/UNsplitH-bQSlFW4OII-400w.avif 400w, /assets/img/UNsplitH-bQSlFW4OII-550w.avif 550w, /assets/img/UNsplitH-bQSlFW4OII-700w.avif 700w, /assets/img/UNsplitH-bQSlFW4OII-850w.avif 850w, /assets/img/UNsplitH-bQSlFW4OII-1000w.avif 1000w, /assets/img/UNsplitH-bQSlFW4OII-1150w.avif 1150w, /assets/img/UNsplitH-bQSlFW4OII-1300w.avif 1300w" sizes="100vw"><source type="image/webp" srcset="/assets/img/UNsplitH-bQSlFW4OII-400w.webp 400w, /assets/img/UNsplitH-bQSlFW4OII-550w.webp 550w, /assets/img/UNsplitH-bQSlFW4OII-700w.webp 700w, /assets/img/UNsplitH-bQSlFW4OII-850w.webp 850w, /assets/img/UNsplitH-bQSlFW4OII-1000w.webp 1000w, /assets/img/UNsplitH-bQSlFW4OII-1150w.webp 1150w, /assets/img/UNsplitH-bQSlFW4OII-1300w.webp 1300w" sizes="100vw"><img alt="Указатель улицы с&nbsp;номером дома на&nbsp;одном полотне" loading="lazy" decoding="async" src="/assets/img/UNsplitH-bQSlFW4OII-400w.jpeg" width="1300" height="395" srcset="/assets/img/UNsplitH-bQSlFW4OII-400w.jpeg 400w, /assets/img/UNsplitH-bQSlFW4OII-550w.jpeg 550w, /assets/img/UNsplitH-bQSlFW4OII-700w.jpeg 700w, /assets/img/UNsplitH-bQSlFW4OII-850w.jpeg 850w, /assets/img/UNsplitH-bQSlFW4OII-1000w.jpeg 1000w, /assets/img/UNsplitH-bQSlFW4OII-1150w.jpeg 1150w, /assets/img/UNsplitH-bQSlFW4OII-1300w.jpeg 1300w" sizes="100vw"></picture><figcaption>Иногда бывает так, что в целях экономии нужно разместить номер дома и указатель улицы на одном полотне</figcaption></figure>
+<h2>Указатель улицы</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/Uh-Txx7fzOZBN-400w.avif 400w, /assets/img/Uh-Txx7fzOZBN-550w.avif 550w, /assets/img/Uh-Txx7fzOZBN-700w.avif 700w, /assets/img/Uh-Txx7fzOZBN-850w.avif 850w, /assets/img/Uh-Txx7fzOZBN-1000w.avif 1000w, /assets/img/Uh-Txx7fzOZBN-1150w.avif 1150w, /assets/img/Uh-Txx7fzOZBN-1300w.avif 1300w" sizes="100vw"><source type="image/webp" srcset="/assets/img/Uh-Txx7fzOZBN-400w.webp 400w, /assets/img/Uh-Txx7fzOZBN-550w.webp 550w, /assets/img/Uh-Txx7fzOZBN-700w.webp 700w, /assets/img/Uh-Txx7fzOZBN-850w.webp 850w, /assets/img/Uh-Txx7fzOZBN-1000w.webp 1000w, /assets/img/Uh-Txx7fzOZBN-1150w.webp 1150w, /assets/img/Uh-Txx7fzOZBN-1300w.webp 1300w" sizes="100vw"><img alt="Указатель улицы" loading="lazy" decoding="async" src="/assets/img/Uh-Txx7fzOZBN-400w.jpeg" width="1300" height="392" srcset="/assets/img/Uh-Txx7fzOZBN-400w.jpeg 400w, /assets/img/Uh-Txx7fzOZBN-550w.jpeg 550w, /assets/img/Uh-Txx7fzOZBN-700w.jpeg 700w, /assets/img/Uh-Txx7fzOZBN-850w.jpeg 850w, /assets/img/Uh-Txx7fzOZBN-1000w.jpeg 1000w, /assets/img/Uh-Txx7fzOZBN-1150w.jpeg 1150w, /assets/img/Uh-Txx7fzOZBN-1300w.jpeg 1300w" sizes="100vw"></picture><figcaption>Иногда требуется просто разместить указание улицы без указания дома.</figcaption></figure>
+<h2>Справочная информация</h2>
+<p>Иногда может потребоваться указать, как называлась улица до&nbsp;её&nbsp;переименования, или&nbsp;же причастность улицы к&nbsp;какому-то событию.</p>
+<div class="fotorama" data-width="90%" data-height="800" data-nav="dots">
+     <figure><picture><source type="image/avif" srcset="/assets/img/DopExample-dxSPRozXDr-400w.avif 400w, /assets/img/DopExample-dxSPRozXDr-550w.avif 550w, /assets/img/DopExample-dxSPRozXDr-700w.avif 700w, /assets/img/DopExample-dxSPRozXDr-850w.avif 850w, /assets/img/DopExample-dxSPRozXDr-1000w.avif 1000w, /assets/img/DopExample-dxSPRozXDr-1150w.avif 1150w, /assets/img/DopExample-dxSPRozXDr-1300w.avif 1300w, /assets/img/DopExample-dxSPRozXDr-1450w.avif 1450w, /assets/img/DopExample-dxSPRozXDr-1600w.avif 1600w, /assets/img/DopExample-dxSPRozXDr-1750w.avif 1750w, /assets/img/DopExample-dxSPRozXDr-1900w.avif 1900w" sizes="100vw"><source type="image/webp" srcset="/assets/img/DopExample-dxSPRozXDr-400w.webp 400w, /assets/img/DopExample-dxSPRozXDr-550w.webp 550w, /assets/img/DopExample-dxSPRozXDr-700w.webp 700w, /assets/img/DopExample-dxSPRozXDr-850w.webp 850w, /assets/img/DopExample-dxSPRozXDr-1000w.webp 1000w, /assets/img/DopExample-dxSPRozXDr-1150w.webp 1150w, /assets/img/DopExample-dxSPRozXDr-1300w.webp 1300w, /assets/img/DopExample-dxSPRozXDr-1450w.webp 1450w, /assets/img/DopExample-dxSPRozXDr-1600w.webp 1600w, /assets/img/DopExample-dxSPRozXDr-1750w.webp 1750w, /assets/img/DopExample-dxSPRozXDr-1900w.webp 1900w" sizes="100vw"><img alt="Пример подписей, когда требуется указать какой-нибудь интересный факт" loading="lazy" decoding="async" src="/assets/img/DopExample-dxSPRozXDr-400w.jpeg" width="1900" height="1068" srcset="/assets/img/DopExample-dxSPRozXDr-400w.jpeg 400w, /assets/img/DopExample-dxSPRozXDr-550w.jpeg 550w, /assets/img/DopExample-dxSPRozXDr-700w.jpeg 700w, /assets/img/DopExample-dxSPRozXDr-850w.jpeg 850w, /assets/img/DopExample-dxSPRozXDr-1000w.jpeg 1000w, /assets/img/DopExample-dxSPRozXDr-1150w.jpeg 1150w, /assets/img/DopExample-dxSPRozXDr-1300w.jpeg 1300w, /assets/img/DopExample-dxSPRozXDr-1450w.jpeg 1450w, /assets/img/DopExample-dxSPRozXDr-1600w.jpeg 1600w, /assets/img/DopExample-dxSPRozXDr-1750w.jpeg 1750w, /assets/img/DopExample-dxSPRozXDr-1900w.jpeg 1900w" sizes="100vw"></picture><figcaption>Интересные факты размещаются под указателями</figcaption></figure>
+     <figure><picture><source type="image/avif" srcset="/assets/img/udoph-QqDt5o7Ukl-400w.avif 400w, /assets/img/udoph-QqDt5o7Ukl-550w.avif 550w, /assets/img/udoph-QqDt5o7Ukl-700w.avif 700w, /assets/img/udoph-QqDt5o7Ukl-850w.avif 850w, /assets/img/udoph-QqDt5o7Ukl-1000w.avif 1000w, /assets/img/udoph-QqDt5o7Ukl-1150w.avif 1150w, /assets/img/udoph-QqDt5o7Ukl-1300w.avif 1300w, /assets/img/udoph-QqDt5o7Ukl-1450w.avif 1450w, /assets/img/udoph-QqDt5o7Ukl-1600w.avif 1600w, /assets/img/udoph-QqDt5o7Ukl-1750w.avif 1750w, /assets/img/udoph-QqDt5o7Ukl-1900w.avif 1900w" sizes="100vw"><source type="image/webp" srcset="/assets/img/udoph-QqDt5o7Ukl-400w.webp 400w, /assets/img/udoph-QqDt5o7Ukl-550w.webp 550w, /assets/img/udoph-QqDt5o7Ukl-700w.webp 700w, /assets/img/udoph-QqDt5o7Ukl-850w.webp 850w, /assets/img/udoph-QqDt5o7Ukl-1000w.webp 1000w, /assets/img/udoph-QqDt5o7Ukl-1150w.webp 1150w, /assets/img/udoph-QqDt5o7Ukl-1300w.webp 1300w, /assets/img/udoph-QqDt5o7Ukl-1450w.webp 1450w, /assets/img/udoph-QqDt5o7Ukl-1600w.webp 1600w, /assets/img/udoph-QqDt5o7Ukl-1750w.webp 1750w, /assets/img/udoph-QqDt5o7Ukl-1900w.webp 1900w" sizes="100vw"><img alt="Пример подписей, когда требуется указать старое название улицы" loading="lazy" decoding="async" src="/assets/img/udoph-QqDt5o7Ukl-400w.jpeg" width="1900" height="1068" srcset="/assets/img/udoph-QqDt5o7Ukl-400w.jpeg 400w, /assets/img/udoph-QqDt5o7Ukl-550w.jpeg 550w, /assets/img/udoph-QqDt5o7Ukl-700w.jpeg 700w, /assets/img/udoph-QqDt5o7Ukl-850w.jpeg 850w, /assets/img/udoph-QqDt5o7Ukl-1000w.jpeg 1000w, /assets/img/udoph-QqDt5o7Ukl-1150w.jpeg 1150w, /assets/img/udoph-QqDt5o7Ukl-1300w.jpeg 1300w, /assets/img/udoph-QqDt5o7Ukl-1450w.jpeg 1450w, /assets/img/udoph-QqDt5o7Ukl-1600w.jpeg 1600w, /assets/img/udoph-QqDt5o7Ukl-1750w.jpeg 1750w, /assets/img/udoph-QqDt5o7Ukl-1900w.jpeg 1900w" sizes="100vw"></picture><figcaption>Пример подписей, когда требуется указать старое название улицы</figcaption></figure>
+</div>
+<h2>Кроме того на&nbsp;ряде домов могут быть изящнее вписаны вертикальные указатели, нежели горизонтальные.</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/uW-example-nsTo_u4cMg-400w.avif 400w, /assets/img/uW-example-nsTo_u4cMg-550w.avif 550w, /assets/img/uW-example-nsTo_u4cMg-700w.avif 700w, /assets/img/uW-example-nsTo_u4cMg-850w.avif 850w, /assets/img/uW-example-nsTo_u4cMg-1000w.avif 1000w, /assets/img/uW-example-nsTo_u4cMg-1150w.avif 1150w, /assets/img/uW-example-nsTo_u4cMg-1300w.avif 1300w" sizes="100vw"><source type="image/webp" srcset="/assets/img/uW-example-nsTo_u4cMg-400w.webp 400w, /assets/img/uW-example-nsTo_u4cMg-550w.webp 550w, /assets/img/uW-example-nsTo_u4cMg-700w.webp 700w, /assets/img/uW-example-nsTo_u4cMg-850w.webp 850w, /assets/img/uW-example-nsTo_u4cMg-1000w.webp 1000w, /assets/img/uW-example-nsTo_u4cMg-1150w.webp 1150w, /assets/img/uW-example-nsTo_u4cMg-1300w.webp 1300w" sizes="100vw"><img alt="Вертикальный формат расположения указателей" loading="lazy" decoding="async" src="/assets/img/uW-example-nsTo_u4cMg-400w.jpeg" width="1300" height="727" srcset="/assets/img/uW-example-nsTo_u4cMg-400w.jpeg 400w, /assets/img/uW-example-nsTo_u4cMg-550w.jpeg 550w, /assets/img/uW-example-nsTo_u4cMg-700w.jpeg 700w, /assets/img/uW-example-nsTo_u4cMg-850w.jpeg 850w, /assets/img/uW-example-nsTo_u4cMg-1000w.jpeg 1000w, /assets/img/uW-example-nsTo_u4cMg-1150w.jpeg 1150w, /assets/img/uW-example-nsTo_u4cMg-1300w.jpeg 1300w" sizes="100vw"></picture><figcaption>Формат наиболее проблемный, так как не все названия можно аккуратно уложить в формат.</figcaption></figure>
+<p>Формат более удобен для размещения справочной информации. Так например с&nbsp;улицей Василия Каенского, можно дополнительно устанавливать биографическую справку, или вовсе нанести рядом с&nbsp;указателем принт железобетонной поэмы.</p>
+<h2>Отдельный формат табличек предназначенный для использования в&nbsp;исторической застройке</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/old-arch-prm-nav-SZBDSOmNoq-400w.avif 400w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-550w.avif 550w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-700w.avif 700w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-850w.avif 850w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1000w.avif 1000w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1150w.avif 1150w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1300w.avif 1300w" sizes="100vw"><source type="image/webp" srcset="/assets/img/old-arch-prm-nav-SZBDSOmNoq-400w.webp 400w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-550w.webp 550w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-700w.webp 700w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-850w.webp 850w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1000w.webp 1000w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1150w.webp 1150w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1300w.webp 1300w" sizes="100vw"><img alt="Варианты указателей для исторических зданий" loading="lazy" decoding="async" src="/assets/img/old-arch-prm-nav-SZBDSOmNoq-400w.jpeg" width="1300" height="570" srcset="/assets/img/old-arch-prm-nav-SZBDSOmNoq-400w.jpeg 400w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-550w.jpeg 550w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-700w.jpeg 700w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-850w.jpeg 850w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1000w.jpeg 1000w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1150w.jpeg 1150w, /assets/img/old-arch-prm-nav-SZBDSOmNoq-1300w.jpeg 1300w" sizes="100vw"></picture><figcaption>Такие указатели не сильно выделяются на красивых фасадах старых зданий, при этом сохраняют свой шарм благодаря шрифту Permian</figcaption></figure>
+<p>Зачастую, в&nbsp;домах объектах исторического и&nbsp;культурного размера в&nbsp;силу архитектурных особенностей нет возможности размещать таблички крупного формата, и&nbsp;там неуместно выглядят детали, которые размещены на&nbsp;домах новой застройки.</p>
+<h2>Резюмируя</h2>
+<p>Форматов много, много ситуация. Примерный вектор сформулировать удалось, но&nbsp;есть вопросы к&nbsp;вёрстке.</p>
+<p>Следующим шагом, нужно доработать вёрстку и&nbsp;разобраться с&nbsp;материалами. Скорее всего её&nbsp;придётся дорабатывать для типоразмеров. Формат ≠ Типоразмер. Разработать типоразмеры отдельная задача&nbsp;— необходимо стандартизировать размеры для экономии при массовом производстве.</p>
+<p>Мы&nbsp;можем дать шаблон для авто-вёрстки задать вектор&nbsp;— но&nbsp;в&nbsp;результате единообразие достигнуто не&nbsp;будет. Возможно некоторые принципы будут пересмотрены, но&nbsp;было&nbsp;бы неплохо найти поддержку в&nbsp;пермском дизайн-сообществе.</p>
+<p>Если есть желание присоединиться к&nbsp;доработке проекта&nbsp;— добро пожаловать в&nbsp;чат →&nbsp;
+<a href="https://t.me/joinchat/03yWotWXO2MwNmUy">Чат по Пермской навигации</a></p>
+<h2>Оглавление:</h2>
+<ul>
+<li>—&nbsp;Часть 1:&nbsp;<a href="https://fourier.rocks/posts/permian-street-navigation-part1/">О&nbsp;предпосылках</a></li>
+<li>—&nbsp;Часть 2:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part2/">Попытки разобраться с&nbsp;базовыми форматами и&nbsp;укладкой названий</a></li>
+<li>—&nbsp;Часть 3:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part3/">Переписка с&nbsp;разработчиками проекта</a></li>
+<li>—&nbsp;Часть 4:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part4/">Существующая навигация. Разбор примеров</a></li>
+<li>→ Часть 5: Разбираемся с&nbsp;форматами</li>
+<li>—&nbsp;Часть 6:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part6/">Переписка с&nbsp;департаментом ЖКХ</a></li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/domoupravlenie" class="link-novisited no-underline hover:underline">Домоуправление</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/zhkh" class="link-novisited no-underline hover:underline">ЖКХ</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/perm" class="link-novisited no-underline hover:underline">Пермь</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/ulichnaya-navigaciya-v-permi" class="link-novisited no-underline hover:underline">Уличная навигация в Перми</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/urbanistika" class="link-novisited no-underline hover:underline">Урбанистика</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/dizajn" class="link-novisited no-underline hover:underline">Дизайн</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/permian-navigation-part4/" itemprop="url"><span itemprop="name">Уличная навигация в&nbsp;Перми [Часть&nbsp;4] ×&nbsp;Существующая навигация</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2022-06-18T00:00:00.000Z">18 июня 2022 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 5 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>В&nbsp;попытках разобраться, есть&nbsp;ли какие-то общие моменты в&nbsp;этой навигации, пришлось пробежаться по&nbsp;городу собрать примеры.</p>
+<h2>Каменского 10</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/kamenskogo-nav-standart-HBc-U3moD1-400w.avif 400w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-550w.avif 550w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-700w.avif 700w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-850w.avif 850w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-1000w.avif 1000w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/kamenskogo-nav-standart-HBc-U3moD1-400w.webp 400w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-550w.webp 550w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-700w.webp 700w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-850w.webp 850w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-1000w.webp 1000w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-1150w.webp 1150w" sizes="100vw"><img alt="Пример таблички размещенной на каменского" loading="lazy" decoding="async" src="/assets/img/kamenskogo-nav-standart-HBc-U3moD1-400w.jpeg" width="1150" height="646" srcset="/assets/img/kamenskogo-nav-standart-HBc-U3moD1-400w.jpeg 400w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-550w.jpeg 550w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-700w.jpeg 700w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-850w.jpeg 850w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-1000w.jpeg 1000w, /assets/img/kamenskogo-nav-standart-HBc-U3moD1-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>Пример таблички размещенной на Каменского</figcaption></figure>
+<p>На&nbsp;улице Каменского, была сделана одна из&nbsp;Первых вывесок, и&nbsp;при этом попытка использовать тот&nbsp;же стиль, в&nbsp;других информационных табличках.</p>
+<p>Занятно, что здесь световой короб слит в&nbsp;один, хотя по&nbsp;бренд-буку Перми такой вариант размещения не&nbsp;предполагается.</p>
+<p>Поэтому в&nbsp;переработке (доработке стандарта) следует рассмотреть подобный вариант конструкции. А&nbsp;еще импонирует, что они оформили предупреждение о&nbsp;сходе снега и&nbsp;льда в&nbsp;том-же стиле. Можно включить подобный набор табличек на&nbsp;следующих этапах разработки (переработки).</p>
+<p>А&nbsp;вот примеры уже новостроек</p>
+<h2>Энгельса 27</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/engelsa-nav-new-xjYMwTG3gR-400w.avif 400w, /assets/img/engelsa-nav-new-xjYMwTG3gR-550w.avif 550w, /assets/img/engelsa-nav-new-xjYMwTG3gR-700w.avif 700w, /assets/img/engelsa-nav-new-xjYMwTG3gR-850w.avif 850w, /assets/img/engelsa-nav-new-xjYMwTG3gR-1000w.avif 1000w, /assets/img/engelsa-nav-new-xjYMwTG3gR-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/engelsa-nav-new-xjYMwTG3gR-400w.webp 400w, /assets/img/engelsa-nav-new-xjYMwTG3gR-550w.webp 550w, /assets/img/engelsa-nav-new-xjYMwTG3gR-700w.webp 700w, /assets/img/engelsa-nav-new-xjYMwTG3gR-850w.webp 850w, /assets/img/engelsa-nav-new-xjYMwTG3gR-1000w.webp 1000w, /assets/img/engelsa-nav-new-xjYMwTG3gR-1150w.webp 1150w" sizes="100vw"><img alt="Пример таблички размещенной на улице Энгельса" loading="lazy" decoding="async" src="/assets/img/engelsa-nav-new-xjYMwTG3gR-400w.jpeg" width="1150" height="646" srcset="/assets/img/engelsa-nav-new-xjYMwTG3gR-400w.jpeg 400w, /assets/img/engelsa-nav-new-xjYMwTG3gR-550w.jpeg 550w, /assets/img/engelsa-nav-new-xjYMwTG3gR-700w.jpeg 700w, /assets/img/engelsa-nav-new-xjYMwTG3gR-850w.jpeg 850w, /assets/img/engelsa-nav-new-xjYMwTG3gR-1000w.jpeg 1000w, /assets/img/engelsa-nav-new-xjYMwTG3gR-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>Пример таблички размещенной на каменского</figcaption></figure>
+<p>Тут формат уже ближе к&nbsp;стандарту. Разве что опущено название района на&nbsp;латинице. Блок с&nbsp;нумерацией судя по&nbsp;стандарту должен быть выполнен Bold начертанием, а&nbsp;здесь стандартным. Отдельной плашкой вынесено наименование застройщика. Поскольку наша гипотеза о&nbsp;том, что наименование района и&nbsp;цвет района никак не&nbsp;определены застройщики предпочитают закрашивать верхнюю плашку в&nbsp;цвет основного доминирующего цвета в&nbsp;архитектуре задния.</p>
+<h2>Решеникова 19</h2>
+<figure><picture><source type="image/avif" srcset="/assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-400w.avif 400w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-550w.avif 550w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-700w.avif 700w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-850w.avif 850w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-1000w.avif 1000w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-400w.webp 400w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-550w.webp 550w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-700w.webp 700w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-850w.webp 850w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-1000w.webp 1000w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-1150w.webp 1150w" sizes="100vw"><img alt="Пример таблички размещенной на улице Решетникова" loading="lazy" decoding="async" src="/assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-400w.jpeg" width="1150" height="646" srcset="/assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-400w.jpeg 400w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-550w.jpeg 550w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-700w.jpeg 700w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-850w.jpeg 850w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-1000w.jpeg 1000w, /assets/img/reshetnikova-nav-perm-Tk5gbkHPKr-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>Пример таблички размещенной на улице Решетникова</figcaption></figure>
+<p>Выглядит, как будто сэкономили. Нумерация включена в&nbsp;основной блок с&nbsp;адресом, хотя бренд-буком предполагается отдельно. Но&nbsp;вот тот выносной блок, выведен в&nbsp;отдельный и&nbsp;на&nbsp;нём размещено название застройщика. Верхняя плашка так&nbsp;же выкрашена в&nbsp;доминантный цвет.</p>
+<blockquote>
+<p>Возможно, если не&nbsp;удастся договориться о&nbsp;цвете районов, то&nbsp;можно оставить концепцию, что плашка выкрашивается в&nbsp;доминирующий в&nbsp;архитектуре дома цвет.
+Заметки собрали, теперь очередь за&nbsp;тем, чтобы сделать типоразмеры и&nbsp;форматы. Попутно будем разбираться с&nbsp;цветной плашкой, попробуем связаться с&nbsp;Эркеном Кагаровым, он&nbsp;в&nbsp;то&nbsp;время был худруком Пермского центра развития дизайна и&nbsp;принимал участие в&nbsp;разработке оригинального проекта.</p>
+</blockquote>
+<h2>Оглавление:</h2>
+<ul>
+<li>—&nbsp;Часть 1:&nbsp;
+О<a href="https://fourier.rocks/posts/permian-street-navigation-part1/"> предпосылках</a>.</li>
+<li>—&nbsp;Часть 2:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part2/">Попытки разобраться с&nbsp;базовыми форматами и&nbsp;укладкой названий</a>.</li>
+<li>—&nbsp;Часть 3:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part3/">Переписка с&nbsp;разработчиками проекта</a></li>
+<li>→ Часть 4: Существующая навигация. Разбор примеров.</li>
+<li>—&nbsp;Часть 5:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part5/">Разбираемся с&nbsp;форматами</a></li>
+<li>—&nbsp;Часть 6:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part6/">Переписка с&nbsp;департаментом ЖКХ</a></li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/domoupravlenie" class="link-novisited no-underline hover:underline">Домоуправление</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/zhkh" class="link-novisited no-underline hover:underline">ЖКХ</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/perm" class="link-novisited no-underline hover:underline">Пермь</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/ulichnaya-navigaciya-v-permi" class="link-novisited no-underline hover:underline">Уличная навигация в Перми</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/urbanistika" class="link-novisited no-underline hover:underline">Урбанистика</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/dizajn" class="link-novisited no-underline hover:underline">Дизайн</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/permian-navigation-part3/" itemprop="url"><span itemprop="name">Уличная навигация в&nbsp;Перми [Часть&nbsp;3] × Переписка с&nbsp;разработчиками проекта</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2022-06-15T00:00:00.000Z">15 июня 2022 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 2 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Случайно откопал старый почтовый ящик свой. И там нашлась занятная переписка с&nbsp;<a href="http://artemshitov.ru/">Артёмом Шитовым</a>. Он принимал участие в разработке&nbsp;<a href="https://www.artlebedev.ru/perm/bus-stop/">дизайна пермских остановок</a>&nbsp;и на сколько я помню плотно взаимодействовал с ПЦРД.
+Переписка датирована 2015 годом. Тогда, я просил Артёма помочь с доработкой таблички по адресу Улица Деревообделочная.</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/derevoobdelochnaya-x8Peq8bIBc-400w.avif 400w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-550w.avif 550w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-700w.avif 700w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-850w.avif 850w" sizes="100vw"><source type="image/webp" srcset="/assets/img/derevoobdelochnaya-x8Peq8bIBc-400w.webp 400w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-550w.webp 550w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-700w.webp 700w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-850w.webp 850w" sizes="100vw"><img alt="Скриншот из того брендбука, что есть в открытом доступе" loading="lazy" decoding="async" src="/assets/img/derevoobdelochnaya-x8Peq8bIBc-400w.jpeg" width="850" height="529" srcset="/assets/img/derevoobdelochnaya-x8Peq8bIBc-400w.jpeg 400w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-550w.jpeg 550w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-700w.jpeg 700w, /assets/img/derevoobdelochnaya-x8Peq8bIBc-850w.jpeg 850w" sizes="100vw"></picture><figcaption>Набор прототипов низкого качества :-), но там есть Ai файл.</figcaption></figure>
+<p>Но самая занятная история в том, что Артём так же отмечает, что брендбук был не доработан:</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-400w.avif 400w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-550w.avif 550w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-700w.avif 700w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-850w.avif 850w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-1000w.avif 1000w" sizes="100vw"><source type="image/webp" srcset="/assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-400w.webp 400w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-550w.webp 550w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-700w.webp 700w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-850w.webp 850w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-1000w.webp 1000w" sizes="100vw"><img alt="Скриншот из того брендбука, что есть в открытом доступе" loading="lazy" decoding="async" src="/assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-400w.jpeg" width="1000" height="230" srcset="/assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-400w.jpeg 400w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-550w.jpeg 550w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-700w.jpeg 700w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-850w.jpeg 850w, /assets/img/ulichnaya-navigaciya-v-permi-chast-3-kNZGkaPE_U-1000w.jpeg 1000w" sizes="100vw"></picture><figcaption></figcaption></figure>
+<p>Самое занятное, что из примера этих доработок вырисовывается вектор, того, как вести себя с сложными номерами и версткой номер типа «<strong>37/1</strong>» или указанием «<strong>корпус 2</strong>». Но при этом остаются открытые вопросы по поводу масштабирования размеров таблички с длинными названиями. Хочется избежать ситуации, когда нам приходится уменьшать шрифт.</p>
+<h2>Оглавление:</h2>
+<ul>
+<li>— Часть 1:&nbsp;<a href="https://fourier.rocks/posts/permian-street-navigation-part1/">О предпосылках</a>.</li>
+<li>— Часть 2:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part2/">Попытки разобраться с базовыми форматами и укладкой названий</a>.</li>
+<li>→ Часть 3: Переписка с разработчиками проекта</li>
+<li>— Часть 4:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part4/">Существующая навигация</a></li>
+<li>— Часть 5:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part5/">Разбираемся с форматами</a></li>
+<li>— Часть 6:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part6/">Переписка с департаментом ЖКХ</a></li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/domoupravlenie" class="link-novisited no-underline hover:underline">Домоуправление</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/zhkh" class="link-novisited no-underline hover:underline">ЖКХ</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/perm" class="link-novisited no-underline hover:underline">Пермь</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/ulichnaya-navigaciya-v-permi" class="link-novisited no-underline hover:underline">Уличная навигация в Перми</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/urbanistika" class="link-novisited no-underline hover:underline">Урбанистика</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/dizajn" class="link-novisited no-underline hover:underline">Дизайн</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/start-proekta-dobrososedstvo-20/" itemprop="url"><span itemprop="name">Старт проекта Добрососедство&nbsp;2.0</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2022-06-14T00:00:00.000Z">14 июня 2022 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 12 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>В&nbsp;отпуске мне опять не&nbsp;сиделось ровно, а&nbsp;идея проекта в&nbsp;голове жила давно. Так я&nbsp;все-такие начал разворачивать проект «<a href="https://neighborliness.ru/">Добрососедство&nbsp;2.0</a>»</p>
+<h2>Предыстория</h2>
+<p>К&nbsp;проекту я&nbsp;пошел через попытки навести порядок в&nbsp;своем доме, пытался создать сообщество соседей&nbsp;— <a href="https://park37a.ru/">Добрососедство&nbsp;37</a>. Но&nbsp;так союзников и&nbsp;нашел. Хотя группа в&nbsp;ВК сохранились, и&nbsp;там более менее есть люди, которые общаются. Но&nbsp;все равно, там скорее демонстрация равнодушия нежели, какие-то союзники.</p>
+<p>Совет дома тоже не&nbsp;поддерживает мои начинания, а&nbsp;УК работает чудовищно непрозрачно. Поскольку в&nbsp;доме в&nbsp;основном проживают люди взрослого поколения, им&nbsp;в&nbsp;принципе подход «Спасибо скажи, что не&nbsp;рухнуло», вполне полезен.</p>
+<blockquote>
+<p>Скажи спасибо, что не&nbsp;рухнуло.</p>
+</blockquote>
+<p>Управляющая компания так&nbsp;же не&nbsp;идёт на&nbsp;встречу&nbsp;— с&nbsp;2018 года они прекратили публиковать годовые отчеты о&nbsp;работ по&nbsp;дому, да&nbsp;и&nbsp;планы тоже. Можете сами проверить и&nbsp;найти отчеты&nbsp;на <a href="http://zhuk-perm.su/">сайте Жилищной управляющей компании</a> за&nbsp;2020 и&nbsp;2019&nbsp;годы. Мне найти их&nbsp;не&nbsp;удалось. В&nbsp;группу и&nbsp;какой-либо контакт через онлайн каналы, они поддерживать не&nbsp;хотят. Любую информацию приходится выскребать.</p>
+<p class="aside"><a href="https://www.artlebedev.ru/kovodstvo/sections/172/">§ 172. Зона комфорта</a></p><p>
+</p><p>Я&nbsp;пытался пригласить к&nbsp;взаимодействию хотя&nbsp;бы в&nbsp;домовом чате, но&nbsp;увы история не&nbsp;увенчалось успехом, с&nbsp;аргументом «МЫ&nbsp;В&nbsp;ЭТОМ ВАШЕМ ИНТЕРНЕТЕ НЕ&nbsp;РАЗБИРАЕМСЯ»</p>
+<p>И&nbsp;к&nbsp;сожалению, во&nbsp;многих домах ситуация аналогичная. Мы&nbsp;живем в&nbsp;замкнутом круге, где&nbsp;УК перекладывает ответственность на&nbsp;собственников, а&nbsp;собственники на&nbsp;УК.</p>
+<blockquote>
+<p>Мы&nbsp;живем в&nbsp;замкнутом круге, где УК&nbsp;перекладывает ответственность на&nbsp;собственников, а&nbsp;собственники на&nbsp;УК.</p>
+</blockquote>
+<p>К&nbsp;сожалению, мне остаётся только ждать того момента, когда дети моих соседей подрастут, и&nbsp;будут хоть сколько-то осознавать ценность своего имущества, и&nbsp;ценность того, что зона комфорта может пролегать за&nbsp;пределы порога квартиры.</p>
+<p>Что в&nbsp;домах старого жилого фонда, можно обеспечивать и&nbsp;строить уют, ничуть не&nbsp;хуже, чем девелоперы обеспечивают в&nbsp;новостройках. Главное сохранять здравый смысл, и&nbsp;не&nbsp;делать работу по&nbsp;содержанию жилья спустя рукава и&nbsp;соглашаться с&nbsp;мнение «Скажи спасибо, что еще не&nbsp;рухнуло»</p>
+<h2>В&nbsp;одного ничего не&nbsp;получится</h2>
+<p>Собственно, я&nbsp;верю, что пришло, (или близится) то&nbsp;время, когда дети, которые не&nbsp;могли на&nbsp;что-то повлиять, обретают право голоса, понимают ценность того места, где они живут. И&nbsp;более того, понимают свою ответственность за&nbsp;мир вокруг.</p>
+<p>Идея Добрососедства&nbsp;2.0 заключается в&nbsp;том, что теперь мы&nbsp;хозяева своего жилья и&nbsp;мы&nbsp;несем полную ответственность за&nbsp;то&nbsp;место, в&nbsp;котором живем. За&nbsp;то&nbsp;грязно у&nbsp;нас в&nbsp;лифте, работает&nbsp;ли лампочка в&nbsp;подъезде, позволяем&nbsp;ли мы&nbsp;себе закрашивать слоем серой краски исторически витраж начала 20&nbsp;века&nbsp;— несем ответственность только&nbsp;мы.</p>
+<p>Но&nbsp;проблема управления жилым фондом кроется не&nbsp;только в&nbsp;несовершенстве законодательства.</p>
+<p>Так например проблеском света мне служат. <a href="https://vc.ru/offline/29797-tehnologichnoe-zhkh-iz-ekaterinburga">Пример Лиги ЖКХ</a> и&nbsp;их&nbsp;вера в&nbsp;то, что качественный сервис на&nbsp;рынке ЖКХ и&nbsp;Управляющих компаний возможен.</p>
+<p>Или как в&nbsp;Перми соседи привели в&nbsp;порядок квартал в&nbsp;Рабочем посёлке</p>
+<blockquote class="twitter-tweet"><p lang="ru" dir="ltr">"Спроси себя, почему лично ты согласен на "убого"?"<br><br>Жители этого квартала отказались от управляющих компаний, перевели дома в непосредственное управление и добились от властей проведения капремонта. Сравнить их дома с соседними вы можете сами <a href="https://t.co/TXrOXsWWfW">pic.twitter.com/TXrOXsWWfW</a></p>— Настоящее Время (@CurrentTimeTv) <a href="https://twitter.com/CurrentTimeTv/status/1227255906343120897?ref_src=twsrc%5Etfw">February 11, 2020</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Или как ребята&nbsp;из <a href="https://vk.com/stpkraevedgang">Краеведческой ячейки Гэнгъ</a> отмывают исторические парадные в&nbsp;Петербурге и&nbsp;приводят их&nbsp;с&nbsp;волонтерами в&nbsp;порядок.</p>
+<p>Все эти примеры, внушают веру в&nbsp;то, что что-то можно изменить.</p>
+<h2>Проблемы с самоуправлением.</h2>
+<p>К сожалению в России крайне редко можно встретить примеры хорошего самоуправления. Это касается как и УК, так и ТСЖ. Иногда в новостях мелькают сюжеты, как какой-нибудь&nbsp;<a href="https://youtu.be/vtwDP3Ea6LI">активист в одиночку отремонтировал подъезд</a>, или&nbsp;<a href="https://59.ru/text/gorod/2019/07/16/66162259/">создал парк возле дома</a>.</p>
+<p>Но&nbsp;все эти события&nbsp;— частные и&nbsp;единичные случаи.</p>
+<p>Проблема самоуправления кроется в&nbsp;том, что в&nbsp;большинстве своем этим самым управлением начинают заниматься люди, которые либо не&nbsp;умеют управлять и&nbsp;делают это исходя из&nbsp;того опыта, который есть.</p>
+<p>Людям не&nbsp;хватает ресурса, где можно было&nbsp;бы черпать информацию о&nbsp;лучших практиках. Не&nbsp;хватает сборника методических рекомендаций. И&nbsp;многие вещи, будь&nbsp;то организация ТСЖ или благоустройство газона у&nbsp;подъезда приходится делать с&nbsp;нуля, методом проб и&nbsp;ошибок.</p>
+<p>Хотя наверняка есть люди, которые уже проживали эту историю, и&nbsp;знают как не&nbsp;делая лишних движений достигать результата в&nbsp;том или ином деле.</p>
+<h2>Цель проекта Добрососедство 2.0</h2>
+<p>Для себя я&nbsp;сформулировал цель проекта следующим образом:</p>
+<blockquote>
+<p>Создать культуру эффективного управления многоквартирными домами среди собственников, председателей ТСЖ, советов жилых домов и&nbsp;ТОСов. Дать управленцам и&nbsp;собственникам современные и&nbsp;эффективные практики управления и&nbsp;коммуникации, которые позволяют делать дом, двор и&nbsp;подъезд комфортными для жизни.</p>
+</blockquote>
+<p class="aside"><a href="https://neighborliness.ru/about/">Замысел проекта Добрососедство 2.0</a></p><p>
+</p><p>В&nbsp;общем Добрососедство&nbsp;2.0&nbsp;— это такое место, где можно найти проверенные методические рекомендации и&nbsp;руководства, как сделать совой двор, подъезд или дом&nbsp;— комфортным место, не&nbsp;наступая на&nbsp;гору грабель, не&nbsp;проводя экспериментов и&nbsp;не&nbsp;тратя денег.</p>
+<p>Может он&nbsp;будет полезен тем управленцам, которые есть сейчас. Но&nbsp;я&nbsp;рассчитываю, что собранные материалы помогут уже следующему поколению собственников такие дворы и&nbsp;подъезды, из&nbsp;которых не&nbsp;хочется убегать, а&nbsp;в&nbsp;которых хочется проводить время, отдыхать и&nbsp;созидать.</p>
+<p>К&nbsp;сожалению, я&nbsp;делаю это пока один. Но&nbsp;надеюсь на&nbsp;то, что все таки надуться соратники, которым эта идея близка, и&nbsp;которые помогут мне. Но&nbsp;о&nbsp;том, чьи&nbsp;бы компетенции мне&nbsp;бы пригодились, расскажу на&nbsp;страницах журнала проекта ну&nbsp;или здесь.</p>
+<p><strong>P.S.</strong> Чтобы не&nbsp;страдать, разрешаю себе сдаться, если не&nbsp;будет получаться.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/zhkh" class="link-novisited no-underline hover:underline">ЖКХ</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/dobrososedstvo-20" class="link-novisited no-underline hover:underline">Добрососедство 2.0</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/domoupravlenie" class="link-novisited no-underline hover:underline">Домоуправление</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/permian-navigation-part2/" itemprop="url"><span itemprop="name">Переработка пермской уличной навигации [Часть&nbsp;2] ×&nbsp;Разбор базовых форматов</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2022-06-12T00:00:00.000Z">12 июня 2022 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 10 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>В&nbsp;Перми, концепт уличной навигации так и&nbsp;не&nbsp;принял внятного очертания. В&nbsp;<a href="https://fourier.rocks/posts/permian-street-navigation-part1/">прошлой части</a>, я&nbsp;говорил о&nbsp;том, как круто получилось сделать навигацию в&nbsp;Челябинске, и&nbsp;что было&nbsp;бы неплохо привести в&nbsp;порядок и&nbsp;нашу.</p>
+<p><a href="https://ilyabirman.ru/projects/chelyabinsk-address-plates/">Адресные таблички Челябинска</a>&nbsp;в&nbsp;Блоге Ильи Бирмана.
+Я&nbsp;начал собирать по&nbsp;кускам, те&nbsp;наработки, которые есть на&nbsp;сегодняшний день. Первой зацепкой стал документ сделанный, ныне закрытым ПЦРД&nbsp;—&nbsp;<a href="https://fourier.rocks%5Cassets%5Cimg%5Cposts%5Cprmnav%5Cpermvisualcommunications1.pdf">Брендбук Перми [β-версия]</a>.</p>
+<p class="aside"><a href="https://ilyabirman.ru/projects/chelyabinsk-address-plates/">Адресные таблички Челябинска</a>в Блоге Ильи Бирмана.</p>
+<p>В&nbsp;силу статуса β-версии, удалось выяснить базовые пропорции навигации, и&nbsp;некоторые заложенные подходы к&nbsp;её&nbsp;применению. Но&nbsp;проблем оказалось больше. Давайте поговорим про них.</p>
+<h2>Проблема № 1&nbsp;— Цветовая идентификация районов города</h2>
+<p>По&nbsp;задумке, и&nbsp;отражению в&nbsp;бренд буке Перми, навигация предусматривает небольшую плашку отмеченную цветом&nbsp;— каждый для своего района. Так например для Ленинского района предусмотрен красный цвет, а&nbsp;для Свердловского&nbsp;— фиолетовый</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/permian-table-example-zrtj-AaSCR-400w.avif 400w, /assets/img/permian-table-example-zrtj-AaSCR-550w.avif 550w, /assets/img/permian-table-example-zrtj-AaSCR-700w.avif 700w, /assets/img/permian-table-example-zrtj-AaSCR-850w.avif 850w, /assets/img/permian-table-example-zrtj-AaSCR-1000w.avif 1000w, /assets/img/permian-table-example-zrtj-AaSCR-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/permian-table-example-zrtj-AaSCR-400w.webp 400w, /assets/img/permian-table-example-zrtj-AaSCR-550w.webp 550w, /assets/img/permian-table-example-zrtj-AaSCR-700w.webp 700w, /assets/img/permian-table-example-zrtj-AaSCR-850w.webp 850w, /assets/img/permian-table-example-zrtj-AaSCR-1000w.webp 1000w, /assets/img/permian-table-example-zrtj-AaSCR-1150w.webp 1150w" sizes="100vw"><img alt="Скриншот из того брендбука, что есть в открытом доступе" loading="lazy" decoding="async" src="/assets/img/permian-table-example-zrtj-AaSCR-400w.jpeg" width="1150" height="922" srcset="/assets/img/permian-table-example-zrtj-AaSCR-400w.jpeg 400w, /assets/img/permian-table-example-zrtj-AaSCR-550w.jpeg 550w, /assets/img/permian-table-example-zrtj-AaSCR-700w.jpeg 700w, /assets/img/permian-table-example-zrtj-AaSCR-850w.jpeg 850w, /assets/img/permian-table-example-zrtj-AaSCR-1000w.jpeg 1000w, /assets/img/permian-table-example-zrtj-AaSCR-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>Скриншот из того брендбука, что есть в открытом доступе</figcaption></figure>
+<p class="aside"><a href="https://www.tema.ru/jjj/perm/permvisualcommunications1.pdf">Брендбук в&nbsp;блоге Артемия Лебедева</a></p>
+<p>Если на&nbsp;двух районах цвет понятен, то&nbsp;остальные вызывают вопросы. Более, того я&nbsp;прошелся по&nbsp;городу, и&nbsp;попытался найти примеры табличек такого формата.</p>
+<p>Хотя в&nbsp;брендбуке есть следующее разъяснение применительно к&nbsp;цвету логотипа:</p>
+<blockquote>
+<p><strong>Цвет</strong>
+Основной цвет для П&nbsp;— красный. R255 G0 B0, C0&nbsp;M100&nbsp;Y100&nbsp;K0, Pantone 025. Тем не&nbsp;менее, логотип можно перекрашивать в&nbsp;любые цвета, если это будет лучше соответствовать ситуации.
+Хотя и&nbsp;по&nbsp;запросу «Pantone 025» выходит точно не&nbsp;красный цвет.</p>
+</blockquote>
+<p>Опять, же&nbsp;в&nbsp;бренд-буке не&nbsp;даётся разъяснений&nbsp;— по&nbsp;тому, каким HEX, RGB, CMYK соответствуют какие Pantone и&nbsp;Ral цвета&nbsp;— а&nbsp;они важны, так как применяются при изготовлении физических носителей.</p>
+<p>Сейчас они хоть в&nbsp;моих наработках и&nbsp;проставлены&nbsp;— проставлены они через использование конвертера.&nbsp;<em>(Так себе подход, но&nbsp;вееров и&nbsp;палитр у&nbsp;меня на&nbsp;руках пока нет).</em></p>
+<p>Если кто-нибудь знает дизайнеров, которые работали над проектом, и&nbsp;у&nbsp;которых могли сохраниться наработки свяжитесь со&nbsp;мной.</p>
+<p>Пока цветовая идентификация вызывающая у&nbsp;меня уверенность выглядит так:</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/District-Color-K89yq7S7ie-400w.avif 400w, /assets/img/District-Color-K89yq7S7ie-550w.avif 550w, /assets/img/District-Color-K89yq7S7ie-700w.avif 700w, /assets/img/District-Color-K89yq7S7ie-850w.avif 850w, /assets/img/District-Color-K89yq7S7ie-1000w.avif 1000w, /assets/img/District-Color-K89yq7S7ie-1150w.avif 1150w, /assets/img/District-Color-K89yq7S7ie-1300w.avif 1300w, /assets/img/District-Color-K89yq7S7ie-1450w.avif 1450w, /assets/img/District-Color-K89yq7S7ie-1600w.avif 1600w, /assets/img/District-Color-K89yq7S7ie-1750w.avif 1750w, /assets/img/District-Color-K89yq7S7ie-1900w.avif 1900w" sizes="100vw"><source type="image/webp" srcset="/assets/img/District-Color-K89yq7S7ie-400w.webp 400w, /assets/img/District-Color-K89yq7S7ie-550w.webp 550w, /assets/img/District-Color-K89yq7S7ie-700w.webp 700w, /assets/img/District-Color-K89yq7S7ie-850w.webp 850w, /assets/img/District-Color-K89yq7S7ie-1000w.webp 1000w, /assets/img/District-Color-K89yq7S7ie-1150w.webp 1150w, /assets/img/District-Color-K89yq7S7ie-1300w.webp 1300w, /assets/img/District-Color-K89yq7S7ie-1450w.webp 1450w, /assets/img/District-Color-K89yq7S7ie-1600w.webp 1600w, /assets/img/District-Color-K89yq7S7ie-1750w.webp 1750w, /assets/img/District-Color-K89yq7S7ie-1900w.webp 1900w" sizes="100vw"><img alt="Скриншот из того брендбука, что есть в открытом доступе" loading="lazy" decoding="async" src="/assets/img/District-Color-K89yq7S7ie-400w.jpeg" width="1900" height="1116" srcset="/assets/img/District-Color-K89yq7S7ie-400w.jpeg 400w, /assets/img/District-Color-K89yq7S7ie-550w.jpeg 550w, /assets/img/District-Color-K89yq7S7ie-700w.jpeg 700w, /assets/img/District-Color-K89yq7S7ie-850w.jpeg 850w, /assets/img/District-Color-K89yq7S7ie-1000w.jpeg 1000w, /assets/img/District-Color-K89yq7S7ie-1150w.jpeg 1150w, /assets/img/District-Color-K89yq7S7ie-1300w.jpeg 1300w, /assets/img/District-Color-K89yq7S7ie-1450w.jpeg 1450w, /assets/img/District-Color-K89yq7S7ie-1600w.jpeg 1600w, /assets/img/District-Color-K89yq7S7ie-1750w.jpeg 1750w, /assets/img/District-Color-K89yq7S7ie-1900w.jpeg 1900w" sizes="100vw"></picture><figcaption>Первый прототип описания цветовой идентификации табличек, и тот с оговорками.</figcaption></figure>
+<p>Я&nbsp;специально прошелся по&nbsp;городу, чтобы найти таблички, которые уже сейчас используются, может они внесут ясность в&nbsp;работу с&nbsp;цветом.</p>
+<blockquote>
+<p><strong>Задача на&nbsp;следующий этап:</strong>
+Разобраться, с&nbsp;тем какие цвета, какому району соответствуют. Или полностью отказаться от&nbsp;этой гипотезы.</p>
+</blockquote>
+<h2>Проблема № 2&nbsp;— Верстка длинных и&nbsp;нестандартных Топонимов и&nbsp;нумерации домов</h2>
+<p>В&nbsp;документе сейчас, таблички отдельного формата, предусматривают набор двузначного номера дома, но&nbsp;вопрос, что делать если, номер трёхзначный, или если у&nbsp;дома есть литера, или требуется указание корпуса. На&nbsp;все эти вопросы бренд-бук ответа не&nbsp;даёт.</p>
+<p>Попробовал поэкспериментировать и&nbsp;вбить разные вариации в&nbsp;предложенные бренд-буком варианты.</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/question-about-m-nav-perm-89e1XtJaUy-400w.avif 400w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-550w.avif 550w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-700w.avif 700w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-850w.avif 850w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1000w.avif 1000w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1150w.avif 1150w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1300w.avif 1300w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1450w.avif 1450w" sizes="100vw"><source type="image/webp" srcset="/assets/img/question-about-m-nav-perm-89e1XtJaUy-400w.webp 400w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-550w.webp 550w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-700w.webp 700w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-850w.webp 850w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1000w.webp 1000w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1150w.webp 1150w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1300w.webp 1300w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1450w.webp 1450w" sizes="100vw"><img alt="Скриншот с вопросами к системе навигации" loading="lazy" decoding="async" src="/assets/img/question-about-m-nav-perm-89e1XtJaUy-400w.jpeg" width="1450" height="812" srcset="/assets/img/question-about-m-nav-perm-89e1XtJaUy-400w.jpeg 400w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-550w.jpeg 550w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-700w.jpeg 700w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-850w.jpeg 850w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1000w.jpeg 1000w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1150w.jpeg 1150w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1300w.jpeg 1300w, /assets/img/question-about-m-nav-perm-89e1XtJaUy-1450w.jpeg 1450w" sizes="100vw"></picture><figcaption>Попытка вставить разную нумерацию в макеты предложенные бренд-буком. Не очень понятно, что делать с номерами через слэш, например 333/9 — им явно не хватает увеличенной плашки, если это так, вопрос, как это уложить в сетку. Потому что даже в самом бренд буке разработчики пошли на уменьшение размеров шрифта, а не увеличение размеров таблички.</figcaption></figure>
+<p>Совсем странно, когда в&nbsp;верхней плашке указание следующего по&nbsp;улице дома, сменяется указанием корпуса или литерой. На&nbsp;первый взгляд тут требуется либо прояснение дизайнеров, либо иной подход к&nbsp;верстке подобной навигации.</p>
+<h2>Ситуация с&nbsp;указателями большого формата:</h2>
+<p>Тут тоже не&nbsp;совсем ясная ситуация. В&nbsp;бренд-буке предусмотрено два варианта для Длиных названий и&nbsp;коротких. Но&nbsp;ощущение, что этап тестирования они не&nbsp;прошли.</p>
+<p>Есть проблема с&nbsp;тем, чтобы включить на&nbsp;верхнюю плашку&nbsp;<strong>Орджоникидзевский район</strong>, и&nbsp;проблема с&nbsp;тем, что ни&nbsp;большой ни&nbsp;малый формат не&nbsp;позволяют уместить без изменения размеров шрифта улицу&nbsp;<strong>Зои Космодемьянской</strong>.</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/comments-about-big-plates-(1)-XihUSRaUgI-400w.avif 400w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-550w.avif 550w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-700w.avif 700w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-850w.avif 850w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1000w.avif 1000w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1150w.avif 1150w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1300w.avif 1300w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1450w.avif 1450w" sizes="100vw"><source type="image/webp" srcset="/assets/img/comments-about-big-plates-(1)-XihUSRaUgI-400w.webp 400w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-550w.webp 550w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-700w.webp 700w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-850w.webp 850w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1000w.webp 1000w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1150w.webp 1150w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1300w.webp 1300w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1450w.webp 1450w" sizes="100vw"><img alt="Скриншот с разбором больших форматов" loading="lazy" decoding="async" src="/assets/img/comments-about-big-plates-(1)-XihUSRaUgI-400w.jpeg" width="1450" height="1407" srcset="/assets/img/comments-about-big-plates-(1)-XihUSRaUgI-400w.jpeg 400w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-550w.jpeg 550w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-700w.jpeg 700w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-850w.jpeg 850w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1000w.jpeg 1000w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1150w.jpeg 1150w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1300w.jpeg 1300w, /assets/img/comments-about-big-plates-(1)-XihUSRaUgI-1450w.jpeg 1450w" sizes="100vw"></picture><figcaption>Попытки вместить крупные названия.</figcaption></figure>
+<p>И&nbsp;это как раз задача на&nbsp;следующий этап:</p>
+<blockquote>
+<p><strong>Задача на&nbsp;следующий этап:</strong>
+разобраться с&nbsp;версткой нестандартных урбанонимов и&nbsp;нумерации домов. Составить гугл-таблицу с&nbsp;всевозможными вариантами сокращений и&nbsp;наименований. Попытаться найти и&nbsp;связаться с&nbsp;сопричастными, либо найти тех, кто поможет упорядочить и&nbsp;систематизировать эту историю.</p>
+</blockquote>
+<h2>P.S</h2>
+<p>Если у&nbsp;вы&nbsp;участвовали в&nbsp;разработке, или обладаете информацией о&nbsp;том, как должны реализовываться эти моменты, или вы&nbsp;дизайнер, и&nbsp;готовы помочь привести в&nbsp;порядок подход к&nbsp;навигации, которая находится в&nbsp;статусе β-версия, пожалуйста свяжитесь со&nbsp;мной.</p>
+<h2>Оглавление:</h2>
+<ul>
+<li>—&nbsp;Часть 1:&nbsp;<a href="https://fourier.rocks/posts/permian-street-navigation-part1/">О&nbsp;предпосылках</a></li>
+<li>→ Часть 2: Попытки разобраться с&nbsp;базовыми форматами и&nbsp;укладкой названий.</li>
+<li>—&nbsp;Часть 3:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part3/">Переписка с&nbsp;разработчиками проекта.</a></li>
+<li>—&nbsp;Часть 4:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part4/">Существующая навигация</a></li>
+<li>—&nbsp;Часть 5:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part5/">Разбираемся с&nbsp;форматами</a></li>
+<li>—&nbsp;Часть 6:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part6/">Переписка с&nbsp;департаментом ЖКХ</a></li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/domoupravlenie" class="link-novisited no-underline hover:underline">Домоуправление</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/zhkh" class="link-novisited no-underline hover:underline">ЖКХ</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/perm" class="link-novisited no-underline hover:underline">Пермь</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/ulichnaya-navigaciya-v-permi" class="link-novisited no-underline hover:underline">Уличная навигация в Перми</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/urbanistika" class="link-novisited no-underline hover:underline">Урбанистика</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/dizajn" class="link-novisited no-underline hover:underline">Дизайн</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+<nav class="flex justify-stretch mt-8">
+  <div class="inline-flex">
+    
+    <div class="hidden">Ранее ↑</div>
+     
+    <a id="earlierPosts" href="/posts/1/">
+      <div aria-label="Посмотреть посты опубликованные позже">Позднее</div>
+    </a>
+    <div><small class="text-gray-500">&nbsp;Ctrl&nbsp;↓</small></div>
+
+    
+  </div>
+</nav>
+
+      
+      </main>
+      
+      <footer class="mt-4">
+  <div class="mx-auto  pb-10">
+
+      <!---->
+      <div class="flex flex-wrap content-center">
+        <div class="flex items-center link-novisited no-underline hover:text-social-mastodon dark:hover:text-social-mastodon mr-6">
+          <i class="lab la-mastodon text-2xl"></i>
+          <a href="https://mastodon.ml/@dmitriyfourier" class="link-novisited">Мастадон</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-linkedin dark:hover:text-social-linkedin mr-6">
+          <i class="lab la-linkedin text-2xl no-underline"></i>
+            <a href="https://www.linkedin.com/in/dmitriyfourier/" class="link-novisited">ЛинкедИн</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-instagram dark:hover:text-social-instagram mr-6">
+          <i class="lab la-instagram text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Инстаграм</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-youtube dark:hover:text-social-youtube mr-6">
+          <i class="lab la-youtube text-2xl no-underline"></i>
+          <a href="https://www.youtube.com/c/DmitriyFurye" class="link-novisited">Ютуб</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-telegram dark:hover:text-social-telegram mr-6">
+          <i class="lab la-telegram text-2xl no-underline">
+            <a href="https://t.me/FourierNotesRU" class="link-novisited"></a></i><a href="https://t.me/FourierNotesRU" class="link-novisited">Телеграм</a>
+        </div>
+
+        <div class="flex items-center sm:grow link-novisited no-underline hover:text-social-epicgames dark:hover:text-social-steam-dark mr-6">
+          <i class="lab la-steam text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Стим</a>
+        </div>
+        <div class="flex items-center link-novisited no-underline hover:text-mk-background">
+          <a href="/donation">
+            <button class="outline-solid outline-offset-2 outline-1 rounded-sm">
+              <div class="px-1 flex items-center">
+                <i class="text-2xl las la-piggy-bank"></i></div>
+            </button></a>
+        </div>
+      </div>
+     
+      <p class="text-sm py-2">
+        <!--Добавляем автора сайта-->
+        <span class="space-out-bottom-mili-xs">© Дмитрий Фурье × </span>
+        <!--Добавляем копирайт на сайт и даты-->
+        <span>2017 — 2026</span> </p>
+  </div>
+</footer>
+
+      <script>
+        document.getElementById("toggleDarkMode").addEventListener("change", function() {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+        });
+      </script>
+      <script>
+document.addEventListener('keydown', function(event) {
+  // Проверяем, что нажата клавиша Ctrl
+  if (event.ctrlKey) {
+    // Проверяем, какая стрелка нажата
+    if (event.key === 'ArrowDown') {
+      // Ctrl + стрелка вниз
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var prevLink = document.getElementById('earlierPosts');
+      if (prevLink) {
+        window.location.href = prevLink.href;
+      }
+    } else if (event.key === 'ArrowUp') {
+      // Ctrl + стрелка вверх
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var nextLink = document.getElementById('latestPosts');
+      if (nextLink) {
+        window.location.href = nextLink.href;
+      }
+    }
+  }
+});
+</script>
+  
+</body></html>

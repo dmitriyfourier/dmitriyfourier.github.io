@@ -1,0 +1,1017 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
+    
+    <title>📋 Заметки Димы Фурье × [Страница 1]</title>
+    <meta name="description" content="Про управление, дизайн и менеджмент × [Страница 1]">
+    
+    <meta name="author" content="Дмитрий Фурье">
+
+    <!--Open Graph-->
+    
+      <meta property="og:title" content="📋 Заметки Димы Фурье × [Страница 1]">
+      <meta property="og:description" content="Про управление, дизайн и менеджмент × [Страница 1]">
+      <meta property="og:image" content="https://fourier.rocks/assets/covers/Notes-OG.jpg">
+      
+     
+    <meta property="og:site_name" content="fourier.rocks">
+    <meta property="og:url" content="https://fourier.rocks/posts/1/">
+    <meta property="og:type" content="object">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+  
+    <!--links-->
+    <link rel="canonical" href="https://fourier.rocks/posts/1/">
+     <!-- fonts -->
+  <link rel="preload" href="/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/TildaSans-Black.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-brands-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/la-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+
+        <!--/assets/img/favicon/-->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#202020">
+  <meta name="theme-color" content="#202020">
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="/assets/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png>
+  <link rel=" mask-icon"="" color="#202020">
+      <link rel="me" href="https://mastodon.ml/@dmitriyfourier">
+    <!--styles-->
+    <link href="/assets/styles/tailwind.css" rel="stylesheet">
+    <script>
+      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDarkMode()) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+ 
+<body class="text-mk-background bg-white dark:text-mk-white dark:bg-mk-background"> 
+    <header>
+<nav id="header" class="w-full z-30 top-10 py-1">
+  <div class="w-full flex place-items-start justify-between mt-0 py-2">
+
+    <div id="mobileMenuButton" class="cursor-pointer hidden mr-6 left-0 top-0">
+      <i class="las la-bars text-mk-background dark:text-mk-yellow-main text-2xl"></i>
+    </div>
+    <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
+
+    <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
+      <nav>
+        <ul class="sm:flex items-center justify-between text-mk-blue dark:text-mk-yellow-main pt-0 sm:pt-0">
+          <li class="flex flex-wrap justify-between items-center mx-auto max-w-(--breakpoint-2xl)">
+            <span class="flex items-center">
+              <div class="ml-0.5 self-center font-semibold whitespace-nowrap text-mk-background dark:text-mk-white">Блог Димы Фурье</div></span>
+          </li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="#"></a></li>
+          <li><a class="inline-block link-novisited hover:text-black font-medium  pt-0 pb-0 sm:pl-0 md:px-3" href="/podcasts/"></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
+      <div id="nav-buttons" class="flex items-center w-full sm:w-full">
+        <div class="px-4">
+          <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
+            <input type="checkbox" class="sr-only peer">
+            <div class="flex justify-center items-center w-8 h-8 
+              bg-tg-deepdark 
+              shadow-xs
+              shadow-mk-purple-deco
+              dark:shadow-mk-yellow-main
+              rounded-full
+              peer-hover::outspanne-none 
+              peer-hover::ring-2 
+              dark:bg-mk-yellow-main 
+              dark:border-gray-600 
+              peer-checked:bg-mk-yellow-main">
+              <div class="text-mk-yellow-main dark:hidden">
+                <i class="las la-moon"></i>
+              </div>
+              <div class=" text-mk-background hidden dark:visible dark:inline">
+                <i class="las la-sun"></i>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </header>
+      <main class="">
+        
+        
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/permian-street-navigation-part1/" itemprop="url"><span itemprop="name">О&nbsp;недоделанной Пермской уличной навигации [Часть&nbsp;1] ×&nbsp;Предпосылки</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2022-06-04T00:00:00.000Z">4 июня 2022 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 5 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Илья Бирман с командой не так давно сделали&nbsp;<a href="https://ilyabirman.ru/projects/chelyabinsk-address-plates/">Конструктор адресных табличек в Челябинска</a>, и я ему завидую.
+Выглядят таблички вот так: 1</p>
+<div class="fotorama" data-width="100%" data-height="800" data-nav="dots">
+     <figure><picture><source type="image/avif" srcset="/assets/img/quarters-5jsipXjFSn-400w.avif 400w, /assets/img/quarters-5jsipXjFSn-550w.avif 550w, /assets/img/quarters-5jsipXjFSn-700w.avif 700w, /assets/img/quarters-5jsipXjFSn-850w.avif 850w, /assets/img/quarters-5jsipXjFSn-1000w.avif 1000w, /assets/img/quarters-5jsipXjFSn-1150w.avif 1150w, /assets/img/quarters-5jsipXjFSn-1300w.avif 1300w, /assets/img/quarters-5jsipXjFSn-1450w.avif 1450w, /assets/img/quarters-5jsipXjFSn-1600w.avif 1600w, /assets/img/quarters-5jsipXjFSn-1750w.avif 1750w, /assets/img/quarters-5jsipXjFSn-1900w.avif 1900w" sizes="100vw"><source type="image/webp" srcset="/assets/img/quarters-5jsipXjFSn-400w.webp 400w, /assets/img/quarters-5jsipXjFSn-550w.webp 550w, /assets/img/quarters-5jsipXjFSn-700w.webp 700w, /assets/img/quarters-5jsipXjFSn-850w.webp 850w, /assets/img/quarters-5jsipXjFSn-1000w.webp 1000w, /assets/img/quarters-5jsipXjFSn-1150w.webp 1150w, /assets/img/quarters-5jsipXjFSn-1300w.webp 1300w, /assets/img/quarters-5jsipXjFSn-1450w.webp 1450w, /assets/img/quarters-5jsipXjFSn-1600w.webp 1600w, /assets/img/quarters-5jsipXjFSn-1750w.webp 1750w, /assets/img/quarters-5jsipXjFSn-1900w.webp 1900w" sizes="100vw"><img alt="Пример навигации разработанной Ильёй Барманом" loading="lazy" decoding="async" src="/assets/img/quarters-5jsipXjFSn-400w.jpeg" width="1900" height="509" srcset="/assets/img/quarters-5jsipXjFSn-400w.jpeg 400w, /assets/img/quarters-5jsipXjFSn-550w.jpeg 550w, /assets/img/quarters-5jsipXjFSn-700w.jpeg 700w, /assets/img/quarters-5jsipXjFSn-850w.jpeg 850w, /assets/img/quarters-5jsipXjFSn-1000w.jpeg 1000w, /assets/img/quarters-5jsipXjFSn-1150w.jpeg 1150w, /assets/img/quarters-5jsipXjFSn-1300w.jpeg 1300w, /assets/img/quarters-5jsipXjFSn-1450w.jpeg 1450w, /assets/img/quarters-5jsipXjFSn-1600w.jpeg 1600w, /assets/img/quarters-5jsipXjFSn-1750w.jpeg 1750w, /assets/img/quarters-5jsipXjFSn-1900w.jpeg 1900w" sizes="100vw"></picture><figcaption>Пример базовой навигации разработанной Ильёй Барманом</figcaption></figure>
+     <figure><picture><source type="image/avif" srcset="/assets/img/plans-PmeP8ul2jF-400w.avif 400w, /assets/img/plans-PmeP8ul2jF-550w.avif 550w, /assets/img/plans-PmeP8ul2jF-700w.avif 700w, /assets/img/plans-PmeP8ul2jF-850w.avif 850w, /assets/img/plans-PmeP8ul2jF-1000w.avif 1000w, /assets/img/plans-PmeP8ul2jF-1150w.avif 1150w, /assets/img/plans-PmeP8ul2jF-1300w.avif 1300w, /assets/img/plans-PmeP8ul2jF-1450w.avif 1450w, /assets/img/plans-PmeP8ul2jF-1600w.avif 1600w, /assets/img/plans-PmeP8ul2jF-1750w.avif 1750w, /assets/img/plans-PmeP8ul2jF-1900w.avif 1900w" sizes="100vw"><source type="image/webp" srcset="/assets/img/plans-PmeP8ul2jF-400w.webp 400w, /assets/img/plans-PmeP8ul2jF-550w.webp 550w, /assets/img/plans-PmeP8ul2jF-700w.webp 700w, /assets/img/plans-PmeP8ul2jF-850w.webp 850w, /assets/img/plans-PmeP8ul2jF-1000w.webp 1000w, /assets/img/plans-PmeP8ul2jF-1150w.webp 1150w, /assets/img/plans-PmeP8ul2jF-1300w.webp 1300w, /assets/img/plans-PmeP8ul2jF-1450w.webp 1450w, /assets/img/plans-PmeP8ul2jF-1600w.webp 1600w, /assets/img/plans-PmeP8ul2jF-1750w.webp 1750w, /assets/img/plans-PmeP8ul2jF-1900w.webp 1900w" sizes="100vw"><img alt="Пример который объясняет как работает навигация" loading="lazy" decoding="async" src="/assets/img/plans-PmeP8ul2jF-400w.jpeg" width="1900" height="1204" srcset="/assets/img/plans-PmeP8ul2jF-400w.jpeg 400w, /assets/img/plans-PmeP8ul2jF-550w.jpeg 550w, /assets/img/plans-PmeP8ul2jF-700w.jpeg 700w, /assets/img/plans-PmeP8ul2jF-850w.jpeg 850w, /assets/img/plans-PmeP8ul2jF-1000w.jpeg 1000w, /assets/img/plans-PmeP8ul2jF-1150w.jpeg 1150w, /assets/img/plans-PmeP8ul2jF-1300w.jpeg 1300w, /assets/img/plans-PmeP8ul2jF-1450w.jpeg 1450w, /assets/img/plans-PmeP8ul2jF-1600w.jpeg 1600w, /assets/img/plans-PmeP8ul2jF-1750w.jpeg 1750w, /assets/img/plans-PmeP8ul2jF-1900w.jpeg 1900w" sizes="100vw"></picture><figcaption>Объяснение работы навигации</figcaption></figure>
+</div>
+<p class="aside">Фото из&nbsp;<a href="https://ilyabirman.ru/projects/chelyabinsk-address-plates/">публикации Илья Бирмана</a></p>
+<p>Я живу в Перми, у нас довольно часто начинают хорошо, а заканчивают за упокой. Так было и с концептом адресной навигации в Перми. Но она так и осталась горкой нескольких макетов.
+У нас есть отличный&nbsp;<a href="https://www.artlebedev.ru/perm/permian/">шрифт Permian</a>, который содержит набор стрелочек для отдельной навигации.</p>
+<p>Даже были попытки разработать&nbsp;<a href="https://www.tema.ru/jjj/perm/permvisualcommunications1.pdf">Модельные правила (рекомендации) по размещению и мониторингу систем визуальных коммуникаций для Перми</a></p>
+<figure><picture><source type="image/avif" srcset="/assets/img/permvisualcommunications-CkcgdcLAXO-400w.avif 400w, /assets/img/permvisualcommunications-CkcgdcLAXO-550w.avif 550w, /assets/img/permvisualcommunications-CkcgdcLAXO-700w.avif 700w" sizes="100vw"><source type="image/webp" srcset="/assets/img/permvisualcommunications-CkcgdcLAXO-400w.webp 400w, /assets/img/permvisualcommunications-CkcgdcLAXO-550w.webp 550w, /assets/img/permvisualcommunications-CkcgdcLAXO-700w.webp 700w" sizes="100vw"><img alt="Пример модульных правил" loading="lazy" decoding="async" src="/assets/img/permvisualcommunications-CkcgdcLAXO-400w.jpeg" width="700" height="989" srcset="/assets/img/permvisualcommunications-CkcgdcLAXO-400w.jpeg 400w, /assets/img/permvisualcommunications-CkcgdcLAXO-550w.jpeg 550w, /assets/img/permvisualcommunications-CkcgdcLAXO-700w.jpeg 700w" sizes="100vw"></picture><figcaption>Пример модульных правил</figcaption></figure>
+<p>Но они таки и носят статус «beta» — то есть разработка максимальная сырая. Она отражает задумки на перспективу, но не отражает правил, и различных вариаций.</p>
+<p>Так например в правилах сказано</p>
+<blockquote>
+<p>Размер таблички определяется тем, как далеко находится дом от проезжей части и пешеходных дорожек. Чем дальше дом от наблюдателя, тем крупнее должна быть табличка.</p>
+</blockquote>
+<p>Но как быть, если требуется табличка более крупного размера в связи её удалённостью по отношению к пешеходной части, но при этом не вписывается в общие размеры конструкций фасада?</p>
+<p>Или вот еще пример:</p>
+<blockquote>
+<p>На улицах с современной многоэтажной застройкой, рекомендуется размещать широкие белые таблички с цветной полосой сверху. Цвет полосы соответствует административному району, в котором расположен дом. Это стандартные таблички для большинства домов в Перми.
+Но, нигде не сказано, какой цвет какому району соответствует. Я в рамках одного района встречал таблички и с красной полосой сверху, и фиолетовой. Но при этом дома принадлежали оба к индустриальному району.</p>
+</blockquote>
+<p>А как быть Председателям ТСЖ, Управляющим компаниям и застройщикам, в условиях, когда публично нигде нет макетов, ни правил, ни качественного описания, что, как в каких пропорциях и где можно размещать.
+Не очень понятно еще из какого материала должны быть таблички. Это должна быть эмаль по металлу, или ПВХ-плашка с заклейкой по периметру, или иной подход.</p>
+<blockquote>
+<p>Если кто-то знает, кто был дизайнером, разработчиком этих макетов свяжитесь со мной в Телеграмме →&nbsp;<a href="https://t.me/DmitriyFourier">https://t.me/DmitriyFourier</a>&nbsp;, или может у кого остались готовые макеты ai, psd или svg формата, дайте знать.
+Очень хочется довести проект до стадии внедрения, и собрать все наработки, которые были сделаны до конца.</p>
+</blockquote>
+<h2>Оглавление</h2>
+<ul>
+<li>→ Часть 1: О предпосылках</li>
+<li>— Часть 2:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part2/">Попытки разобраться с базовыми форматами указателей и укладке названий.</a></li>
+<li>— Часть 3:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part3/">Переписка с разработчиками проекта.</a></li>
+<li>— Часть 4:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part4/">Существующая навигация</a></li>
+<li>— Часть 5:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part5/">Разбираемся с форматами</a></li>
+<li>— Часть 6:&nbsp;<a href="https://fourier.rocks/posts/permian-navigation-part6/">Переписка с департаментом ЖКХ</a></li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/domoupravlenie" class="link-novisited no-underline hover:underline">Домоуправление</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/zhkh" class="link-novisited no-underline hover:underline">ЖКХ</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/perm" class="link-novisited no-underline hover:underline">Пермь</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/ulichnaya-navigaciya-v-permi" class="link-novisited no-underline hover:underline">Уличная навигация в Перми</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/urbanistika" class="link-novisited no-underline hover:underline">Урбанистика</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/dizajn" class="link-novisited no-underline hover:underline">Дизайн</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/postroit-zapasnoj-aerodrom/" itemprop="url"><span itemprop="name">Построить запасной аэродром</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2020-06-15T00:00:00.000Z">15 июня 2020 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 7 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Организовать план «Б» на&nbsp;случай факапа&nbsp;— точно такой-же способ обезопасить себя, от&nbsp;потери работы. Ранее мы&nbsp;обсуждали подушку безопасности. Она нужна, когда и&nbsp;план «А» и&nbsp;план «Б» не&nbsp;сработали.</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/airport-SmLmMoa5Ms-400w.avif 400w, /assets/img/airport-SmLmMoa5Ms-550w.avif 550w, /assets/img/airport-SmLmMoa5Ms-700w.avif 700w, /assets/img/airport-SmLmMoa5Ms-850w.avif 850w, /assets/img/airport-SmLmMoa5Ms-1000w.avif 1000w" sizes="100vw"><source type="image/webp" srcset="/assets/img/airport-SmLmMoa5Ms-400w.webp 400w, /assets/img/airport-SmLmMoa5Ms-550w.webp 550w, /assets/img/airport-SmLmMoa5Ms-700w.webp 700w, /assets/img/airport-SmLmMoa5Ms-850w.webp 850w, /assets/img/airport-SmLmMoa5Ms-1000w.webp 1000w" sizes="100vw"><img alt="Запасной аэродром" loading="lazy" decoding="async" src="/assets/img/airport-SmLmMoa5Ms-400w.jpeg" width="1000" height="666" srcset="/assets/img/airport-SmLmMoa5Ms-400w.jpeg 400w, /assets/img/airport-SmLmMoa5Ms-550w.jpeg 550w, /assets/img/airport-SmLmMoa5Ms-700w.jpeg 700w, /assets/img/airport-SmLmMoa5Ms-850w.jpeg 850w, /assets/img/airport-SmLmMoa5Ms-1000w.jpeg 1000w" sizes="100vw"></picture><figcaption>Оригинальное фото Unsplash, сфотографировал Tomas Williams</figcaption></figure>
+<p>Запасной вариант работы, хоть и&nbsp;не&nbsp;генерирует дополнительных денег, но&nbsp;он&nbsp;всегда может придти на&nbsp;помощь, если с&nbsp;прежней работой вы&nbsp;распрощались, и&nbsp;что&nbsp;бы не&nbsp;жить питаясь бич-пакетами, у&nbsp;вас будет вариант, который позволит вам, сохранить доходы, пусть даже и&nbsp;не&nbsp;на&nbsp;прежнем уровне. Если этот план роняет вас в&nbsp;доходах, то&nbsp;тут как раз и&nbsp;придёт на&nbsp;помощь подушка безопасности.</p>
+<h2>Как построить план «Б»?</h2>
+<h3>1. Ведите портфолио и держите резюме в актуальном виде.</h3>
+<p>Портфолио, по&nbsp;возможности держать публично, чтобы его могли видеть. Это даст шанс, что вам будут долетать предложения во&nbsp;время вашей текущей работы.</p>
+<p>Держите портфолио и&nbsp;резюме в&nbsp;актуальном виде</p>
+<h3>2. Сохраняйте контакты тех, от кого вам поступали предложения.</h3>
+<p>Когда ты&nbsp;ищешь работу, ты&nbsp;можешь получать чуть менее выгодные предложения о&nbsp;работе, чем&nbsp;та, на&nbsp;которую ты&nbsp;в&nbsp;итоге устроился.</p>
+<p>Если тебе выдали предложение, предложить обменяться контактами, под предлогом того, что у&nbsp;тебя есть еще пару собеседований, на&nbsp;которые нужно сходить.</p>
+<p>Если вы&nbsp;отказались от&nbsp;предложения о&nbsp;работе, все-равно сохраните контакт эйчара.Так у&nbsp;тебя всегда будет план «Б», если ты&nbsp;понравился руководителю или эйч-ару, который дал тебе приглашение, вероятность взять тебя на&nbsp;«втором круге», все&nbsp;же выше.</p>
+<h3>3. Поддерживайте контакт со&nbsp;старыми работодателями.</h3>
+<p>В&nbsp;том, что вы&nbsp;ушли от&nbsp;них нет ничего страшного. (Если вы&nbsp;ушли в&nbsp;хороших отношениях), можно попроситься обратно, если вы&nbsp;себя хорошо зарекомендовали.</p>
+<h3>4. Рассказывайте о&nbsp;своем опыте</h3>
+<p>Заведите блог, инстаграм, канал в&nbsp;телеграме и&nbsp;рассказывайте о&nbsp;своих проектах, делитесь опытом, так люди вокруг будут знать, чем вы&nbsp;занимаетесь и&nbsp;сформировать мнение о&nbsp;качестве вашей работы. Плюс это неплохой источник собирать предложения от&nbsp;потенциальных работодателей.</p>
+<p>Рассказывайте всем о&nbsp;том, что вы&nbsp;делаете и&nbsp;как работаете.</p>
+<h3>5. Будьте в&nbsp;хороших отношения с&nbsp;родственниками</h3>
+<p>Бытует мнение, что работать с&nbsp;родственниками&nbsp;— чревато плохими отношениями. Бизнес ваших родственников может быть, как запасной аэродром. Хотя&nbsp;бы, как временная работа.Главное заранее договориться о&nbsp;ролях.</p>
+<p>Не&nbsp;тащите личное на&nbsp;работу.Ваш родственник может уволить вас, как руководитель бизнеса днём. А&nbsp;вечером посочувствовать</p>
+<h3>6. Поддерживайте отношения с клиентами на текущей работе.</h3>
+<p>Если вы&nbsp;ушли от&nbsp;работодателя, но&nbsp;при этом в&nbsp;хороших отношениях с&nbsp;клиентом. Он&nbsp;всегда может стать ваши работодателем, несмотря на&nbsp;то, что уже не&nbsp;работает с&nbsp;вашим текущим работодателем.</p>
+<p>Поддерживайте хорошие отношения с&nbsp;клиентом.</p>
+<h2>Запомните</h2>
+<ul>
+<li>Держите портфолио и&nbsp;резюме в&nbsp;актуальном виде.</li>
+<li>Сохраняйте предложения о&nbsp;работе и&nbsp;контакты эйчаров, от&nbsp;которых вы&nbsp;отказались.</li>
+<li>Поддерживайте контакт со&nbsp;своими старыми работодателями.</li>
+<li>Рассказывайте всем о&nbsp;своей работе и&nbsp;своих результатах.</li>
+<li>Будьте в&nbsp;хороших отношениях с&nbsp;родственниками. Их&nbsp;бизнес может быть для вас планом «Б»</li>
+<li>Поддерживайте хорошие отношения с&nbsp;клиентом, они знают ваши компетенции и&nbsp;могут потенциально быть вашим новым работодателем.</li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansy" class="link-novisited no-underline hover:underline">Финансы</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/kalendar-dedlajnov/" itemprop="url"><span itemprop="name">Календарь дедлайнов</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2019-08-01T00:00:00.000Z">1 августа 2019 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 1 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Когда, я&nbsp;работал&nbsp;в <a href="https://www.facebook.com/taskandsolution">Task &amp;&nbsp;Solution Marketing</a> у&nbsp;нас был сформулирован «словарь дедлайнов». Такой своеобразный переводчик формулировок с&nbsp;указанием сроков, с&nbsp;языка клиента на&nbsp;язык исполнителя, чтобы не&nbsp;допускать недопониманий, факапов и&nbsp;оставлять время на&nbsp;доработку и&nbsp;флекс.</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/Dead-line-calendar-kBxZTBT1WO-400w.avif 400w, /assets/img/Dead-line-calendar-kBxZTBT1WO-550w.avif 550w, /assets/img/Dead-line-calendar-kBxZTBT1WO-700w.avif 700w" sizes="100vw"><source type="image/webp" srcset="/assets/img/Dead-line-calendar-kBxZTBT1WO-400w.webp 400w, /assets/img/Dead-line-calendar-kBxZTBT1WO-550w.webp 550w, /assets/img/Dead-line-calendar-kBxZTBT1WO-700w.webp 700w" sizes="100vw"><img alt="Deadline Calendar" loading="lazy" decoding="async" src="/assets/img/Dead-line-calendar-kBxZTBT1WO-400w.jpeg" width="700" height="494" srcset="/assets/img/Dead-line-calendar-kBxZTBT1WO-400w.jpeg 400w, /assets/img/Dead-line-calendar-kBxZTBT1WO-550w.jpeg 550w, /assets/img/Dead-line-calendar-kBxZTBT1WO-700w.jpeg 700w" sizes="100vw"></picture><figcaption>undefined</figcaption></figure>
+<p>Чуть позже, ребята подготовили постер, который можно распечатать и&nbsp;повесить себе на&nbsp;стену.
+Словарь будет полезен:</p>
+<ul>
+<li><em>Клиентам</em> — чтобы найти общий язык с исполнителями.</li>
+<li><em>Фрилансерам</em> — чтобы перестать подводить клиента.</li>
+<li>Штатным <em>исполнителями</em> и <em>руководителям</em>, чтобы лучше контролировать сроки.</li>
+</ul>
+<p><a href="https://vk.com/doc-77254814_401650378">Скачать версию для печати</a> — (CMYK, 100 dpi/», A1, .tiff)</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/upravlenie" class="link-novisited no-underline hover:underline">Управление</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/samyj-bogatyj-chelovek-v-vavilone/" itemprop="url"><span itemprop="name">Самый богатый человек в&nbsp;Вавилоне</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2019-06-10T00:00:00.000Z">10 июня 2019 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 7 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Редко пишу отзывы на книги, но если бы эту книгу я прочитал в 20 лет, то вероятнее всего сейчас бы не был в той финансовой заднице, что нахожусь. Хотя продуктивно их неё вылажу. Я буду рекомендовать эту книгу всем своим друзьям, родным, поскольку на мой взгляд, вещи из нее нужно прививать ещё со школы.</p>
+<p>Не так давно в одной из своих сториз <a href="https://www.instagram.com/igorfaynman/">Игорь Файнман</a> порекомендовал книжку «<a href="https://www.ozon.ru/context/detail/id/143992863/?partner=fourierOZON">Самый богатый человек в Вавилоне</a>»</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/vavilon-book-1bSJXHaqv3-400w.avif 400w, /assets/img/vavilon-book-1bSJXHaqv3-550w.avif 550w, /assets/img/vavilon-book-1bSJXHaqv3-700w.avif 700w, /assets/img/vavilon-book-1bSJXHaqv3-850w.avif 850w, /assets/img/vavilon-book-1bSJXHaqv3-1000w.avif 1000w, /assets/img/vavilon-book-1bSJXHaqv3-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/vavilon-book-1bSJXHaqv3-400w.webp 400w, /assets/img/vavilon-book-1bSJXHaqv3-550w.webp 550w, /assets/img/vavilon-book-1bSJXHaqv3-700w.webp 700w, /assets/img/vavilon-book-1bSJXHaqv3-850w.webp 850w, /assets/img/vavilon-book-1bSJXHaqv3-1000w.webp 1000w, /assets/img/vavilon-book-1bSJXHaqv3-1150w.webp 1150w" sizes="100vw"><img alt="Книга Самый богатый человек в Вавилоне" loading="lazy" decoding="async" src="/assets/img/vavilon-book-1bSJXHaqv3-400w.jpeg" width="1150" height="718" srcset="/assets/img/vavilon-book-1bSJXHaqv3-400w.jpeg 400w, /assets/img/vavilon-book-1bSJXHaqv3-550w.jpeg 550w, /assets/img/vavilon-book-1bSJXHaqv3-700w.jpeg 700w, /assets/img/vavilon-book-1bSJXHaqv3-850w.jpeg 850w, /assets/img/vavilon-book-1bSJXHaqv3-1000w.jpeg 1000w, /assets/img/vavilon-book-1bSJXHaqv3-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>Да, приписка «Книга будущего миллионера»&nbsp;— звучит пафосно, но&nbsp;увы в&nbsp;другой обложке этой книги я&nbsp;не&nbsp;нашел.</figcaption></figure>
+<p>Так или иначе, пока эта книга бьёт рекорды по&nbsp;числу заметок и&nbsp;закладок в&nbsp;ней в&nbsp;моём рейтинге.</p>
+<p>В&nbsp;чем соль? В&nbsp;этой книге наглядно показано, что за&nbsp;тысячи лет, в&nbsp;мире личных финансов ничего не&nbsp;изменилось.Конечно, для кого-то написанное в&nbsp;книге, будет казаться простыми истинами, но&nbsp;и&nbsp;сам автор прямым текстом говорит, что это не&nbsp;секреты, это просто истины, которые нужно усвоить.</p>
+<p>Для всех, кто хочет навести порядок в&nbsp;личных финансах, эта книга должна быть №&nbsp;1&nbsp;в списке для чтения.</p>
+<p>Прямым показателем того, что мало что изменилось с&nbsp;тех времен, служит глава «Глиняные дощечки»&nbsp;— где археологи исследователи, расшифровывают дощечки должника из&nbsp;Вавилона, и&nbsp;применяют эти принципы к&nbsp;своим финансам.</p>
+<p>Позволю процитировать кусок одной из&nbsp;табличек.</p>
+<blockquote>
+<p>«Сейчас, в полнолуние, я, Дабазир, недавно вернувшийся из сирийского рабства, полный решимости заплатить мои многочисленные долги и стать уважаемым гражданином моего родного города Вавилона, оставляю на этой глине запись о делах своих, которые намерен совершить во имя исполнения самых высоких желаний.</p>
+</blockquote>
+<blockquote>
+<p>Следуя мудрому совету моего друга Матона, ростовщика, я собираюсь из должника превратиться в уважаемого человека. План, который я составил для себя, ставит три цели. В их осуществлении — моя надежда.</p>
+</blockquote>
+<blockquote>
+<p>Во-первых, я должен позаботиться о будущем процветании.
+Поэтому одну десятую часть всего, что я заработаю, я буду откладывать. Матон не напрасно говорит:</p>
+</blockquote>
+<blockquote>
+<p>Человек, который держит в своем кошельке золото и серебро, отложенные на будущее, — достойный семьянин и верный слуга своему царю.</p>
+</blockquote>
+<blockquote>
+<p>Человек, у которого в кошельке лишь несколько медяков, равнодушен к своей семье и царю.</p>
+</blockquote>
+<blockquote>
+<p>Человек, у которого кошелек пуст, жесток по отношению к своей семье и нелоялен царю, поскольку сердце у него черствое.</p>
+</blockquote>
+<blockquote>
+<p>Вот почему человек, мечтающий добиться успеха, должен сделать так, чтобы в его кошельке не переводилось золото, — тогда в его сердце будет жива и любовь к семье, и верность царю.»</p>
+</blockquote>
+<p>Я&nbsp;дал прочитать эту книгу своей бабушке. И&nbsp;бабушка прониклась, она просила объяснить ей&nbsp;некоторые моменты, в&nbsp;разрезе того, как можно применять эти принципы. Теперь она не&nbsp;забывает платить себе, и&nbsp;что-то откладывает с&nbsp;каждой пенсии.</p>
+<p>Я&nbsp;дал прочитать эту книгу маме, и&nbsp;она тоже прониклась энтузиазмом. Не&nbsp;назову свою семью финансово грамотной, но&nbsp;по&nbsp;ощущениям, все после неё пересмотрели свое отношение к&nbsp;деньгам. Кто-то начал копить, кто-то считать свои расходы. В&nbsp;общем, начало положено.</p>
+<p>А&nbsp;я&nbsp;теперь рекомендую эту книгу, каждому из&nbsp;своих друзей. Не&nbsp;рассчитываю, что прочитают, но&nbsp;просто, если не&nbsp;посоветую, буду чувствовать себя уродом. Потому как, сам пересмотрел своё отношение к&nbsp;деньгам после этой книги.</p>
+<blockquote>
+<p>Дурак! Ты&nbsp;платишь, всем кроме себя!</p>
+</blockquote>
+<p>Именно эта фраза из&nbsp;книги, откликнулась внутри самой первой.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/knigi" class="link-novisited no-underline hover:underline">Книги</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansy" class="link-novisited no-underline hover:underline">Финансы</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/minimalnyj-nabor-dlya-starta-v-gejmdeve-ustarelo/" itemprop="url"><span itemprop="name">Минимальный набор для старта в&nbsp;геймдеве [Устарело]</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2018-08-01T00:00:00.000Z">1 августа 2018 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 12 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Прошлым летом, я&nbsp;планировал уйти из&nbsp;маркетинга, рекламы, PR&nbsp;в&nbsp;геймдев. Но&nbsp;так вышло, что встречал отказ за&nbsp;отказом, в&nbsp;каждой компании, куда закидывал резюме.</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/gamedev-form-hell-dxGCHp8wAy-400w.avif 400w, /assets/img/gamedev-form-hell-dxGCHp8wAy-550w.avif 550w, /assets/img/gamedev-form-hell-dxGCHp8wAy-700w.avif 700w, /assets/img/gamedev-form-hell-dxGCHp8wAy-850w.avif 850w, /assets/img/gamedev-form-hell-dxGCHp8wAy-1000w.avif 1000w, /assets/img/gamedev-form-hell-dxGCHp8wAy-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/gamedev-form-hell-dxGCHp8wAy-400w.webp 400w, /assets/img/gamedev-form-hell-dxGCHp8wAy-550w.webp 550w, /assets/img/gamedev-form-hell-dxGCHp8wAy-700w.webp 700w, /assets/img/gamedev-form-hell-dxGCHp8wAy-850w.webp 850w, /assets/img/gamedev-form-hell-dxGCHp8wAy-1000w.webp 1000w, /assets/img/gamedev-form-hell-dxGCHp8wAy-1150w.webp 1150w" sizes="100vw"><img alt="Сложности поиска работы в геймдеве" loading="lazy" decoding="async" src="/assets/img/gamedev-form-hell-dxGCHp8wAy-400w.jpeg" width="1150" height="718" srcset="/assets/img/gamedev-form-hell-dxGCHp8wAy-400w.jpeg 400w, /assets/img/gamedev-form-hell-dxGCHp8wAy-550w.jpeg 550w, /assets/img/gamedev-form-hell-dxGCHp8wAy-700w.jpeg 700w, /assets/img/gamedev-form-hell-dxGCHp8wAy-850w.jpeg 850w, /assets/img/gamedev-form-hell-dxGCHp8wAy-1000w.jpeg 1000w, /assets/img/gamedev-form-hell-dxGCHp8wAy-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>Сложности поиска работы в геймдеве</figcaption></figure>
+<p>Отказ&nbsp;— это не&nbsp;проблема. Я&nbsp;специалист по&nbsp;отказам, поэтому это для меня очередной повод к&nbsp;рефлексии.</p>
+<p>За&nbsp;то&nbsp;время, пока я&nbsp;искал работу я&nbsp;просмотрел 130, или 140&nbsp;вакансий. У&nbsp;меня сложились следующие представления о&nbsp;том, что нужно знать прежде чем пойти заваливать своим резюме студии.</p>
+<p>Сразу говорю, речь идёт не&nbsp;о&nbsp;конкретной профессии в&nbsp;геймдеве (ТЫСЯЧИ ИХ!). Это скорее сферический пузырь знаний, которые будут полезны тем кто, только-только собрался идти в&nbsp;отрасль.</p>
+<p>Профессионалы не&nbsp;найдут этот материал интересным, но&nbsp;вполне могут дополнить его в&nbsp;комментариях.</p>
+<h2>Вникаем в&nbsp;отрасль</h2>
+<ul>
+<li>Книга «<a href="http://galyonkin.com/book/">Маркетинг игр</a>» Сергея Галёнкина.</li>
+<li>Подкаст «<a href="https://www.youtube.com/user/Kuzmitch/">Как делают игры</a>»&nbsp;— совместный проект Сергея Галёнкина и&nbsp;Михаила&nbsp;— Кузьмина. Помогает понять проблемы индустрии, и&nbsp;выяснить каким подходами пользуются компании чтобы их&nbsp;разрешить.</li>
+<li><a href="http://stopgame.ru/trudnosti/">Трудности перевода</a>, на&nbsp;портале Стопгеймз.ру&nbsp;— поможет вникнуть в&nbsp;локализацию, хотя позиция Дениса Карамышева и&nbsp;считается авторской, но&nbsp;в&nbsp;целом показывает на&nbsp;какие моменты следует обращать внимание во&nbsp;время локализации проекта.</li>
+<li>Следить за&nbsp;<a href="http://screamschool.ru/">публикациями scream school</a>&nbsp;— есть неплохие компетенции в&nbsp;геймдеве и&nbsp;часто публикуют публичные лекции в&nbsp;сети. Что-то можно найти и&nbsp;для себя.</li>
+<li><a href="https://gamestats.mail.ru/">Аналитика Мэйл.ру групп по&nbsp;портрету европейского и&nbsp;российского геймера</a>&nbsp;— поможет понять, кто играет в&nbsp;игры на&nbsp;территории СНГ и&nbsp;Европы.</li>
+</ul>
+<h2>Краудфандинг</h2>
+<ul>
+<li><a href="https://learn.indiegogo.com/the-essential-guide-to-crowdfunding/">The&nbsp;Essential Guide to&nbsp;Crowdfunding</a>&nbsp;<a href="http://furye.ru/blog/%D0%9D%D0%B0">английском</a>&nbsp;— Учебник по&nbsp;краудфандингу и&nbsp;работе с&nbsp;площадкой indiegogo.</li>
+<li>Онлайн-курс «<a href="https://boomstarter.ru/crowd_learning">Мастер краудфандинга</a>» площадки Boom Starter</li>
+<li>Курс «<a href="http://netology.ru/courses/kraudfanding">Основы краудфандинга</a>» на&nbsp;Нетологии&nbsp;₽</li>
+<li>дают сертификат, который можно приложить к&nbsp;резюме.</li>
+<li><a href="https://www.kickstarter.com/help/handbook">Creator Handbook</a>&nbsp;<a href="http://furye.ru/blog/%D0%9D%D0%B0">английском</a>&nbsp;площадки KickStarter&nbsp;— рекомендации площадки для создателей проектов.</li>
+<li></li>
+</ul>
+<h2>Мероприятия</h2>
+<p><a href="http://www.gameconfs.com/">Полный список событий игровой индустрии</a>&nbsp;проводящийся в&nbsp;мире. Берите его за&nbsp;основу, и&nbsp;отбирайте&nbsp;те, которые будут полезны именно&nbsp;вам. Если вы&nbsp;их&nbsp;посещайте&nbsp;— знакомьтесь, предлагайте свою помощь. «Закинуть удочку», порой помогает «поймать рыбку».</p>
+<h3>Самые крупные:</h3>
+<ul>
+<li><a href="https://www.e3expo.com/">е3</a>&nbsp;как правило на&nbsp;русском языке много хороших трансляций, но&nbsp;лучше смотреть в&nbsp;оригинале. Заодно отраслевой английский будете подкачивать.</li>
+<li><a href="http://www.gamescom-cologne.com/">Геймзком</a>&nbsp;— вторая после е3</li>
+<li><a href="https://www.parisgamesweek.com/">Парижская неделя игр</a></li>
+<li><a href="http://devgamm.com/">Девгамм</a>&nbsp;— для разработчиков. Если хотите в&nbsp;геймдев, то&nbsp;лучше посещайте. Старайтесь попасть в&nbsp;зону быстрых знакомств и&nbsp;нетворкинга.</li>
+<li><a href="http://oigconf.com/">Международная игровая конференция в&nbsp;Оттаве</a></li>
+<li><a href="http://wnconf.com/">Вайт найт</a></li>
+<li><a href="http://www.gdconf.com/">Гейм Девелоперс Конференс</a>
+Ещё есть Game Night в&nbsp;разных городах. Если в&nbsp;вашем проводится, рекомендую посещать.</li>
+</ul>
+<h2>Полезные материалы:</h2>
+<ul>
+<li><a href="https://steamcommunity.com/workshop/about/?appid=765%C2%A7ion=faq">Официальные рекомендации Валв по&nbsp;продвижению проект в&nbsp;Гринлайте</a>.</li>
+<li>Статья от&nbsp;разработчиков TurnOn «<a href="https://habrahabr.ru/post/255877/">Продвижение игры в&nbsp;Steam Greenlight</a>»</li>
+<li>Курс Варгейминга «<a href="http://universarium.org/course/460">Геймдизайн: по&nbsp;ту&nbsp;сторону игры</a>» на&nbsp;площадке Универсариум.</li>
+<li>Статья от&nbsp;разработчиков TurnOn «<a href="https://habrahabr.ru/post/302848/">Особенности консольной инди-разработки в&nbsp;российской провинции</a>» отлично помогает понять, как там внутри всё выглядит.</li>
+</ul>
+<h2><strong>Издания, блоги и&nbsp;сообщества</strong></h2>
+<ul>
+<li><a href="https://habrahabr.ru/hub/gamedev/">Ветка про геймдев</a>&nbsp;на&nbsp;Хабре</li>
+<li>Издание&nbsp;<a href="https://dtf.ru/">дтф.ру</a></li>
+<li>Рубрика «<a href="https://vc.ru/games">Рынок игр</a>» на&nbsp;виси.ру</li>
+<li>Коллективный блог «<a href="https://gdcuffs.com/">Манжеты геймдизайнера</a>»</li>
+<li><a href="http://gamedev.ru/">Геймдев.ру</a>&nbsp;— старейший форум о&nbsp;разработке игр в&nbsp;России.</li>
+<li><a href="http://gamesjam.org/">Геймзджем</a>&nbsp;— поможет найти команду под проект, или проект под себя. Неплохой вариант для тех, кому нужно получить опыт работы.</li>
+<li><a href="http://app2top.ru/">Эпп2топ</a>&nbsp;— отраслевое издание посвященное аспектам мобильной игровой разработки. Полезные кейсы, интервью с&nbsp;лидерами мнений и&nbsp;возможность отслеживать ситуацию на&nbsp;рынке.</li>
+<li><a href="http://gamesisart.ru/">Игры как искусство</a>&nbsp;— небольшой отраслевое медиа. Не&nbsp;обращайте внимания на&nbsp;дизайн сайт. Он&nbsp;регулярно обновляется с&nbsp;2009 года и&nbsp;содержит довольно много материалов, для новичков в&nbsp;геймдеве.</li>
+<li>Коллективный твиттер&nbsp;<a href="http://gdunderhood.ru/">@gdunderhood</a>&nbsp;— каждую неделю новый автор, что помогает отслеживать разные взгляды на&nbsp;разработку&nbsp;игр. Рекомендую держать в&nbsp;подписках.</li>
+<li><a href="http://www.ant-karlov.ru/">Блог Антона Карлова</a>&nbsp;— специалист по&nbsp;казуальным и&nbsp;флэш-играм. Пишет как на&nbsp;технические так и&nbsp;отраслевые темы.</li>
+<li><a href="http://aushestov.ru/">Аус Хестов</a>&nbsp;— довольно большой сборник материалов по&nbsp;теме геймдизайна и&nbsp;левелдизайна.</li>
+<li><a href="http://leaden.ru/language/ru/">Блог Ярослава Кравцова</a>—&nbsp;множество заметок, по&nbsp;отдельным моментам разработки видеоигр и&nbsp;отрасли</li>
+<li><a href="http://lantally.blogspot.ru/">Блог Марии Кравцовой</a>&nbsp;— пишет про сценарное дело применительно к&nbsp;видеоиграм. Читать осторожно и&nbsp;с&nbsp;долей скептицизма, поскольку позиция по&nbsp;большей части авторская.</li>
+<li><a href="http://indiedev.name/">Инди дев</a>&nbsp;— специально для тех, кто решил начать с&nbsp;инди. Боюсь, что в&nbsp;России таких большинство. Хочу ошибаться.</li>
+<li><a href="https://80.lv/">80&nbsp;lvl</a>&nbsp;издание компании xsolla для профессионального сообщества отрасли.
+Изданий и&nbsp;площадок очень много. В&nbsp;моём персональном списке их&nbsp;порядка 200. Буду признателен, если в&nbsp;комментариях напишите, чем дополнить этот список.</li>
+</ul>
+<blockquote>
+<p>Не&nbsp;выключайте голову, когда читаете издания, во&nbsp;многих случаях там авторская позиция, с&nbsp;субъективным мнением. Будьте умным чуваком.</p>
+</blockquote>
+<h2>Люди в&nbsp;российской индустрии</h2>
+<p>Рекомендую следить за&nbsp;тем, что делают люди из&nbsp;<a href="https://dtf.ru/top">рейтинга представителей игровой индустрии</a>. Но&nbsp;это необязательно, поскольку список значительно шире. Составляйте свой. Желательно, чтобы в&nbsp;нём оказались люди, из&nbsp;тех компаний, в&nbsp;которые вы&nbsp;целитесь.</p>
+<h2>Английский</h2>
+<p>Учите английский, ёбта. Он, как минимум, повышает шансы на&nbsp;трудоустройство процентов на&nbsp;пятнадцать.</p>
+<blockquote>
+<p>Даже знание этих основ не&nbsp;даёт никаких гарантий трудоустройства. Эффективнее влиться в&nbsp;какую-нибудь начинающую команду и&nbsp;набрать хоть сколько-то опыта. Не&nbsp;брезгуйте знакомиться с&nbsp;ребятами&nbsp;<a href="http://gamesjam.org/">на&nbsp;джемах</a>. Практика и&nbsp;опыт наше всё.</p>
+</blockquote>
+<p>В&nbsp;комментарии принимаются мнения от&nbsp;профессиональных разработчиков, чем дополнить список. Критика и&nbsp;гнобление приветствуются.</p>
+<p>Пост обновляется и&nbsp;дополняется.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/gejmdev" class="link-novisited no-underline hover:underline">Геймдев</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/kak-smenit-familiyu-i-ne-oblazhatsya/" itemprop="url"><span itemprop="name">Как сменить фамилию и&nbsp;не&nbsp;облажаться</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2018-06-01T00:00:00.000Z">1 июня 2018 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 22 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Привет, меня зовут Дима Фурье.</p>
+<p>Раньше у&nbsp;меня была другая фамилия, но&nbsp;в&nbsp;один день мне захотелось что-то поменять в&nbsp;себе и&nbsp;решил я&nbsp;начать с&nbsp;фамилии. Поскольку мне пришлось, наткнуться на&nbsp;несколько подводных камней, я&nbsp;расскажу вам, как с&nbsp;комфортом и&nbsp;быстро сменить фамилию в&nbsp;России, без умирания в&nbsp;очередях, и&nbsp;хождениям по&nbsp;кабинетам.</p>
+<h2>Шаг первый&nbsp;— подготовка</h2>
+<p>Ни&nbsp;в&nbsp;коем случае не&nbsp;игнорируйте подготовку. Вы&nbsp;живете в&nbsp;России, где на&nbsp;любом общении с&nbsp;государством можно получить неприятности. Поэтому купите папку для бумаг&nbsp;— и&nbsp;держите её&nbsp;при себе. Пусть в&nbsp;ней будет вообще все документы и&nbsp;копии из&nbsp;списка.</p>
+<h3>Зарегистрируйтесь на&nbsp;госуслугах</h3>
+<p>Этим вы&nbsp;сэкономите время, на&nbsp;заполнении заявлений от&nbsp;руки, и&nbsp;ожидании в&nbsp;очередях. В&nbsp;некоторых государственных учреждения есть отдельное окно для тех, кто подавал заявления на&nbsp;госуслугах. И&nbsp;вам не&nbsp;придётся тратить время на&nbsp;стойке с&nbsp;образцами заявлений.</p>
+<h3>Соберите документы из&nbsp;списка и&nbsp;подготовьте их&nbsp;копии.</h3>
+<p>Так вы&nbsp;избежите того, что у&nbsp;вас попросят копию какого-нибудь документа, а&nbsp;у&nbsp;вас её&nbsp;не&nbsp;окажется. А&nbsp;на&nbsp;месте снять копию не&nbsp;всегда получится&nbsp;— придётся выйти и&nbsp;искать где её&nbsp;сделать, а&nbsp;потом снова в&nbsp;порядке очереди ждать входа в&nbsp;кабинет.</p>
+<h3>Заранее сфотографируйтесь на&nbsp;документы</h3>
+<p>Подготовьте несколько комплектов фотографий: в&nbsp;цветном и&nbsp;черно-белом варианте, на&nbsp;матовой и&nbsp;глянцевой бумаге&nbsp;— размеры 35×40мм и&nbsp;30×40мм. Эти требования подходят под большинство документов, которые вы&nbsp;будете переделывать после смены фамилии.</p>
+<h3>Помните про закон подлости</h3>
+<p>Если вы&nbsp;не&nbsp;взяли какой-либо документ с&nbsp;собой, то, скорее всего, именно его у&nbsp;вас и&nbsp;спросят в&nbsp;кабинете.</p>
+<h2>Шаг второй&nbsp;— подать заявление на&nbsp;смену фамилии</h2>
+<p>Допустим, вы&nbsp;определились с&nbsp;фамилией. Следующим пунктом будет направить заявление в&nbsp;районый ЗАГС. Сделать это можно на&nbsp;портале госуслуг. Выберите свой город и&nbsp;введите в&nbsp;поиске&nbsp;<strong>Государственная регистрация перемены имени лицом, достигшим совершеннолетия</strong></p>
+<p class="aside"><a href="https://www.gosuslugi.ru/27388/1/info">Государственная регистрация перемены имени лицом, достигшим совершеннолетия</a>&nbsp;— прямая ссылка на&nbsp;услугу на&nbsp;сайте госуслуг.</p>
+<p>Не&nbsp;забудьте зайти по&nbsp;пути в&nbsp;отделение Сбербанка и&nbsp;оплатить госпошлины за&nbsp;перемену имени 1 600₽, за&nbsp;свидетельство о&nbsp;рождении 350₽, и&nbsp;за&nbsp;свидетельство о&nbsp;перемени имени 350₽. Иначе на&nbsp;приёме в&nbsp;ЗАГС, вас отправят в&nbsp;банк.</p>
+<p>Оплатили&nbsp;— идём в&nbsp;ЗАГС, в&nbsp;который вы&nbsp;направили заявление. После этого, будет небольшое собеседование с&nbsp;работником о&nbsp;том, почему вы&nbsp;решили сменить фамилию, и&nbsp;вас попросят проверить данные из&nbsp;заявления ещё раз.
+Не&nbsp;переживайте, отказать вам не&nbsp;могут.</p>
+<p>В&nbsp;законе не&nbsp;указаны ни&nbsp;причины для перемены имени, ни&nbsp;основания для отказа. Максимум&nbsp;— это работник ЗАГСа может счесть, что ваша фамилия принесет вам много неприятностей. Но, скорее всего, этого не&nbsp;будет.</p>
+<p>Если вы&nbsp;не&nbsp;знаете какую причину перемены фамилии назвать&nbsp;— скажите, что считаете свою фамилию неблагозвучной, или просто сошлитесь на&nbsp;собственное желание. Отказать не&nbsp;могут.</p>
+<p>Предъявите квитанции об&nbsp;оплате работнику.</p>
+<h2>Шаг третий&nbsp;— меняем нужные документы</h2>
+<p>Чтобы быть полноценным человеком, с&nbsp;новой фамилией, необходимо переоформить кучу бумажек.</p>
+<h3>Свидетельство о&nbsp;рождении и&nbsp;перемене имени</h3>
+<p>Их&nbsp;вам выдадут сразу в&nbsp;ЗАГСе, после того, как примут заявление и&nbsp;квитанции об&nbsp;оплате. По&nbsp;крайней мере мне выдали сразу.</p>
+<p>Проверьте данные ещё раз, поблагодарите сотрудника и&nbsp;попрощайтесь.</p>
+<p>Поздравляю&nbsp;— у&nbsp;вас новая фамилия!</p>
+<h3>Паспорт</h3>
+<p>Как-бы вас теперь не&nbsp;звали&nbsp;— нужно менять паспорт. Причем в&nbsp;первую очередь. Без паспорта будет невозможно сменить другие документы.</p>
+<p>Подать заявление на&nbsp;замену паспорта лучше через госуслуги. В&nbsp;поиске ищите «Замена паспорта РФ&nbsp;при изменении ФИО, сведений о&nbsp;дате и&nbsp;месте рождения».</p>
+<p>Так быстрее, и&nbsp;вам назначат конкретное время. Не&nbsp;знаю, как выйдет у&nbsp;вас, но&nbsp;мне уже на&nbsp;следующий день выдали новый паспорт.</p>
+<p class="aside"><a href="https://www.gosuslugi.ru/600102/1/form">Замена паспорта РФ&nbsp;при изменении ФИО, сведений о&nbsp;дате и&nbsp;месте рождения</a>&nbsp;прямая ссылка на&nbsp;услугу на&nbsp;сайте Госуслуг.</p>
+<p>Перед визитом в&nbsp;МВД, УФМС или МФЦ (в&nbsp;зависимости от&nbsp;того, куда отправят за&nbsp;паспортом), возьмите с&nbsp;собой шесть цветных глянцевых фотографий 35×45мм, и&nbsp;оплатите госпошлину 350₽ в&nbsp;ближайшем банкомате</p>
+<p>Не&nbsp;забудьте потренировать новую фамильную роспись. Попрактикуйтесь заранее. Это хороший шанс сделать паспорт аккуратным.</p>
+<h3>СНИЛС</h3>
+<p>В&nbsp;пенсионный фонд придётся идти и&nbsp;сидеть в&nbsp;очереди. Заявление через госулуги или интернет подать нельзя. Поэтому возьмите с&nbsp;собой копии текущего СНИЛС, ИНН и&nbsp;Паспорт. Обычно СНИЛС делают около недели, но&nbsp;могут делать быстрее или дольше в&nbsp;зависимости от&nbsp;вашего подразделения.</p>
+<p>Раз идёте в&nbsp;пенсионный фонд РФ, после этого можете перевестись в&nbsp;негосударственный пенсионный фонд, с&nbsp;более привлекательными процентными ставками.</p>
+<p>Если вы&nbsp;уже перевели свою пенсию в&nbsp;НПФ, после получения нового СНИЛС не&nbsp;забудьте обновить данные в&nbsp;договорах с&nbsp;негосударственными пенсионными фондами.</p>
+<h3>Полис обязательного медицинского страхования</h3>
+<p>Идём получать или переоформлять после того, как получили новый СНИЛС. В&nbsp;ряде случаев страховые компании требуют указывать его в&nbsp;заявке. Поэтому возьмите с&nbsp;собой копии старого полиса, нового СНИЛС и&nbsp;паспорта.</p>
+<p>Страховые компании, обычно могут себе позволить сделать копии, но&nbsp;лучше иметь в&nbsp;запасе свои.</p>
+<p>Если у&nbsp;вас есть полис ДМС или страховка от&nbsp;несчастного случая. Сообщите страховым компаниями, о&nbsp;смене фамилии. В&nbsp;большинстве компаний можно подать заявку через сайт или по&nbsp;телефону без посещения офиса.</p>
+<h3>ИНН</h3>
+<p>Номер ИНН при смене фамилии не&nbsp;меняется, но&nbsp;если вам нужен сертификат с&nbsp;номером, то&nbsp;сходите в&nbsp;местное отделение Федеральной налоговой службы. Напишите заявление по&nbsp;форме 2-2-учёт. Заодно можете попросить сделать штампик в&nbsp;паспорт с&nbsp;номером для удобства.</p>
+<p class="aside"><a href="https://service.nalog.ru/addrno.do">Узнать адрес местной налоговой</a></p>
+<p>Через госуслуги получить новый сертификат нельзя&nbsp;— придётся идти лично. Зато не&nbsp;нужно платить госпошлины.</p>
+<h3>Банковские карты</h3>
+<p>Сообщите банкам, о&nbsp;том, что у&nbsp;вас сменилась фамилия. Иначе могут возникнуть проблемы с&nbsp;кредитами и&nbsp;вкладами, и&nbsp;проблемы при общении с&nbsp;банками.</p>
+<p>При визите в&nbsp;отделение возьмите с&nbsp;собой копии нового паспорта с&nbsp;отметкой о&nbsp;перемене фамилии и&nbsp;свидетельство о&nbsp;перемене имени и&nbsp;его копию. Этих документов будет достаточно, чтобы обновить в&nbsp;банке данные о&nbsp;вас.</p>
+<h3>Военный билет</h3>
+<p>При смене фамилии, ЗАГС сам передаёт новые данные в&nbsp;военкоматы. В&nbsp;скором времени после смены фамилии, вам придёт повестка. Но&nbsp;лучше не&nbsp;дожидайтесь и&nbsp;сходите в&nbsp;военкомат сами.</p>
+<p>Будет меньше вопросов, и&nbsp;излишней беготни.
+Не&nbsp;забудьте на&nbsp;всякий случай снять копии со&nbsp;старого военного билета, и&nbsp;других военных документов.</p>
+<p>Если у&nbsp;вас личный номер приклеен к&nbsp;обложке&nbsp;— отклейте и&nbsp;оставьте себе. Я&nbsp;забыл отклеить, и&nbsp;его мне так и&nbsp;не&nbsp;вернули.</p>
+<h3>Водительские права</h3>
+<p>Заявление на&nbsp;перевыпуск водительских прав можно подать через госуслуги. Встречается, что в&nbsp;ГИБДД работает отдельное окно, для приёма тех, кто подавал документы через портал Госуслуг.</p>
+<p class="aside">Услуга <a href="https://www.gosuslugi.ru/10056/24">Замена водительского удостоверения при смене данных владельца, утрате или непригодности</a>&nbsp;на&nbsp;сайте Госуслуг.</p>
+<p>Оплатите госпошлину 2 000₽ и&nbsp;возьмите с&nbsp;собой 4 глянцевых фотографии 45×35мм. На&nbsp;всякий случай, снимите копию со&nbsp;старого водительского удостоверения. Возьмите с&nbsp;собой документы на&nbsp;автомобиль и&nbsp;копии нового паспорта со&nbsp;свидетельством о&nbsp;перемене имени.</p>
+<p>Если у&nbsp;вас есть автомобиль не&nbsp;забудьте направить новые данные в&nbsp;вашу страховую компанию.</p>
+<h3>Трудовая книжка и&nbsp;трудовые документы</h3>
+<p>Рекомендую зайти в&nbsp;отдел кадров вашей компании, и&nbsp;переоформить договор. Так, вы&nbsp;избежите проблем с&nbsp;начисление зарплаты и&nbsp;отчислениями в&nbsp;социальные фонды.</p>
+<h3>Заграничный паспорт</h3>
+<p>У&nbsp;загран-паспорта нет никаких сроков, по&nbsp;замене в&nbsp;связи со&nbsp;сменой фамилии. Паспорт действителен до&nbsp;окончания срока, который в&nbsp;нем указан.</p>
+<p>Со&nbsp;въездом в&nbsp;безвизовые страны проблем возникнуть не&nbsp;должно. А&nbsp;вот, если вы&nbsp;получаете визу, то&nbsp;паспорт попросят заменить, чтобы фамилия в&nbsp;общегражданском и&nbsp;заграничном паспортах совпадала.</p>
+<p>Поэтому рекомендую менять, его как только получите новый общегражданский паспорт.</p>
+<p>Учтите, что если вы&nbsp;сменили паспорт с&nbsp;открытыми визами, то&nbsp;они автоматически закрываются, и&nbsp;в&nbsp;самолёт вас никто не&nbsp;посадит, даже если вы&nbsp;возьмёте с&nbsp;собой оба паспорта&nbsp;— старый с&nbsp;якобы действующей визой и&nbsp;новый с&nbsp;новой фамилией.</p>
+<p>Заявление на&nbsp;выдачу нового паспорта подаём через госуслуги. Перед посещением отделения, не&nbsp;забываем оплатить госпошлину 3 500₽ за&nbsp;загранпаспорт нового образца. Возьмите, на&nbsp;всякий случай с&nbsp;собой, копии свидетельства о&nbsp;перемене имени, копии нового паспорта и&nbsp;шесть цветных матовых фотографии 35×45мм. Хотя, в&nbsp;некоторых отделениях на&nbsp;загранпаспорт фотографируют отдельно.</p>
+<h3>Диплом, аттестат и&nbsp;другие документы об&nbsp;образовании</h3>
+<p>Дипломы и&nbsp;аттестаты, обязательной замене не&nbsp;подлежат, а&nbsp;подтверждаются предъявлением свидетельства о&nbsp;перемене имени.</p>
+<p>Если вы&nbsp;учитесь в&nbsp;университете или колледже, рекомендую зайти в&nbsp;деканат, заменить зачетку, студенческий билет и&nbsp;предупредить деканат, что вы&nbsp;теперь именуетесь по-другому.</p>
+<p>Будет обидно получить диплом, на&nbsp;старую фамилию. Так что не&nbsp;откладывайте это дело.</p>
+<h3>Документы на&nbsp;недвижимость</h3>
+<p>Хотя документы на&nbsp;недвижимость не&nbsp;подлежат обязательной замене, я&nbsp;рекомендую вам, сходить в&nbsp;росресстр и&nbsp;обновить свои данные. Хотя ЗАГС, самостоятельно передаёт эти данные туда. А&nbsp;вот за&nbsp;выдачей нового свидетельства с&nbsp;актуальными данными придётся обратится самостоятельно.</p>
+<p>В&nbsp;будущем это сэкономит вам время на&nbsp;решении вопросов с&nbsp;бумагами, при продаже недвижимости и&nbsp;вступлении в&nbsp;наследство.</p>
+<h3>Прочие договоры</h3>
+<p>Обновите данные в&nbsp;договорах с&nbsp;операторами связи, провайдерами интернета, хстинг-провайдерами и&nbsp;другими вашими поставщиками.</p>
+<h2>Запомните</h2>
+<ul>
+<li>Оплачивайте госпошлины заранее. Так вы&nbsp;избежите ситуаций, когда вас попросят показать квитанцию об&nbsp;оплате и&nbsp;заставят выйти из&nbsp;очереди и&nbsp;идти в&nbsp;банкомат.</li>
+<li>По&nbsp;возможности используйте портал госуслуг для подачи заявлений. Так вы&nbsp;избежите очередей, и&nbsp;сэкономите время на&nbsp;заполнении заявлений на&nbsp;месте. При оплате пошлины через портал госуслуг, вы&nbsp;получаете скидку&nbsp;— хороший способ сэкономить.</li>
+<li>Всегда носите с&nbsp;собой несколько копий старых и&nbsp;уже новых документов. Никогда точно не&nbsp;знаешь, какой документ могут попросить в&nbsp;кабинете в&nbsp;следующий момент.</li>
+<li>По&nbsp;возможности, старайтесь обновить данные во&nbsp;всех возможных документах. Это не&nbsp;обязательно, но&nbsp;в&nbsp;будущем поможет избежать проволочек.</li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/gosuslugi" class="link-novisited no-underline hover:underline">Госуслуги</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/sveryajtes-v-terminologii/" itemprop="url"><span itemprop="name">Сверяйтесь в терминологии</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2017-09-21T00:00:00.000Z">21 сентября 2017 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 3 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Самое главное в&nbsp;переговорах&nbsp;— договориться в&nbsp;терминологии.</p>
+<p>Сейчас я&nbsp;стажируюсь финансовым lконсультантом в&nbsp;Нескучных финансах, и&nbsp;в&nbsp;финансовом консалтинге одно из&nbsp;важных правил&nbsp;— применять одинаковую терминологию. Иначе возможны ошибки в&nbsp;учете.</p>
+<blockquote>
+<p>— Какая у&nbsp;вас выручка?<br>
+— 2,5 миллиона в&nbsp;месяц.<br>
+— Это деньги, которые закрыты актами?<br>
+— Нет это все, что поступило в&nbsp;кассу.<br>
+— Но&nbsp;это деньги клиентов, пока обязательства не&nbsp;исполнены.<br>
+— ????</p>
+</blockquote>
+<p>Если в&nbsp;данном случае не&nbsp;уточнить, что клиент понимает под «выручкой», есть риск не&nbsp;правильно учесть эти цифры в&nbsp;финансовой модели.</p>
+<blockquote>
+<p>— А&nbsp;переменные расходы у&nbsp;вас какие?<br>
+— Ну&nbsp;на&nbsp;рекламу мы&nbsp;стараемся выкладывать больше с&nbsp;ростом выручки.<br>
+— То&nbsp;есть если вы&nbsp;перестанете вкладывать в&nbsp;рекламу вообще, на&nbsp;выручке это никак не&nbsp;скажется?<br>
+— Ну, выручка тогда упадёт.<br>
+— Тогда почему вы&nbsp;относите это в&nbsp;переменные расходы, если выручка упадёт то&nbsp;вы&nbsp;перестанете тратиться на&nbsp;рекламу?<br>
+— ????<br>
+— Не&nbsp;перестанете, иначе выручка не&nbsp;будет расти. А&nbsp;вот закупка сырья напрямую повлияет на&nbsp;вашу выручку. Купили товар&nbsp;— смогли сделать выручку. Не&nbsp;купили товар&nbsp;— выручку сделать не&nbsp;из&nbsp;чего. Так что давайте все-таки рекламу относить в&nbsp;постоянные расходы.</p>
+</blockquote>
+<p>Или вот про кредиторку</p>
+<blockquote>
+<p>— У&nbsp;вас есть <strong>кредиторка</strong>?<br>
+— Да&nbsp;конечно, время от&nbsp;времени мы&nbsp;берём товар у&nbsp;поставщиков с&nbsp;отсрочкой платежа.<br>
+— А&nbsp;вот, когда вам клиент присылает аванс, вы&nbsp;это считаете в&nbsp;кредиторку?<br>
+— Я&nbsp;всегда думал, что <strong>кредиторка</strong> только по&nbsp;запасам и&nbsp;в&nbsp;деньгах считается.<br>
+— Но&nbsp;пока вы&nbsp;не&nbsp;выполнили свои обязательства&nbsp;— эти деньги не&nbsp;ваши. Посмотрите договор ещё раз.</p>
+</blockquote>
+<p>Перед любой встречей, во&nbsp;время любых переговоров обозначайте треминологию. Так вы&nbsp;избежите недопонимания и&nbsp;разночтения. Соответственно ситуаций, когда из-за недопонимания все переросло в&nbsp;факапы, можно будет легко избежать.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/menedzhment" class="link-novisited no-underline hover:underline">менеджмент</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/peregovory" class="link-novisited no-underline hover:underline">переговоры</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/vstrechi" class="link-novisited no-underline hover:underline">встречи</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/otzyv-na-pervuyu-stupen-universiteta-finolog/" itemprop="url"><span itemprop="name">Отзыв на&nbsp;первую ступень университета Финолог</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2017-09-12T00:00:00.000Z">12 сентября 2017 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 14 мин</span>
+  </div>
+  <div itemprop="articleBody"><figure><picture><source type="image/avif" srcset="/assets/img/finolog-review-IToU7wFMfW-400w.avif 400w, /assets/img/finolog-review-IToU7wFMfW-550w.avif 550w, /assets/img/finolog-review-IToU7wFMfW-700w.avif 700w, /assets/img/finolog-review-IToU7wFMfW-850w.avif 850w, /assets/img/finolog-review-IToU7wFMfW-1000w.avif 1000w, /assets/img/finolog-review-IToU7wFMfW-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/finolog-review-IToU7wFMfW-400w.webp 400w, /assets/img/finolog-review-IToU7wFMfW-550w.webp 550w, /assets/img/finolog-review-IToU7wFMfW-700w.webp 700w, /assets/img/finolog-review-IToU7wFMfW-850w.webp 850w, /assets/img/finolog-review-IToU7wFMfW-1000w.webp 1000w, /assets/img/finolog-review-IToU7wFMfW-1150w.webp 1150w" sizes="100vw"><img alt="Finolog-review" loading="lazy" decoding="async" src="/assets/img/finolog-review-IToU7wFMfW-400w.jpeg" width="1150" height="603" srcset="/assets/img/finolog-review-IToU7wFMfW-400w.jpeg 400w, /assets/img/finolog-review-IToU7wFMfW-550w.jpeg 550w, /assets/img/finolog-review-IToU7wFMfW-700w.jpeg 700w, /assets/img/finolog-review-IToU7wFMfW-850w.jpeg 850w, /assets/img/finolog-review-IToU7wFMfW-1000w.jpeg 1000w, /assets/img/finolog-review-IToU7wFMfW-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>undefined</figcaption></figure>
+<p>Пару месяцев назад я начал осваивать управленческий учёт. Для старта в этой сфере выбрал <a href="https://finolog.ru/univer">университет Финолог</a> и теперь закончил первую ступень.</p>
+<h2>Димон, нафиг оно тебе нужно?</h2>
+<p>В&nbsp;первую очередь ради понимания того, как работает бизнес с&nbsp;точки финансов. Долгое время я&nbsp;работал в&nbsp;маркетинге и&nbsp;рекламе, и&nbsp;зачастую для обоснования своих решений или критики чужих мне не&nbsp;хватало аргументов по&nbsp;финансовой части.</p>
+<p>Новая веточка в&nbsp;«<a href="http://bureau.ru/bb/soviet/20161013/">Осьминожке навыков</a>»&nbsp;— иметь запасную квалификацию хорошо. В&nbsp;случае чего появляется вариаинт сменить сферу деятельности.</p>
+<p>По&nbsp;отзывам предпринимателей, у&nbsp;них часто возникают проблемы с&nbsp;финансами в&nbsp;компаниях, и&nbsp;во&nbsp;всем этом нужно помогать разбираться&nbsp;— так что ниша перспективная, а&nbsp;в&nbsp;нашей стране финансовая грамотность только сейчас набирает популярность.</p>
+<h2>Чему научили</h2>
+<p>Строить три формы отчётности&nbsp;— отчёт о&nbsp;движении денежных средств, отчет о&nbsp;финансовых результатах, и&nbsp;баланс. Все три формы помогают понимать, что происходит с&nbsp;деньгами в&nbsp;бизнесе, помогают выявить, куда уходят деньги и&nbsp;предупреждают кассовые разрывы.Четко отличать операционные, инвестиционные и&nbsp;финансовые операции.</p>
+<h2>Общие впечатления</h2>
+<h3>Что понравилось</h3>
+<p><strong>Харизма и примеры</strong></p>
+<p>.Занятия были не&nbsp;скучными, более-менее интересными, с&nbsp;обратной связью во&nbsp;время прямых эфиров. Занятие по&nbsp;налогам мне показалось очень скучным, хотя надо отдать должное&nbsp;— более-менее в&nbsp;налогах разобрался.</p>
+<p>Ещё было&nbsp;бы круто после каждого занятия присылать своеобразную методичку с&nbsp;ключевыми формулами. Бывает при выполнении задания забываешь формулу, и&nbsp;приходится долго проматывать и&nbsp;искать нужный момент в&nbsp;лекции.</p>
+<p><strong>Обратная связь</strong></p>
+<p>Хоть и&nbsp;не&nbsp;сразу появилась, но&nbsp;спустя пару занятий от&nbsp;кураторов, можно было увидеть комментарии по&nbsp;ошибкам в&nbsp;гугль-документах. Это удобно, сразу увидеть, где ошибся, и&nbsp;как это исправить.</p>
+<p><strong>Чат в телеграме</strong></p>
+<p>Очень удобно, что можно получить советы или проконсультироваться с&nbsp;более опытными ребятами и&nbsp;предпринимателями. Хочу поблагодарить Олю Андриевскую, за&nbsp;то, что помогала разобраться с&nbsp;парой тем.</p>
+<h3>Что не понравилось</h3>
+<p><strong>Отсутствие строгого дедлайна</strong></p>
+<p>Но&nbsp;ребята сейчас это поняли, и&nbsp;думаю, в&nbsp;следующем потоке срок сдачи будет фиксированным. Никто не&nbsp;хочет ночевать в&nbsp;офисе и&nbsp;проверять домашки. К&nbsp;тому&nbsp;же, это поможет быстро отсеять тех, кто не&nbsp;следит за&nbsp;дедлайном. Уровень выпускаемых консультантов повысится.</p>
+<p><strong>Проблемы с организацией</strong></p>
+<p>Михаил говорил, что поток экспериментальный&nbsp;— постоянные переносы занятий, проблемы с&nbsp;согласованием времени и&nbsp;неопределённость с&nbsp;экзаменом&nbsp;— доставили неприятностей. И&nbsp;хотя я&nbsp;все понимаю, но&nbsp;осадок остался. Надеюсь удастся сходить на&nbsp;второй поток, где уже все будет хорошо.</p>
+<p><strong>Задания</strong></p>
+<p>Очень не&nbsp;хватило более объёмных заданий по&nbsp;расчёту ROE и&nbsp;оборачиваемости. На&nbsp;оборачиваемость задание было, но&nbsp;оно было простым, и&nbsp;я&nbsp;думаю, что в&nbsp;бизнесе есть случаи и&nbsp;сложнее.</p>
+<p>Не&nbsp;хватило заданий, с&nbsp;большим объёмом самостоятельной работы. Где нужно не&nbsp;просто в&nbsp;нужные ячейки вставить циферки, а&nbsp;ещё и&nbsp;головой подумать. Ну&nbsp;и&nbsp;хотелось&nbsp;бы заданий, которые ближе к&nbsp;проектной работе, с&nbsp;которой сталкиваются профессиональные консультанты.</p>
+<p><strong>Экзамен</strong></p>
+<p>Я совершенно запутался с экзаменом.</p>
+<p>На сайте было сказано:</p>
+<blockquote>
+<p>Экзамен на&nbsp;получение сертификата 1й&nbsp;ступени. Онлайн тест на&nbsp;полтора часа + 15&nbsp;мин собеседование по&nbsp;скайпу. Для доступа к&nbsp;экзамену вы&nbsp;должны выполнить все домашки.</p>
+</blockquote>
+<p>Тестирование было, собеседование отменили&nbsp;— слишком много народа. Домашки все выполнил хорошо, а&nbsp;вот тест как-то провалил. Увы.</p>
+<blockquote>
+<p>Для сертификата консультанта «C» уровня надо дополнительно выполнить 2 тестовых проекта для клиентов.</p>
+</blockquote>
+<p>За&nbsp;сертификацию на&nbsp;консультанта нужно было доплатить 5 000₽&nbsp;— но&nbsp;тестовых проектов я&nbsp;так и&nbsp;не&nbsp;видел. Логично, что у&nbsp;меня нет клиентов и&nbsp;бизнеса собственного, но&nbsp;хотелось&nbsp;бы разобраться полноценно, как выглядят эти проекты и&nbsp;какие в&nbsp;них стоят задачи.</p>
+<p>А&nbsp;возможно, меня не&nbsp;допустили до&nbsp;этого экзамена, из-за того, что я&nbsp;плохо написал итоговый тест.</p>
+<p>Хотя где-то в&nbsp;чате, я&nbsp;ходил слух, что только после второго потока всех оплативших позовут сдавать экзамены на&nbsp;консультантов. В&nbsp;файлике «Материалы и&nbsp;ответы на&nbsp;вопросы по&nbsp;Университету»&nbsp;— ответа на&nbsp;вопрос про сертификацию консультантов, увы нет.</p>
+<h2>Что дальше?</h2>
+<p><a href="https://www.facebook.com/apometun">Андрей Пометун</a>, когда мы&nbsp;работали вместе, говорил, что знания забываются, если постоянно не&nbsp;обращаться к&nbsp;ним, для решения практических задач.</p>
+<p>Поскольку бизнеса у&nbsp;меня своего нет&nbsp;— я&nbsp;напросился на&nbsp;стажировку в&nbsp;«<a href="http://noboring-finance.ru/">Нескучные финанcы</a>»&nbsp;— их&nbsp;советовал Михаил.</p>
+<p>Ребята помогают бизнесу наводить порядок в&nbsp;финансах, внедрять управленческий учёт и&nbsp;строить финансовые модели, для поиска верных управленческих решений и&nbsp;диагностируют неполадки в&nbsp;бизнесе. Как миниму, это хороший способ узнать, что из&nbsp;себя представляет работа финансовым консультантом и&nbsp;с&nbsp;какими задачами чаще всего сталкиваются владельцы бизнеса в&nbsp;разных отраслях.</p>
+<p>Возможно, будет дневник или общий пост с&nbsp;итогами стажировки позже. Следите за&nbsp;обновлениями.</p>
+<h2>Провал и позорище</h2>
+<p>С&nbsp;тестом я&nbsp;конечно провалился. Но&nbsp;ничего, во&nbsp;втором потоке исправлюсь. Главное, что материал более-менее усвоил. А&nbsp;циферка в&nbsp;табличке покоя все-равно не&nbsp;даёт.</p>
+<h2>Тоже хочу уметь в управленческий учёт, что посоветуешь?</h2>
+<p>Я далеко не гуру, но для начала советую почитать следующее:</p>
+<h3>Бесплатно:</h3>
+<ol>
+<li><a href="https://megaproryv.ru/finance-free/">Бесплатные видео-уроки по&nbsp;финансовой грамотности</a> учебного центра «Мегапрорыв».<br>Помогут разобраться в&nbsp;том, как строить финансовую модель, разделять категории расходов и&nbsp;операций.</li>
+<li><a href="https://leads.noboring-finance.ru/knigaypravlenka">Базовый курс</a> для предпринимателей бюро «Нескучные финансы» в&nbsp;виде и-мейл-рассылки. Кроме-того почитывайте их&nbsp;«<a href="https://noboring-finance.ru/gazeta/">газету</a>»&nbsp;— там разбор рабочих ситуаций, практика управленческого учета, и&nbsp;ответы на&nbsp;вопросы с&nbsp;которыми сталкиваются предприниматели, при попытке разобраться в&nbsp;финансах.</li>
+<li><a href="https://subscribe.finolog.ru/">Бесплатная рассылка для предпринимателей</a> сервиса Финолог.</li>
+</ol>
+<h3>Платно</h3>
+<ol>
+<li>Электронные рассылки финолога</li>
+<li><a href="https://antibardak.finolog.ru/">Антибардак</a> — 3 500₽<br>Как навести порядок в&nbsp;финансах и&nbsp;четко понимать «где деньги», куда они уходят и&nbsp;с&nbsp;какой эффективностью.</li>
+<li><a href="https://budget.finolog.ru/">Бюджетирование</a> — 3 500₽ <br>В&nbsp;курсе рассказывают о&nbsp;том, как планировать и&nbsp;обкатывать процессы в&nbsp;бизнесе. Как увеличить точность планирования&nbsp;— продаж до&nbsp;95%, маркетинга с&nbsp;отклонением до&nbsp;2%. Это не&nbsp;волшебная таблетка, но&nbsp;хорошее руководство как сделать бизнес более предсказуемым и&nbsp;прозрачным для контроля.</li>
+<li><a href="https://motivation.finolog.ru/">Мотивация персонала</a> — 0₽<br>Рассылка бесплатная, расскажет о&nbsp;том, как выжимать из&nbsp;сотрудников больше, распознавать лентяев, искать баланс между материальной и&nbsp;нематериальной мотивацией. В&nbsp;конце курса&nbsp;— присылают методичку в .ПДФ с&nbsp;крутыми иллюстрациями. (Жаль в&nbsp;печатном варианте нет).</li>
+<li><a href="https://pravki.finolog.ru/">Правочки</a> — 3 500₽<br>Совместный проект <a href="http://web.archive.org/web/20171223035547/http://maximilyahov.ru/">Максима Ильяхова</a> и&nbsp;Михаила Смолянова&nbsp;— о&nbsp;том, как работать в&nbsp;проектном бизнесе с&nbsp;трудными клиентами. Не&nbsp;факапить, соблюдать дедлайны, добиваться приёма работы и&nbsp;окончательно оплаты.</li>
+</ol>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansy" class="link-novisited no-underline hover:underline">Финансы</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansovyj-menedzhment" class="link-novisited no-underline hover:underline">Финансовый менеджмент</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/obrazovanie" class="link-novisited no-underline hover:underline">Образование</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/kak-vesti-uchyot-nalichki-v-biznese-i-ne-svihnutsya/" itemprop="url"><span itemprop="name">Как&nbsp;вести учёт налички в&nbsp;бизнесе и&nbsp;не&nbsp;свихнуться</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2017-07-05T00:00:00.000Z">5 июля 2017 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 14 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>В&nbsp;управленческом учёте есть такой отчёт «Отчёт о&nbsp;движении денег»&nbsp;— он&nbsp;помогает сводить актуальные остатки, и&nbsp;видеть собственнику, куда ушли, и, откуда пришли деньги.</p>
+<figure><picture><source type="image/avif" srcset="/assets/img/cashflow-in-finance-managment-AfWfRzC8UY-400w.avif 400w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-550w.avif 550w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-700w.avif 700w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-850w.avif 850w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-1000w.avif 1000w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-1150w.avif 1150w" sizes="100vw"><source type="image/webp" srcset="/assets/img/cashflow-in-finance-managment-AfWfRzC8UY-400w.webp 400w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-550w.webp 550w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-700w.webp 700w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-850w.webp 850w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-1000w.webp 1000w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-1150w.webp 1150w" sizes="100vw"><img alt="Питер Брейгель Младший. Выплата десятины (1615)" loading="lazy" decoding="async" src="/assets/img/cashflow-in-finance-managment-AfWfRzC8UY-400w.jpeg" width="1150" height="672" srcset="/assets/img/cashflow-in-finance-managment-AfWfRzC8UY-400w.jpeg 400w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-550w.jpeg 550w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-700w.jpeg 700w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-850w.jpeg 850w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-1000w.jpeg 1000w, /assets/img/cashflow-in-finance-managment-AfWfRzC8UY-1150w.jpeg 1150w" sizes="100vw"></picture><figcaption>Питер Брейгель Младший. Выплата десятины (1615)</figcaption></figure>
+<p>В&nbsp;связке с&nbsp;платёжным календарём и&nbsp;другими отчётами это помогает правильно составлять бюджеты. Но&nbsp;об&nbsp;этом чуть позже.</p>
+<p>Уже месяц как я&nbsp;работаю в&nbsp;Нескучных финансах. Я&nbsp;помогаю предпринимателям внедрять управленческий учёт, и&nbsp;четко понимать, как работает их&nbsp;бизнес с&nbsp;точки зрения финансов.</p>
+<p>В&nbsp;целом работа над проектом по&nbsp;внедрению управленческого учёта всегда разбивается на&nbsp;несколько этапов. Один из&nbsp;которых, как раз собрать отчёт о&nbsp;движении денег.</p>
+<p>Если в&nbsp;ситуации с&nbsp;расчётным счётом все более-менее понятно: можно настроить нужные справочники в&nbsp;1с&nbsp;и&nbsp;забирать цифры для отчета оттуда. В&nbsp;крайнем случае можно сесть и&nbsp;разнести банковские выписки и&nbsp;платежные поручения руками.</p>
+<p>С&nbsp;наличкой ситуация сложнее. Если расчётных счетов немного, то&nbsp;наличка может жить на&nbsp;каком-то бесконечном количестве носителей&nbsp;— может быть пять карт, два сейфа, и&nbsp;ещё что-то под матрасом лежит.</p>
+<p>Если в&nbsp;случае с&nbsp;расчетными счетами банк сам хранит данные, то&nbsp;в&nbsp;учёте налички всё зачастую завязано на&nbsp;человеческом факторе и&nbsp;дисциплине&nbsp;— не&nbsp;записал выдачу наличных или оплату наличным&nbsp;— вспоминай где деньги.</p>
+<p>Пока я&nbsp;работал над проектами, встретил несколько ошибок, которые сильно тормозят работу. Так что давайте разберёмся&nbsp;— как с&nbsp;этим жить и&nbsp;вести учёт налички правильно.</p>
+<h2>Корпоративные деньги на&nbsp;личных картах</h2>
+<p>Довольно частая история, когда деньги из&nbsp;бизнеса выводятся на&nbsp;личные карты. Это чревато тем, что, когда деньги лежат на&nbsp;личной карте, личные деньги слипаюстся с&nbsp;корпоративными.</p>
+<p>Вечером, когда ты&nbsp;садишься разносить операции по&nbsp;статьям, в&nbsp;интернет-банке смешаны в&nbsp;кучу, твоя оплата обеда, покупка одежды детям и&nbsp;кофе в&nbsp;офис. Операций может быть десятки&nbsp;— и&nbsp;очень легко запутаться и&nbsp;забыть, когда ты&nbsp;брал что-то в&nbsp;офис и&nbsp;на&nbsp;компанию из&nbsp;корпоративных денег, а&nbsp;когда из&nbsp;личных. В&nbsp;результате можно легко ошибиться и&nbsp;записать в&nbsp;движение по&nbsp;компании, то&nbsp;что было личным и&nbsp;наоборот.</p>
+<p>Вторая проблема здесь, скорее личного плана. Когда на&nbsp;карте лежат корпоративные деньги в&nbsp;кучу с&nbsp;личными&nbsp;— велик соблазн потратить не&nbsp;свои деньги.</p>
+<blockquote>
+<p><strong>Совет:</strong><br>
+Под корпоративную наличку заводить отдельную карту. Чтобы операции по&nbsp;ней проходили только&nbsp;те, которые касаются организации.</p>
+</blockquote>
+<p>Так будет проще переносить данные по&nbsp;тратам в&nbsp;отчёт, легко сверять на&nbsp;опечатки и&nbsp;быстро находить ошибки в&nbsp;записи, если они возникли.</p>
+<h2>Неправильное отражение перевода со&nbsp;счёта в&nbsp;наличку</h2>
+<p>Как правило, все операции в&nbsp;отчёте о&nbsp;движении денег сводятся к&nbsp;трём видам деятельности&nbsp;— операционная, инвестиционная и&nbsp;финансовая.</p>
+<p>Когда, вы&nbsp;выводите деньги со&nbsp;счёта в&nbsp;наличку&nbsp;— это не&nbsp;операция. В&nbsp;этот момент денег в&nbsp;компании не&nbsp;становится ни&nbsp;больше не&nbsp;меньше&nbsp;— поэтому на&nbsp;такие случаи, есть строчка «Перевод со&nbsp;счёта (выбытие)» и&nbsp;Вход в&nbsp;наличку (поступление). Это технические операции необходимые для корректного расчета остатков на&nbsp;расчётнике и&nbsp;в&nbsp;наличке. Они не&nbsp;влияют на&nbsp;движение денег, но&nbsp;влияют на&nbsp;остатки на&nbsp;расчётных счетах.</p>
+<p>Самая популярная ошибка здесь, когда с&nbsp;расчётного счёта вышло больше&nbsp;— а&nbsp;в&nbsp;кассу зашло меньше.</p>
+<p>На&nbsp;самом деле операции «Перевод со&nbsp;счета» (выбытие) и&nbsp;«Вход в&nbsp;наличку» (поступления) должны быть равны. Но&nbsp;часто, по&nbsp;ошибке комиссии за&nbsp;вывод налички вписывают в&nbsp;эти операции.</p>
+<p>В&nbsp;результате чего со&nbsp;счета ушло 10 000₽, а&nbsp;в&nbsp;наличку вошло 9 000₽</p>
+<p>Для корректировки таких ситуаций есть статья «Комиссия за&nbsp;наличные»&nbsp;— она относится к&nbsp;операционнойдеятельности. так как влияет на&nbsp;движение денег.</p>
+<p>Правильно записать так, если комиссию считаем выбытием с&nbsp;расчётного счёта:</p>
+<div class="warp">
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right"><strong>С расчётника</strong></th>
+<th style="text-align:right"><strong>С кассы</strong></th>
+<th style="text-align:right"><strong>Неправильно</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Перевод со счёта (выбытие)</strong></td>
+<td style="text-align:right">—9&nbsp;000</td>
+<td style="text-align:right">—10&nbsp;000</td>
+<td style="text-align:right">—10&nbsp;000</td>
+</tr>
+<tr>
+<td><strong>Вход в наличку (поступление)</strong></td>
+<td style="text-align:right">+9 000</td>
+<td style="text-align:right">+10&nbsp;000</td>
+<td style="text-align:right">+9 000</td>
+</tr>
+<tr>
+<td><strong>Комиссия за наличные (р/с)</strong></td>
+<td style="text-align:right">—1&nbsp;000</td>
+<td style="text-align:right">—1&nbsp;000</td>
+<td style="text-align:right">Где ещё касарь?!</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Кроме того, часто встречается ошибка, когда оплату наличными включают в&nbsp;статью «Вход в&nbsp;наличку»&nbsp;— вместо того, чтобы разнести её&nbsp;по&nbsp;конкретной статье «оплата от&nbsp;клиента»&nbsp;— в&nbsp;таком случае, в&nbsp;конце месяца в&nbsp;сводном ДДС видно, что денег в&nbsp;кассу зашло больше, чем вышло с&nbsp;расчётного счёта.</p>
+<blockquote>
+<p><strong>Совет:</strong><br>
+Будьте внимательнее! В&nbsp;результате, когда построите сводный ОДДС по&nbsp;компании и&nbsp;всем счетам&nbsp;— у&nbsp;вас правильно сойдутся остатки.</p>
+</blockquote>
+<h2>Несколько ответственных и отсутствие договоренностей</h2>
+<p>Тоже один из&nbsp;проблемных моментов, когда за&nbsp;наличку отвечает сразу несколько человек.</p>
+<p>Часто это заканчивается тем, что некоторые вообще не&nbsp;знают, что у&nbsp;них есть корпоративные деньги или в&nbsp;случае, когда нужно сводить отчётность, нет доступа к&nbsp;движению по&nbsp;конкретному кошельку, или ответственный забыл их&nbsp;зафиксировать.</p>
+<blockquote>
+<p><strong>Совет:</strong><br>
+Договоритесь с&nbsp;коллегами, что играете по&nbsp;одинаковым правилам. Что&nbsp;те, у&nbsp;кого есть доступ к&nbsp;кошельку, сейфу, или какой-то части наличных денег обязаны отчитываться за&nbsp;них в&nbsp;конце дня.</p>
+</blockquote>
+<p>Иначе разбор полётов, и&nbsp;попытки разобраться «где деньги» будут съедать больше времени, чем корректное ведение учёта.</p>
+<h2>Отсутствие ежедневной фиксации</h2>
+<p>Ещё одна проблема, когда движения по&nbsp;кассе фиксируются от&nbsp;случая к&nbsp;случаю, а&nbsp;не&nbsp;каждый день. Потом когда, приходит время разнести операции их&nbsp;уже так много, что вникать в&nbsp;каждую уже просто лень, и&nbsp;тут возможны ошибки, когда не&nbsp;хочется думать и&nbsp;цифры переносятся только ради того, чтобы свести остаток.</p>
+<p>В&nbsp;результате, остатки показываются верно, а&nbsp;само движение по&nbsp;статьям далеко от&nbsp;реальности&nbsp;— из-за подобных ошибок, в&nbsp;дальнейшем может произойти неправильное распределение бюджетов.</p>
+<p>В&nbsp;таком случае придётся тратить время на&nbsp;то, чтобы сверять руками операции за&nbsp;последние пол-года. Только таким способом будет реально выяснить, по&nbsp;каким статьям были такие аномальные сдвиги. А&nbsp;это может занимать до&nbsp;недели работы, так как операций может быть больше тысячи.</p>
+<blockquote>
+<p><strong>Совет:</strong><br>
+Заведите привычку переносить данные по&nbsp;операциям в&nbsp;движении денег в&nbsp;конце дня и&nbsp;сверять остаток, который показывает ДДС с&nbsp;тем, который по&nbsp;факту лежит в&nbsp;сейфе или на&nbsp;карте.</p>
+</blockquote>
+<p>Это поможет быстро выявлять ошибки и&nbsp;опечатки и&nbsp;сэкономит время в&nbsp;будущем. Так как найти опечатки&nbsp;— самое сложное, что может случится при проверке отчёта ДДС.</p>
+<h3>Запомните:</h3>
+<ul>
+<li>— Храните корпоративные деньги отдельно от&nbsp;личных.</li>
+<li>Внимательно относитесь, к&nbsp;отражению операций по&nbsp;выходу с&nbsp;расчётного счёта и&nbsp;поступлению в&nbsp;наличку&nbsp;— они должны совпадать.</li>
+<li>Заведите привычку переносить операции в&nbsp;конце дня и&nbsp;не&nbsp;откладывать на&nbsp;потом.</li>
+<li>Если за&nbsp;разные кошельки ответственны разные люди договоритесь с&nbsp;ними, как будете фиксировать движения по&nbsp;картам.</li>
+</ul>
+<p>Если вы&nbsp;хотите только начать внедрять управленческий учёт, почитайте <a href="https://noboring-finance.ru/gazeta">статьи коллег</a> о&nbsp;том, как начать учёт финансов или подпишитесь&nbsp;на <a href="https://noboring-finance.ru/upravlenka-download/">базовый курс по&nbsp;финансам</a>.</p>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansy" class="link-novisited no-underline hover:underline">Финансы</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansovyj-menedzhment" class="link-novisited no-underline hover:underline">Финансовый менеджмент</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<div class="mb-16" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <h2 class="text-2xl sm:text-4xl font-bold leading-tight sm:leading-10">
+    <a class="link-novisited no-underline hover:underline" href="/posts/bezopasnost-pri-najme-finmenedzhera/" itemprop="url"><span itemprop="name">Безопасность при&nbsp;найме финменеджера</span></a>
+  </h2>
+  <div>
+  <em><time itemprop="datePublished" datetime="2017-04-05T00:00:00.000Z">5 апреля 2017 г.</time></em><span class="text-base font-normal"> · Время чтения ≈ 4 мин</span>
+  </div>
+  <div itemprop="articleBody"><p>Когда мы&nbsp;в&nbsp;Нескучных финансах внедряем управленческий учёт, мы&nbsp;говорим собственнику, о&nbsp;том, что нам на&nbsp;его стороне понадобиться человек, который будет отвечать за&nbsp;предоставление данных.</p>
+<p>Мы&nbsp;в&nbsp;нескучных убеждены, что задача собственника и&nbsp;руководителя управлять, а&nbsp;не&nbsp;собирать цифры. Поэтому мы&nbsp;считаем важным, чтобы собственник делегировал сбор данных другому сотруднику, а&nbsp;сам сосредоточился на&nbsp;оперативном управлении.</p>
+<p>Но&nbsp;когда мы&nbsp;об&nbsp;этом говорим на&nbsp;встречах, встречаем вопрос, как доверить стороннему человеку финансы компании. Вдруг он&nbsp;будет подворовывать, или сливать данные посторонним?</p>
+<p>Опасения понятны. Бизнес&nbsp;— это про риски. Так давайте разберёмся, как эти риски свести к&nbsp;минимуму.</p>
+<h2>Оставить проведение платежей за&nbsp;собой</h2>
+<p>Вы проводите платежи, а&nbsp;менеджеру отдаёте выписки, для того, чтобы он&nbsp;корректно фиксировал суммы в&nbsp;отчётах.</p>
+<p>Таким образом, ваш финансовый менеджер не&nbsp;имеет доступа к&nbsp;деньгам, но&nbsp;в&nbsp;курсе того, как они движутся. Этого достаточно для продуктивной работы.</p>
+<h2>Нанять человека из&nbsp;штата</h2>
+<p>Возможно, у&nbsp;вас есть человек, который давно работает в&nbsp;компании на&nbsp;более низкой должности.</p>
+<p>Вы&nbsp;доверяете ему, он&nbsp;доверяет вам. Почему&nbsp;бы его не&nbsp;повысить? Свой человек, возможно, лучше, чем человек со&nbsp;стороны.</p>
+<h2>Подписать соглашение о неразглашении</h2>
+<p>Финансы компании&nbsp;— коммерческая тайна, и&nbsp;правильно защищать такие данные. Заключите с&nbsp;сотрудником Договор о&nbsp;неразглашении информации.</p>
+<p>Воспользуйтесь <a href="https://docs.google.com/document/d/1gLLtLLNhx6T0uyt_Lna4cGxwbwjt1aceMifyyCYy6OI/edit">примером НДА</a>, который предлагают в Центре управления законом. Внесите свои данные, реквизиты, скорректируйте условия под свой бизнес.</p>
+<p>Этот документ имеет юридическую силу. И&nbsp;в&nbsp;случае чего сможет защитить вас уже в&nbsp;суде.</p>
+<h2>Запомните:</h2>
+<ul>
+<li>Берите проведение платежей на&nbsp;себя, а&nbsp;менеджеру отдавайте только выписки.</li>
+<li>По возможности, ставьте на&nbsp;должность человека, с&nbsp;которым работаете уже давно. Подписывайте соглашение о&nbsp;конфиденциальности.</li>
+</ul>
+</div>
+
+  <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+    <div class="pr-4">
+      
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansy" class="link-novisited no-underline hover:underline">Финансы</a></span>
+      
+      
+      
+      <span class="pr-2"><a href="/tags/finansovyj-menedzhment" class="link-novisited no-underline hover:underline">Финансовый менеджмент</a></span>
+      
+      
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+<nav class="flex justify-stretch mt-8">
+  <div class="inline-flex">
+    
+    <a id="latestPosts" href="/posts/">
+      <div aria-label="Посмотреть посты опубликованные Ранее">Ранее</div>
+    </a>
+    <div><small class="text-gray-500">&nbsp;Ctrl&nbsp;↑</small></div>
+
+     
+    <div class="hidden">Позднее ↓</div>
+    
+  </div>
+</nav>
+
+      
+      </main>
+      
+      <footer class="mt-4">
+  <div class="mx-auto  pb-10">
+
+      <!---->
+      <div class="flex flex-wrap content-center">
+        <div class="flex items-center link-novisited no-underline hover:text-social-mastodon dark:hover:text-social-mastodon mr-6">
+          <i class="lab la-mastodon text-2xl"></i>
+          <a href="https://mastodon.ml/@dmitriyfourier" class="link-novisited">Мастадон</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-linkedin dark:hover:text-social-linkedin mr-6">
+          <i class="lab la-linkedin text-2xl no-underline"></i>
+            <a href="https://www.linkedin.com/in/dmitriyfourier/" class="link-novisited">ЛинкедИн</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-instagram dark:hover:text-social-instagram mr-6">
+          <i class="lab la-instagram text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Инстаграм</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-youtube dark:hover:text-social-youtube mr-6">
+          <i class="lab la-youtube text-2xl no-underline"></i>
+          <a href="https://www.youtube.com/c/DmitriyFurye" class="link-novisited">Ютуб</a>
+        </div>
+
+        <div class="flex items-center link-novisited no-underline hover:text-social-telegram dark:hover:text-social-telegram mr-6">
+          <i class="lab la-telegram text-2xl no-underline">
+            <a href="https://t.me/FourierNotesRU" class="link-novisited"></a></i><a href="https://t.me/FourierNotesRU" class="link-novisited">Телеграм</a>
+        </div>
+
+        <div class="flex items-center sm:grow link-novisited no-underline hover:text-social-epicgames dark:hover:text-social-steam-dark mr-6">
+          <i class="lab la-steam text-2xl no-underline"></i>
+            <a href="https://steamcommunity.com/id/DmitriyFourier" class="link-novisited">Стим</a>
+        </div>
+        <div class="flex items-center link-novisited no-underline hover:text-mk-background">
+          <a href="/donation">
+            <button class="outline-solid outline-offset-2 outline-1 rounded-sm">
+              <div class="px-1 flex items-center">
+                <i class="text-2xl las la-piggy-bank"></i></div>
+            </button></a>
+        </div>
+      </div>
+     
+      <p class="text-sm py-2">
+        <!--Добавляем автора сайта-->
+        <span class="space-out-bottom-mili-xs">© Дмитрий Фурье × </span>
+        <!--Добавляем копирайт на сайт и даты-->
+        <span>2017 — 2026</span> </p>
+  </div>
+</footer>
+
+      <script>
+        document.getElementById("toggleDarkMode").addEventListener("change", function() {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+        });
+      </script>
+      <script>
+document.addEventListener('keydown', function(event) {
+  // Проверяем, что нажата клавиша Ctrl
+  if (event.ctrlKey) {
+    // Проверяем, какая стрелка нажата
+    if (event.key === 'ArrowDown') {
+      // Ctrl + стрелка вниз
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var prevLink = document.getElementById('earlierPosts');
+      if (prevLink) {
+        window.location.href = prevLink.href;
+      }
+    } else if (event.key === 'ArrowUp') {
+      // Ctrl + стрелка вверх
+      event.preventDefault(); // Предотвращаем стандартное действие браузера
+      var nextLink = document.getElementById('latestPosts');
+      if (nextLink) {
+        window.location.href = nextLink.href;
+      }
+    }
+  }
+});
+</script>
+  
+</body></html>
