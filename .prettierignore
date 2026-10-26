@@ -25,3 +25,6 @@ src/_partials/og.liquid
 # fix the markup first, then remove these lines
 src/404.html
 src/Everything-Everywhere-All-at-Once.liquid
+
+# Plain-text output (llms.txt), not HTML
+src/llms.liquid
