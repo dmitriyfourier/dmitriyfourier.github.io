@@ -58,6 +58,9 @@ const postFolder = (inputPath) => {
   return path.basename(dir) === path.parse(inputPath).name ? dir : null;
 };
 
+// Files in a post folder that Eleventy builds itself rather than copies
+const POST_TEMPLATE_FILES = /\.(md|liquid|html|njk|json|11tydata\.js)$/i;
+
 // A file referenced relatively from a post in its own folder, or null
 const postFile = (page, ref) => {
   if (!page?.inputPath || !ref || /^([a-z][a-z\d+.-]*:|\/|#)/i.test(ref)) {
@@ -176,6 +179,16 @@ module.exports = function (eleventyConfig) {
       tokens[idx].attrSet("src", inputUrl(file));
     }
     return renderImage(tokens, idx, options, env, self);
+  };
+  // [report](report.pdf) points to the copy next to the page (see
+  // "Files from post folders" below); the full path keeps the link
+  // working in the feed and on tag pages too
+  md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+    const href = tokens[idx].attrGet("href");
+    if (postFile(env.page, href)) {
+      tokens[idx].attrSet("href", `${env.page.url}${href}`);
+    }
+    return self.renderToken(tokens, idx, options);
   };
   eleventyConfig.setLibrary("md", md);
 
@@ -369,6 +382,29 @@ module.exports = function (eleventyConfig) {
       }
     }
     usedImages.clear();
+  });
+
+  // Files from post folders: everything next to a post that isn't a
+  // template or data file is copied next to its page, so
+  // src/posts/2024/06/my-post/report.pdf is served at /posts/my-post/report.pdf
+  eleventyConfig.addWatchTarget(`${INPUT_DIR}/posts/`);
+  eleventyConfig.on("eleventy.after", ({ directories, results }) => {
+    for (const { inputPath, url } of results) {
+      const dir = postFolder(inputPath);
+      if (!dir || !url) {
+        continue;
+      }
+      for (const name of fs.readdirSync(dir)) {
+        if (name.startsWith(".") || POST_TEMPLATE_FILES.test(name)) {
+          continue;
+        }
+        fs.cpSync(
+          path.join(dir, name),
+          path.join(directories.output, url, name),
+          { recursive: true }
+        );
+      }
+    }
   });
 
   // Convert the social preview SVGs into JPEGs next to them
