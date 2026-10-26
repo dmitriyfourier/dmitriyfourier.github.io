@@ -3,7 +3,6 @@ layout: post
 title: Как телеграм снижает доступность информации.
 desc: С ростом популярности телеграм-каналов информация не попадает в поисковый индекс
 date: 2024-06-12
-url: why-i-dont-like-telegram-channels
 cover: "telegram-degradation.png"
 tags:
   - Медиа

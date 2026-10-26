@@ -10,15 +10,15 @@ pagination:
 ---
 {% for post in pagination.items %}
   {% if post.data.published %}
-    <div class="mb-16" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="mb-16">
       <h2 class="text-2xl leading-tight font-bold sm:text-4xl sm:leading-10">
-        <a class="link-novisited no-underline hover:underline" href="{{ post.url }}" itemprop="url"
-          ><span itemprop="name">{{ post.data.title }}</span></a
-        >
+        <a class="link-novisited no-underline hover:underline" href="{{ post.url }}">
+          {{- post.data.title -}}
+        </a>
       </h2>
       <div>
         <em
-          ><time itemprop="datePublished" datetime="{{ post.date | dateIso }}">
+          ><time datetime="{{ post.date | dateIso }}">
             {{- post.date | dateReadable -}}
           </time></em
         ><span
@@ -27,7 +27,7 @@ pagination:
           &middot; Время чтения ≈ {{ post.templateContent | readTime }} мин</span
         >
       </div>
-      <div itemprop="articleBody">{{ post.templateContent | lazyImages }}</div>
+      <div>{{ post.templateContent | lazyImages }}</div>
 
       <div class="mt-4 flex flex-nowrap items-center text-2xl md:text-lg lg:text-xl xl:text-2xl">
         <div class="pr-4">

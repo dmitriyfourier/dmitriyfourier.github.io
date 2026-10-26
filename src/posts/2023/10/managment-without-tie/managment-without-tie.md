@@ -3,7 +3,6 @@ layout: post
 title: Менеджмент без короны и галстука
 desc: Как управлять компанией, когда вертикальные связи не эффектвны.
 date: 2023-10-26
-url: managment-without-tie
 cover: "horizontal-mgmt-OG.png"
 tags:
   - Управление

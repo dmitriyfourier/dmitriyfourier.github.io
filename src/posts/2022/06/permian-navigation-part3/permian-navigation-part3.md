@@ -3,7 +3,6 @@ layout: post
 title: Уличная навигация в Перми [Часть 3] × Переписка с разработчиками проекта
 desc: Как спустя почти 10 лет, найти что-то похожее на исходники файлов и шаблонов.
 date: 2022-06-15
-url: permian-navigation-part3
 categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - Домоуправление

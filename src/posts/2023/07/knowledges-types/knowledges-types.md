@@ -3,7 +3,6 @@ layout: post
 title: Типы знаний в Knowledge Managment
 desc: Важная штука, при разработке базы знаний.
 date: 2023-07-12
-url: knowledges-types
 cover: "kniwledge-types-og.jpg"
 categories: ["База знаний", "Knoweledge managment", "Управление"]
 tags:

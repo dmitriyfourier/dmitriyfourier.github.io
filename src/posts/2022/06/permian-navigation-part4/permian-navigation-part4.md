@@ -3,7 +3,6 @@ layout: post
 title: Уличная навигация в Перми [Часть 4] × Существующая навигация
 desc: Набор примеров того, как выглядит уличная навигация сегодня.
 date: 2022-06-18
-url: permian-navigation-part4
 categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - Домоуправление

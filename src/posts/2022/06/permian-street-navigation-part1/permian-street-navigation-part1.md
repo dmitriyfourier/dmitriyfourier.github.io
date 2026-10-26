@@ -3,7 +3,6 @@ layout: post
 title: О недоделанной Пермской уличной навигации [Часть 1] × Предпосылки
 desc: О том, зачем Перми нужна тотальное обновление стандартов уличной навигации.
 date: 2022-06-04
-url: permian-street-navigation-part1
 categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - Домоуправление
