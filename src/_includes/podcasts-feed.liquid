@@ -3,17 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ desc }}">
-    <meta name="author" content="{{ site.author }}">
-    <!-- links -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-    <link rel="me" href="{{ site.mastodon }}">
+    {% include '_partials/meta.liquid' %}
     {% include '_partials/fonts.liquid' %}
     {% include '_partials/favicons.liquid' %}
     {% include '_partials/alternates.liquid' %}
-    <!-- styles -->
+    <link rel="me" href="{{ site.mastodon }}">
     <link href="/assets/styles/tailwind.css?v={{ build.version }}" rel="stylesheet" />
     {% include '_partials/theme-init.liquid' %}
   </head>
