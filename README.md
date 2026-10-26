@@ -28,6 +28,12 @@ Build the production site into `_site/`:
 npm run build
 ```
 
+Format templates and styles with Prettier; it also sorts Tailwind classes. Post content and JavaScript are left alone (JavaScript follows ESLint):
+
+```sh
+npm run format
+```
+
 ## Writing posts
 
 Create a post in `src/posts/YYYY/MM/` from a title:

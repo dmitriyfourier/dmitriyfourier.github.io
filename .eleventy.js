@@ -277,7 +277,7 @@ module.exports = function (eleventyConfig) {
   // Post lists: posts embedded in a list must not compete for the first screen
   eleventyConfig.addFilter("lazyImages", (html) =>
     typeof html === "string"
-      ? html.replace(/ loading="eager"| fetchpriority="high"/g, "")
+      ? html.replace(/\s+(?:loading="eager"|fetchpriority="high")/g, "")
       : html
   );
 

@@ -2,33 +2,34 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-  	<meta name='viewport' content='width=device-width'>
+    <meta name="viewport" content="width=device-width">
 
     <title>{{ title }}</title>
-    <meta name='description' content="{{ desc }}">
-  <meta name="author" content="{{ site.author }}">
-    <!--links-->
+    <meta name="description" content="{{ desc }}">
+    <meta name="author" content="{{ site.author }}">
+    <!-- links -->
     <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
     <link rel="me" href="{{ site.mastodon }}">
-  {% include "_partials/fonts.liquid" %}
-  {% include "_partials/favicons.liquid" %}
-    <!--styles-->
+    {% include '_partials/fonts.liquid' %}
+    {% include '_partials/favicons.liquid' %}
+    <!-- styles -->
     <link href="/assets/styles/tailwind.css" rel="stylesheet" />
-    {% include "_partials/theme-init.liquid" %}
+    {% include '_partials/theme-init.liquid' %}
   </head>
- 
-<body>
-  {% include "_partials/header.liquid" %}
-      <main id="main" tabindex="-1">
-        {% unless content contains "<h1" %}<h1 class="sr-only">{{ title }}</h1>{% endunless %}
-        
-        {{ content }}
-      
-      </main>
-      
-  {% include "_partials/footer.liquid" %}
 
-  <script src="/assets/scripts/theme.js"></script>
-  <script src="/assets/scripts/hotkeys.js"></script>
+  <body>
+    {% include '_partials/header.liquid' %}
+    <main id="main" tabindex="-1">
+      {% unless content contains '<h1' %}
+        <h1 class="sr-only">{{ title }}</h1>
+      {% endunless %}
+
+      {{ content }}
+    </main>
+
+    {% include '_partials/footer.liquid' %}
+
+    <script src="/assets/scripts/theme.js"></script>
+    <script src="/assets/scripts/hotkeys.js"></script>
   </body>
 </html>

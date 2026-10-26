@@ -5,7 +5,7 @@
   Output: _site/assets/styles/tailwind.css
 */
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
   Harmony palette (github.com/evilmartians/harmony): replaces Tailwind's
@@ -14,14 +14,14 @@
   every hue: on white, 600 ≈ Lc 65, 700 ≈ Lc 77, 800 ≈ Lc 90; on near-black,
   400 ≈ Lc 65, 300 ≈ Lc 77, 200 ≈ Lc 90.
 */
-@import '@evilmartians/harmony/tailwind.css';
+@import "@evilmartians/harmony/tailwind.css";
 
 /* Site styles go into the base layer so Tailwind utilities can override them */
-@import './src/assets/styles/fonts.css' layer(base);
-@import './src/assets/styles/bettertext.css' layer(base);
-@import './src/assets/styles/links.css' layer(base);
-@import './src/assets/styles/fotorama.css' layer(base);
-@import './src/assets/styles/line-awesome.css' layer(base);
+@import "./src/assets/styles/fonts.css" layer(base);
+@import "./src/assets/styles/bettertext.css" layer(base);
+@import "./src/assets/styles/links.css" layer(base);
+@import "./src/assets/styles/fotorama.css" layer(base);
+@import "./src/assets/styles/line-awesome.css" layer(base);
 
 /* `dark:` follows a .dark class on a parent instead of the OS setting */
 @custom-variant dark (&:is(.dark *));
@@ -40,19 +40,19 @@
 */
 @theme {
   --color-bg: #fff;
-  --color-surface: var(--color-sand-50);     /* cards, tag chips */
-  --color-fg: var(--color-sand-950);         /* Lc 105 */
-  --color-muted: var(--color-sand-700);      /* dates, captions: Lc 77 */
-  --color-border: var(--color-sand-300);     /* Lc 26 */
-  --color-accent: var(--color-amber-500);    /* blockquote bar: Lc 48 */
-  --color-focus: var(--color-blue-600);      /* focus outline: Lc 65 */
+  --color-surface: var(--color-sand-50); /* cards, tag chips */
+  --color-fg: var(--color-sand-950); /* Lc 105 */
+  --color-muted: var(--color-sand-700); /* dates, captions: Lc 77 */
+  --color-border: var(--color-sand-300); /* Lc 26 */
+  --color-accent: var(--color-amber-500); /* blockquote bar: Lc 48 */
+  --color-focus: var(--color-blue-600); /* focus outline: Lc 65 */
   --color-selection: var(--color-amber-200); /* text on it: Lc 89 */
 
-  --color-link: var(--color-blue-700);                 /* Lc 77 */
-  --color-link-hover: var(--color-blue-800);           /* Lc 90 */
-  --color-link-visited: var(--color-purple-700);       /* Lc 77 */
+  --color-link: var(--color-blue-700); /* Lc 77 */
+  --color-link-hover: var(--color-blue-800); /* Lc 90 */
+  --color-link-visited: var(--color-purple-700); /* Lc 77 */
   --color-link-visited-hover: var(--color-purple-800); /* Lc 90 */
-  --color-link-active: var(--color-orange-700);        /* Lc 77 */
+  --color-link-active: var(--color-orange-700); /* Lc 77 */
 
   /* Brand colors for social icons on hover */
   --color-social-mastodon: #6364ff;
@@ -97,18 +97,18 @@
   .dark {
     --color-bg: var(--color-sand-950);
     --color-surface: var(--color-sand-900);
-    --color-fg: var(--color-sand-100);         /* Lc 99 */
-    --color-muted: var(--color-sand-300);      /* Lc 77 */
-    --color-border: var(--color-sand-700);     /* Lc 24 */
-    --color-accent: var(--color-amber-400);    /* Lc 65 */
-    --color-focus: var(--color-amber-400);     /* Lc 65 */
+    --color-fg: var(--color-sand-100); /* Lc 99 */
+    --color-muted: var(--color-sand-300); /* Lc 77 */
+    --color-border: var(--color-sand-700); /* Lc 24 */
+    --color-accent: var(--color-amber-400); /* Lc 65 */
+    --color-focus: var(--color-amber-400); /* Lc 65 */
     --color-selection: var(--color-amber-800); /* text on it: Lc 86 */
 
-    --color-link: var(--color-amber-300);               /* Lc 77 */
-    --color-link-hover: var(--color-amber-200);         /* Lc 90 */
-    --color-link-visited: var(--color-green-300);       /* Lc 77 */
+    --color-link: var(--color-amber-300); /* Lc 77 */
+    --color-link-hover: var(--color-amber-200); /* Lc 90 */
+    --color-link-visited: var(--color-green-300); /* Lc 77 */
     --color-link-visited-hover: var(--color-green-200); /* Lc 89 */
-    --color-link-active: var(--color-orange-300);       /* Lc 77 */
+    --color-link-active: var(--color-orange-300); /* Lc 77 */
 
     /* Native controls and scrollbars follow the theme */
     color-scheme: dark;
@@ -184,7 +184,7 @@
   @apply sr-only;
 }
 .skip-link:focus {
-  @apply not-sr-only fixed top-2 left-2 z-50 px-3 py-2 rounded-sm bg-bg text-fg;
+  @apply not-sr-only fixed top-2 left-2 z-50 rounded-sm bg-bg px-3 py-2 text-fg;
 }
 
 /* <main> takes focus from the skip link; it isn't a control, so no outline */

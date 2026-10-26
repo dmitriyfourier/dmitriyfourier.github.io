@@ -6,60 +6,58 @@ date: 2015-06-04
 changefreq: Weekly
 priority: "0.8"
 ---
-
-{% include "_partials/about.liquid" %}
+{% include '_partials/about.liquid' %}
 
 <h2 class="text-2xl font-bold">Наговорил</h2>
 <div class="warp pb-4">
   <div class="flex">
     {%- for podcast in collections.podcasts -%}
-
-    <div class="flex space-x-4 shrink-0">
-      <div class="shrink-0 py-2 px-2">
-        <a href="{{ podcast.url }}" class="link-novisited" tabindex="-1" aria-hidden="true">
-          <figure
-            class="size-24 rounded-full outline-1 outline-offset-2 hover:outline-2"
-          >
-            <img
-              src="{{ podcast.data.pdcastimg }}"
-              alt=""
-              class="rounded-full" loading="eager" sizes="96px" eleventy:widths="96,192,288"
-            />
-          </figure>
-        </a>
+      <div class="flex shrink-0 space-x-4">
+        <div class="shrink-0 px-2 py-2">
+          <a href="{{ podcast.url }}" class="link-novisited" tabindex="-1" aria-hidden="true">
+            <figure
+              class="size-24 rounded-full outline-1 outline-offset-2 hover:outline-2"
+            >
+              <img
+                src="{{ podcast.data.pdcastimg }}"
+                alt=""
+                class="rounded-full"
+                loading="eager"
+                sizes="96px"
+                eleventy:widths="96,192,288"
+              />
+            </figure>
+          </a>
+        </div>
+        <div class="max-w-xs flex-none">
+          <h2 class="mt-0 text-lg font-semibold">
+            <a href="{{ podcast.url }}" class="link-novisited">{{ podcast.data.title }}</a>
+          </h2>
+          <p class="text-lg">{{ podcast.data.desc }}</p>
+        </div>
       </div>
-      <div class="max-w-xs flex-none">
-        <h2 class="text-lg font-semibold mt-0">
-          <a href="{{ podcast.url }}" class="link-novisited"
-            >{{ podcast.data.title }}</a
-          >
-        </h2>
-        <p class="text-lg">{{ podcast.data.desc}}</p>
-      </div>
-    </div>
-
     {%- endfor -%}
   </div>
 </div>
-<h2 class="text-2xl font-bold mb-1">Делюсь знаниями</h2>
+<h2 class="mb-1 text-2xl font-bold">Делюсь знаниями</h2>
 <p class="pb-3">Оналайн-курсы, вебинары и другие образовательные материалы.</p>
 <div class="container">
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
+    class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
   >
     <ul class="m-0 p-0">
       <li>
-        <a href="https://kypc.adesk.ru/"
-          ><figure class="m-0 p-0">
+        <a href="https://kypc.adesk.ru/">
+          <figure class="m-0 p-0">
             <img
               src="/assets/img/fc-prew.png"
               alt=""
               loading="eager"
               sizes="(min-width: 1536px) 496px, (min-width: 768px) 31vw, (min-width: 640px) 47vw, calc(96vw - 40px)"
-              class="rounded-md hover:scale-105 hover:rotate-2 hover:shadow-sm transition-all duration-300"
+              class="rounded-md transition-all duration-300 hover:scale-105 hover:rotate-2 hover:shadow-sm"
             />
             <figcaption class="text-base">
-              Онлайн-курс по управленческому учету для предпринимателей
+              Онлайн-курс по управленческому учету для предпринимателей
             </figcaption>
           </figure>
         </a>
@@ -68,37 +66,41 @@ priority: "0.8"
   </div>
 </div>
 
-<h2 class="text-2xl font-bold mb-1">Написал</h2>
+<h2 class="mb-1 text-2xl font-bold">Написал</h2>
 
-{%- for post in collections.posts-%} {% if forloop.last %}
-<p>
-  <span class="font-medium">Свежее в блоге 🔥:</span><br /><a
-    href="{{ post.url }}"
-    >{{ post.data.title }}</a
-  >
-</p>
-{% endif %} {%- endfor -%}
+{%- for post in collections.posts -%}
+  {% if forloop.last %}
+    <p>
+      <span class="font-medium">Свежее в блоге 🔥:</span><br
+      /><a
+        href="{{ post.url }}"
+      >
+        {{- post.data.title -}}
+      </a>
+    </p>
+  {% endif %}
+{%- endfor -%}
 <hr />
-<!--Тест-->
+<!-- Тест -->
 <div class="container mb-7">
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
   >
     <div>
-      <h3 class="text-xl font-bold mb-4">Про Финансы</h3>
+      <h3 class="mb-4 text-xl font-bold">Про Финансы</h3>
       <ul class="space-y-2">
         <li>
           <a href="/posts/kak-vesti-uchyot-nalichki-v-biznese-i-ne-svihnutsya/"
-            >Как вести учёт налички в бизнесе и не свихнуться</a
+            >Как вести учёт налички в бизнесе и не свихнуться</a
           >
         </li>
         <li>
           <a href="/posts/bezopasnost-pri-najme-finmenedzhera/"
-            >Безопасность при найме финансового менеджера</a
+            >Безопасность при найме финансового менеджера</a
           >
         </li>
         <li>
-          <h3 class="text-xl font-bold mb-4">
+          <h3 class="mb-4 text-xl font-bold">
             Для <a href="https://noboring-finance.ru/">Нескучных финансов</a>
           </h3>
         </li>
@@ -113,9 +115,7 @@ priority: "0.8"
           >
         </li>
         <li>
-          <a href="https://noboring-finance.ru/gazeta/debitorka"
-            >Правила жизни с дебеторкой</a
-          >
+          <a href="https://noboring-finance.ru/gazeta/debitorka">Правила жизни с дебеторкой</a>
         </li>
         <li>
           <a href="https://noboring-finance.ru/gazeta/ebitda"
@@ -123,14 +123,14 @@ priority: "0.8"
           >
         </li>
         <li>
-          <h3 class="text-xl font-bold mb-4">
-            Для сервиса «<a href="https://adesk.ru/?pc=a82b9">Adesk</a>»
+          <h3 class="mb-4 text-xl font-bold">
+            Для сервиса «<a href="https://adesk.ru/?pc=a82b9">Adesk</a>»
           </h3>
         </li>
         <li>
           <a
             href="https://adesk.ru/blog/kak-pobedit-soglasovanie-platezhei-v-kompanii/"
-            >Как победить согласование платежей в компании</a
+            >Как победить согласование платежей в компании</a
           >
         </li>
         <li>
@@ -143,26 +143,19 @@ priority: "0.8"
     </div>
 
     <div>
-      <h3 class="text-xl font-bold mb-4">
-        Для <a href="https://zhiza.evotor.ru/">Эвотора</a>
-      </h3>
+      <h3 class="mb-4 text-xl font-bold">Для <a href="https://zhiza.evotor.ru/">Эвотора</a></h3>
       <ul class="space-y-2">
-        <li>
-          Совместные цикл статей, о том, как маленький бизнес разбирается с
-          управленкой
-        </li>
+        <li>Совместные цикл статей, о том, как маленький бизнес разбирается с управленкой</li>
         <li>
           <a
             href="https://zhiza.evotor.ru/vlozhitsya-i-ne-pozhalet-schitaem-effektivnost-reklamnoj-kampanii-do-eyo-nachala/"
-            >Считаем деньги: как вовремя понять, что бизнес идёт не так хорошо,
-            как кажется.</a
+            >Считаем деньги: как вовремя понять, что бизнес идёт не так хорошо, как кажется.</a
           >
         </li>
         <li>
           <a
             href="https://zhiza.evotor.ru/skolko-vy-mozhete-vzyat-iz-kassy-schitaem-dengi-ot-prodazh-do-chistoj-pribyli-2/"
-            >Сколько вы можете взять из кассы: считаем деньги от продаж до
-            чистой прибыли</a
+            >Сколько вы можете взять из кассы: считаем деньги от продаж до чистой прибыли</a
           >
         </li>
         <li>
@@ -180,8 +173,7 @@ priority: "0.8"
         <li>
           <a
             href="https://zhiza.evotor.ru/vlozhitsya-i-ne-pozhalet-schitaem-effektivnost-reklamnoj-kampanii-do-eyo-nachala/"
-            >Вложиться и не пожалеть: считаем эффективность рекламной кампании
-            до её начала.</a
+            >Вложиться и не пожалеть: считаем эффективность рекламной кампании до её начала.</a
           >
         </li>
         <li>
@@ -193,8 +185,7 @@ priority: "0.8"
         <li>
           <a
             href="https://zhiza.evotor.ru/tochka-bezubytochnosti-skolko-nuzhno-prodat-chtoby-vybratsya-iz-minusa/"
-            >Точка безубыточности: сколько нужно продать, чтобы выбраться из
-            минуса</a
+            >Точка безубыточности: сколько нужно продать, чтобы выбраться из минуса</a
           >
         </li>
         <li>
@@ -251,6 +242,7 @@ priority: "0.8"
           <li><a href=""></a></li>
           <li><a href=""></a></li>
         </ul>
-      </div>-->
+      </div>
+    -->
   </div>
 </div>

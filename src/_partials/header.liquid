@@ -9,17 +9,30 @@
       <div id="nav-menu" class="order-1 w-full sm:flex sm:w-auto">
         <ul class="items-center justify-between sm:flex">
           <li class="mx-auto flex max-w-(--breakpoint-2xl) flex-wrap items-center justify-between">
-            {%- if variant == "blog" %}
-            <span class="ml-0.5 font-semibold whitespace-nowrap text-fg">Блог Димы Фурье</span>
+            {%- if variant == 'blog' %}
+              <span class="ml-0.5 font-semibold whitespace-nowrap text-fg">Блог Димы Фурье</span>
             {%- else %}
-            <a href="/" class="flex items-center no-underline link-novisited">
-              <img src="/assets/img/furye.jpg" class="mr-2 hidden size-10 rounded-full sm:inline-block" alt="" loading="eager" sizes="40px" eleventy:widths="40,80,120" />
-              <span class="ml-0.5 font-semibold whitespace-nowrap text-fg">Дмитрий Фурье</span>
-            </a>
+              <a href="/" class="link-novisited flex items-center no-underline">
+                <img
+                  src="/assets/img/furye.jpg"
+                  class="mr-2 hidden size-10 rounded-full sm:inline-block"
+                  alt=""
+                  loading="eager"
+                  sizes="40px"
+                  eleventy:widths="40,80,120"
+                />
+                <span class="ml-0.5 font-semibold whitespace-nowrap text-fg">Дмитрий Фурье</span>
+              </a>
             {%- endif %}
           </li>
-          {%- unless variant == "blog" %}
-          <li><a class="inline-block py-1 font-medium link-novisited sm:pl-0 md:px-3" href="/podcasts/">Наговорил</a></li>
+          {%- unless variant == 'blog' %}
+            <li>
+              <a
+                class="link-novisited inline-block py-1 font-medium sm:pl-0 md:px-3"
+                href="/podcasts/"
+                >Наговорил</a
+              >
+            </li>
           {%- endunless %}
         </ul>
       </div>
@@ -27,10 +40,12 @@
       <div id="nav-content" class="order-2 flex flex-col-reverse flex-wrap justify-end sm:order-3">
         <div id="nav-buttons" class="flex w-full items-center">
           <div class="px-4">
-            {% include "_partials/theme-toggle.liquid" %}
+            {% include '_partials/theme-toggle.liquid' %}
           </div>
-          {%- unless variant == "blog" %}
-          <a href="/posts" class="inline-block py-1 link-novisited">Блог<span aria-hidden="true"> →</span></a>
+          {%- unless variant == 'blog' %}
+            <a href="/posts" class="link-novisited inline-block py-1"
+              >Блог<span aria-hidden="true"> →</span></a
+            >
           {%- endunless %}
         </div>
       </div>

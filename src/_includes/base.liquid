@@ -1,51 +1,56 @@
 <!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-<head>
-  <meta charset="utf-8">
-  <meta name='viewport' content='width=device-width'>
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ desc }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+    <meta name="author" content="{{ site.author }}">
+    {% include '_partials/fonts.liquid' %}
+    {% include '_partials/favicons.liquid' %}
+    <!-- Opengraph -->
+    <meta property="og:title" content="{{ data.title }}" />
+    <meta property="og:url" content="{{ page.url }}" />
+    {% if tags %}
+      <meta
+        property="og:image"
+        content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg"
+      />
+      <meta
+        property="og:image:secure_url"
+        content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg"
+      />
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}/img/default-preview.jpeg" />
+      <meta property="og:image:secure_url" content="{{ site.url }}/img/default-preview.jpeg" />
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ site.twitter-s }}" />
+    <meta name="twitter:creator" content="{{ site.twitter-s }}" />
+    <link rel="me" href="{{ site.mastodon }}">
+    <!-- styles -->
+    <link href="/assets/styles/tailwind.css" rel="stylesheet" />
 
-  <title>{{ title }}</title>
-  <meta name='description' content="{{ desc }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-  <meta name="author" content="{{ site.author }}">
-  {% include "_partials/fonts.liquid" %}
-  {% include "_partials/favicons.liquid" %}
-<!--Opengraph-->
-  <meta property="og:title" content="{{ data.title }}" />
-  <meta property="og:url" content="{{ page.url }}" />
-  {% if tags %}
-  <meta property="og:image" content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg" />
-  <meta property="og:image:secure_url" content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg" />
-  {% else %}
-  <meta property="og:image" content="{{ site.url }}/img/default-preview.jpeg" />
-  <meta property="og:image:secure_url" content="{{ site.url }}/img/default-preview.jpeg" />
-  {% endif %}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="{{ site.twitter-s }}" />
-  <meta name="twitter:creator" content="{{ site.twitter-s }}" />
-  <link rel="me" href="{{ site.mastodon }}">
-  <!--styles-->
-  <link href="/assets/styles/tailwind.css" rel="stylesheet" />
-  
-  <!--Scripts-->
-  {% include "_partials/theme-init.liquid" %}
-</head>
+    <!-- Scripts -->
+    {% include '_partials/theme-init.liquid' %}
+  </head>
 
-<body>
-  {% include "_partials/header.liquid" %}
-  <main id="main" tabindex="-1">
-        {% unless content contains "<h1" %}<h1 class="sr-only">{{ title }}</h1>{% endunless %}
+  <body>
+    {% include '_partials/header.liquid' %}
+    <main id="main" tabindex="-1">
+      {% unless content contains '<h1' %}
+        <h1 class="sr-only">{{ title }}</h1>
+      {% endunless %}
 
-    {{ content }}
+      {{ content }}
+    </main>
 
-  </main>
-
-  {% include "_partials/footer.liquid" %}
-  <script src="/assets/scripts/theme.js"></script>
-  <script src="/assets/scripts/jquery.min.js"></script>
-  <script src="/assets/scripts/fotorama.min.js"></script>
-  <script src="/assets/scripts/gallery.js"></script>
-</body>
-
+    {% include '_partials/footer.liquid' %}
+    <script src="/assets/scripts/theme.js"></script>
+    <script src="/assets/scripts/jquery.min.js"></script>
+    <script src="/assets/scripts/fotorama.min.js"></script>
+    <script src="/assets/scripts/gallery.js"></script>
+  </body>
 </html>

@@ -12,18 +12,23 @@ lab la-steam|Стим|{{ site.steam }}|hover:text-social-epicgames dark:hover:te
 {%- endcapture -%}
 <footer class="mt-4 pb-10">
   <div class="flex flex-wrap content-center">
-    {%- assign rows = social | split: "
-" %}
+    {%- assign rows = social | split: '
+' %}
     {%- for row in rows %}
-    {%- assign item = row | strip | split: "|" %}
-    <div class="mr-6 flex items-center text-muted {{ item[3] }}">
-      <i class="{{ item[0] }} text-2xl" aria-hidden="true"></i>
-      <a href="{{ item[2] }}" class="link-novisited">{{ item[1] }}</a>
-    </div>
+      {%- assign item = row | strip | split: '|' %}
+      <div class="mr-6 flex items-center text-muted {{ item[3] }}">
+        <i class="{{ item[0] }} text-2xl" aria-hidden="true"></i>
+        <a href="{{ item[2] }}" class="link-novisited">{{ item[1] }}</a>
+      </div>
     {%- endfor %}
-    <a href="/donation" class="inline-flex items-center rounded-sm border border-current px-1 no-underline link-novisited"
-      aria-label="Поддержать Диму Фурье" title="Поддержать">
-      <i class="las la-piggy-bank text-2xl" aria-hidden="true"></i></a>
+    <a
+      href="/donation"
+      class="link-novisited inline-flex items-center rounded-sm border border-current px-1 no-underline"
+      aria-label="Поддержать Диму Фурье"
+      title="Поддержать"
+    >
+      <i class="las la-piggy-bank text-2xl" aria-hidden="true"></i
+    ></a>
   </div>
 
   <p class="py-2 text-sm">© {{ site.author }} × 2017 — {% year %}</p>
