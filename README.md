@@ -29,6 +29,7 @@ bash create "Как я перестал бояться дедлайнов" deadl
 - [Getting started](#getting-started)
 - [Writing posts](#writing-posts)
 - [Project structure](#project-structure)
+- [Supported browsers](#supported-browsers)
 - [Code style](#code-style)
 - [Deployment](#deployment)
 
@@ -130,6 +131,23 @@ src/
 tailwind.css      Tailwind entry: theme colors, dark mode, base styles
 .eleventy.js      Eleventy config: plugins, shortcodes, image pipeline
 create            script that creates a new post
+scripts/          compat-css.js: lowers the built CSS to the browsers in package.json
+eslint.config.js  ESLint rules, with browser compatibility checks
+```
+
+## Supported browsers
+
+Chrome and Edge 109+, Safari 15.4+ and Firefox 115 ESR+, listed in `browserslist` in `package.json`. That is about 95% of visitors worldwide. Older browsers don't support the cascade layers that Tailwind relies on.
+
+The same list drives two tools:
+
+- **CSS.** `npm run build` passes the built stylesheet through `scripts/compat-css.js`. It adds vendor prefixes and HEX fallbacks for Tailwind's `oklch()` colors, so Chrome 109 still gets the theme. The dev server serves the stylesheet without this step.
+- **JavaScript.** `eslint-plugin-compat` fails the lint when a site script uses a browser API that a supported browser lacks.
+
+To check what a change to the list covers, paste it into [browsersl.ist](https://browsersl.ist) or run:
+
+```sh
+npx browserslist --coverage=global,RU
 ```
 
 ## Code style
@@ -140,7 +158,11 @@ Prettier formats templates and styles and sorts Tailwind classes:
 npm run format
 ```
 
-Post content and JavaScript are not formatted. JavaScript follows the ESLint config.
+Post content and JavaScript are not formatted. ESLint checks JavaScript for mistakes and checks the site scripts against the supported browsers:
+
+```sh
+npm run lint
+```
 
 ## Deployment
 
