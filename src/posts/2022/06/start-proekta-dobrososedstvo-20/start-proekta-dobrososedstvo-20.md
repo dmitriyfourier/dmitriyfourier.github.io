@@ -2,7 +2,6 @@
 title: Старт проекта Добрососедство 2.0
 desc: О том, почему важно создавать место, которое поможет развивать жилые дома и превращать их в комьюнити.
 date: 2022-06-14
-permalink: "/posts/{{ title | slug }}/"
 categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - ЖКХ

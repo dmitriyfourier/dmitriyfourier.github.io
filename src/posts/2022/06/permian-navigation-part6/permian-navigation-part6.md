@@ -5,7 +5,6 @@ desc: Какие взгляды у Пермской администрации �
 short-title: Уличная навигация в Перми [Часть 6]
 date: 2022-06-25
 url: permian-navigation-part6
-permalink: "/posts/{{ url | slug }}/"
 categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - Домоуправление

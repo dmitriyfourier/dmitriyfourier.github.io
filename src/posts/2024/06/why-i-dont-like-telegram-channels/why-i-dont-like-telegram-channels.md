@@ -5,7 +5,6 @@ desc: С ростом популярности телеграм-каналов �
 date: 2024-06-12
 url: why-i-dont-like-telegram-channels
 cover: "telegram-degradation.png"
-permalink: "/posts/{{ url | slug }}/"
 tags:
   - Медиа
   - Телеграм

@@ -2,7 +2,6 @@
 title: Как вести учёт налички в бизнесе и не свихнуться
 desc: О некоторых подходах к учету наличности и отражению в Cash Flow
 date: 2017-07-05
-permalink: "/posts/{{ title | slug }}/"
 # published: false
 tags:
 - Финансы

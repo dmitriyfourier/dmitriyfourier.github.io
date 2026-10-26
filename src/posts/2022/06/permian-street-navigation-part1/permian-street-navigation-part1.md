@@ -4,7 +4,6 @@ title: О недоделанной Пермской уличной навига
 desc: О том, зачем Перми нужна тотальное обновление стандартов уличной навигации.
 date: 2022-06-04
 url: permian-street-navigation-part1
-permalink: "/posts/{{ url | slug }}/"
 categories: ["Design", "Street Navigation", "PRM"]
 tags:
   - Домоуправление
@@ -20,8 +19,8 @@ tags:
 
 <div class="fotorama" data-width="100%" data-height="800"
      data-nav="dots">
-     {% asset_img '/posts/prmnav/quarters.jpg' 'Пример навигации разработанной Ильёй Барманом' 'Пример базовой навигации разработанной Ильёй Барманом' %}
-     {% asset_img '/posts/prmnav/plans.jpg' 'Пример который объясняет как работает навигация' 'Объяснение работы навигации' %}
+     {% asset_img 'quarters.jpg' 'Пример навигации разработанной Ильёй Барманом' 'Пример базовой навигации разработанной Ильёй Барманом' %}
+     {% asset_img 'plans.jpg' 'Пример который объясняет как работает навигация' 'Объяснение работы навигации' %}
 </div>
 
 <p class="aside">Фото из <a href="https://ilyabirman.ru/projects/chelyabinsk-address-plates/">публикации Илья Бирмана</a></p>
@@ -31,7 +30,7 @@ tags:
 
 Даже были попытки разработать [Модельные правила (рекомендации) по размещению и мониторингу систем визуальных коммуникаций для Перми](https://www.tema.ru/jjj/perm/permvisualcommunications1.pdf)
 
-{% asset_img '/posts/prmnav/permvisualcommunications.jpg' 'Пример модульных правил' 'Пример модульных правил' %}
+{% asset_img 'permvisualcommunications.jpg' 'Пример модульных правил' 'Пример модульных правил' %}
 
 Но они таки и носят статус «beta» — то есть разработка максимальная сырая. Она отражает задумки на перспективу, но не отражает правил, и различных вариаций.
 

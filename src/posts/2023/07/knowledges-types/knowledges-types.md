@@ -5,7 +5,6 @@ desc: Важная штука, при разработке базы знаний
 date: 2023-07-12
 url: knowledges-types
 cover: "kniwledge-types-og.jpg"
-permalink: "/posts/{{ url | slug }}/"
 categories: ["База знаний", "Knoweledge managment", "Управление"]
 tags:
   - Управление знаниями
@@ -21,7 +20,7 @@ tags:
 
 <p class="aside"><b><a href="https://base.supprt.school/">supprt.base</a></b> — база знаний о клиентском сервисе. </p>
 
-{% asset_img '/posts/knowlage-base-types.png' 'Скриншот с данными из Support Science' 'Скриншот с данными из Support Science' %}
+{% asset_img 'knowlage-base-types.png' 'Скриншот с данными из Support Science' 'Скриншот с данными из Support Science' %}
 
 Ребята выделяют два вида типов знаний, «фундаментальных» — это **Явные знания (эксплицитные/фактологические/алгоритмические):** и **Неявные знания (эвристические)**.
 
