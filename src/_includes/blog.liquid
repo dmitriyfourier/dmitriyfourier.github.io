@@ -38,7 +38,7 @@
     <meta name="twitter:creator" content="{{ site.twitter-s }}" />
     <link rel="me" href="{{ site.mastodon }}">
     <!-- styles -->
-    <link href="/assets/styles/tailwind.css" rel="stylesheet" />
+    <link href="/assets/styles/tailwind.css?v={{ build.version }}" rel="stylesheet" />
 
     {% include '_partials/theme-init.liquid' %}
   </head>
@@ -55,12 +55,12 @@
 
     {% include '_partials/footer.liquid' %}
 
-    <script src="/assets/scripts/theme.js"></script>
-    <script src="/assets/scripts/hotkeys.js"></script>
+    <script src="/assets/scripts/theme.js?v={{ build.version }}"></script>
+    <script src="/assets/scripts/hotkeys.js?v={{ build.version }}"></script>
     {% if content contains 'class="fotorama"' %}
-      <script src="/assets/scripts/jquery.min.js"></script>
-      <script src="/assets/scripts/fotorama.min.js"></script>
-      <script src="/assets/scripts/gallery.js"></script>
+      <script src="/assets/scripts/jquery.min.js?v={{ build.version }}"></script>
+      <script src="/assets/scripts/fotorama.min.js?v={{ build.version }}"></script>
+      <script src="/assets/scripts/gallery.js?v={{ build.version }}"></script>
     {% endif %}
   </body>
 </html>
