@@ -57,8 +57,10 @@
 
     <script src="/assets/scripts/theme.js"></script>
     <script src="/assets/scripts/hotkeys.js"></script>
-    <script src="/assets/scripts/jquery.min.js"></script>
-    <script src="/assets/scripts/fotorama.min.js"></script>
-    <script src="/assets/scripts/gallery.js"></script>
+    {% if content contains 'class="fotorama"' %}
+      <script src="/assets/scripts/jquery.min.js"></script>
+      <script src="/assets/scripts/fotorama.min.js"></script>
+      <script src="/assets/scripts/gallery.js"></script>
+    {% endif %}
   </body>
 </html>
