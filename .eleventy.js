@@ -2,11 +2,14 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const moment = require("moment");
 const slugify = require("slugify");
-const img2picture = require("eleventy-plugin-img2picture");
 const fs = require("fs");
-const Image = require("@11ty/eleventy-img");
+const path = require("path");
+const {
+  default: Image,
+  eleventyImageTransformPlugin,
+} = require("@11ty/eleventy-img");
 const embedEverything = require("eleventy-plugin-embed-everything");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 const getSimilarCategories = function (categoriesA, categoriesB) {
   return categoriesA.filter(Set.prototype.has, new Set(categoriesB)).length;
 };
@@ -185,22 +188,24 @@ module.exports = function (eleventyConfig) {
     return `<figure><img src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`;
   });
 
-  eleventyConfig.addPlugin(img2picture, {
-    // Should be same as Eleventy input folder set using `dir.input`.
-    eleventyInputDir: "./src/",
-
-    // Output folder for optimized images.
-    imagesOutputDir: "_site/assets/img/",
-
-    // URL prefix for images src URLS.
-    // It should match with path suffix in `imagesOutputDir`.
-    // Eg: imagesOutputDir with `_site/images` likely need urlPath as `/images/`
+  // Replace <img> in the HTML output with responsive <picture>
+  const imageWidths = [];
+  for (let width = 400; width < 1920; width += 150) {
+    imageWidths.push(width);
+  }
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // Output folder and URL prefix for optimized images.
+    outputDir: "_site/assets/img/",
     urlPath: "/assets/img/",
-    extensions: ["jpg", "png", "jpeg"],
     formats: ["avif", "webp", "jpeg"],
-    minWidth: 400,
-    maxWidth: 1920,
-    sizes: "100vw",
+    widths: imageWidths,
+    filenameFormat: (id, src, width, format) =>
+      `${path.parse(src).name}-${id}-${width}w.${format}`,
+    defaultAttributes: {
+      sizes: "100vw",
+      loading: "lazy",
+      decoding: "async",
+    },
   });
 
   return {
