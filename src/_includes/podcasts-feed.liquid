@@ -13,7 +13,7 @@
     {% include '_partials/fonts.liquid' %}
     {% include '_partials/favicons.liquid' %}
     <!-- styles -->
-    <link href="/assets/styles/tailwind.css" rel="stylesheet" />
+    <link href="/assets/styles/tailwind.css?v={{ build.version }}" rel="stylesheet" />
     {% include '_partials/theme-init.liquid' %}
   </head>
 
@@ -29,7 +29,7 @@
 
     {% include '_partials/footer.liquid' %}
 
-    <script src="/assets/scripts/theme.js"></script>
-    <script src="/assets/scripts/hotkeys.js"></script>
+    <script src="/assets/scripts/theme.js?v={{ build.version }}"></script>
+    <script src="/assets/scripts/hotkeys.js?v={{ build.version }}"></script>
   </body>
 </html>
