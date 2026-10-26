@@ -175,7 +175,7 @@
  .fotorama__fullscreen-icon,
  .fotorama__video-close,
  .fotorama__video-play {
-     background: url(fotorama.png) no-repeat
+     background: url(https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.png) no-repeat
  }
 
  @media (-webkit-min-device-pixel-ratio:1.5),
@@ -185,7 +185,7 @@
      .fotorama__fullscreen-icon,
      .fotorama__video-close,
      .fotorama__video-play {
-         background: url(fotorama@2x.png) 0 0/96px 160px no-repeat
+         background: url(https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama@2x.png) 0 0/96px 160px no-repeat
      }
  }
 

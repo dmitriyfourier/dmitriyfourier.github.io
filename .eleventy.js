@@ -18,10 +18,11 @@ const {
 // Where optimized images live. .cache is kept between Cloudflare Workers
 // Builds for Eleventy projects, so unchanged images aren't re-encoded.
 const IMAGE_CACHE_DIR = ".cache/eleventy-img/";
-const IMAGE_OUTPUT_DIR = "_site/assets/img/";
 const IMAGE_URL_PATH = "/assets/img/";
+// Folders inside the build output (_site by default)
+const IMAGE_OUTPUT_SUBDIR = "assets/img";
 // Social preview SVGs are rendered by src/og.liquid and converted to JPEG
-const OG_IMAGES_DIR = "_site/assets/img/og/";
+const OG_IMAGES_SUBDIR = "assets/img/og";
 
 // Content width: body margins are 2vw + 10px on each side
 const CONTENT_SIZES = "calc(96vw - 40px)";
@@ -213,15 +214,16 @@ module.exports = function (eleventyConfig) {
   // After a production build, copy the images this build uses from the cache
   // into _site and delete the rest from the cache so it doesn't grow forever.
   // `eleventy --serve` generates images on request instead.
-  eleventyConfig.on("eleventy.after", ({ runMode }) => {
+  eleventyConfig.on("eleventy.after", ({ runMode, directories }) => {
     if (runMode !== "build" || usedImages.size === 0) {
       return;
     }
-    fs.mkdirSync(IMAGE_OUTPUT_DIR, { recursive: true });
+    const outputDir = path.join(directories.output, IMAGE_OUTPUT_SUBDIR);
+    fs.mkdirSync(outputDir, { recursive: true });
     for (const filename of fs.readdirSync(IMAGE_CACHE_DIR)) {
       const cached = path.join(IMAGE_CACHE_DIR, filename);
       if (usedImages.has(filename)) {
-        fs.copyFileSync(cached, path.join(IMAGE_OUTPUT_DIR, filename));
+        fs.copyFileSync(cached, path.join(outputDir, filename));
       } else {
         fs.unlinkSync(cached);
       }
@@ -230,18 +232,19 @@ module.exports = function (eleventyConfig) {
   });
 
   // Convert the social preview SVGs into JPEGs next to them
-  eleventyConfig.on("eleventy.after", async () => {
-    if (!fs.existsSync(OG_IMAGES_DIR)) {
+  eleventyConfig.on("eleventy.after", async ({ directories }) => {
+    const ogDir = path.join(directories.output, OG_IMAGES_SUBDIR);
+    if (!fs.existsSync(ogDir)) {
       return;
     }
     const svgs = fs
-      .readdirSync(OG_IMAGES_DIR)
+      .readdirSync(ogDir)
       .filter((file) => file.endsWith(".svg"));
     await Promise.all(
       svgs.map((file) =>
-        Image(path.join(OG_IMAGES_DIR, file), {
+        Image(path.join(ogDir, file), {
           formats: ["jpeg"],
-          outputDir: OG_IMAGES_DIR,
+          outputDir: ogDir,
           filenameFormat: (id, src, width, format) =>
             `${path.basename(file, ".svg")}.${format}`,
         })
