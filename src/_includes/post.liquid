@@ -10,7 +10,7 @@ layout: blog
     <span class=>Время чтения ≈ {{ content | readTime }} мин.</span>
 </div>
 <div itemprop="articleBody">
-  {{ content }}
+  {{ content | eagerFirstImage }}
 </div>
 </article>
 <!-- # ===== Related Posts ==== # -->

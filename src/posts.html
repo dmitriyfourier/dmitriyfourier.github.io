@@ -18,7 +18,7 @@ pagination:
   <em><time itemprop="datePublished" datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></em><span
     class="text-base font-normal"> &middot; Время чтения ≈ {{ post.templateContent | readTime }} мин</span>
   </div>
-  <div itemprop="articleBody">{{ post.templateContent }}</div>
+  <div itemprop="articleBody">{{ post.templateContent | lazyImages }}</div>
 
   <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
     <div class="pr-4">

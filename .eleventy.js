@@ -202,11 +202,41 @@ module.exports = function (eleventyConfig) {
     filenameFormat: (id, src, width, format) =>
       `${path.parse(src).name}-${id}-${width}w.${format}`,
     defaultAttributes: {
-      sizes: "100vw",
+      // `auto` lets lazy images use their real layout width; the fallback
+      // is the content width (body margins are 2vw + 10px on each side).
+      sizes: "auto, calc(96vw - 40px)",
       loading: "lazy",
       decoding: "async",
     },
   });
+
+  // Load the first post image eagerly when it is likely on the first screen
+  eleventyConfig.addFilter("eagerFirstImage", (html) => {
+    const match = /<img\b/.exec(html);
+    if (!match) {
+      return html;
+    }
+    const textBefore = html
+      .slice(0, match.index)
+      .replace(/<[^>]+>/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (textBefore.length > 600) {
+      return html;
+    }
+    return (
+      html.slice(0, match.index) +
+      '<img loading="eager" fetchpriority="high" sizes="calc(96vw - 40px)"' +
+      html.slice(match.index + 4)
+    );
+  });
+
+  // Content embedded in listings should not compete for the first screen
+  eleventyConfig.addFilter("lazyImages", (html) =>
+    typeof html === "string"
+      ? html.replace(/ loading="eager"| fetchpriority="high"/g, "")
+      : html
+  );
 
   return {
     dir: {
