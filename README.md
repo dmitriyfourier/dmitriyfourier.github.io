@@ -14,11 +14,12 @@ The source of [fourier.rocks](https://fourier.rocks), Dmitriy Fourier's personal
 - **Readable by AI tools.** Every post, podcast and the home page also has a clean Markdown version at the same URL with `.md`, for example `/posts/knowledges-types.md`. Pages link to it with `<link rel="alternate">` and an HTTP `Link` header. [`/llms.txt`](https://fourier.rocks/llms.txt) lists all of them, and `robots.txt` allows AI use through `Content-Signal`.
 - **Automatic deploys.** A merge into `main` publishes the site on Cloudflare.
 
-To write a post, run one command, then fill in the Markdown file it creates:
+To write a post, run one command, then fill in the Markdown file it creates. Its images and files go in the same folder:
 
 ```sh
-bash create "Как я перестал бояться дедлайнов"
-# Created new post at src/posts/2026/10/Как-я-перестал-бояться-дедлайнов.md
+bash create "Как я перестал бояться дедлайнов" deadlines
+# Created new post at src/posts/2026/10/deadlines/deadlines.md
+# Put its images and files in src/posts/2026/10/deadlines/ and the post will be at /posts/deadlines/
 ```
 
 ---
@@ -61,7 +62,9 @@ You need **Node.js 22 or newer** (`.node-version` pins 24) and git.
 
 ## Writing posts
 
-`bash create "Title"` creates `src/posts/YYYY/MM/Title.md` with this front matter. On Windows, run it in Git Bash.
+Every post has its own folder: `src/posts/YYYY/MM/<slug>/<slug>.md`. The page is published at `/posts/<slug>/`, so the year and month only sort the sources. The folder and the file must have the same name; otherwise the post's files aren't picked up.
+
+`bash create "Title" [slug]` creates the folder and the file with this front matter. Without a slug, it is made from the title, with Cyrillic transliterated. On Windows, run it in Git Bash.
 
 ```markdown
 ---
@@ -80,9 +83,26 @@ tags:
 | `tags`          | Tag pages at `/tags/…`; Cyrillic tags are transliterated in the URL  |
 | `categories`    | A list; posts that share categories are shown as related posts       |
 | `desc`          | Page description for search engines and link previews                |
+| `cover`         | Link preview image: a file in the post's folder                      |
 | `published`     | `false` hides the post from the `/posts` feed; its page still builds |
 
-Put images in `src/assets/img/`. Plain `<img>` tags work. These shortcodes add captions and layout:
+### Images and files
+
+Put a post's images and attachments in its folder and refer to them by file name:
+
+```markdown
+![Схема квартала](plan.jpg)
+[Презентация в PDF](slides.pdf)
+{% asset_img 'plan.jpg' 'Схема квартала' 'Подпись' %}
+```
+
+- Images become responsive `<picture>` elements; the original is also served at `/posts/<slug>/plan.jpg`.
+- Every other file in the folder is copied next to the page, so `slides.pdf` opens at `/posts/<slug>/slides.pdf`.
+- Images shared by several posts stay in `src/assets/img/`; shortcodes look there when the post's folder has no such file.
+
+> **Raw HTML isn't rewritten.** An `<img>` or `<a>` written as HTML needs an absolute path, such as `/assets/img/file.jpg`. Use Markdown or a shortcode for files in the post's folder.
+
+These shortcodes add captions and layout:
 
 | Shortcode                                    | Result                                  |
 | -------------------------------------------- | --------------------------------------- |
@@ -97,7 +117,7 @@ A YouTube, Instagram or similar link on its own line becomes an embed.
 
 ```
 src/
-  posts/          blog posts, one folder per year and month
+  posts/          blog posts: YYYY/MM/<slug>/<slug>.md with the post's images and files
   podcasts/       podcast pages
   _includes/      page layouts
   _partials/      shared header, footer, theme toggle, fonts
