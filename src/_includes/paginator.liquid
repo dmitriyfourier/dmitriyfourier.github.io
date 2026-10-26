@@ -1,21 +1,22 @@
-<nav class="flex justify-stretch mt-8">
+<nav class="mt-8 flex justify-stretch" aria-label="Страницы ленты">
   <div class="inline-flex">
     {% if page.url != pagination.href.first %}
-    <a id="latestPosts" href="{{ pagination.href.first }}">
-      <div aria-label="Посмотреть посты опубликованные Ранее">Ранее</div>
-    </a>
-    <div><small class="text-gray-500"> Ctrl ↑</small></div>
+      <a id="latestPosts" href="{{ pagination.href.first }}" aria-keyshortcuts="Control+ArrowUp">
+        Ранее
+      </a>
+      <div><small class="text-muted" aria-hidden="true"> Ctrl ↑</small></div>
 
     {% else %}
-    <div class="hidden">Ранее ↑</div>
-    {% endif %} {% if page.url != pagination.href.last %}
-    <a id="earlierPosts" href="{{ pagination.href.last }}">
-      <div aria-label="Посмотреть посты опубликованные позже">Позднее</div>
-    </a>
-    <div><small class="text-gray-500"> Ctrl ↓</small></div>
+      <div class="hidden">Ранее ↑</div>
+    {% endif %}
+    {% if page.url != pagination.href.last %}
+      <a id="earlierPosts" href="{{ pagination.href.last }}" aria-keyshortcuts="Control+ArrowDown">
+        Позднее
+      </a>
+      <div><small class="text-muted" aria-hidden="true"> Ctrl ↓</small></div>
 
     {% else %}
-    <div class="hidden">Позднее ↓</div>
+      <div class="hidden">Позднее ↓</div>
     {% endif %}
   </div>
 </nav>

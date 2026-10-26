@@ -1,156 +1,92 @@
-﻿/*! links.less v0.0.5 | MIT License | github.com/paulradzkov/links.less */
+﻿/*
+  Link styles, after links.less (github.com/paulradzkov/links.less, MIT)
+  and paulradzkov.com/2014/visited_link_on_hover:
+
+  - every state has its own color: link, visited, hover, visited + hover,
+    active; a visited link keeps its own hue on hover
+  - links are underlined; the line is the link color at half opacity and
+    becomes solid on hover, so hover isn't signalled by color alone
+  - color changes fade out slowly and appear instantly on hover
+  - keyboard focus gets a visible outline (see :focus-visible in tailwind.css)
+
+  Colors are theme tokens from tailwind.css and switch with the theme.
+
+  Classes:
+    a without a class, .link  — full set of states
+    .link-novisited           — visited looks like unvisited (navigation)
+    .link-inherit             — text color until hover (lists, footers)
+*/
+
 a,
 .link,
 .link-novisited,
 .link-inherit {
-  text-decoration: underline;
+  --link: var(--color-link);
+  --link-hover: var(--color-link-hover);
+  --link-visited: var(--color-link-visited);
+  --link-visited-hover: var(--color-link-visited-hover);
+
+  color: var(--link);
   text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip: ink;
+  text-decoration-color: color-mix(in oklch, currentColor 50%, transparent);
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.15em;
+  text-decoration-skip-ink: auto;
+  border-radius: 0.125em;
+  transition:
+    color 0.3s ease-out,
+    text-decoration-color 0.3s ease-out;
 }
 
-a img:only-child,
-.link img:only-child,
-.link-novisited img:only-child,
-.link-inherit img:only-child {
+a:visited,
+.link:visited {
+  color: var(--link-visited);
+}
+
+a:hover,
+.link:hover {
+  color: var(--link-hover);
+  text-decoration-color: currentColor;
+  transition: none;
+}
+
+a:visited:hover,
+.link:visited:hover {
+  color: var(--link-visited-hover);
+}
+
+a:active,
+.link:active {
+  color: var(--color-link-active);
+}
+
+/* Navigation: no visited state */
+.link-novisited {
+  --link-visited: var(--link);
+  --link-visited-hover: var(--link-hover);
+}
+
+/* Inherits the text color until hover */
+.link-inherit {
+  --link: currentColor;
+  --link-visited: currentColor;
+}
+
+/* OS "increase contrast" setting: solid underline at all times */
+@media (prefers-contrast: more) {
+  a,
+  .link,
+  .link-novisited,
+  .link-inherit {
+    text-decoration-color: currentColor;
+  }
+}
+
+a img:only-child {
   vertical-align: top;
 }
 
-a:not([class]),
-.link,
-a:not([class]):link,
-.link:link { 
-  /* color: #0877db;
-  text-decoration-color: rgba(8, 119, 219, 0.25);*/
-  @apply text-mk-blue-main decoration-mk-blue-deco dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
-}
-
-a:not([class]):visited,
-.link:visited {
-  /*color: #9108db;
-  text-decoration-color: rgba(145, 8, 219, 0.25);*/
-  @apply text-mk-purple-main  decoration-mk-purple-deco dark:bg-mk-greenlow-main dark:decoration-mk-greenlow-deco;
-}
-
-a:not([class]):hover,
-.link:hover,
-a:not([class]):focus,
-.link:focus {
-/*  color: #2b9aff;
-  text-decoration-color: rgba(43, 154, 255, 0.25);*/
-  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-greenlow-main dark:decoration-mk-greenlow-deco;
-}
-
-a:not([class]):visited:hover,
-.link:visited:hover,
-a:not([class]):visited:focus,
-.link:visited:focus {
-  /*color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.25);*/
-@apply text-mk-purple-main decoration-mk-purple-deco dark:text-mk-greenlow-main dark:decoration-mk-greenlow-deco;
-}
-
-a:not([class]):active,
-.link:active {
-  color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.25);
-}
-
-.link-novisited,
-.link-novisited:link {
- /* color: #0877db;
-  text-decoration-color: rgba(8, 119, 219, 0.25); */
-  @apply text-mk-blue-main decoration-mk-blue-deco dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
-}
-
-.link-novisited:visited {
-  /*
-  color: #0877db;
-  text-decoration-color: rgba(8, 119, 219, 0.25);*/
-  @apply text-mk-blue-main decoration-mk-blue-deco dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
-}
-
-.link-novisited:hover,
-.link-novisited:focus {
- /* color: #2b9aff;
-  text-decoration-color: rgba(43, 154, 255, 0.25);*/
-  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-orange-main dark:decoration-mk-orange-deco;
-}
-
-.link-novisited:visited:hover,
-.link-novisited:visited:focus {
-  /*
-  color: #2b9aff;
-  text-decoration-color: rgba(43, 154, 255, 0.25);
-  */
-  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-orange-main dark:decoration-mk-orange-deco;
-}
-
-.link-novisited:active {
-  color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.25);
-}
-
-.link-inherit,
-.link-inherit:link {
-  color: inherit;
-}
-
-.link-inherit:visited {
-  color: inherit;
-}
-
-.link-inherit:hover,
-.link-inherit:focus {
-  /* color: #2b9aff;
-  text-decoration-color: rgba(43, 154, 255, 0.25); */
-  @apply text-mk-blue-deep decoration-mk-blue-deep dark:text-mk-yellow-main dark:decoration-mk-yellow-deco;
-}
-
-.link-inherit:visited:hover,
-.link-inherit:visited:focus {
-  /* color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.25);*/
-  @apply  text-mk-purple-main  decoration-mk-purple-deco dark:bg-mk-greenlow-main dark:decoration-mk-greenlow-deco;
-}
-
-.link-inherit:active {
-  color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.25);
-}
-
-.link,
-.link-novisited,
-.link-inherit,
-a:not([class]),
-.link:link,
-.link-novisited:link,
-.link-inherit:link,
-a:not([class]):link,
-.link:visited,
-.link-novisited:visited,
-.link-inherit:visited,
-a:not([class]):visited {
-  border-radius: 0.125em;
-  transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out, text-decoration-color 0.3s ease-out;
-}
-
-.link:hover,
-.link-novisited:hover,
-.link-inherit:hover,
-a:not([class]):hover {
-  transition: color 0s, background-color 0s, border-color 0s, box-shadow 0s, text-decoration-color 0s;
-}
-
-.link:focus,
-.link-novisited:focus,
-.link-inherit:focus,
-a:not([class]):focus {
- /* background: rgba(43, 154, 255, 0.2);
-  box-shadow: 0 0 0 0.1875em rgba(43, 154, 255, 0.2);
-  outline: none;*/
-}
-
+/* .link on a non-link element, e.g. a button that looks like a link */
 .link:not(a),
 .link-novisited:not(a),
 .link-inherit:not(a) {
@@ -159,9 +95,8 @@ a:not([class]):focus {
   border-style: unset;
   padding: unset;
 }
+
 p {
   max-width: 840px;
   margin: 0 0 16px 0;
 }
-
-

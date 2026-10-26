@@ -1,0 +1,27 @@
+# Build output and caches
+_site/
+.cache/
+node_modules/
+
+# Post and podcast content is written by hand; formatting it could change
+# the text. Templates and styles are formatted, content is not.
+src/posts/
+src/**/*.md
+
+# Third-party and minified files
+src/assets/scripts/*.min.js
+src/assets/styles/fotorama.css
+src/assets/styles/line-awesome.css
+src/assets/fonts/
+src/assets/img/
+package-lock.json
+
+# Not HTML: XML sitemap and SVG for Open Graph images
+src/sitemap.liquid
+src/og.liquid
+src/_partials/og.liquid
+
+# Broken tag nesting makes the Liquid plugin add blank lines on every run;
+# fix the markup first, then remove these lines
+src/404.html
+src/Everything-Everywhere-All-at-Once.liquid

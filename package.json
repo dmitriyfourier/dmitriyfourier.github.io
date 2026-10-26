@@ -10,6 +10,8 @@
     "debug": "DEBUG=Eleventy* run-p serve:*",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{liquid,html,css}\" tailwind.css",
+    "format:check": "prettier --check \"src/**/*.{liquid,html,css}\" tailwind.css",
     "build": "run-s build:*",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss -i ./tailwind.css -o _site/assets/styles/tailwind.css --minify"
@@ -19,24 +21,20 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.7",
-    "@11ty/eleventy-img": "^6.0.4",
-    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-img": "^7.1.1",
+    "@11ty/eleventy-plugin-rss": "^3.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@evilmartians/harmony": "^1.4.0",
+    "@shopify/prettier-plugin-liquid": "^1.11.3",
     "@tailwindcss/cli": "^4.3.3",
-    "@tailwindcss/typography": "^0.5.20",
     "eleventy-plugin-embed-everything": "^1.21.2",
-    "eleventy-plugin-img2picture": "^7.0.0",
     "eslint": "^7.32.0",
-    "markdown-it": "^14.3.3",
-    "markdown-it-anchor": "^8.6.7",
-    "markdown-it-container": "^4.0.0",
-    "moment": "^2.31.0",
+    "markdown-it": "^15.0.3",
     "npm-run-all2": "^9.0.4",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "slugify": "^1.6.9",
     "tailwindcss": "^4.3.3"
-  },
-  "dependencies": {
-    "flowbite": "^4.0.2"
   },
   "engines": {
     "node": ">=22"
