@@ -17,20 +17,11 @@
 @import '@evilmartians/harmony/tailwind.css';
 
 /* Site styles go into the base layer so Tailwind utilities can override them */
-@import './src/assets/styles/normalize.css' layer(base);
 @import './src/assets/styles/fonts.css' layer(base);
 @import './src/assets/styles/bettertext.css' layer(base);
 @import './src/assets/styles/links.css' layer(base);
-@import './src/assets/styles/likely.css' layer(base);
 @import './src/assets/styles/fotorama.css' layer(base);
 @import './src/assets/styles/line-awesome.css' layer(base);
-
-/* `prose` classes for post text, and Flowbite components */
-@plugin '@tailwindcss/typography';
-@plugin 'flowbite/plugin';
-
-/* Templates in src/ are scanned automatically; Flowbite's JS adds its own classes */
-@source './node_modules/flowbite';
 
 /* `dark:` follows a .dark class on a parent instead of the OS setting */
 @custom-variant dark (&:is(.dark *));
@@ -64,49 +55,13 @@
   --color-link-active: var(--color-orange-700);        /* Lc 77 */
 
   /* Brand colors for social icons on hover */
-  --color-social-facebook: #1877f2;
-  --color-social-twitter: #1da1f2;
   --color-social-mastodon: #6364ff;
-  --color-social-whatsapp: #25d366;
-  --color-social-google: #dd4b39;
   --color-social-linkedin: #0a66c2;
-  --color-social-reddit: #ff4500;
   --color-social-instagram: #c13584;
-  --color-social-lastfm: #d51007;
-  --color-social-odnoklassniki: #ed812b;
-  --color-social-spotify: #1db954;
-  --color-social-gitlab: #fca326;
-  --color-social-dribbble: #ea4c89;
-  --color-social-telegram: #0088cc;
-  --color-social-goodreads: #553b08;
-  --color-social-kaggle: #20beff;
-  --color-social-blizzard: #0e86ca;
-  --color-social-epicgames: #121212;
-  --color-social-medium: #1a8917;
-  --color-social-vk: #45668e;
-  --color-social-xbox: #52b043;
-  --color-social-twitch: #9146ff;
-  --color-social-playstation: #003087;
-  --color-social-bitcoin: #f7901f;
-  --color-social-ethereum: #464a76;
   --color-social-youtube: #ff0000;
-  --color-social-behance: #0057ff;
-  --color-social-pinterest: #e60023;
-  --color-social-imdb: #f6c700;
-
-  --color-social-github-light: #333;
-  --color-social-github-dark: #f5f5f5;
-
-  --color-social-steam-light: #000000;
+  --color-social-telegram: #0088cc;
+  --color-social-epicgames: #121212;
   --color-social-steam-dark: #f5f5f5;
-
-
-  --grid-template-rows-6: repeat(6, minmax(0, 1fr));
-  --grid-template-rows-8: repeat(8, minmax(0, 1fr));
-  --grid-template-rows-10: repeat(10, minmax(0, 1fr));
-  --grid-template-rows-12: repeat(12, minmax(0, 1fr));
-  --grid-template-rows-14: repeat(14, minmax(0, 1fr));
-  --grid-template-rows-16: repeat(16, minmax(0, 1fr));
 }
 
 /*
