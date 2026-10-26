@@ -1,0 +1,50 @@
+{%- comment -%}
+  Title, description, canonical URL and link previews (Open Graph, X).
+  A layout may set before including it:
+    metaTitle, metaDesc  instead of the page's title and desc
+    ogImage              a site path to the preview image
+{%- endcomment -%}
+{%- assign metaTitle = metaTitle | default: title -%}
+{%- assign metaDesc = metaDesc
+  | default: desc
+  | default: description
+  | default: site.description
+-%}
+{%- assign pageUrl = page.url | url | prepend: site.url -%}
+{%- assign isPost = false -%}
+{%- if tags contains 'posts' -%}{%- assign isPost = true -%}{%- endif -%}
+{%- assign imageCard = 'summary_large_image' -%}
+{%- if cover -%}
+  {%- assign ogImage = cover | coverUrl -%}
+{%- elsif pdcastimg -%}
+  {%- assign ogImage = pdcastimg -%}
+  {%- assign imageCard = 'summary' -%}
+{%- elsif isPost -%}
+  {%- assign ogImage = title | slug | prepend: '/assets/img/og/' | append: '-preview.jpeg' -%}
+{%- endif -%}
+{%- assign ogImage = ogImage | default: '/assets/covers/Blog-OG.jpg' -%}
+<title>{{ metaTitle }}</title>
+<meta name="description" content="{{ metaDesc | escape }}">
+<meta name="author" content="{{ site.author }}">
+<link rel="canonical" href="{{ pageUrl }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="{{ metaTitle | escape }}">
+<meta property="og:description" content="{{ metaDesc | escape }}">
+<meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:image" content="{{ site.url }}{{ ogImage }}">
+{%- if isPost %}
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="{{ page.date | dateIso }}">
+  {%- for tag in tags -%}
+    {%- if tag != 'posts' %}
+      <meta property="article:tag" content="{{ tag | escape }}">
+    {%- endif -%}
+  {%- endfor %}
+{%- else %}
+  <meta property="og:type" content="website">
+{%- endif %}
+<meta name="twitter:card" content="{{ imageCard }}">
+<meta name="twitter:site" content="{{ site.twitter-s }}">
+<meta name="twitter:creator" content="{{ site.twitter-s }}">
+{% include '_partials/jsonld.liquid' %}

@@ -1,0 +1,35 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{%- comment -%}
+  /llms.txt (llmstxt.org): a short guide to the site for AI assistants.
+  Posts and podcasts are listed from their collections, so new ones appear
+  on their own and link to their Markdown versions; the intro and the
+  Optional section are written by hand.
+{%- endcomment -%}
+# {{ site.author }}
+
+> Личный сайт Дмитрия Фурье: блог о финансовом менеджменте, управлении проектами, командами и знаниями и о городской навигации Перми, а также подкасты и резюме. Все тексты на русском.
+
+Дмитрий управляет проектами, людьми и компаниями и помогает предпринимателям управлять бизнесом с помощью финансового менеджмента и пересмотра бизнес-процессов. Связаться: Telegram https://t.me/DmitriyFourier, почта dmitriyfurye@gmail.com.
+
+## Блог
+
+{% for post in collections.sortedPosts %}{% if post.data.published %}- [{{ post.data.title }}]({{ site.url }}{{ post.url | markdownUrl }}): {{ post.data.desc | default: post.data.description }}
+{% endif %}{% endfor %}
+
+## Подкасты
+
+{% for podcast in collections.podcasts -%}
+- [{{ podcast.data.title }}]({{ site.url }}{{ podcast.url | markdownUrl }}): {{ podcast.data.desc }}
+{% endfor %}
+## Резюме
+
+- [CV на русском](https://fourier.rocks/CV/Fourier-CV-RU.pdf): полная версия, PDF
+- [CV in English](https://fourier.rocks/CV/Fourier-CV-EN.pdf): full version, PDF
+
+## Optional
+
+- [RSS-лента блога]({{ site.url }}{{ site.feed.path }})
+- [Карта сайта]({{ site.url }}/sitemap.xml)

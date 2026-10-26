@@ -8,6 +8,8 @@ const markdownIt = require("markdown-it");
 const slugify = require("slugify");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedEverything = require("eleventy-plugin-embed-everything");
+const TurndownService = require("turndown");
+const { gfm } = require("turndown-plugin-gfm");
 // These two packages are ESM-only, so require() returns their namespace
 const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 const {
@@ -17,6 +19,7 @@ const {
 
 // Where optimized images live. .cache is kept between Cloudflare Workers
 // Builds for Eleventy projects, so unchanged images aren't re-encoded.
+const INPUT_DIR = "src";
 const IMAGE_CACHE_DIR = ".cache/eleventy-img/";
 const IMAGE_URL_PATH = "/assets/img/";
 // Folders inside the build output (_site by default)
@@ -30,10 +33,16 @@ const CONTENT_SIZES = "calc(96vw - 40px)";
 const IMAGE_WIDTHS = Array.from({ length: 11 }, (_, i) => 400 + i * 150);
 
 // Eleventy's built-in tags and our helper collections, not real post tags
-const SERVICE_TAGS = new Set(["all", "posts"]);
+const SERVICE_TAGS = new Set(["all", "posts", "podcasts"]);
 
 // Characters per minute used for the reading time estimate
 const READING_SPEED = 450;
+// Max rules Cloudflare reads from _headers
+const CLOUDFLARE_HEADER_RULES = 100;
+
+// Icons used on every page (header and footer), inlined as SVG so pages
+// don't download the Line Awesome fonts. The SVGs come from Line Awesome.
+const ICONS_DIR = `${INPUT_DIR}/_icons`;
 // Max characters per line of a title on the social preview image
 const OG_LINE_LENGTH = 19;
 
@@ -45,12 +54,111 @@ const readableDate = new Intl.DateTimeFormat("ru", {
   timeZone: "UTC",
 });
 
-// <figure> with an optional caption, used by the image shortcodes
-const figure = (filename, alt = "", caption, className) =>
+// Posts can live in their own folder together with their files:
+// src/posts/YYYY/MM/my-post/my-post.md next to photo.jpg, report.pdf, …
+// Returns that folder, or null for a post that shares its folder.
+const postFolder = (inputPath) => {
+  const dir = path.dirname(inputPath);
+  return path.basename(dir) === path.parse(inputPath).name ? dir : null;
+};
+
+// Files in a post folder that Eleventy builds itself rather than copies
+const POST_TEMPLATE_FILES = /\.(md|liquid|html|njk|json|11tydata\.js)$/i;
+
+// A file referenced relatively from a post in its own folder, or null
+const postFile = (page, ref) => {
+  if (!page?.inputPath || !ref || /^([a-z][a-z\d+.-]*:|\/|#)/i.test(ref)) {
+    return null;
+  }
+  const dir = postFolder(page.inputPath);
+  const file = dir && path.join(dir, decodeURI(ref));
+  return file && fs.existsSync(file) ? file : null;
+};
+
+// "/posts/2024/06/my-post/photo.jpg": the path eleventy-img resolves from
+// the input folder. Unlike a relative path, it also works when the post is
+// shown inside another page (feed, tag pages).
+const inputUrl = (file) =>
+  `/${path.relative(INPUT_DIR, file).split(path.sep).join("/")}`;
+
+// <figure> with an optional caption, used by the image shortcodes. The file
+// comes from the post's folder if it is there, otherwise from src/assets/img/
+const figure = (page, filename, alt = "", caption, className) =>
   `<figure${className ? ` class="${className}"` : ""}>` +
-  `<img src="${IMAGE_URL_PATH}${filename}" alt="${alt}" />` +
+  `<img src="${
+    postFile(page, filename)
+      ? inputUrl(postFile(page, filename))
+      : `${IMAGE_URL_PATH}${filename}`
+  }" alt="${alt}" />` +
   (caption ? `<figcaption>${caption}</figcaption>` : "") +
   "</figure>";
+
+// HTML → Markdown for the .md versions of pages (src/markdown.liquid).
+// Links and images get absolute URLs, so the Markdown works wherever it is
+// pasted. Scripts, embeds, decorative images (alt="") and duplicates hidden
+// from screen readers (aria-hidden) are dropped.
+const { url: SITE_URL } = require("./src/_data/site.json");
+const absoluteUrl = (href) => {
+  if (href.startsWith("#") || !URL.canParse(href, SITE_URL)) {
+    return href;
+  }
+  const url = new URL(href, SITE_URL);
+  if (url.origin === SITE_URL) {
+    url.pathname = url.pathname.replace(/\/{2,}/g, "/");
+  }
+  return url.href;
+};
+const turndown = new TurndownService({
+  headingStyle: "atx",
+  hr: "---",
+  codeBlockStyle: "fenced",
+  bulletListMarker: "-",
+});
+turndown.use(gfm);
+// Rules added with addRule take priority over the built-in ones, and the
+// last one added is checked first, so "drop" goes at the end
+turndown.addRule("image", {
+  filter: "img",
+  replacement: (content, node) =>
+    `![${node.getAttribute("alt")}](${absoluteUrl(node.getAttribute("src"))})`,
+});
+// Block content inside a link (cards) collapses to one line
+turndown.addRule("link", {
+  filter: (node) => node.nodeName === "A" && node.getAttribute("href"),
+  replacement: (content, node) => {
+    const text = content.replace(/\s+/g, " ").trim();
+    return text ? `[${text}](${absoluteUrl(node.getAttribute("href"))})` : "";
+  },
+});
+// "- item" instead of turndown's "-   item"
+turndown.addRule("listItem", {
+  filter: "li",
+  replacement: (content, node) => {
+    const parent = node.parentNode;
+    const prefix =
+      parent.nodeName === "OL"
+        ? `${
+            (Number(parent.getAttribute("start")) || 1) +
+            Array.from(parent.childNodes)
+              .filter((child) => child.nodeName === "LI")
+              .indexOf(node)
+          }. `
+        : "- ";
+    const body = content
+      .replace(/^\n+|\n+$/g, "")
+      .replace(/\n/g, `\n${" ".repeat(prefix.length)}`);
+    return prefix + body + (node.nextSibling ? "\n" : "");
+  },
+});
+turndown.addRule("drop", {
+  filter: (node) =>
+    ["SCRIPT", "STYLE", "NOSCRIPT", "IFRAME", "BUTTON"].includes(
+      node.nodeName
+    ) ||
+    node.getAttribute("aria-hidden") === "true" ||
+    (node.nodeName === "IMG" && !node.getAttribute("alt")),
+  replacement: () => "",
+});
 
 module.exports = function (eleventyConfig) {
   // ---------------------------------------------------------------------------
@@ -64,8 +172,29 @@ module.exports = function (eleventyConfig) {
   // RSS/Atom filters used by src/feed.njk
   eleventyConfig.addPlugin(pluginRss);
 
-  // Allow raw HTML in Markdown and turn bare URLs into links
-  eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
+  // Allow raw HTML in Markdown and turn bare URLs into links.
+  // ![alt](photo.jpg) in a post with its own folder takes the image from
+  // that folder (Eleventy passes the page data to markdown-it as env).
+  const md = markdownIt({ html: true, linkify: true });
+  const renderImage = md.renderer.rules.image;
+  md.renderer.rules.image = (tokens, idx, options, env, self) => {
+    const file = postFile(env.page, tokens[idx].attrGet("src"));
+    if (file) {
+      tokens[idx].attrSet("src", inputUrl(file));
+    }
+    return renderImage(tokens, idx, options, env, self);
+  };
+  // [report](report.pdf) points to the copy next to the page (see
+  // "Files from post folders" below); the full path keeps the link
+  // working in the feed and on tag pages too
+  md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+    const href = tokens[idx].attrGet("href");
+    if (postFile(env.page, href)) {
+      tokens[idx].attrSet("href", `${env.page.url}${href}`);
+    }
+    return self.renderToken(tokens, idx, options);
+  };
+  eleventyConfig.setLibrary("md", md);
 
   // ---------------------------------------------------------------------------
   // Static files copied to _site as is
@@ -95,6 +224,19 @@ module.exports = function (eleventyConfig) {
       collectionApi.getAll().flatMap((item) => item.data.tags || [])
     );
     return [...tags].filter((tag) => !SERVICE_TAGS.has(tag)).sort();
+  });
+
+  // Pages that also get a Markdown version: front matter `markdown: true`
+  eleventyConfig.addCollection("markdownPages", (collectionApi) => {
+    const pages = collectionApi.getAll().filter((item) => item.data.markdown);
+    // src/headers.liquid writes two _headers rules per page; Cloudflare
+    // ignores rules past 100
+    if (pages.length * 2 > CLOUDFLARE_HEADER_RULES) {
+      console.warn(
+        `[markdown] ${pages.length} pages need ${pages.length * 2} _headers rules, Cloudflare applies only ${CLOUDFLARE_HEADER_RULES}`
+      );
+    }
+    return pages;
   });
 
   // ---------------------------------------------------------------------------
@@ -141,6 +283,34 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  // URL of a page's Markdown version: /posts/x/ → /posts/x.md, / → /index.md
+  eleventyConfig.addFilter("markdownUrl", (url) =>
+    url === "/" ? "/index.md" : `${url.replace(/\/$/, "")}.md`
+  );
+
+  // Social preview image from `cover:` — a file in the post's folder
+  // (served next to the page) or one in src/assets/covers/
+  eleventyConfig.addFilter("coverUrl", function (cover) {
+    return postFile(this.page, cover)
+      ? `${this.page.url}${cover}`
+      : `/assets/covers/${cover}`;
+  });
+
+  // Images from a post's folder are rendered with their source path for
+  // eleventy-img. Outside the image pipeline (Markdown versions, RSS) point
+  // them to the originals served next to the page instead.
+  // Usage: post.content | postFileUrls: post
+  const postFileUrls = (html, item) => {
+    const dir = item && postFolder(item.inputPath);
+    return dir ? html.replaceAll(`"${inputUrl(dir)}/`, `"${item.url}`) : html;
+  };
+  eleventyConfig.addFilter("postFileUrls", postFileUrls);
+
+  // Rendered page content as Markdown. Usage: item.content | toMarkdown: item
+  eleventyConfig.addFilter("toMarkdown", (html, item) =>
+    turndown.turndown(postFileUrls(html, item))
+  );
+
   // Splits a title into lines that fit the social preview image
   eleventyConfig.addFilter("splitlines", (input) =>
     input.split(" ").reduce((lines, word) => {
@@ -161,9 +331,23 @@ module.exports = function (eleventyConfig) {
   // Current year, for the footer copyright
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  // {% asset_img 'file.jpg' 'alt' 'caption' %} — image from src/assets/img/
-  eleventyConfig.addLiquidShortcode("asset_img", (filename, alt, caption) =>
-    figure(filename, alt, caption)
+  // {% icon 'moon' 'text-xl' %} — an icon from src/_icons, sized by the
+  // font size like the icon font it replaces, hidden from screen readers
+  eleventyConfig.addShortcode("icon", (name, className = "") => {
+    const svg = fs.readFileSync(path.join(ICONS_DIR, `${name}.svg`), "utf8");
+    return svg.replace(
+      "<svg ",
+      `<svg class="icon ${className}" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" `
+    );
+  });
+
+  // {% asset_img 'file.jpg' 'alt' 'caption' %} — image from the post's
+  // folder or from src/assets/img/
+  eleventyConfig.addLiquidShortcode(
+    "asset_img",
+    function (filename, alt, caption) {
+      return figure(this.page, filename, alt, caption);
+    }
   );
 
   // {% aside 'text' %} — side note, floats right on wide screens
@@ -173,8 +357,11 @@ module.exports = function (eleventyConfig) {
   );
 
   // {% aside-img 'file.jpg' 'alt' 'caption' %} — side image with a caption
-  eleventyConfig.addLiquidShortcode("aside-img", (filename, alt, caption) =>
-    figure(filename, alt, caption, "aside")
+  eleventyConfig.addLiquidShortcode(
+    "aside-img",
+    function (filename, alt, caption) {
+      return figure(this.page, filename, alt, caption, "aside");
+    }
   );
 
   // {% tg-embed 'channel' 'postId' %} — Telegram post widget
@@ -231,6 +418,29 @@ module.exports = function (eleventyConfig) {
     usedImages.clear();
   });
 
+  // Files from post folders: everything next to a post that isn't a
+  // template or data file is copied next to its page, so
+  // src/posts/2024/06/my-post/report.pdf is served at /posts/my-post/report.pdf
+  eleventyConfig.addWatchTarget(`${INPUT_DIR}/posts/`);
+  eleventyConfig.on("eleventy.after", ({ directories, results }) => {
+    for (const { inputPath, url } of results) {
+      const dir = postFolder(inputPath);
+      if (!dir || !url) {
+        continue;
+      }
+      for (const name of fs.readdirSync(dir)) {
+        if (name.startsWith(".") || POST_TEMPLATE_FILES.test(name)) {
+          continue;
+        }
+        fs.cpSync(
+          path.join(dir, name),
+          path.join(directories.output, url, name),
+          { recursive: true }
+        );
+      }
+    }
+  });
+
   // Convert the social preview SVGs into JPEGs next to them
   eleventyConfig.on("eleventy.after", async ({ directories }) => {
     const ogDir = path.join(directories.output, OG_IMAGES_SUBDIR);
@@ -283,7 +493,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: "src",
+      input: INPUT_DIR,
     },
   };
 };

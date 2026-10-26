@@ -3,12 +3,12 @@
   the donation button to the right on wide screens.
 {%- endcomment -%}
 {%- capture social -%}
-lab la-mastodon|Мастадон|{{ site.mastodon }}|hover:text-social-mastodon
-lab la-linkedin|ЛинкедИн|{{ site.linkedin }}|hover:text-social-linkedin
-lab la-instagram|Инстаграм|{{ site.instagramm }}|hover:text-social-instagram
-lab la-youtube|Ютуб|{{ site.youtube }}|hover:text-social-youtube
-lab la-telegram|Телеграм|{{ site.telegram }}|hover:text-social-telegram
-lab la-steam|Стим|{{ site.steam }}|hover:text-social-epicgames dark:hover:text-social-steam-dark sm:grow
+mastodon|Мастадон|{{ site.mastodon }}|hover:text-social-mastodon
+linkedin|ЛинкедИн|{{ site.linkedin }}|hover:text-social-linkedin
+instagram|Инстаграм|{{ site.instagramm }}|hover:text-social-instagram
+youtube|Ютуб|{{ site.youtube }}|hover:text-social-youtube
+telegram|Телеграм|{{ site.telegram }}|hover:text-social-telegram
+steam|Стим|{{ site.steam }}|hover:text-social-epicgames dark:hover:text-social-steam-dark sm:grow
 {%- endcapture -%}
 <footer class="mt-4 pb-10">
   <div class="flex flex-wrap content-center">
@@ -16,8 +16,9 @@ lab la-steam|Стим|{{ site.steam }}|hover:text-social-epicgames dark:hover:te
 ' %}
     {%- for row in rows %}
       {%- assign item = row | strip | split: '|' %}
+      {%- assign iconName = item[0] %}
       <div class="mr-6 flex items-center text-muted {{ item[3] }}">
-        <i class="{{ item[0] }} text-2xl" aria-hidden="true"></i>
+        {% icon iconName 'text-2xl' %}
         <a href="{{ item[2] }}" class="link-novisited">{{ item[1] }}</a>
       </div>
     {%- endfor %}
@@ -27,8 +28,8 @@ lab la-steam|Стим|{{ site.steam }}|hover:text-social-epicgames dark:hover:te
       aria-label="Поддержать Диму Фурье"
       title="Поддержать"
     >
-      <i class="las la-piggy-bank text-2xl" aria-hidden="true"></i
-    ></a>
+      {% icon 'piggy-bank' 'text-2xl' -%}
+    </a>
   </div>
 
   <p class="py-2 text-sm">© {{ site.author }} × 2017 — {% year %}</p>

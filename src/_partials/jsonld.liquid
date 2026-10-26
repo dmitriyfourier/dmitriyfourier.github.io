@@ -1,0 +1,78 @@
+{%- comment -%}
+  schema.org data for search engines: the author, the site and the page
+  itself (a post, a podcast or a plain page). Included by meta.liquid,
+  so it reuses metaTitle, metaDesc, pageUrl, ogImage and isPost.
+{%- endcomment -%}
+{%- assign personId = site.url | append: '/#person' -%}
+{%- assign websiteId = site.url | append: '/#website' -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "{{ personId }}",
+        "name": {{ site.author | json }},
+        "url": "{{ site.url }}/",
+        "image": "{{ site.url }}/assets/img/furye.jpg",
+        "email": "mailto:{{ site.email }}",
+        "sameAs": [
+          "{{ site.telegram }}",
+          "{{ site.github }}",
+          "{{ site.linkedin }}",
+          "{{ site.mastodon }}",
+          "{{ site.youtube }}",
+          "{{ site.twitter-l }}"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ websiteId }}",
+        "url": "{{ site.url }}/",
+        "name": {{ site.title | json }},
+        "description": {{ site.description | json }},
+        "inLanguage": "ru",
+        "publisher": { "@id": "{{ personId }}" }
+      },
+      {%- if isPost %}
+      {
+        "@type": "BlogPosting",
+        "@id": "{{ pageUrl }}#article",
+        "mainEntityOfPage": "{{ pageUrl }}",
+        "url": "{{ pageUrl }}",
+        "headline": {{ metaTitle | json }},
+        "description": {{ metaDesc | json }},
+        "image": "{{ site.url }}{{ ogImage }}",
+        "datePublished": "{{ page.date | dateIso }}",
+        "inLanguage": "ru",
+        "author": { "@id": "{{ personId }}" },
+        "publisher": { "@id": "{{ personId }}" },
+        "isPartOf": { "@id": "{{ websiteId }}" },
+        "keywords": {{ tags | where_exp: 'tag', "tag != 'posts'" | json }}
+      }
+      {%- elsif pdcastimg %}
+      {
+        "@type": "PodcastSeries",
+        "@id": "{{ pageUrl }}#podcast",
+        "url": "{{ pageUrl }}",
+        "name": {{ metaTitle | json }},
+        "description": {{ metaDesc | json }},
+        "image": "{{ site.url }}{{ pdcastimg }}",
+        "inLanguage": "ru",
+        "author": { "@id": "{{ personId }}" },
+        "isPartOf": { "@id": "{{ websiteId }}" }
+      }
+      {%- else %}
+      {
+        "@type": "WebPage",
+        "@id": "{{ pageUrl }}",
+        "url": "{{ pageUrl }}",
+        "name": {{ metaTitle | json }},
+        "description": {{ metaDesc | json }},
+        "inLanguage": "ru",
+        "isPartOf": { "@id": "{{ websiteId }}" }
+      }
+      {%- endif %}
+    ]
+  }
+</script>

@@ -2,38 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ desc }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-    <meta name="author" content="{{ site.author }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include '_partials/meta.liquid' %}
     {% include '_partials/fonts.liquid' %}
     {% include '_partials/favicons.liquid' %}
-    <!-- Opengraph -->
-    <meta property="og:title" content="{{ data.title }}" />
-    <meta property="og:url" content="{{ page.url }}" />
-    {% if tags %}
-      <meta
-        property="og:image"
-        content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg"
-      />
-      <meta
-        property="og:image:secure_url"
-        content="{{ site.url }}/assets/img/og/{{ data.title | slug }}-preview.jpeg"
-      />
-    {% else %}
-      <meta property="og:image" content="{{ site.url }}/img/default-preview.jpeg" />
-      <meta property="og:image:secure_url" content="{{ site.url }}/img/default-preview.jpeg" />
-    {% endif %}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="{{ site.twitter-s }}" />
-    <meta name="twitter:creator" content="{{ site.twitter-s }}" />
+    {% include '_partials/alternates.liquid' %}
     <link rel="me" href="{{ site.mastodon }}">
-    <!-- styles -->
     <link href="/assets/styles/tailwind.css?v={{ build.version }}" rel="stylesheet" />
-
-    <!-- Scripts -->
     {% include '_partials/theme-init.liquid' %}
   </head>
 
@@ -45,6 +20,7 @@
       {% endunless %}
 
       {{ content }}
+      {% include '_partials/markdown-note.liquid' %}
     </main>
 
     {% include '_partials/footer.liquid' %}

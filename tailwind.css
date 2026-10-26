@@ -202,10 +202,19 @@ main:focus {
 }
 
 /* Fotorama galleries are built after their scripts load. Hold the built
-   height (800px stage from data-height plus 30px of dots) up front, so the
-   text below doesn't jump. A gallery with other settings needs its own rule. */
-.fotorama[data-height="800"][data-nav="dots"] {
-  min-height: 830px;
+   height (a 4:3 stage of the full text width, at most 800px, plus 30px of
+   dots) up front, so the text below doesn't jump. A gallery with other
+   settings needs its own rule. */
+main {
+  container-type: inline-size;
+}
+.fotorama[data-ratio="4/3"][data-maxheight="800"][data-nav="dots"] {
+  min-height: calc(min(75cqw, 800px) + 30px);
+}
+/* A slide is a figure with a caption; the usual figure margins would push
+   the caption out of the stage */
+.fotorama figure {
+  margin: 0;
 }
 
 /* Fotorama's dot buttons are 18px wide; widen them to the 24px minimum
@@ -215,6 +224,12 @@ main:focus {
 }
 .fotorama__dot {
   left: 9px;
+}
+
+/* Inline SVG icons from the icon shortcode sit on the text baseline like
+   the icon font glyphs they replace */
+.icon {
+  vertical-align: -0.125em;
 }
 
 /* Side notes: {% aside %} and {% aside-img %} shortcodes */
@@ -243,7 +258,7 @@ figure.aside {
   }
 }
 
-/* Horizontal scroll for wide content, e.g. the tag row on post pages */
+/* Horizontal scroll for wide content, e.g. the podcast row on the home page */
 div.warp {
   @apply overflow-x-auto;
 }

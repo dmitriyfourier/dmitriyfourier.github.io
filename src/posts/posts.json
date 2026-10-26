@@ -1,5 +1,7 @@
 {
     "layout": "post.liquid",
+    "permalink": "/posts/{{ page.fileSlug | slug }}/",
     "tags": ["posts"],
-    "published": true
+    "published": true,
+    "markdown": true
 }

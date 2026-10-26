@@ -4,7 +4,10 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {%- comment -%} Tag pages are closed in robots.txt {%- endcomment -%}
     {% for page in collections.all %}
+        {%- assign urlStart = page.url | slice: 0, 6 -%}
+        {%- if urlStart == '/tags/' %}{% continue %}{% endif %}
         <url>
             <loc>{{ site.url }}{{ page.url | url }}</loc>
             <lastmod>{{ page.date | dateIso }}</lastmod>

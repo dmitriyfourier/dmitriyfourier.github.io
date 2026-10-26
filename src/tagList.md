@@ -4,11 +4,12 @@ pagination:
   data: collections
   size: 1
   # Skip Eleventy's built-in and helper collections, they aren't tags
-  filter: [all, posts, sortedPosts, tagList]
+  filter: [all, posts, podcasts, sortedPosts, tagList, markdownPages]
   alias: tag
 permalink: /tags/{{ tag | slug }}/
 eleventyComputed:
   title: "{{ tag }}"
+  desc: "Заметки Димы Фурье с тегом «{{ tag }}» — все записи блога на эту тему."
 ---  
 
 <h1 class="text-3xl font-bold mb-6">Записи с тегом «{{ tag }}»</h1>

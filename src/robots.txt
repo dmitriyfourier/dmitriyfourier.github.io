@@ -1,6 +1,8 @@
-﻿user-agent: *
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Disallow: /404*
 Disallow: /tags/*
 Disallow: /_partials/*
 Disallow: /admin/
+
 Sitemap: https://fourier.rocks/sitemap.xml

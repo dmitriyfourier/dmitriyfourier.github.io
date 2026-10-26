@@ -1,0 +1,16 @@
+---
+permalink: /_headers
+eleventyExcludeFromCollections: true
+---
+# Cloudflare static asset headers (built from src/headers.liquid).
+# Every page with a Markdown version points to it with an HTTP Link header,
+# and the Markdown points back to the page. Cloudflare allows 100 rules,
+# so this fits 50 such pages; .eleventy.js warns when there are more.
+{% for item in collections.markdownPages %}
+{{ item.url }}
+  Link: <{{ item.url | markdownUrl }}>; rel="alternate"; type="text/markdown"
+
+{{ item.url | markdownUrl }}
+  Content-Type: text/markdown; charset=utf-8
+  Link: <{{ item.url }}>; rel="alternate"; type="text/html"
+{% endfor %}

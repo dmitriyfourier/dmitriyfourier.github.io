@@ -1,0 +1,10 @@
+{%- comment -%}
+  For AI tools that get the page's text, e.g. a URL pasted into a chat.
+  Hidden from sight and from screen readers.
+{%- endcomment -%}
+{%- if markdown %}
+  <p class="sr-only" aria-hidden="true">
+    Markdown-версия этой страницы: {{ site.url -}}
+    {{- page.url | markdownUrl }}
+  </p>
+{%- endif %}

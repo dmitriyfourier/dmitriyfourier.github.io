@@ -14,7 +14,7 @@
     "format:check": "prettier --check \"src/**/*.{liquid,html,css}\" tailwind.css",
     "build": "run-s build:*",
     "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i ./tailwind.css -o _site/assets/styles/tailwind.css --minify"
+    "build:css": "tailwindcss -i ./tailwind.css -o _site/assets/styles/tailwind.css --minify && node scripts/compat-css.js _site/assets/styles/tailwind.css"
   },
   "keywords": [],
   "author": "",
@@ -24,19 +24,37 @@
     "@11ty/eleventy-img": "^7.1.1",
     "@11ty/eleventy-plugin-rss": "^3.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@eslint/js": "^9.39.5",
     "@evilmartians/harmony": "^1.4.0",
     "@shopify/prettier-plugin-liquid": "^1.11.3",
     "@tailwindcss/cli": "^4.3.3",
+    "browserslist": "^4.29.4",
     "eleventy-plugin-embed-everything": "^1.21.2",
-    "eslint": "^7.32.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-compat": "^7.0.2",
+    "globals": "^17.13.0",
+    "lightningcss": "^1.32.0",
     "markdown-it": "^15.0.3",
     "npm-run-all2": "^9.0.4",
     "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "slugify": "^1.6.9",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2"
   },
   "engines": {
     "node": ">=22"
-  }
+  },
+  "browserslist": [
+    "chrome >= 109",
+    "edge >= 109",
+    "opera >= 95",
+    "and_chr >= 109",
+    "samsung >= 21",
+    "safari >= 15.4",
+    "ios_saf >= 15.4",
+    "firefox >= 115",
+    "and_ff >= 115"
+  ]
 }
