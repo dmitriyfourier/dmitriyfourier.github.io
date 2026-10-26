@@ -1,64 +1,45 @@
-## Features
-- Static Site Gen - Eleventy v3 (Node 22+)
+# fourier.rocks
 
-- Tailwind CSS v4 (+ Flowbite plugin) / Tailwind Typography / Dark Mode
+The source of [fourier.rocks](https://fourier.rocks), Dmitriy Fourier's personal blog and podcast pages, built with Eleventy.
 
-- Create excerpts using the `<!-- excerpt -->`
+The site is in Russian. The repository keeps its old GitHub Pages name, `dmitriyfourier.github.io`, but the site is now deployed with Cloudflare Workers.
 
-- Custom ReadTime filter
+- [Eleventy 3](https://www.11ty.dev/) with Liquid templates, content in `src/`
+- [Tailwind CSS 4](https://tailwindcss.com/) with Typography and Flowbite plugins, dark mode
+- Responsive AVIF/WebP/JPEG images generated from every `<img>` by [eleventy-img](https://www.11ty.dev/docs/plugins/image/)
+- Tags, RSS feed, sitemap, related posts, reading time, Open Graph previews
 
-- 404 page
+## Requirements
 
-+ Tags page to view posts related to tag
-  - Use of a `tagList` collection defined in `.eleventy.js`
-  - `/tags` - show all available tags (excluding all and posts) as buttons (`tags.md`)
-  - `/tags/tag-name` - shows all posts related to that tag (`tagList.md`)
+Node.js 22 or newer (`.node-version` pins 24).
 
-+ Sitemap and Robots.txt 
-  - Change site url in `_data/site.json`
+## Usage
 
-+ Shortcode to handle images
-  - Add image under `src/assets/img/posts` and use the asset_img short code
-  - `{% asset_img 'filename' 'alt_text' %}` eg. `{% asset_img 'mailbox.jpg' 'mailbox' %}`
-
-- Draft posts using the `published` frontmatter
-
-+ Posts pagination in `index.html` 
-  - change the `size` frontmatter variable
-- ESLint
-
-+ Bash script to create new post (based on YYYY and MM)
-```bash
-$ ./create new blog post
-Created new post at src/posts/2021/01/new-blog-post.md
-```
-
-
-## Running locally
-
-Create your blogpost under `src/posts`. I like to have mine sorted by YY/MM.
-
-Navigate to localhost:8080 after starting the server.
-```
+```sh
+npm install
 npm start
 ```
 
+This starts Eleventy and the Tailwind watcher together; the site is at http://localhost:8080.
+
+Build the production site into `_site/`:
+
+```sh
+npm run build
+```
+
+## Writing posts
+
+Create a post in `src/posts/YYYY/MM/` from a title:
+
+```sh
+bash create "Title of the post"
+```
+
+- Text above `<!-- excerpt -->` is the excerpt shown in post lists.
+- Posts are published by default (`src/posts/posts.json`); `published: false` in front matter hides a post from the `/posts` list, but its page is still built.
+- Put images in `src/assets/img/` and insert them with `{% asset_img 'file.jpg' 'alt text' 'caption' %}`. Plain `<img>` tags work too; both are converted to responsive `<picture>` on build.
 
 ## Deployment
-[<img src="https://www.netlify.com/img/deploy/button.svg" />](
-https://app.netlify.com/start/deploy?repository=https://github.com/kohrongying/11ty-blog-starter)
 
-
-
-On Netlify / Surge / Firebase hosting / etc hosting providers
-
-Build Command: `npm run build`
-
-Output folder: `_site`
-
-<!--
-## Future Improvemeents
-
-- [ ] Minification of assets
-- [ ] Make next/prev posts
--->
+A merge into `main` triggers a Cloudflare Workers Builds deploy of `_site/`. Optimized images are written to `.cache/eleventy-img/`, which Workers Builds keeps between builds when build caching is enabled for the project, so unchanged images aren't re-encoded.
