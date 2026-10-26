@@ -11,6 +11,7 @@ The source of [fourier.rocks](https://fourier.rocks), Dmitriy Fourier's personal
   - touch targets of at least 24 px;
   - Ctrl + arrow shortcuts between posts.
 - **Ready for sharing.** Posts get tags, related posts, reading time, an RSS feed, a sitemap, and an Open Graph preview image generated from the title.
+- **Readable by AI tools.** Every post, podcast and the home page also has a clean Markdown version at the same URL with `.md`, for example `/posts/knowledges-types.md`. Pages link to it with `<link rel="alternate">` and an HTTP `Link` header. [`/llms.txt`](https://fourier.rocks/llms.txt) lists all of them, and `robots.txt` allows AI use through `Content-Signal`.
 - **Automatic deploys.** A merge into `main` publishes the site on Cloudflare.
 
 To write a post, run one command, then fill in the Markdown file it creates:
@@ -101,6 +102,9 @@ src/
   _includes/      page layouts
   _partials/      shared header, footer, theme toggle, fonts
   _data/          site settings (site.json) and the build version
+  markdown.liquid .md versions of pages with `markdown: true` (all posts, podcasts, home)
+  headers.liquid  _headers for Cloudflare: Link headers between pages and their .md
+  llms.liquid     /llms.txt
   assets/         images, fonts, styles and scripts copied as is
 tailwind.css      Tailwind entry: theme colors, dark mode, base styles
 .eleventy.js      Eleventy config: plugins, shortcodes, image pipeline

@@ -5,3 +5,6 @@
   title="{{ site.title }}"
   href="{{ site.feed.path }}"
 >
+{%- if markdown %}
+  <link rel="alternate" type="text/markdown" href="{{ page.url | markdownUrl }}">
+{%- endif %}

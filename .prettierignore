@@ -29,3 +29,4 @@ src/Everything-Everywhere-All-at-Once.liquid
 # Plain-text outputs (llms.txt, .md pages), not HTML
 src/llms.liquid
 src/markdown.liquid
+src/headers.liquid

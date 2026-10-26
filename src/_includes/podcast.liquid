@@ -45,6 +45,7 @@
         <h1 class="sr-only">{{ title }}</h1>
       {% endunless %}
       {{ content }}
+      {% include '_partials/markdown-note.liquid' %}
     </main>
 
     {% include '_partials/footer.liquid' %}

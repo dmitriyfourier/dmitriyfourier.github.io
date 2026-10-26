@@ -36,6 +36,8 @@ const SERVICE_TAGS = new Set(["all", "posts"]);
 
 // Characters per minute used for the reading time estimate
 const READING_SPEED = 450;
+// Max rules Cloudflare reads from _headers
+const CLOUDFLARE_HEADER_RULES = 100;
 // Max characters per line of a title on the social preview image
 const OG_LINE_LENGTH = 19;
 
@@ -167,9 +169,17 @@ module.exports = function (eleventyConfig) {
   });
 
   // Pages that also get a Markdown version: front matter `markdown: true`
-  eleventyConfig.addCollection("markdownPages", (collectionApi) =>
-    collectionApi.getAll().filter((item) => item.data.markdown)
-  );
+  eleventyConfig.addCollection("markdownPages", (collectionApi) => {
+    const pages = collectionApi.getAll().filter((item) => item.data.markdown);
+    // src/headers.liquid writes two _headers rules per page; Cloudflare
+    // ignores rules past 100
+    if (pages.length * 2 > CLOUDFLARE_HEADER_RULES) {
+      console.warn(
+        `[markdown] ${pages.length} pages need ${pages.length * 2} _headers rules, Cloudflare applies only ${CLOUDFLARE_HEADER_RULES}`
+      );
+    }
+    return pages;
+  });
 
   // ---------------------------------------------------------------------------
   // Filters
