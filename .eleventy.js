@@ -19,6 +19,7 @@ const {
 
 // Where optimized images live. .cache is kept between Cloudflare Workers
 // Builds for Eleventy projects, so unchanged images aren't re-encoded.
+const INPUT_DIR = "src";
 const IMAGE_CACHE_DIR = ".cache/eleventy-img/";
 const IMAGE_URL_PATH = "/assets/img/";
 // Folders inside the build output (_site by default)
@@ -49,10 +50,39 @@ const readableDate = new Intl.DateTimeFormat("ru", {
   timeZone: "UTC",
 });
 
-// <figure> with an optional caption, used by the image shortcodes
-const figure = (filename, alt = "", caption, className) =>
+// Posts can live in their own folder together with their files:
+// src/posts/YYYY/MM/my-post/my-post.md next to photo.jpg, report.pdf, …
+// Returns that folder, or null for a post that shares its folder.
+const postFolder = (inputPath) => {
+  const dir = path.dirname(inputPath);
+  return path.basename(dir) === path.parse(inputPath).name ? dir : null;
+};
+
+// A file referenced relatively from a post in its own folder, or null
+const postFile = (page, ref) => {
+  if (!page?.inputPath || !ref || /^([a-z][a-z\d+.-]*:|\/|#)/i.test(ref)) {
+    return null;
+  }
+  const dir = postFolder(page.inputPath);
+  const file = dir && path.join(dir, decodeURI(ref));
+  return file && fs.existsSync(file) ? file : null;
+};
+
+// "/posts/2024/06/my-post/photo.jpg": the path eleventy-img resolves from
+// the input folder. Unlike a relative path, it also works when the post is
+// shown inside another page (feed, tag pages).
+const inputUrl = (file) =>
+  `/${path.relative(INPUT_DIR, file).split(path.sep).join("/")}`;
+
+// <figure> with an optional caption, used by the image shortcodes. The file
+// comes from the post's folder if it is there, otherwise from src/assets/img/
+const figure = (page, filename, alt = "", caption, className) =>
   `<figure${className ? ` class="${className}"` : ""}>` +
-  `<img src="${IMAGE_URL_PATH}${filename}" alt="${alt}" />` +
+  `<img src="${
+    postFile(page, filename)
+      ? inputUrl(postFile(page, filename))
+      : `${IMAGE_URL_PATH}${filename}`
+  }" alt="${alt}" />` +
   (caption ? `<figcaption>${caption}</figcaption>` : "") +
   "</figure>";
 
@@ -135,8 +165,19 @@ module.exports = function (eleventyConfig) {
   // RSS/Atom filters used by src/feed.njk
   eleventyConfig.addPlugin(pluginRss);
 
-  // Allow raw HTML in Markdown and turn bare URLs into links
-  eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
+  // Allow raw HTML in Markdown and turn bare URLs into links.
+  // ![alt](photo.jpg) in a post with its own folder takes the image from
+  // that folder (Eleventy passes the page data to markdown-it as env).
+  const md = markdownIt({ html: true, linkify: true });
+  const renderImage = md.renderer.rules.image;
+  md.renderer.rules.image = (tokens, idx, options, env, self) => {
+    const file = postFile(env.page, tokens[idx].attrGet("src"));
+    if (file) {
+      tokens[idx].attrSet("src", inputUrl(file));
+    }
+    return renderImage(tokens, idx, options, env, self);
+  };
+  eleventyConfig.setLibrary("md", md);
 
   // ---------------------------------------------------------------------------
   // Static files copied to _site as is
@@ -253,9 +294,13 @@ module.exports = function (eleventyConfig) {
   // Current year, for the footer copyright
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  // {% asset_img 'file.jpg' 'alt' 'caption' %} — image from src/assets/img/
-  eleventyConfig.addLiquidShortcode("asset_img", (filename, alt, caption) =>
-    figure(filename, alt, caption)
+  // {% asset_img 'file.jpg' 'alt' 'caption' %} — image from the post's
+  // folder or from src/assets/img/
+  eleventyConfig.addLiquidShortcode(
+    "asset_img",
+    function (filename, alt, caption) {
+      return figure(this.page, filename, alt, caption);
+    }
   );
 
   // {% aside 'text' %} — side note, floats right on wide screens
@@ -265,8 +310,11 @@ module.exports = function (eleventyConfig) {
   );
 
   // {% aside-img 'file.jpg' 'alt' 'caption' %} — side image with a caption
-  eleventyConfig.addLiquidShortcode("aside-img", (filename, alt, caption) =>
-    figure(filename, alt, caption, "aside")
+  eleventyConfig.addLiquidShortcode(
+    "aside-img",
+    function (filename, alt, caption) {
+      return figure(this.page, filename, alt, caption, "aside");
+    }
   );
 
   // {% tg-embed 'channel' 'postId' %} — Telegram post widget
@@ -375,7 +423,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: "src",
+      input: INPUT_DIR,
     },
   };
 };
