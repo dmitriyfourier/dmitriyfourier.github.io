@@ -26,7 +26,7 @@ categories %} {% if similar.size > 0 %}
 </div>
 {% else %} {% endif %}
 -->
-<!---
+{% comment %}
 {% assign similar = collections.sortedPosts | similarPosts: page.inputPath,
 categories %} {% if similar.size > 0 %}
 <h2>Сосздаём одну сториз нормальных размеров</h2>
@@ -55,4 +55,4 @@ categories %} {% if similar.size > 0 %}
     {% endfor %} {% else %} {% endif %}
   </div>
 </div>
-->
+{% endcomment %}
