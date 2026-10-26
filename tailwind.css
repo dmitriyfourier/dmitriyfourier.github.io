@@ -1,18 +1,140 @@
-@import "tailwindcss/base";
-@import "/src/assets/styles/normalize.css";
-@import "/src/assets/styles/fonts.css";
-@import "/src/assets/styles/bettertext.css";
-@import "/src/assets/styles/links.css";
-@import "/src/assets/styles/likely.css";
-@import "/src/assets/styles/fotorama.css";
-@import "/src/assets/styles/line-awesome.css";
-@import "tailwindcss/utilities";
-@import "tailwindcss/components";
+@import 'tailwindcss';
+@import './src/assets/styles/normalize.css' layer(base);
+@import './src/assets/styles/fonts.css' layer(base);
+@import './src/assets/styles/bettertext.css' layer(base);
+@import './src/assets/styles/links.css' layer(base);
+@import './src/assets/styles/likely.css' layer(base);
+@import './src/assets/styles/fotorama.css' layer(base);
+@import './src/assets/styles/line-awesome.css' layer(base);
 
-body {
-  margin: calc(10px + 3vh) calc(10px + 2vw);
- }
- 
+@plugin '@tailwindcss/typography';
+@plugin 'flowbite/plugin';
+
+@source './node_modules/flowbite';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-social-facebook: #1877f2;
+  --color-social-twitter: #1da1f2;
+  --color-social-mastodon: #6364ff;
+  --color-social-whatsapp: #25d366;
+  --color-social-google: #dd4b39;
+  --color-social-linkedin: #0a66c2;
+  --color-social-reddit: #ff4500;
+  --color-social-instagram: #c13584;
+  --color-social-lastfm: #d51007;
+  --color-social-odnoklassniki: #ed812b;
+  --color-social-spotify: #1db954;
+  --color-social-gitlab: #fca326;
+  --color-social-dribbble: #ea4c89;
+  --color-social-telegram: #0088cc;
+  --color-social-goodreads: #553b08;
+  --color-social-kaggle: #20beff;
+  --color-social-blizzard: #0e86ca;
+  --color-social-epicgames: #121212;
+  --color-social-medium: #1a8917;
+  --color-social-vk: #45668e;
+  --color-social-xbox: #52b043;
+  --color-social-twitch: #9146ff;
+  --color-social-playstation: #003087;
+  --color-social-bitcoin: #f7901f;
+  --color-social-ethereum: #464a76;
+  --color-social-youtube: #ff0000;
+  --color-social-behance: #0057ff;
+  --color-social-pinterest: #e60023;
+  --color-social-imdb: #f6c700;
+
+  --color-social-github-light: #333;
+  --color-social-github-dark: #f5f5f5;
+
+  --color-social-steam-light: #000000;
+  --color-social-steam-dark: #f5f5f5;
+
+  --color-tg-light: #fff;
+  --color-tg-dark: #15202b;
+  --color-tg-deepdark: #234;
+
+  --color-mk-background: oklch(19.34% 0.012 75);
+  --color-mk-comments: oklch(61.33% 0.008 75);
+  --color-mk-white: oklch(96.68% 0.0171875 20);
+
+  --color-mk-yellow-main: rgb(229, 181, 103);
+  --color-mk-yellow-deco: rgb(229, 181, 103, 0.25);
+
+  --color-mk-green: #b4d273;
+
+  --color-mk-orange-main: rgb(232, 125, 62);
+  --color-mk-orange-deco: rgb(232, 125, 62, 0.25);
+
+  --color-mk-purple-main: rgb(132, 91, 203);
+  --color-mk-purple-deco: rgb(158, 134, 200, 0.25);
+
+  --color-mk-greenlow-main: rgb(122, 168, 116);
+  --color-mk-greenlow-deco: rgb(122, 168, 116, 0.25);
+
+  --color-mk-pink: #b05279;
+
+  --color-mk-blue-main: oklch(58% 0.083 242);
+  --color-mk-blue-deco: rgb(108, 153, 187, 0.25);
+  --color-mk-blue-deep: #4344b3;
+  --color-mk-blue-deepde: rgb(67, 68, 179, 0.25);
+
+  --grid-template-rows-6: repeat(6, minmax(0, 1fr));
+  --grid-template-rows-8: repeat(8, minmax(0, 1fr));
+  --grid-template-rows-10: repeat(10, minmax(0, 1fr));
+  --grid-template-rows-12: repeat(12, minmax(0, 1fr));
+  --grid-template-rows-14: repeat(14, minmax(0, 1fr));
+  --grid-template-rows-16: repeat(16, minmax(0, 1fr));
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* Tailwind v4 no longer sets cursor: pointer on buttons */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/*
+  Element styles live in the base layer so utilities (text-lg, text-sm, …)
+  can still override them, as they did in Tailwind v3.
+*/
+@layer base {
+  body {
+    margin: calc(10px + 3vh) calc(10px + 2vw);
+  }
+
+  /*blockquote*/
+  blockquote {
+    @apply border-l-4 border-l-mk-comments dark:border-l-mk-yellow-main;
+  }
+
+  blockquote > p {
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
 
 /* tags */
 
@@ -24,20 +146,6 @@ body {
   @apply inline-block text-xs rounded-full py-2 px-4 mt-1 mr-1 bg-gray-300 dark:bg-gray-500;
 }
 
-
-/*blockquote*/
-blockquote {
-  @apply border-l-4 border-l-mk-comments dark:border-l-mk-yellow-main;
-}
-
-blockquote > p {
-  font-weight: 300;
-  font-size: 1.3rem;
-}
-
-p {
-  font-size: 1.3rem;
-}
 
 /*comments*/
 .comments{

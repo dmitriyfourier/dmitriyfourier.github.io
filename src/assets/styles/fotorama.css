@@ -1,4 +1,4 @@
-﻿ /*! fotorama.css | MIT-LICENSE | https://github.com/artpolikarpov/fotorama */
+﻿/*! fotorama.css | MIT-LICENSE | https://github.com/artpolikarpov/fotorama */
  .fotorama__arr:focus:after,
  .fotorama__fullscreen-icon:focus:after,
  .fotorama__html,
@@ -139,9 +139,7 @@
  .fotorama__nav__shaft {
      -moz-box-orient: vertical;
      display: inline-block;
-     vertical-align: middle;
-     *display: inline;
-     *zoom: 1
+     vertical-align: middle
  }
 
  .fotorama__nav__frame,
@@ -581,7 +579,6 @@
  .fotorama__arr--disabled {
      pointer-events: none;
      cursor: default;
-     *display: none;
      opacity: .1
  }
 

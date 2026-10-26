@@ -1,7 +1,7 @@
 ## Features
-- Static Site Gen - Eleventy
+- Static Site Gen - Eleventy v3 (Node 22+)
 
-- Tailwind CSS v2.0 / Tailwind Typography / Dark Mode
+- Tailwind CSS v4 (+ Flowbite plugin) / Tailwind Typography / Dark Mode
 
 - Create excerpts using the `<!-- excerpt -->`
 
