@@ -27,7 +27,7 @@ eleventyExcludeFromCollections: true
             <pubDate>{{ post.date | dateIso }}</pubDate>
             <author>{{ site.author }}</author>
             <turbo:content>
-				{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+				{{ post.templateContent | postFileUrls(post) | htmlToAbsoluteUrls(absolutePostUrl) }}
             </turbo:content>
         </item>
 		{%- endfor -%}

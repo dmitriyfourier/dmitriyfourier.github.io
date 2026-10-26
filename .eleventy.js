@@ -292,16 +292,20 @@ module.exports = function (eleventyConfig) {
       : `/assets/covers/${cover}`;
   });
 
-  // Rendered page content as Markdown. Images from a post's folder point to
-  // their originals next to the page instead of the source path.
-  // Usage: item.content | toMarkdown: item
-  eleventyConfig.addFilter("toMarkdown", (html, item) => {
+  // Images from a post's folder are rendered with their source path for
+  // eleventy-img. Outside the image pipeline (Markdown versions, RSS) point
+  // them to the originals served next to the page instead.
+  // Usage: post.content | postFileUrls: post
+  const postFileUrls = (html, item) => {
     const dir = item && postFolder(item.inputPath);
-    const content = dir
-      ? html.replaceAll(`"${inputUrl(dir)}/`, `"${item.url}`)
-      : html;
-    return turndown.turndown(content);
-  });
+    return dir ? html.replaceAll(`"${inputUrl(dir)}/`, `"${item.url}`) : html;
+  };
+  eleventyConfig.addFilter("postFileUrls", postFileUrls);
+
+  // Rendered page content as Markdown. Usage: item.content | toMarkdown: item
+  eleventyConfig.addFilter("toMarkdown", (html, item) =>
+    turndown.turndown(postFileUrls(html, item))
+  );
 
   // Splits a title into lines that fit the social preview image
   eleventyConfig.addFilter("splitlines", (input) =>
