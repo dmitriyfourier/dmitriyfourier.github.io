@@ -7,6 +7,15 @@
 
 @import 'tailwindcss';
 
+/*
+  Harmony palette (github.com/evilmartians/harmony): replaces Tailwind's
+  default colors under the same names (gray-500, blue-700, …). Shades are
+  built with OKLCH and APCA, so a shade number means the same contrast for
+  every hue: on white, 600 ≈ Lc 65, 700 ≈ Lc 77, 800 ≈ Lc 90; on near-black,
+  400 ≈ Lc 65, 300 ≈ Lc 77, 200 ≈ Lc 90.
+*/
+@import '@evilmartians/harmony/tailwind.css';
+
 /* Site styles go into the base layer so Tailwind utilities can override them */
 @import './src/assets/styles/normalize.css' layer(base);
 @import './src/assets/styles/fonts.css' layer(base);
@@ -26,8 +35,35 @@
 /* `dark:` follows a .dark class on a parent instead of the OS setting */
 @custom-variant dark (&:is(.dark *));
 
-/* Custom colors (bg-mk-*, text-social-*, …) and extra grid-rows-* utilities */
+/*
+  Theme colors. Templates use these semantic names (text-fg, bg-surface,
+  text-muted, …) instead of pairs like `text-x dark:text-y`: the values
+  switch with the theme in the `.dark` block below.
+
+  Contrast targets (APCA Lc, see git.apcacontrast.com):
+    90+  body text            75+  links, small secondary text
+    45+  focus outline        15+  borders and dividers
+  Light theme is tuned for a white background, where Harmony's shades hit
+  their targets exactly; the dark one for sand-950, the site's own
+  background. Checked values are in the comments.
+*/
 @theme {
+  --color-bg: #fff;
+  --color-surface: var(--color-sand-50);     /* cards, tag chips */
+  --color-fg: var(--color-sand-950);         /* Lc 105 */
+  --color-muted: var(--color-sand-700);      /* dates, captions: Lc 77 */
+  --color-border: var(--color-sand-300);     /* Lc 26 */
+  --color-accent: var(--color-amber-500);    /* blockquote bar: Lc 48 */
+  --color-focus: var(--color-blue-600);      /* focus outline: Lc 65 */
+  --color-selection: var(--color-amber-200); /* text on it: Lc 89 */
+
+  --color-link: var(--color-blue-700);                 /* Lc 77 */
+  --color-link-hover: var(--color-blue-800);           /* Lc 90 */
+  --color-link-visited: var(--color-purple-700);       /* Lc 77 */
+  --color-link-visited-hover: var(--color-purple-800); /* Lc 90 */
+  --color-link-active: var(--color-orange-700);        /* Lc 77 */
+
+  /* Brand colors for social icons on hover */
   --color-social-facebook: #1877f2;
   --color-social-twitter: #1da1f2;
   --color-social-mastodon: #6364ff;
@@ -64,34 +100,6 @@
   --color-social-steam-light: #000000;
   --color-social-steam-dark: #f5f5f5;
 
-  --color-tg-light: #fff;
-  --color-tg-dark: #15202b;
-  --color-tg-deepdark: #234;
-
-  --color-mk-background: oklch(19.34% 0.012 75);
-  --color-mk-comments: oklch(61.33% 0.008 75);
-  --color-mk-white: oklch(96.68% 0.0171875 20);
-
-  --color-mk-yellow-main: rgb(229, 181, 103);
-  --color-mk-yellow-deco: rgb(229, 181, 103, 0.25);
-
-  --color-mk-green: #b4d273;
-
-  --color-mk-orange-main: rgb(232, 125, 62);
-  --color-mk-orange-deco: rgb(232, 125, 62, 0.25);
-
-  --color-mk-purple-main: rgb(132, 91, 203);
-  --color-mk-purple-deco: rgb(158, 134, 200, 0.25);
-
-  --color-mk-greenlow-main: rgb(122, 168, 116);
-  --color-mk-greenlow-deco: rgb(122, 168, 116, 0.25);
-
-  --color-mk-pink: #b05279;
-
-  --color-mk-blue-main: oklch(58% 0.083 242);
-  --color-mk-blue-deco: rgb(108, 153, 187, 0.25);
-  --color-mk-blue-deep: #4344b3;
-  --color-mk-blue-deepde: rgb(67, 68, 179, 0.25);
 
   --grid-template-rows-6: repeat(6, minmax(0, 1fr));
   --grid-template-rows-8: repeat(8, minmax(0, 1fr));
@@ -115,7 +123,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-border, currentcolor);
   }
 
   /* Tailwind v4 no longer sets cursor: pointer on buttons */
@@ -130,13 +138,63 @@
   can still override them, as they did in Tailwind v3.
 */
 @layer base {
+  /* Dark theme: the same tokens, mirrored on the sand-950 background */
+  .dark {
+    --color-bg: var(--color-sand-950);
+    --color-surface: var(--color-sand-900);
+    --color-fg: var(--color-sand-100);         /* Lc 99 */
+    --color-muted: var(--color-sand-300);      /* Lc 77 */
+    --color-border: var(--color-sand-700);     /* Lc 24 */
+    --color-accent: var(--color-amber-400);    /* Lc 65 */
+    --color-focus: var(--color-amber-400);     /* Lc 65 */
+    --color-selection: var(--color-amber-800); /* text on it: Lc 86 */
+
+    --color-link: var(--color-amber-300);               /* Lc 77 */
+    --color-link-hover: var(--color-amber-200);         /* Lc 90 */
+    --color-link-visited: var(--color-green-300);       /* Lc 77 */
+    --color-link-visited-hover: var(--color-green-200); /* Lc 89 */
+    --color-link-active: var(--color-orange-300);       /* Lc 77 */
+
+    /* Native controls and scrollbars follow the theme */
+    color-scheme: dark;
+  }
+
+  html {
+    color-scheme: light;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
+
   body {
     margin: calc(10px + 3vh) calc(10px + 2vw);
   }
 
+  ::selection {
+    background-color: var(--color-selection);
+    color: var(--color-fg);
+  }
+
+  /* Visible focus for keyboard users on every interactive element */
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  /* Respect the OS "reduce motion" setting */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   /*blockquote*/
   blockquote {
-    @apply border-l-4 border-l-mk-comments dark:border-l-mk-yellow-main;
+    @apply border-l-4 border-l-accent;
   }
 
   blockquote > p {
@@ -165,7 +223,7 @@ figure.aside,
 p.aside {
   line-height: 1.4;
   font-size: 0.875em;
-  @apply text-mk-comments dark:text-mk-white;
+  @apply text-muted;
 }
 
 figure.aside {
