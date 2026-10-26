@@ -193,14 +193,22 @@ module.exports = function (eleventyConfig) {
   for (let width = 400; width < 1920; width += 150) {
     imageWidths.push(width);
   }
+  // Optimized images are written to .cache, which Cloudflare Workers Builds
+  // keeps between builds for Eleventy projects, so unchanged images are not
+  // re-encoded. File names contain a hash of the source and options.
+  const imageCacheDir = ".cache/eleventy-img/";
+  const imageOutputDir = "_site/assets/img/";
+  const usedImages = new Set();
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // Output folder and URL prefix for optimized images.
-    outputDir: "_site/assets/img/",
+    outputDir: imageCacheDir,
     urlPath: "/assets/img/",
     formats: ["avif", "webp", "jpeg"],
     widths: imageWidths,
-    filenameFormat: (id, src, width, format) =>
-      `${path.parse(src).name}-${id}-${width}w.${format}`,
+    filenameFormat: (id, src, width, format) => {
+      const filename = `${path.parse(src).name}-${id}-${width}w.${format}`;
+      usedImages.add(filename);
+      return filename;
+    },
     defaultAttributes: {
       // `auto` lets lazy images use their real layout width; the fallback
       // is the content width (body margins are 2vw + 10px on each side).
@@ -208,6 +216,25 @@ module.exports = function (eleventyConfig) {
       loading: "lazy",
       decoding: "async",
     },
+  });
+
+  // Publish the images used by this build and drop stale ones from the cache
+  eleventyConfig.on("eleventy.after", ({ runMode }) => {
+    if (runMode !== "build" || usedImages.size === 0) {
+      return;
+    }
+    fs.mkdirSync(imageOutputDir, { recursive: true });
+    for (const filename of fs.readdirSync(imageCacheDir)) {
+      if (usedImages.has(filename)) {
+        fs.copyFileSync(
+          path.join(imageCacheDir, filename),
+          path.join(imageOutputDir, filename)
+        );
+      } else {
+        fs.unlinkSync(path.join(imageCacheDir, filename));
+      }
+    }
+    usedImages.clear();
   });
 
   // Load the first post image eagerly when it is likely on the first screen
