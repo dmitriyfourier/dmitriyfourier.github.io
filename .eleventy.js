@@ -33,7 +33,7 @@ const CONTENT_SIZES = "calc(96vw - 40px)";
 const IMAGE_WIDTHS = Array.from({ length: 11 }, (_, i) => 400 + i * 150);
 
 // Eleventy's built-in tags and our helper collections, not real post tags
-const SERVICE_TAGS = new Set(["all", "posts"]);
+const SERVICE_TAGS = new Set(["all", "posts", "podcasts"]);
 
 // Characters per minute used for the reading time estimate
 const READING_SPEED = 450;
