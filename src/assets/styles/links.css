@@ -72,6 +72,16 @@ a:active,
   --link-visited: currentColor;
 }
 
+/* OS "increase contrast" setting: solid underline at all times */
+@media (prefers-contrast: more) {
+  a,
+  .link,
+  .link-novisited,
+  .link-inherit {
+    text-decoration-color: currentColor;
+  }
+}
+
 a img:only-child {
   vertical-align: top;
 }

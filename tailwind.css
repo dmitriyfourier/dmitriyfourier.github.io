@@ -159,6 +159,21 @@
     color-scheme: dark;
   }
 
+  /*
+    OS "increase contrast" setting: secondary text becomes as strong as
+    body text, borders get darker (lighter in the dark theme)
+  */
+  @media (prefers-contrast: more) {
+    :root {
+      --color-muted: var(--color-fg);
+      --color-border: var(--color-sand-600);
+    }
+
+    .dark {
+      --color-border: var(--color-sand-400);
+    }
+  }
+
   html {
     color-scheme: light;
     background-color: var(--color-bg);
