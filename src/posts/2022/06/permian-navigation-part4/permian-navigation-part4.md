@@ -46,8 +46,7 @@ related:
 
 ## Оглавление:
 
-- — Часть 1: 
-  О[ предпосылках]({{ site.url }}/posts/permian-street-navigation-part1/).
+- — Часть 1: [О предпосылках]({{ site.url }}/posts/permian-street-navigation-part1/).
 - — Часть 2: [Попытки разобраться с базовыми форматами и укладкой названий]({{ site.url }}/posts/permian-navigation-part2/).
 - — Часть 3: [Переписка с разработчиками проекта]({{ site.url }}/posts/permian-navigation-part3/)
 - → Часть 4: Существующая навигация. Разбор примеров.

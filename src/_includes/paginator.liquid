@@ -2,21 +2,21 @@
   <div class="inline-flex">
     {% if page.url != pagination.href.first %}
       <a id="latestPosts" href="{{ pagination.href.first }}" aria-keyshortcuts="Control+ArrowUp">
-        Ранее
+        Позднее
       </a>
       <div><small class="text-muted" aria-hidden="true"> Ctrl ↑</small></div>
 
     {% else %}
-      <div class="hidden">Ранее ↑</div>
+      <div class="hidden">Позднее ↑</div>
     {% endif %}
     {% if page.url != pagination.href.last %}
       <a id="earlierPosts" href="{{ pagination.href.last }}" aria-keyshortcuts="Control+ArrowDown">
-        Позднее
+        Ранее
       </a>
       <div><small class="text-muted" aria-hidden="true"> Ctrl ↓</small></div>
 
     {% else %}
-      <div class="hidden">Позднее ↓</div>
+      <div class="hidden">Ранее ↓</div>
     {% endif %}
   </div>
 </nav>
