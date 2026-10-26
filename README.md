@@ -120,7 +120,8 @@ src/
   posts/          blog posts: YYYY/MM/<slug>/<slug>.md with the post's images and files
   podcasts/       podcast pages
   _includes/      page layouts
-  _partials/      shared header, footer, theme toggle, fonts
+  _partials/      shared header, footer, theme toggle, fonts, meta tags and JSON-LD
+  _icons/         SVG icons inlined with {% icon 'name' %} in the header and footer
   _data/          site settings (site.json) and the build version
   markdown.liquid .md versions of pages with `markdown: true` (all posts, podcasts, home)
   headers.liquid  _headers for Cloudflare: Link headers between pages and their .md
