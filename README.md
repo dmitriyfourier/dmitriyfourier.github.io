@@ -36,7 +36,6 @@ Create a post in `src/posts/YYYY/MM/` from a title:
 bash create "Title of the post"
 ```
 
-- Text above `<!-- excerpt -->` is the excerpt shown in post lists.
 - Posts are published by default (`src/posts/posts.json`); `published: false` in front matter hides a post from the `/posts` list, but its page is still built.
 - Put images in `src/assets/img/` and insert them with `{% asset_img 'file.jpg' 'alt text' 'caption' %}`. Plain `<img>` tags work too; both are converted to responsive `<picture>` on build.
 

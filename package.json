@@ -27,9 +27,6 @@
     "eleventy-plugin-embed-everything": "^1.21.2",
     "eslint": "^7.32.0",
     "markdown-it": "^15.0.3",
-    "markdown-it-anchor": "^10.0.0",
-    "markdown-it-container": "^4.0.0",
-    "moment": "^2.31.0",
     "npm-run-all2": "^9.0.4",
     "slugify": "^1.6.9",
     "tailwindcss": "^4.3.3"

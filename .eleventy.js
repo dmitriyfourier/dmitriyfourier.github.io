@@ -1,243 +1,256 @@
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const markdownIt = require("markdown-it");
-const moment = require("moment");
-const slugify = require("slugify");
+// Eleventy configuration: https://www.11ty.dev/docs/config/
+// Templates live in src/, the built site goes to _site/.
+// Styles are built separately by the Tailwind CLI from tailwind.css.
+
 const fs = require("fs");
 const path = require("path");
+const markdownIt = require("markdown-it");
+const slugify = require("slugify");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const embedEverything = require("eleventy-plugin-embed-everything");
+// These two packages are ESM-only, so require() returns their namespace
+const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 const {
   default: Image,
   eleventyImageTransformPlugin,
 } = require("@11ty/eleventy-img");
-const embedEverything = require("eleventy-plugin-embed-everything");
-const pluginRss = require("@11ty/eleventy-plugin-rss").default;
-const getSimilarCategories = function (categoriesA, categoriesB) {
-  return categoriesA.filter(Set.prototype.has, new Set(categoriesB)).length;
-};
-moment.locale("ru");
+
+// Where optimized images live. .cache is kept between Cloudflare Workers
+// Builds for Eleventy projects, so unchanged images aren't re-encoded.
+const IMAGE_CACHE_DIR = ".cache/eleventy-img/";
+const IMAGE_OUTPUT_DIR = "_site/assets/img/";
+const IMAGE_URL_PATH = "/assets/img/";
+// Social preview SVGs are rendered by src/og.liquid and converted to JPEG
+const OG_IMAGES_DIR = "_site/assets/img/og/";
+
+// Content width: body margins are 2vw + 10px on each side
+const CONTENT_SIZES = "calc(96vw - 40px)";
+// Responsive widths for post images: 400, 550, … 1900px
+const IMAGE_WIDTHS = Array.from({ length: 11 }, (_, i) => 400 + i * 150);
+
+// Eleventy's built-in tags and our helper collections, not real post tags
+const SERVICE_TAGS = new Set(["all", "posts"]);
+
+// Characters per minute used for the reading time estimate
+const READING_SPEED = 450;
+// Max characters per line of a title on the social preview image
+const OG_LINE_LENGTH = 19;
+
+// "31 мая 2019 г." — dates are stored in UTC, so format them in UTC too
+const readableDate = new Intl.DateTimeFormat("ru", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+// <figure> with an optional caption, used by the image shortcodes
+const figure = (filename, alt = "", caption, className) =>
+  `<figure${className ? ` class="${className}"` : ""}>` +
+  `<img src="${IMAGE_URL_PATH}${filename}" alt="${alt}" />` +
+  (caption ? `<figcaption>${caption}</figcaption>` : "") +
+  "</figure>";
 
 module.exports = function (eleventyConfig) {
+  // ---------------------------------------------------------------------------
   // Plugins
+  // ---------------------------------------------------------------------------
+
+  // YouTube, Instagram and other links on their own line become embeds
   eleventyConfig.addPlugin(embedEverything);
+  // Prism highlighting for fenced code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addFilter("dateIso", (date) => {
-    return moment(date).toISOString();
-  });
-
-  eleventyConfig.addFilter("dateReadable", (date) => {
-    return moment(date).utc().format("LL"); // E.g. May 31, 2019
-  });
-
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
-  // To enable merging of tags
-  eleventyConfig.setDataDeepMerge(true);
-
-  // Copy these static files to _site folder
-  eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("src/manifest.json");
-  eleventyConfig.addPassthroughCopy("src/avatar");
-  eleventyConfig.addPassthroughCopy("src/CV");
-  eleventyConfig.addPassthroughCopy("src/i");
-  eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
-  eleventyConfig.addPassthroughCopy("src/CNAME");
-  eleventyConfig.addPassthroughCopy("src/robots.txt");
-
-  // rss settings
+  // RSS/Atom filters used by src/feed.njk
   eleventyConfig.addPlugin(pluginRss);
 
-  // To create excerpts
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_alias: "post_excerpt",
-    excerpt_separator: "<!-- excerpt -->",
+  // Allow raw HTML in Markdown and turn bare URLs into links
+  eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
+
+  // ---------------------------------------------------------------------------
+  // Static files copied to _site as is
+  // ---------------------------------------------------------------------------
+
+  [
+    "src/assets",
+    "src/CV",
+    "src/manifest.json",
+    "src/browserconfig.xml",
+    "src/robots.txt",
+    "src/CNAME",
+  ].forEach((file) => eleventyConfig.addPassthroughCopy(file));
+
+  // ---------------------------------------------------------------------------
+  // Collections
+  // ---------------------------------------------------------------------------
+
+  // Posts from newest to oldest, the source for similar posts
+  eleventyConfig.addCollection("sortedPosts", (collectionApi) =>
+    collectionApi.getFilteredByTag("posts").sort((a, b) => b.date - a.date)
+  );
+
+  // Every tag used on the site, sorted, for the /tags page
+  eleventyConfig.addCollection("tagList", (collectionApi) => {
+    const tags = new Set(
+      collectionApi.getAll().flatMap((item) => item.data.tags || [])
+    );
+    return [...tags].filter((tag) => !SERVICE_TAGS.has(tag)).sort();
   });
 
-  //related pages
-  eleventyConfig.addCollection("sortedPosts", function (collectionApi) {
-    return collectionApi
-      .getFilteredByTag("posts")
-      .sort((a, b) => b.date - a.date);
+  // ---------------------------------------------------------------------------
+  // Filters
+  // ---------------------------------------------------------------------------
+
+  // Machine-readable date for <time datetime> and feeds
+  eleventyConfig.addFilter("dateIso", (date) => new Date(date).toISOString());
+
+  // Human-readable Russian date
+  eleventyConfig.addFilter("dateReadable", (date) =>
+    readableDate.format(new Date(date))
+  );
+
+  // Reading time in minutes, at least 1
+  eleventyConfig.addFilter("readTime", (html) => {
+    const text = html.replace(/<[^>]+>/g, "");
+    return Math.max(1, Math.floor(text.length / READING_SPEED));
   });
+
+  // URL-safe slug for tags; Cyrillic is transliterated
+  eleventyConfig.addFilter("slug", (str) =>
+    str ? slugify(str, { lower: true, strict: true, locale: "en" }) : undefined
+  );
+
+  // Posts sharing categories with the current one, most shared first.
+  // Usage: collections.sortedPosts | similarPosts: page.inputPath, categories
   eleventyConfig.addLiquidFilter(
     "similarPosts",
-    function (collection, path, categories) {
-      if (!categories) return []; // Возвращаем пустой массив, если категории не определены
-      return collection
-        .filter((post) => {
-          return (
-            post.data.categories && // Проверяем, что у поста есть категории
-            getSimilarCategories(post.data.categories, categories) >= 1 &&
-            post.data.page.inputPath !== path
-          );
-        })
-        .sort((a, b) => {
-          return (
-            getSimilarCategories(b.data.categories, categories) -
-            getSimilarCategories(a.data.categories, categories)
-          );
-        });
+    (posts, inputPath, categories) => {
+      if (!categories) {
+        return [];
+      }
+      const wanted = new Set(categories);
+      return posts
+        .filter((post) => post.inputPath !== inputPath && post.data.categories)
+        .map((post) => ({
+          post,
+          shared: post.data.categories.filter((c) => wanted.has(c)).length,
+        }))
+        .filter(({ shared }) => shared > 0)
+        .sort((a, b) => b.shared - a.shared)
+        .map(({ post }) => post);
     }
   );
 
-  // To create a filter to determine duration of post
-  eleventyConfig.addFilter("readTime", (value) => {
-    const content = value;
-    const textOnly = content.replace(/(<([^>]+)>)/gi, "");
-    const readingSpeedPerMin = 450;
-    return Math.max(1, Math.floor(textOnly.length / readingSpeedPerMin));
-  });
-
-  // Enable us to iterate over all the tags, excluding posts and all
-  eleventyConfig.addCollection("tagList", (collection) => {
-    const tagsSet = new Set();
-    collection.getAll().forEach((item) => {
-      if (!item.data.tags) return;
-      item.data.tags
-        .filter((tag) => !["posts", "all"].includes(tag))
-        .forEach((tag) => tagsSet.add(tag));
-    });
-    return Array.from(tagsSet).sort();
-  });
-  // slugify filter //
-  eleventyConfig.addFilter("slug", (str) => {
-    if (!str) {
-      return;
-    }
-
-    return slugify(str, {
-      lower: true,
-      replacement: "-",
-      strict: true,
-      locale: "en",
-      remove: /["]/g,
-    });
-  });
-
-  const md = markdownIt({ html: true, linkify: true });
-  /*md.use(markdownItAnchor, { 
-    level: [1, 2], 
-    permalink: markdownItAnchor.permalink.headerLink({ 
-      safariReaderFix: true,
-      class: 'header-anchor',
-    })
-  })*/
-
-  // MD Table Container //
-
-  eleventyConfig.setLibrary("md", md);
-  // Open graph generation
-  eleventyConfig.addFilter("splitlines", function (input) {
-    const parts = input.split(" ");
-    const lines = parts.reduce(function (prev, current) {
-      if (!prev.length) {
-        return [current];
+  // Splits a title into lines that fit the social preview image
+  eleventyConfig.addFilter("splitlines", (input) =>
+    input.split(" ").reduce((lines, word) => {
+      const last = lines[lines.length - 1];
+      if (last !== undefined && last.length + word.length <= OG_LINE_LENGTH) {
+        lines[lines.length - 1] = `${last} ${word}`;
+      } else {
+        lines.push(word);
       }
+      return lines;
+    }, [])
+  );
 
-      let lastOne = prev[prev.length - 1];
+  // ---------------------------------------------------------------------------
+  // Shortcodes for posts
+  // ---------------------------------------------------------------------------
 
-      if (lastOne.length + current.length > 19) {
-        return [...prev, current];
-      }
+  // Current year, for the footer copyright
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-      prev[prev.length - 1] = lastOne + " " + current;
+  // {% asset_img 'file.jpg' 'alt' 'caption' %} — image from src/assets/img/
+  eleventyConfig.addLiquidShortcode("asset_img", (filename, alt, caption) =>
+    figure(filename, alt, caption)
+  );
 
-      return prev;
-    }, []);
+  // {% aside 'text' %} — side note, floats right on wide screens
+  eleventyConfig.addLiquidShortcode(
+    "aside",
+    (text) => `<p class="aside">${text}</p>`
+  );
 
-    return lines;
-  });
-  // Conver og images from SVG to JPG
-  eleventyConfig.on("afterBuild", () => {
-    const socialPreviewImagesDir = "_site/assets/img/og/";
-    fs.readdir(socialPreviewImagesDir, function (err, files) {
-      if (files.length > 0) {
-        files.forEach(function (filename) {
-          if (filename.endsWith(".svg")) {
-            let imageUrl = socialPreviewImagesDir + filename;
-            Image(imageUrl, {
-              formats: ["jpeg"],
-              outputDir: "./" + socialPreviewImagesDir,
-              filenameFormat: function (id, src, width, format, options) {
-                let outputFilename = filename.substring(0, filename.length - 4);
+  // {% aside-img 'file.jpg' 'alt' 'caption' %} — side image with a caption
+  eleventyConfig.addLiquidShortcode("aside-img", (filename, alt, caption) =>
+    figure(filename, alt, caption, "aside")
+  );
 
-                return `${outputFilename}.${format}`;
-              },
-            });
-          }
-        });
-      }
-    });
-  });
-  // aside notes
-  eleventyConfig.addLiquidShortcode("aside", (text) => {
-    return `<p class="aside">${text}</p>`;
-  });
+  // {% tg-embed 'channel' 'postId' %} — Telegram post widget
+  eleventyConfig.addLiquidShortcode(
+    "tg-embed",
+    (channel, post) =>
+      `<div class="tg-embeded"><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="${channel}/${post}" data-width="100%" data-userpic="true" data-color="CA9C0E" data-dark="1" data-dark-color="F0B138"></script></div>`
+  );
 
-  // shortcod note-image
-  eleventyConfig.addLiquidShortcode("aside-img", (filename, alt, caption) => {
-    return `<figure class="aside"><img src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`;
-  });
+  // ---------------------------------------------------------------------------
+  // Images
+  // ---------------------------------------------------------------------------
 
-  // telgram hortcode embeded
-  eleventyConfig.addLiquidShortcode("tg-embed", (tgchannel, tgpost) => {
-    return `<div class="tg-embeded"> <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="${tgchannel}/${tgpost}" data-width="100%" data-userpic="true" data-color="CA9C0E" data-dark="1" data-dark-color="F0B138"></script></div>`;
-  });
-  // IMAGES
-  // asset_img shortcode
-  eleventyConfig.addLiquidShortcode("asset_img", (filename, alt, caption) => {
-    return `<figure><img src="/assets/img/${filename}" alt="${alt}" /><figcaption>${caption}</figcaption></figure>`;
-  });
-
-  // Replace <img> in the HTML output with responsive <picture>
-  const imageWidths = [];
-  for (let width = 400; width < 1920; width += 150) {
-    imageWidths.push(width);
-  }
-  // Optimized images are written to .cache, which Cloudflare Workers Builds
-  // keeps between builds for Eleventy projects, so unchanged images are not
-  // re-encoded. File names contain a hash of the source and options.
-  const imageCacheDir = ".cache/eleventy-img/";
-  const imageOutputDir = "_site/assets/img/";
+  // Every <img> in the output becomes a <picture> with AVIF/WebP/JPEG sources.
+  // Per-image overrides go in attributes: sizes, loading, eleventy:widths.
+  // File names contain a hash of the source and options, so a changed image
+  // gets a new name. Names are recorded to publish only the ones in use.
   const usedImages = new Set();
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    outputDir: imageCacheDir,
-    urlPath: "/assets/img/",
+    outputDir: IMAGE_CACHE_DIR,
+    urlPath: IMAGE_URL_PATH,
     formats: ["avif", "webp", "jpeg"],
-    widths: imageWidths,
+    widths: IMAGE_WIDTHS,
     filenameFormat: (id, src, width, format) => {
       const filename = `${path.parse(src).name}-${id}-${width}w.${format}`;
       usedImages.add(filename);
       return filename;
     },
     defaultAttributes: {
-      // `auto` lets lazy images use their real layout width; the fallback
-      // is the content width (body margins are 2vw + 10px on each side).
-      sizes: "auto, calc(96vw - 40px)",
+      // `auto` lets lazy images use their real layout width
+      sizes: `auto, ${CONTENT_SIZES}`,
       loading: "lazy",
       decoding: "async",
     },
   });
 
-  // Publish the images used by this build and drop stale ones from the cache
+  // After a production build, copy the images this build uses from the cache
+  // into _site and delete the rest from the cache so it doesn't grow forever.
+  // `eleventy --serve` generates images on request instead.
   eleventyConfig.on("eleventy.after", ({ runMode }) => {
     if (runMode !== "build" || usedImages.size === 0) {
       return;
     }
-    fs.mkdirSync(imageOutputDir, { recursive: true });
-    for (const filename of fs.readdirSync(imageCacheDir)) {
+    fs.mkdirSync(IMAGE_OUTPUT_DIR, { recursive: true });
+    for (const filename of fs.readdirSync(IMAGE_CACHE_DIR)) {
+      const cached = path.join(IMAGE_CACHE_DIR, filename);
       if (usedImages.has(filename)) {
-        fs.copyFileSync(
-          path.join(imageCacheDir, filename),
-          path.join(imageOutputDir, filename)
-        );
+        fs.copyFileSync(cached, path.join(IMAGE_OUTPUT_DIR, filename));
       } else {
-        fs.unlinkSync(path.join(imageCacheDir, filename));
+        fs.unlinkSync(cached);
       }
     }
     usedImages.clear();
   });
 
-  // Load the first post image eagerly when it is likely on the first screen
+  // Convert the social preview SVGs into JPEGs next to them
+  eleventyConfig.on("eleventy.after", async () => {
+    if (!fs.existsSync(OG_IMAGES_DIR)) {
+      return;
+    }
+    const svgs = fs
+      .readdirSync(OG_IMAGES_DIR)
+      .filter((file) => file.endsWith(".svg"));
+    await Promise.all(
+      svgs.map((file) =>
+        Image(path.join(OG_IMAGES_DIR, file), {
+          formats: ["jpeg"],
+          outputDir: OG_IMAGES_DIR,
+          filenameFormat: (id, src, width, format) =>
+            `${path.basename(file, ".svg")}.${format}`,
+        })
+      )
+    );
+  });
+
+  // Post page: load the first image eagerly if it's likely on the first
+  // screen (at most ~600 characters of text above it).
   eleventyConfig.addFilter("eagerFirstImage", (html) => {
     const match = /<img\b/.exec(html);
     if (!match) {
@@ -253,12 +266,12 @@ module.exports = function (eleventyConfig) {
     }
     return (
       html.slice(0, match.index) +
-      '<img loading="eager" fetchpriority="high" sizes="calc(96vw - 40px)"' +
-      html.slice(match.index + 4)
+      `<img loading="eager" fetchpriority="high" sizes="${CONTENT_SIZES}"` +
+      html.slice(match.index + "<img".length)
     );
   });
 
-  // Content embedded in listings should not compete for the first screen
+  // Post lists: posts embedded in a list must not compete for the first screen
   eleventyConfig.addFilter("lazyImages", (html) =>
     typeof html === "string"
       ? html.replace(/ loading="eager"| fetchpriority="high"/g, "")
