@@ -36,6 +36,9 @@
 {%- if isPost %}
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="{{ page.date | dateIso }}">
+  {%- if updated %}
+    <meta property="article:modified_time" content="{{ updated | dateIso }}">
+  {%- endif %}
   {%- for tag in tags -%}
     {%- if tag != 'posts' %}
       <meta property="article:tag" content="{{ tag | escape }}">

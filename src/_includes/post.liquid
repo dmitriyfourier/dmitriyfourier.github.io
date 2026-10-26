@@ -11,8 +11,14 @@ layout: blog
         {{- date | dateReadable -}}
       </time></em
     >
+    {%- if updated %}
+      • Обновлено
+      <time datetime="{{ updated | dateIso }}">
+        {{- updated | dateReadable -}}
+      </time>
+    {%- endif %}
     •
-    <span class="">Время чтения ≈ {{ content | readTime }} мин.</span>
+    <span class="">Время чтения ≈ {{ content | readTime }} мин</span>
   </div>
   <div>
     {{ content | eagerFirstImage }}
