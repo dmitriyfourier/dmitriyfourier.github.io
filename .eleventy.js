@@ -8,6 +8,8 @@ const markdownIt = require("markdown-it");
 const slugify = require("slugify");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedEverything = require("eleventy-plugin-embed-everything");
+const TurndownService = require("turndown");
+const { gfm } = require("turndown-plugin-gfm");
 // These two packages are ESM-only, so require() returns their namespace
 const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 const {
@@ -51,6 +53,73 @@ const figure = (filename, alt = "", caption, className) =>
   `<img src="${IMAGE_URL_PATH}${filename}" alt="${alt}" />` +
   (caption ? `<figcaption>${caption}</figcaption>` : "") +
   "</figure>";
+
+// HTML → Markdown for the .md versions of pages (src/markdown.liquid).
+// Links and images get absolute URLs, so the Markdown works wherever it is
+// pasted. Scripts, embeds, decorative images (alt="") and duplicates hidden
+// from screen readers (aria-hidden) are dropped.
+const { url: SITE_URL } = require("./src/_data/site.json");
+const absoluteUrl = (href) => {
+  if (!URL.canParse(href, SITE_URL)) {
+    return href;
+  }
+  const url = new URL(href, SITE_URL);
+  if (url.origin === SITE_URL) {
+    url.pathname = url.pathname.replace(/\/{2,}/g, "/");
+  }
+  return url.href;
+};
+const turndown = new TurndownService({
+  headingStyle: "atx",
+  hr: "---",
+  codeBlockStyle: "fenced",
+  bulletListMarker: "-",
+});
+turndown.use(gfm);
+// Rules added with addRule take priority over the built-in ones, and the
+// last one added is checked first, so "drop" goes at the end
+turndown.addRule("image", {
+  filter: "img",
+  replacement: (content, node) =>
+    `![${node.getAttribute("alt")}](${absoluteUrl(node.getAttribute("src"))})`,
+});
+// Block content inside a link (cards) collapses to one line
+turndown.addRule("link", {
+  filter: (node) => node.nodeName === "A" && node.getAttribute("href"),
+  replacement: (content, node) => {
+    const text = content.replace(/\s+/g, " ").trim();
+    return text ? `[${text}](${absoluteUrl(node.getAttribute("href"))})` : "";
+  },
+});
+// "- item" instead of turndown's "-   item"
+turndown.addRule("listItem", {
+  filter: "li",
+  replacement: (content, node) => {
+    const parent = node.parentNode;
+    const prefix =
+      parent.nodeName === "OL"
+        ? `${
+            (Number(parent.getAttribute("start")) || 1) +
+            Array.from(parent.childNodes)
+              .filter((child) => child.nodeName === "LI")
+              .indexOf(node)
+          }. `
+        : "- ";
+    const body = content
+      .replace(/^\n+|\n+$/g, "")
+      .replace(/\n/g, `\n${" ".repeat(prefix.length)}`);
+    return prefix + body + (node.nextSibling ? "\n" : "");
+  },
+});
+turndown.addRule("drop", {
+  filter: (node) =>
+    ["SCRIPT", "STYLE", "NOSCRIPT", "IFRAME", "BUTTON"].includes(
+      node.nodeName
+    ) ||
+    node.getAttribute("aria-hidden") === "true" ||
+    (node.nodeName === "IMG" && !node.getAttribute("alt")),
+  replacement: () => "",
+});
 
 module.exports = function (eleventyConfig) {
   // ---------------------------------------------------------------------------
@@ -97,6 +166,11 @@ module.exports = function (eleventyConfig) {
     return [...tags].filter((tag) => !SERVICE_TAGS.has(tag)).sort();
   });
 
+  // Pages that also get a Markdown version: front matter `markdown: true`
+  eleventyConfig.addCollection("markdownPages", (collectionApi) =>
+    collectionApi.getAll().filter((item) => item.data.markdown)
+  );
+
   // ---------------------------------------------------------------------------
   // Filters
   // ---------------------------------------------------------------------------
@@ -140,6 +214,14 @@ module.exports = function (eleventyConfig) {
         .map(({ post }) => post);
     }
   );
+
+  // URL of a page's Markdown version: /posts/x/ → /posts/x.md, / → /index.md
+  eleventyConfig.addFilter("markdownUrl", (url) =>
+    url === "/" ? "/index.md" : `${url.replace(/\/$/, "")}.md`
+  );
+
+  // Rendered page content as Markdown
+  eleventyConfig.addFilter("toMarkdown", (html) => turndown.turndown(html));
 
   // Splits a title into lines that fit the social preview image
   eleventyConfig.addFilter("splitlines", (input) =>

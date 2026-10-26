@@ -5,7 +5,8 @@ eleventyExcludeFromCollections: true
 {%- comment -%}
   /llms.txt (llmstxt.org): a short guide to the site for AI assistants.
   Posts and podcasts are listed from their collections, so new ones appear
-  on their own; the intro and the Optional section are written by hand.
+  on their own and link to their Markdown versions; the intro and the
+  Optional section are written by hand.
 {%- endcomment -%}
 # {{ site.author }}
 
@@ -15,13 +16,13 @@ eleventyExcludeFromCollections: true
 
 ## Блог
 
-{% for post in collections.sortedPosts %}{% if post.data.published %}- [{{ post.data.title }}]({{ site.url }}{{ post.url }}): {{ post.data.desc | default: post.data.description }}
+{% for post in collections.sortedPosts %}{% if post.data.published %}- [{{ post.data.title }}]({{ site.url }}{{ post.url | markdownUrl }}): {{ post.data.desc | default: post.data.description }}
 {% endif %}{% endfor %}
 
 ## Подкасты
 
 {% for podcast in collections.podcasts -%}
-- [{{ podcast.data.title }}]({{ site.url }}{{ podcast.url }}): {{ podcast.data.desc }}
+- [{{ podcast.data.title }}]({{ site.url }}{{ podcast.url | markdownUrl }}): {{ podcast.data.desc }}
 {% endfor %}
 ## Резюме
 

@@ -1,0 +1,29 @@
+---
+pagination:
+  data: collections.markdownPages
+  size: 1
+  alias: item
+permalink: "{{ item.url | markdownUrl }}"
+eleventyExcludeFromCollections: true
+---
+{%- comment -%}
+  Markdown version of every page with `markdown: true` in its front matter,
+  at the same URL with .md (see the markdownUrl filter). Converted from the
+  page's rendered content, so it never drifts from the HTML. Pages with
+  their own <h1> (podcasts) already open with a title and an intro.
+{%- endcomment -%}
+{%- unless item.content contains '<h1' -%}
+{%- assign desc = item.data.desc | default: item.data.description -%}
+# {{ item.data.title }}
+{% if item.data.tags contains 'posts' %}
+Опубликовано {{ item.date | dateReadable }}{% assign tags = item.data.tags | where_exp: "tag", "tag != 'posts'" %}{% if tags.size > 0 %} · Теги: {{ tags | join: ", " }}{% endif %}
+{% endif %}
+{%- if desc %}
+> {{ desc }}
+{% endif %}
+{% endunless -%}
+{{ item.content | toMarkdown }}
+
+---
+
+Страница на сайте: {{ site.url }}{{ item.url }}
