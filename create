@@ -1,14 +1,27 @@
-#/bin/bash
+#!/bin/bash
+# Creates a post in its own folder: src/posts/YYYY/MM/<slug>/<slug>.md
+# Usage: bash create "Title of the post" [slug]
+# Without a slug, it is made from the title (Cyrillic is transliterated),
+# the same way the site makes tag URLs. The post is served at /posts/<slug>/.
 
-TITLE=$@
-TITLEF=$(echo $TITLE | tr " " "-")
-YEAR=$(date +"%Y")
-MONTH=$(date +"%m")
+set -e
 
-mkdir -p "src/posts/$YEAR/$MONTH"
-FILENAME="src/posts/$YEAR/$MONTH/$TITLEF.md"
+TITLE=$1
+if [ -z "$TITLE" ]; then
+  echo 'Usage: bash create "Title of the post" [slug]' >&2
+  exit 1
+fi
+SLUG=${2:-$(node -e 'console.log(require("slugify")(process.argv[1], { lower: true, strict: true, locale: "en" }))' "$TITLE")}
 
-cat <<EOF > $FILENAME
+DIR="src/posts/$(date +%Y)/$(date +%m)/$SLUG"
+FILENAME="$DIR/$SLUG.md"
+if [ -e "$DIR" ]; then
+  echo "$DIR already exists" >&2
+  exit 1
+fi
+
+mkdir -p "$DIR"
+cat <<EOF > "$FILENAME"
 ---
 title: "$TITLE"
 date: "$(date '+%Y-%m-%d')"
@@ -21,3 +34,4 @@ tags:
 EOF
 
 echo "Created new post at $FILENAME"
+echo "Put its images and files in $DIR/ and the post will be at /posts/$SLUG/"
