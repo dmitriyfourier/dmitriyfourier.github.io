@@ -208,6 +208,15 @@ main:focus {
   min-height: 830px;
 }
 
+/* Fotorama's dot buttons are 18px wide; widen them to the 24px minimum
+   touch target and keep the dot centered */
+.fotorama__nav--dots .fotorama__nav__frame {
+  width: 24px;
+}
+.fotorama__dot {
+  left: 9px;
+}
+
 /* Side notes: {% aside %} and {% aside-img %} shortcodes */
 figure.aside,
 p.aside {
