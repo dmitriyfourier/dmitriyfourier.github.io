@@ -209,6 +209,19 @@
 
 /* Components */
 
+/* Skip link: hidden until it gets keyboard focus */
+.skip-link {
+  @apply sr-only;
+}
+.skip-link:focus {
+  @apply not-sr-only fixed top-2 left-2 z-50 px-3 py-2 rounded-sm bg-bg text-fg;
+}
+
+/* <main> takes focus from the skip link; it isn't a control, so no outline */
+main:focus {
+  outline: none;
+}
+
 /* Embeds: {% tg-embed %} shortcode and Instagram links */
 .tg-embeded {
   @apply max-w-lg;

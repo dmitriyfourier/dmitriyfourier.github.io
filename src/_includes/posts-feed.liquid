@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
   	<meta name='viewport' content='width=device-width'>
@@ -7,7 +7,7 @@
     <title>{{ title }} × [Страница {{ pagination.pageNumber }}]</title>
     <meta name='description' content="{{ desc }} × [Страница {{ pagination.pageNumber }}]">
     {% else %}
-    <title>📋 Блог Димы Фурье</title>
+    <title>{{ title }}</title>
     <meta name='description' content="{{ desc }}">
     {% endif %}
     <meta name="author" content="{{ site.author }}">
@@ -40,8 +40,9 @@
   </head>
  
 <body>
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
     <header>
-<nav id="header" class="w-full z-30 top-10 py-1">
+<nav id="header" class="w-full z-30 top-10 py-1" aria-label="Основное меню">
   <div class="w-full flex place-items-start justify-between mt-0 py-2">
 
     <div id="mobileMenuButton" class="cursor-pointer hidden mr-6 left-0 top-0">
@@ -50,14 +51,14 @@
     <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
 
     <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
-      <nav>
+      <div>
         <ul class="sm:flex items-center justify-between pt-0 sm:pt-0">
           <li class="flex flex-wrap justify-between items-center mx-auto max-w-(--breakpoint-2xl)">
             <span class="flex items-center">
               <div class="ml-0.5 self-center font-semibold whitespace-nowrap text-fg">Блог Димы Фурье</div></span>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
 
     <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
@@ -70,7 +71,8 @@
   </div>
 </nav>
     </header>
-      <main class="">
+      <main id="main" tabindex="-1">
+        {% unless content contains "<h1" %}<h1 class="sr-only">{{ title }}</h1>{% endunless %}
         
         {{ content }}
       

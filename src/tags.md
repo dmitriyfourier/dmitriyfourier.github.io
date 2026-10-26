@@ -1,7 +1,9 @@
 ---
 layout: base
-title: Tags
+title: Теги
 ---
+
+<h1 class="text-3xl font-bold mb-6">Теги</h1>
 
 {% for tag in collections.tagList %}
 

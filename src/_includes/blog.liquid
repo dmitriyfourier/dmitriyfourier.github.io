@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -40,8 +40,9 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
   <header>
-    <nav id="header" class="w-full z-30 top-10 py-1">
+    <nav id="header" class="w-full z-30 top-10 py-1" aria-label="Основное меню">
   <div class="w-full flex place-items-start justify-between mt-0 py-2">
 
     <div id="mobileMenuButton" class="cursor-pointer hidden mr-6 left-0 top-0">
@@ -50,7 +51,7 @@
     <!--     <input class="hidden" type="checkbox" id="menu-toggle"> -->
 
     <div id="nav-menu" class="sm:flex sm:items-top sm:w-auto w-full order-1 sm:order-1">
-      <nav>
+      <div>
         <ul class="sm:flex items-center justify-between pt-0 sm:pt-0">
           <li class="flex flex-wrap justify-between items-center mx-auto max-w-(--breakpoint-2xl)">
             <a href="/" class="flex items-center link-novisited no-underline">
@@ -62,7 +63,7 @@
           <li><a class="inline-block link-novisited font-medium  pt-0 pb-0 sm:pl-0 md:px-3"
               href="/podcasts/">Наговорил</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
 
     <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
@@ -96,7 +97,8 @@
   // });
 </script>-->
   </header>
-  <main>
+  <main id="main" tabindex="-1">
+        {% unless content contains "<h1" %}<h1 class="sr-only">{{ title }}</h1>{% endunless %}
 
     {{ content }}
 
