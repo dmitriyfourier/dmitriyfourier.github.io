@@ -45,7 +45,7 @@ tags:
 
 Или как в Перми соседи привели в порядок квартал в Рабочем посёлке
 
-<blockquote class="twitter-tweet"><p lang="ru" dir="ltr">&quot;Спроси себя, почему лично ты согласен на &quot;убого&quot;?&quot;<br><br>Жители этого квартала отказались от управляющих компаний, перевели дома в непосредственное управление и добились от властей проведения капремонта. Сравнить их дома с соседними вы можете сами <a href="https://t.co/TXrOXsWWfW">pic.twitter.com/TXrOXsWWfW</a></p>&mdash; Настоящее Время (@CurrentTimeTv) <a href="https://twitter.com/CurrentTimeTv/status/1227255906343120897?ref_src=twsrc%5Etfw">February 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ru" dir="ltr">&quot;Спроси себя, почему лично ты согласен на &quot;убого&quot;?&quot;<br><br>Жители этого квартала отказались от управляющих компаний, перевели дома в непосредственное управление и добились от властей проведения капремонта. Сравнить их дома с соседними вы можете сами <a href="https://t.co/TXrOXsWWfW">pic.twitter.com/TXrOXsWWfW</a></p>&mdash; Настоящее Время (@CurrentTimeTv) <a href="https://twitter.com/CurrentTimeTv/status/1227255906343120897?ref_src=twsrc%5Etfw">February 11, 2020</a></blockquote>
 
 Или как ребята из [Краеведческой ячейки Гэнгъ](https://vk.com/stpkraevedgang) отмывают исторические парадные в Петербурге и приводят их с волонтерами в порядок.
 

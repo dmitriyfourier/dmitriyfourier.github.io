@@ -226,6 +226,12 @@ main {
   left: 9px;
 }
 
+/* Inline SVG icons from the icon shortcode sit on the text baseline like
+   the icon font glyphs they replace */
+.icon {
+  vertical-align: -0.125em;
+}
+
 /* Side notes: {% aside %} and {% aside-img %} shortcodes */
 figure.aside,
 p.aside {

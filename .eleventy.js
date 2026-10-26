@@ -39,6 +39,10 @@ const SERVICE_TAGS = new Set(["all", "posts", "podcasts"]);
 const READING_SPEED = 450;
 // Max rules Cloudflare reads from _headers
 const CLOUDFLARE_HEADER_RULES = 100;
+
+// Icons used on every page (header and footer), inlined as SVG so pages
+// don't download the Line Awesome fonts. The SVGs come from Line Awesome.
+const ICONS_DIR = `${INPUT_DIR}/_icons`;
 // Max characters per line of a title on the social preview image
 const OG_LINE_LENGTH = 19;
 
@@ -326,6 +330,16 @@ module.exports = function (eleventyConfig) {
 
   // Current year, for the footer copyright
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // {% icon 'moon' 'text-xl' %} — an icon from src/_icons, sized by the
+  // font size like the icon font it replaces, hidden from screen readers
+  eleventyConfig.addShortcode("icon", (name, className = "") => {
+    const svg = fs.readFileSync(path.join(ICONS_DIR, `${name}.svg`), "utf8");
+    return svg.replace(
+      "<svg ",
+      `<svg class="icon ${className}" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" `
+    );
+  });
 
   // {% asset_img 'file.jpg' 'alt' 'caption' %} — image from the post's
   // folder or from src/assets/img/
