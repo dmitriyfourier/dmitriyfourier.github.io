@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
 > {{ desc }}
 {% endif %}
 {% endunless -%}
-{{ item.content | toMarkdown }}
+{{ item.content | toMarkdown: item }}
 
 ---
 

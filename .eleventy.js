@@ -95,7 +95,7 @@ const figure = (page, filename, alt = "", caption, className) =>
 // from screen readers (aria-hidden) are dropped.
 const { url: SITE_URL } = require("./src/_data/site.json");
 const absoluteUrl = (href) => {
-  if (!URL.canParse(href, SITE_URL)) {
+  if (href.startsWith("#") || !URL.canParse(href, SITE_URL)) {
     return href;
   }
   const url = new URL(href, SITE_URL);
@@ -292,8 +292,16 @@ module.exports = function (eleventyConfig) {
       : `/assets/covers/${cover}`;
   });
 
-  // Rendered page content as Markdown
-  eleventyConfig.addFilter("toMarkdown", (html) => turndown.turndown(html));
+  // Rendered page content as Markdown. Images from a post's folder point to
+  // their originals next to the page instead of the source path.
+  // Usage: item.content | toMarkdown: item
+  eleventyConfig.addFilter("toMarkdown", (html, item) => {
+    const dir = item && postFolder(item.inputPath);
+    const content = dir
+      ? html.replaceAll(`"${inputUrl(dir)}/`, `"${item.url}`)
+      : html;
+    return turndown.turndown(content);
+  });
 
   // Splits a title into lines that fit the social preview image
   eleventyConfig.addFilter("splitlines", (input) =>
