@@ -1,7 +1,8 @@
 {%- comment -%}
   schema.org data for search engines: the author, the site and the page
   itself (a post, a podcast or a plain page). Included by meta.liquid,
-  so it reuses metaTitle, metaDesc, pageUrl, ogImage and isPost.
+  so it reuses metaTitle, metaDesc, pageUrl, ogImage and isPost. The page
+  with `profilePage: true` in its front matter is the author's profile.
 {%- endcomment -%}
 {%- assign personId = site.url | append: '/#person' -%}
 {%- assign websiteId = site.url | append: '/#website' -%}
@@ -14,7 +15,11 @@
         "@id": "{{ personId }}",
         "name": {{ site.author | json }},
         "url": "{{ site.url }}/",
+        "mainEntityOfPage": "{{ site.url }}/everything-everywhere-all-at-once.html",
         "image": "{{ site.url }}/assets/img/furye.jpg",
+        "jobTitle": {{ site.jobTitle | json }},
+        "description": {{ site.authorDescription | json }},
+        "knowsAbout": {{ site.knowsAbout | json }},
         "email": "mailto:{{ site.email }}",
         "sameAs": [
           "{{ site.telegram }}",
@@ -65,12 +70,15 @@
       }
       {%- else %}
       {
-        "@type": "WebPage",
+        "@type": "{% if profilePage %}ProfilePage{% else %}WebPage{% endif %}",
         "@id": "{{ pageUrl }}",
         "url": "{{ pageUrl }}",
         "name": {{ metaTitle | json }},
         "description": {{ metaDesc | json }},
         "inLanguage": "ru",
+        {%- if profilePage %}
+        "mainEntity": { "@id": "{{ personId }}" },
+        {%- endif %}
         "isPartOf": { "@id": "{{ websiteId }}" }
       }
       {%- endif %}
