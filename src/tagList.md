@@ -4,7 +4,7 @@ pagination:
   data: collections
   size: 1
   # Skip Eleventy's built-in and helper collections, they aren't tags
-  filter: [all, posts, sortedPosts, tagList]
+  filter: [all, posts, sortedPosts, tagList, markdownPages]
   alias: tag
 permalink: /tags/{{ tag | slug }}/
 eleventyComputed:
