@@ -31,16 +31,7 @@
   <!--styles-->
   <link href="/assets/styles/tailwind.css" rel="stylesheet" />
   <!--Scripts-->
-  <script>
-    const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
-      '(prefers-color-scheme: dark)').matches);
-    if (isDarkMode()) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-
-    }
-  </script>
+  {% include "_partials/theme-init.liquid" %}
 </head>
 
 <body class="dark:text-mk-white dark:bg-mk-background">
@@ -72,27 +63,7 @@
     <div id="nav-content" class="order-2 sm:order-3 flex flex-wrap flex-col-reverse items-top justify-end mr-0">
       <div id="nav-buttons" class="flex items-center w-full sm:w-full">
         <div class="px-4">
-          <label id="toggleDarkMode" class="relative inspanne-flex items-center cursor-pointer switch-button">
-            <input type="checkbox" class="sr-only peer">
-            <div class="flex justify-center items-center w-8 h-8 
-              bg-tg-deepdark 
-              shadow-xs
-              shadow-mk-purple-deco
-              dark:shadow-mk-yellow-main
-              rounded-full
-              peer-hover::outspanne-none 
-              peer-hover::ring-2 
-              dark:bg-mk-yellow-main 
-              dark:border-gray-600 
-              peer-checked:bg-mk-yellow-main">
-              <div class="text-mk-yellow-main dark:hidden">
-                <i class="las la-moon"></i>
-              </div>
-              <div class=" text-mk-background hidden dark:visible dark:inline">
-                <i class="las la-sun"></i>
-              </div>
-            </div>
-          </label>
+          {% include "_partials/theme-toggle.liquid" %}
         </div>
         <div class=""><a href="/posts" class="link-novisited">Блог</a> →</div>
       </div>
@@ -174,17 +145,7 @@
         <span>2017 — {% year %}</span> </p>
   </div>
 </footer>
-  <script>
-    document.getElementById("toggleDarkMode").addEventListener("change", function () {
-      if (isDarkMode()) {
-        localStorage.theme = 'light'
-        document.documentElement.classList.remove('dark')
-      } else {
-        localStorage.theme = 'dark'
-        document.documentElement.classList.add('dark')
-      }
-    });
-  </script>
+  <script src="/assets/scripts/theme.js"></script>
   <script src="/assets/scripts/jquery.min.js"></script>
   <script src="/assets/scripts/fotorama.min.js"></script>
 </body>

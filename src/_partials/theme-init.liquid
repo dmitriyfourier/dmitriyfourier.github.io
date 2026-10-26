@@ -1,0 +1,10 @@
+  <!-- Theme: set before the page renders so it doesn't flash the wrong colors.
+       A saved choice wins, otherwise follow the OS. Toggle logic: /assets/scripts/theme.js -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.toggle("dark", dark);
+    })();
+  </script>
