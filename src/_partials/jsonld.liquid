@@ -44,6 +44,7 @@
         "description": {{ metaDesc | json }},
         "image": "{{ site.url }}{{ ogImage }}",
         "datePublished": "{{ page.date | dateIso }}",
+        "dateModified": "{{ updated | default: page.date | dateIso }}",
         "inLanguage": "ru",
         "author": { "@id": "{{ personId }}" },
         "publisher": { "@id": "{{ personId }}" },

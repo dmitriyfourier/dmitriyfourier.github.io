@@ -78,14 +78,15 @@ tags:
 <!-- excerpt -->
 ```
 
-| Front matter    | What it does                                                         |
-| --------------- | -------------------------------------------------------------------- |
-| `title`, `date` | Title and publication date                                           |
-| `tags`          | Tag pages at `/tags/…`; Cyrillic tags are transliterated in the URL  |
-| `categories`    | A list; posts that share categories are shown as related posts       |
-| `desc`          | Page description for search engines and link previews                |
-| `cover`         | Link preview image: a file in the post's folder                      |
-| `published`     | `false` hides the post from the `/posts` feed; its page still builds |
+| Front matter    | What it does                                                           |
+| --------------- | ---------------------------------------------------------------------- |
+| `title`, `date` | Title and publication date                                             |
+| `tags`          | Tag pages at `/tags/…`; Cyrillic tags are transliterated in the URL    |
+| `categories`    | A list; posts that share categories are shown as related posts         |
+| `desc`          | Page description for search engines and link previews                  |
+| `cover`         | Link preview image: a file in the post's folder                        |
+| `updated`       | Date of a real revision: shown under the title, sent to search engines |
+| `published`     | `false` hides the post from the `/posts` feed; its page still builds   |
 
 ### Images and files
 
