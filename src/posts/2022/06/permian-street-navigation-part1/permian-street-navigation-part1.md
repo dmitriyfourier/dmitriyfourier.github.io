@@ -16,7 +16,7 @@ tags:
 Илья Бирман с командой не так давно сделали [Конструктор адресных табличек в Челябинска](https://ilyabirman.ru/projects/chelyabinsk-address-plates/), и я ему завидую.
 Выглядят таблички вот так: 1
 
-<div class="fotorama" data-width="100%" data-height="800"
+<div class="fotorama" data-width="100%" data-ratio="4/3" data-maxheight="800"
      data-nav="dots">
      {% asset_img 'quarters.jpg' 'Пример навигации разработанной Ильёй Барманом' 'Пример базовой навигации разработанной Ильёй Барманом' %}
      {% asset_img 'plans.jpg' 'Пример который объясняет как работает навигация' 'Объяснение работы навигации' %}

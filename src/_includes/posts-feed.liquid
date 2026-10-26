@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- if pagination.pageNumber > 0 %}
       {%- capture metaTitle %}{{ title }} × [Страница {{ pagination.pageNumber | plus: 1 }}]{% endcapture %}
       {%- capture metaDesc %}{{ desc }} × [Страница {{ pagination.pageNumber | plus: 1 }}]{% endcapture %}
