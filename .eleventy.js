@@ -284,6 +284,14 @@ module.exports = function (eleventyConfig) {
     url === "/" ? "/index.md" : `${url.replace(/\/$/, "")}.md`
   );
 
+  // Social preview image from `cover:` — a file in the post's folder
+  // (served next to the page) or one in src/assets/covers/
+  eleventyConfig.addFilter("coverUrl", function (cover) {
+    return postFile(this.page, cover)
+      ? `${this.page.url}${cover}`
+      : `/assets/covers/${cover}`;
+  });
+
   // Rendered page content as Markdown
   eleventyConfig.addFilter("toMarkdown", (html) => turndown.turndown(html));
 

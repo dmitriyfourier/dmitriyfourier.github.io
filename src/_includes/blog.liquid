@@ -16,8 +16,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ page.url }}" />
     {% if cover %}
-      <meta property="og:image" content="{{ site.url }}/assets/covers/{{ cover }}" />
-      <meta property="og:image:secure_url" content="{{ site.url }}/assets/covers/{{ cover }}" />
+      <meta property="og:image" content="{{ site.url }}{{ cover | coverUrl }}" />
+      <meta property="og:image:secure_url" content="{{ site.url }}{{ cover | coverUrl }}" />
     {% else %}
       {% if tags %}
         <meta
